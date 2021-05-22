@@ -1,2 +1,2 @@
 # dotfiles
-There is no place like ~/
+This is my personal collection of configuration files.
