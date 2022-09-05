@@ -35,7 +35,7 @@ local options = {
   relativenumber = true,
 
   -- Minimal number of screen lines to keep above and below the cursor.
-  scrolloff = 8,
+  scrolloff = 999,
 
   -- Number of spaces to use for each step of (auto)indent.
   shiftwidth = 2,

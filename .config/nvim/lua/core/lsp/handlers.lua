@@ -16,7 +16,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = false, -- disable virtual text
+    virtual_text = true, -- enable inline text
     signs = {
       active = signs, -- show signs
     },
@@ -116,6 +116,21 @@ M.on_attach = function(client, bufnr)
   M.capabilities = vim.lsp.protocol.make_client_capabilities()
   M.capabilities.textDocument.completion.completionItem.snippetSupport = true
   M.capabilities = cmp_nvim_lsp.update_capabilities(M.capabilities)
+
+  vim.api.nvim_create_autocmd("CursorHold", {
+    buffer = bufnr,
+    callback = function()
+      local opts = {
+        focusable = false,
+        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+        border = "rounded",
+        source = "always",
+        prefix = " ",
+        scope = "cursor",
+      }
+      vim.diagnostic.open_float(nil, opts)
+    end,
+  })
 
   lsp_keymaps(bufnr)
   local status_ok, illuminate = pcall(require, "illuminate")

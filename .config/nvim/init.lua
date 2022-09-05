@@ -21,6 +21,6 @@ require "core.lsp"
 require "core.dap"
 require "core.better-escape"
 -- require "core.todo-comments" TODO
--- require "core.trouble" TODO
+require "core.trouble"
 require "core.virt-column"
 require "core.flutter-tools"

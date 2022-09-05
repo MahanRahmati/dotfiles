@@ -73,6 +73,14 @@ keymap(
   '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>'
 )
 
+-- Trouble
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
+
 -- DAP
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
 keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
