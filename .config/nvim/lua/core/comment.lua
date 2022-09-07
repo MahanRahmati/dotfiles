@@ -5,6 +5,5 @@ if not status_ok then
 end
 
 comment.setup {
-  -- ignores empty lines
-  ignore = "^$",
+  ignore = "^$", -- ignores empty lines
 }

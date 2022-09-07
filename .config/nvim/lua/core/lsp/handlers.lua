@@ -106,6 +106,7 @@ end
 M.on_attach = function(client, bufnr)
   local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
   if not status_cmp_ok then
+    require "notify"("Failed to load cmp-nvim-lsp", "error")
     return
   end
 
@@ -133,11 +134,6 @@ M.on_attach = function(client, bufnr)
   })
 
   lsp_keymaps(bufnr)
-  local status_ok, illuminate = pcall(require, "illuminate")
-  if not status_ok then
-    return
-  end
-  illuminate.on_attach(client)
 end
 
 return M

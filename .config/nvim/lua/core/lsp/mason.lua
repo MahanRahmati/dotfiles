@@ -1,6 +1,6 @@
-local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+local status_ok, mason = pcall(require, "mason")
 if not status_ok then
-  require "notify"("Failed to load nvim-lsp-installer", "error")
+  require "notify"("Failed to load mason", "error")
   return
 end
 
@@ -12,7 +12,25 @@ local servers = {
   "yamlls",
 }
 
-lsp_installer.setup {
+mason.setup {
+  ui = {
+    border = "rounded",
+    icons = {
+      package_installed = "✓",
+      package_pending = "➜",
+      package_uninstalled = "✗",
+    },
+  },
+}
+
+local mason_lspconfig_status_ok, mason_lspconfig =
+  pcall(require, "mason-lspconfig")
+if not mason_lspconfig_status_ok then
+  require "notify"("Failed to load mason-lspconfig", "error")
+  return
+end
+
+mason_lspconfig.setup {
   ensure_installed = servers,
 }
 

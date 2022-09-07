@@ -4,33 +4,39 @@ if not status_ok then
   return
 end
 
+local config = require("alpha.themes.theta").config
 local dashboard = require "alpha.themes.dashboard"
-dashboard.section.header.val = {
-  [[                               __                ]],
-  [[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-  [[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-  [[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-  [[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-  [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
-  [[                                                 ]],
+
+local buttons = {
+  type = "group",
+  val = {
+    {
+      type = "text",
+      val = "Quick links",
+      opts = { hl = "SpecialComment", position = "center" },
+    },
+    { type = "padding", val = 1 },
+    dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
+    { type = "padding", val = 1 },
+    dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
+    { type = "padding", val = 1 },
+    dashboard.button(
+      "r",
+      "ﱮ  Recent Projects ",
+      "<CMD>Telescope projects<CR>"
+    ),
+    { type = "padding", val = 1 },
+    dashboard.button(
+      "c",
+      "  Configuration",
+      ":e ~/.config/nvim/init.lua <CR>"
+    ),
+    { type = "padding", val = 1 },
+    dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+    { type = "padding", val = 1 },
+  },
+  position = "center",
 }
 
-dashboard.section.buttons.val = {
-  dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
-  dashboard.button("p", "ﱮ  Recent Projects ", "<CMD>Telescope projects<CR>"),
-  dashboard.button(
-    "c",
-    "  Configuration",
-    ":e ~/.config/nvim/init.lua <CR>"
-  ),
-  dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
-  -- button("l", "   Open Last Session", ':lua require("persisted").load()<CR>'),
-}
-
-dashboard.section.footer.opts.hl = "Type"
-dashboard.section.header.opts.hl = "Include"
-dashboard.section.buttons.opts.hl = "Keyword"
-
-dashboard.opts.opts.noautocmd = true
-alpha.setup(dashboard.opts)
+config.layout[6] = buttons
+alpha.setup(config)
