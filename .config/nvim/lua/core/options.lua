@@ -19,6 +19,9 @@ local options = {
   -- File-content encoding for the current buffer.
   fileencoding = "utf-8",
 
+  -- This is a list of fonts which will be used for the GUI version of Vim.
+  guifont = "Hack Nerd Font:h15",
+
   -- Ignore case in search patterns.
   ignorecase = true,
 

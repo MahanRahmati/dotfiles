@@ -250,7 +250,7 @@ return packer.startup(function(use)
   -- A snazzy buffer line for Neovim built using Lua.
   use {
     "akinsho/bufferline.nvim",
-    commit = "0b4b863244ef1369a8b9e4246dc95f8cdb5db026",
+    commit = "ffa1d0009f5e52d3d32d08c9a781f18b2b2ef507",
   }
 
   -----------------------------------------------------------------------------

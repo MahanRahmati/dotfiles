@@ -10,7 +10,13 @@ vim.g.mapleader = " "
 
 -- Insert Mode --
 
+-- Allow clipboard copy paste in neovim
+keymap("i", "<D-v>", "<ESC>:put<CR>i", opts)
+
 -- Normal Mode --
+
+-- Allow clipboard copy paste in neovim
+keymap("n", "<D-v>", ":put<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -34,7 +40,7 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 -- Save
 keymap("n", "<leader>w", ":w<CR>", opts)
 
--- Save
+-- Quit
 keymap("n", "<leader>q", ":q<CR>", opts)
 
 -- Visual Mode --
@@ -64,13 +70,13 @@ keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 keymap(
   "n",
   "<leader>/",
-  "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>",
+  "<cmd>lua require('Comment.api').toggle.linewise()<CR>",
   opts
 )
 keymap(
   "x",
   "<leader>/",
-  '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>'
+  "<ESC><CMD>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>"
 )
 
 -- Trouble
@@ -80,14 +86,3 @@ keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
 keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
 keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
 keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
-
--- DAP
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
-keymap("n", "<leader>dc", "<cmd>lua require'dap'.continue()<cr>", opts)
-keymap("n", "<leader>di", "<cmd>lua require'dap'.step_into()<cr>", opts)
-keymap("n", "<leader>do", "<cmd>lua require'dap'.step_over()<cr>", opts)
-keymap("n", "<leader>dO", "<cmd>lua require'dap'.step_out()<cr>", opts)
-keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
-keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
-keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
