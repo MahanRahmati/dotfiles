@@ -13,8 +13,8 @@ fish_add_path .cargo/bin
 fish_add_path .pub-cache/bin
 
 # Neovim
-set -x EDITOR 'nvim'
-set -x VISUAL 'nvim'
+set -x EDITOR nvim
+set -x VISUAL nvim
 
 #    ___     __ _
 #   /   |   / /(_)____ _ _____ ___   _____
@@ -45,21 +45,21 @@ alias v='nvim'
 
 # Auto ls after cd
 function cd
-  if [ -n $argv[1] ]
-    builtin cd $argv[1]
-    and exa --icons --color=always -a --group-directories-first
-  else
-    builtin cd ~
-    and exa --icons --color=always -a --group-directories-first
-  end
+    if [ -n $argv[1] ]
+        builtin cd $argv[1]
+        and exa --icons --color=always -a --group-directories-first
+    else
+        builtin cd ~
+        and exa --icons --color=always -a --group-directories-first
+    end
 end
 
 # Git Clone
 function g
-	git clone $argv[1]
-	and set git_folder (echo $argv[1] | awk -F '/' '{ print $5 }' | awk -F '.git' '{ print $1 }')
-	and mv $git_folder $HOME/Development/Git/
-	and cd $HOME/Development/Git/$git_folder
+    git clone $argv[1]
+    and set git_folder (echo $argv[1] | awk -F '/' '{ print $5 }' | awk -F '.git' '{ print $1 }')
+    and mv $git_folder $HOME/Development/Git/
+    and cd $HOME/Development/Git/$git_folder
 end
 
 #    ____                                  __
@@ -76,26 +76,26 @@ set fish_color_command green
 set fish_color_param $fish_color_normal
 
 function print_in_color
-  set -l string $argv[1]
-  set -l color  $argv[2]
+    set -l string $argv[1]
+    set -l color $argv[2]
 
-  set_color $color
-  printf $string
-  set_color normal
+    set_color $color
+    printf $string
+    set_color normal
 end
 
 function prompt_color_for_status
-  if test $argv[1] -eq 0
-    echo magenta
-  else
-    echo red
-  end
+    if test $argv[1] -eq 0
+        echo magenta
+    else
+        echo red
+    end
 end
 
 function fish_prompt
-  set -l last_status $status
+    set -l last_status $status
 
-  print_in_color '['(prompt_pwd)']' cyan
+    print_in_color '['(prompt_pwd)']' cyan
 
-  print_in_color ' ❯❯❯ ' (prompt_color_for_status $last_status)
+    print_in_color ' ❯❯❯ ' (prompt_color_for_status $last_status)
 end
