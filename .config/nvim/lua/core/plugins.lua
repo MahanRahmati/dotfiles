@@ -130,6 +130,12 @@ return packer.startup(function(use)
     commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21",
   }
 
+  -- A nvim-cmp source for displaying function signatures.
+  use {
+    "hrsh7th/cmp-nvim-lsp-signature-help",
+    commit = "3dd40097196bdffe5f868d5dddcc0aa146ae41eb",
+  }
+
   -----------------------------------------------------------------------------
   ------------------------------- Syntax --------------------------------------
   -----------------------------------------------------------------------------
@@ -171,6 +177,17 @@ return packer.startup(function(use)
   use {
     "nvim-telescope/telescope.nvim",
     commit = "2584ff391b528d01bf5e8c04206d5902a79ebdde",
+  }
+
+  -----------------------------------------------------------------------------
+  -------------------------------- Color --------------------------------------
+  -----------------------------------------------------------------------------
+
+  -- A high-performance color highlighter for Neovim which has no external
+  -- dependencies.
+  use {
+    "NvChad/nvim-colorizer.lua",
+    commit = "004a2b3ef62b01d3d1db454d1efe76d31934d43b",
   }
 
   -----------------------------------------------------------------------------

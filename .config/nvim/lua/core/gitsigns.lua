@@ -37,4 +37,5 @@ gitsigns.setup {
       linehl = "GitSignsChangeLn",
     },
   },
+  current_line_blame = true,
 }

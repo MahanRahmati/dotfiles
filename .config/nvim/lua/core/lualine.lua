@@ -88,8 +88,8 @@ lualine.setup {
   },
   sections = {
     lualine_a = { nvim_tree_shift, "mode" },
-    lualine_b = { branch, diagnostics, diff },
-    lualine_c = { "filename" },
+    lualine_b = { diagnostics, diff },
+    lualine_c = { branch },
     lualine_x = { lsp },
     lualine_y = { location, spaces, filetype },
     lualine_z = { "progress" },
