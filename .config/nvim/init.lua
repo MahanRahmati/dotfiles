@@ -1,7 +1,15 @@
+--     _   __                    _
+--    / | / /___   ____  _   __ (_)____ ___
+--   /  |/ // _ \ / __ \| | / // // __ `__ \
+--  / /|  //  __// /_/ /| |/ // // / / / / /
+-- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
+--
+
 require "core.options"
 require "core.keymaps"
 require "core.plugins"
 require "core.autocommands"
+require "core.notify"
 require "core.colorscheme"
 require "core.cmp"
 require "core.telescope"
@@ -24,10 +32,12 @@ require "core.todo-comments"
 require "core.trouble"
 require "core.virt-column"
 require "core.flutter-tools"
-require "core.lightbulb"
 require "core.dressing"
 require "core.auto-save"
 require "core.treesitter-context"
 require "core.numb"
 require "core.lastplace"
 require "core.colorizer"
+require "core.fidget"
+require "core.neoscroll"
+require "core.whichkey"

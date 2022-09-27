@@ -1,6 +1,6 @@
 local status_ok, lualine = pcall(require, "lualine")
 if not status_ok then
-  require "notify"("Failed to load lualine", "error")
+  vim.notify("Failed to load lualine", "error")
   return
 end
 
@@ -25,6 +25,13 @@ local branch = {
   icon = "",
 }
 
+local diff = {
+  "diff",
+  colored = false,
+  symbols = { added = " ", modified = " ", removed = " " },
+  cond = hide_in_width,
+}
+
 local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
@@ -36,15 +43,8 @@ local diagnostics = {
   cond = hide_in_width,
 }
 
-local diff = {
-  "diff",
-  colored = false,
-  symbols = { added = " ", modified = " ", removed = " " },
-  cond = hide_in_width,
-}
-
 local lsp = function()
-  local msg = "No Active Lsp"
+  local msg = "LS Inactive"
   local clients = vim.lsp.get_active_clients()
   if next(clients) == nil then
     return msg
@@ -53,24 +53,14 @@ local lsp = function()
   for _, client in ipairs(clients) do
     local filetypes = client.config.filetypes
     if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-      return client.name
+      return "漣" .. client.name
     end
   end
   return msg
 end
 
-local location = {
-  "location",
-  padding = 0,
-}
-
-local spaces = function()
-  return "Spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth")
-end
-
 local filetype = {
   "filetype",
-  icons_enabled = false,
   fmt = function(str)
     return str:gsub("^%l", str.upper)
   end,
@@ -82,16 +72,17 @@ lualine.setup {
     theme = "auto",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
+    -- section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard" },
     always_divide_middle = true,
     globalstatus = true,
   },
   sections = {
     lualine_a = { nvim_tree_shift, "mode" },
-    lualine_b = { diagnostics, diff },
-    lualine_c = { branch },
-    lualine_x = { lsp },
-    lualine_y = { location, spaces, filetype },
+    lualine_b = { branch },
+    lualine_c = { diff },
+    lualine_x = { diagnostics, lsp, filetype },
+    lualine_y = { "location" },
     lualine_z = { "progress" },
   },
   inactive_sections = {

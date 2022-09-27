@@ -106,7 +106,7 @@ end
 M.on_attach = function(client, bufnr)
   local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
   if not status_cmp_ok then
-    require "notify"("Failed to load cmp-nvim-lsp", "error")
+    vim.notify("Failed to load cmp-nvim-lsp", "error")
     return
   end
 

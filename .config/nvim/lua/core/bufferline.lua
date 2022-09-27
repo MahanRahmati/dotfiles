@@ -17,6 +17,6 @@ bufferline.setup {
     },
     show_close_icon = false,
     separator_style = { "", "" },
-    always_show_bufferline = true,
+    always_show_bufferline = false,
   },
 }

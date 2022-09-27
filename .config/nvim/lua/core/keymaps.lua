@@ -8,15 +8,7 @@ local opts = { silent = true }
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
--- Insert Mode --
-
--- Allow clipboard copy paste in neovim
-keymap("i", "<D-v>", "<ESC>:put<CR>i", opts)
-
 -- Normal Mode --
-
--- Allow clipboard copy paste in neovim
-keymap("n", "<D-v>", ":put<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

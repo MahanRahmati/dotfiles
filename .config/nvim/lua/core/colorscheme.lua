@@ -1,12 +1,13 @@
 local status_ok, colorscheme = pcall(require, "onedark")
 if not status_ok then
-  require "notify"("Failed to load colorscheme", "error")
+  vim.notify("Failed to load colorscheme", "error")
   return
 end
 
 colorscheme.setup {
   -- 'dark', 'darker', 'cool', 'deep', 'warm', 'warmer', 'light'
   style = "darker",
+  transparent = true,
   colors = {
     black = "#0e1013",
     bg0 = "#1f2329",
