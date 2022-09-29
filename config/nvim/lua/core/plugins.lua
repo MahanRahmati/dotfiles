@@ -88,6 +88,13 @@ return packer.startup(function(use)
     commit = "980f83609cd58e2069dda89a05367f81a48bdf2f",
   }
 
+  -- Extension to mason.nvim that makes it easier to use null-ls with
+  -- mason.nvim
+  use {
+    "jayp0521/mason-null-ls.nvim",
+    commit = "a7feaca84149e0c64e53583ad74fc7ffd49acc54",
+  }
+
   -- A pretty diagnostics list to help you solve all the trouble your code is
   -- causing.
   use {

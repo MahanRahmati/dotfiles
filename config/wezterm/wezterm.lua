@@ -34,10 +34,11 @@ return {
   font = wezterm.font "Hack Nerd Font",
   font_size = 15,
   hide_tab_bar_if_only_one_tab = true,
+  window_background_opacity = 0.95,
   window_padding = {
     left = "0.25cell",
     right = "0.25cell",
-    top = "0",
-    bottom = "0",
+    top = "0.25cell",
+    bottom = "0.25cell",
   },
 }
