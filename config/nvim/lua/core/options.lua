@@ -80,7 +80,7 @@ local options = {
   termguicolors = true,
 
   -- Time in milliseconds to wait for a mapped sequence to complete.
-  timeoutlen = 1000,
+  timeoutlen = 100,
 
   -- When on, the title of the window will be set to the value of
   -- 'titlestring'.

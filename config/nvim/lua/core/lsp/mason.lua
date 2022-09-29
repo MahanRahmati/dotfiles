@@ -10,6 +10,8 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "rust_analyzer",
+  "taplo",
 }
 
 mason.setup {

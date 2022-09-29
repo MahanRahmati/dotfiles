@@ -14,9 +14,8 @@ null_ls.setup {
   debug = false,
   sources = {
 
-    -- JSON YAML Markdown TOML
+    -- JSON YAML Markdown
     formatting.prettier.with {
-      extra_filetypes = { "toml" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
 
