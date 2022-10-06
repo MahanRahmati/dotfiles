@@ -98,6 +98,7 @@ cmp.setup {
     format = function(entry, vim_item)
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
+        nvim_lsp_signature_help = "[LSP]",
         nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM-Lua]",
         luasnip = "[Snippet]",

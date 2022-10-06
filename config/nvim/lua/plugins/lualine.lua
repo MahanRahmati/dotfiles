@@ -8,28 +8,28 @@ local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
 
-local nvim_tree_shift = {
-  function()
-    return string.rep(
-      " ",
-      vim.api.nvim_win_get_width(require("nvim-tree.view").get_winnr()) - 1
-    )
-  end,
-  cond = require("nvim-tree.view").is_visible,
-  color = "Normal",
-}
-
 local branch = {
-  "branch",
-  icons_enabled = true,
+  "b:gitsigns_head",
   icon = "",
 }
+
+local function diff_source()
+  local gitsigns = vim.b.gitsigns_status_dict
+  if gitsigns then
+    return {
+      added = gitsigns.added,
+      modified = gitsigns.changed,
+      removed = gitsigns.removed,
+    }
+  end
+end
 
 local diff = {
   "diff",
   colored = false,
   symbols = { added = " ", modified = " ", removed = " " },
   cond = hide_in_width,
+  source = diff_source,
 }
 
 local diagnostics = {
@@ -44,10 +44,9 @@ local diagnostics = {
 }
 
 local lsp = function()
-  local msg = "LS Inactive"
   local clients = vim.lsp.get_active_clients()
   if next(clients) == nil then
-    return msg
+    return ""
   end
   local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
   for _, client in ipairs(clients) do
@@ -56,7 +55,7 @@ local lsp = function()
       return "漣" .. client.name
     end
   end
-  return msg
+  return ""
 end
 
 local filetype = {
@@ -72,14 +71,13 @@ lualine.setup {
     theme = "auto",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    -- section_separators = { left = "", right = "" },
     disabled_filetypes = { "alpha", "dashboard" },
     always_divide_middle = true,
     globalstatus = true,
   },
   sections = {
-    lualine_a = { nvim_tree_shift, "mode" },
-    lualine_b = { branch },
+    lualine_a = { "mode" },
+    lualine_b = { "filename", branch },
     lualine_c = { diff },
     lualine_x = { diagnostics, lsp, filetype },
     lualine_y = { "location" },
@@ -94,5 +92,6 @@ lualine.setup {
     lualine_z = {},
   },
   tabline = {},
+  winbar = {},
   extensions = {},
 }

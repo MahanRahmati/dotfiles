@@ -33,3 +33,9 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
   end,
 })
+
+-- Close fidget before exiting neovim. TODO: Remove this when fidget is updated.
+vim.api.nvim_create_autocmd(
+  "VimLeavePre",
+  { command = [[silent! FidgetClose]] }
+)

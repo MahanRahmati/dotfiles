@@ -41,58 +41,58 @@ packer.init {
 
 -- Install plugins
 return packer.startup(function(use)
-  -----------------------------------------------------------------------------
-  --------------------------- Plugin Manager ----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                          Plugin Manager                          --
+  ----------------------------------------------------------------------
 
   -- A use-package inspired plugin manager for Neovim.
   use {
     "wbthomason/packer.nvim",
-    commit = "50aeb9060cf64c3c27e6d7b11d7af9e209ed6c3b",
+    commit = "6afb67460283f0e990d35d229fd38fdc04063e0a",
   }
 
-  -----------------------------------------------------------------------------
-  --------------------------------- LSP ---------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                               LSP                                --
+  ----------------------------------------------------------------------
 
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "79d4cb9c45ecf185d2200dd2af1e12829c8a9232",
+    commit = "fc2f44dc6024bddb75b82e471c642ad1f4483094",
   }
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   use {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "1569ad4817492e0daefa4e1bcf55f8280cdc82db",
+    commit = "4e1118c3f19885623d060aa9b10e41544232f183",
   }
 
   -- Standalone UI for LSP progress.
   use {
     "j-hui/fidget.nvim",
-    commit = "492492e7d50452a9ace8346d31f6d6da40439f0e",
+    commit = "1097a86db8ba38e390850dc4035a03ed234a4673",
   }
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "2fa0fd4bb13cb9060c8aae9296d53e6397245e9f",
+    commit = "45606b0e9b01a1565bfc8b57a52ec04f58f5f295",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   use {
     "williamboman/mason-lspconfig.nvim",
-    commit = "980f83609cd58e2069dda89a05367f81a48bdf2f",
+    commit = "b364c98644b53e351d27313dfdab809df7fde1d3",
   }
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
   -- mason.nvim
   use {
     "jayp0521/mason-null-ls.nvim",
-    commit = "a7feaca84149e0c64e53583ad74fc7ffd49acc54",
+    commit = "3be1172bfba22b2b42a3deb2fa588e1ed80142dc",
   }
 
   -- A pretty diagnostics list to help you solve all the trouble your code is
@@ -102,12 +102,12 @@ return packer.startup(function(use)
     commit = "929315ea5f146f1ce0e784c76c943ece6f36d786",
   }
 
-  -----------------------------------------------------------------------------
-  ----------------------------- Completion ------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                            Completion                            --
+  ----------------------------------------------------------------------
 
   -- Completion plugin for Neovim
-  use { "hrsh7th/nvim-cmp", commit = "b16e5bcf1d8fd466c289eab2472d064bcd7bab5d" }
+  use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }
 
   -- A nvim-cmp source for Neovim builtin LSP client.
   use {
@@ -122,7 +122,7 @@ return packer.startup(function(use)
   }
 
   -- A nvim-cmp source for filesystem paths.
-  use { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" }
+  use { "hrsh7th/cmp-path", commit = "91ff86cd9c29299a64f968ebb45846c485725f23" }
 
   -- A nvim-cmp source for buffer words.
   use {
@@ -142,123 +142,122 @@ return packer.startup(function(use)
     commit = "3dd40097196bdffe5f868d5dddcc0aa146ae41eb",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------- Programming languages support ---------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                  Programming Languages Support                   --
+  ----------------------------------------------------------------------
 
   -- Build flutter and dart applications in Neovim using the native lsp.
   use {
     "akinsho/flutter-tools.nvim",
-    commit = "78551498310e25055ec26d0f8dec2b5297043676",
+    commit = "15b770dcdca7ad2dab11cdf0dfdca34f04739471",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Syntax --------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                              Syntax                              --
+  ----------------------------------------------------------------------
 
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "2a63ea5665a6de96acd31a045d9d4d73272ff5a9",
+    commit = "a1bf2c75c01d612c4c3128aad6e291fe41eb03a9",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Snippet -------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Snippet                              --
+  ----------------------------------------------------------------------
 
   -- A snippet engine for Neovim written in Lua.
-  use { "L3MON4D3/LuaSnip", commit = "4073f821e1c02c7deb50235b4b68ecc5cf0b95e9" }
+  use { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }
 
   -- Set of preconfigured snippets for different languages.
   use {
     "rafamadriz/friendly-snippets",
-    commit = "22a99756492a340c161ab122b0ded90ab115a1b3",
+    commit = "9f4ffd17ade26815cad52ba90f478a4e6e2d80df",
   }
 
-  -----------------------------------------------------------------------------
-  ---------------------------- Fuzzy Finder -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                           Fuzzy Finder                           --
+  ----------------------------------------------------------------------
 
   -- A highly extendable fuzzy finder over lists.
   use {
     "nvim-telescope/telescope.nvim",
-    commit = "30e2dc5232d0dd63709ef8b44a5d6184005e8602",
+    commit = "76ea9a898d3307244dce3573392dcf2cc38f340f",
   }
 
-  -----------------------------------------------------------------------------
-  --------------------------- File explorer -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                          File Explorer                           --
+  ----------------------------------------------------------------------
 
   -- A simple and fast file explorer tree for Neovim.
   use {
     "kyazdani42/nvim-tree.lua",
-    commit = "3e49d9b7484e21f0b24ebdf21b8b7af227ea97a6",
+    commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------ Project --------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Project                              --
+  ----------------------------------------------------------------------
 
   -- An all in one Neovim plugin that provides superior project management.
   use {
     "ahmedkhalf/project.nvim",
-    commit = "090bb11ee7eb76ebb9d0be1c6060eac4f69a240f",
+    commit = "628de7e433dd503e782831fe150bb750e56e55d6",
   }
 
-  -----------------------------------------------------------------------------
-  -------------------------------- Color --------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                              Color                               --
+  ----------------------------------------------------------------------
 
   -- A high-performance color highlighter for Neovim which has no external
   -- dependencies.
   use {
     "NvChad/nvim-colorizer.lua",
-    commit = "004a2b3ef62b01d3d1db454d1efe76d31934d43b",
+    commit = "9dd7ecde55b06b5114e1fa67c522433e7e59db8b",
   }
 
-  -----------------------------------------------------------------------------
-  ---------------------------- Colorscheme -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                           Colorscheme                            --
+  ----------------------------------------------------------------------
 
-  -- A One Dark Theme for Neovim
+  -- NvChad's base46 theme plugin
   use {
-    "navarasu/onedark.nvim",
-    commit = "551f299d9ab2fd557247aa1995b2831a1237e4ae",
+    "NvChad/base46",
   }
 
-  -----------------------------------------------------------------------------
-  ----------------------------- Statusline ------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                            Statusline                            --
+  ----------------------------------------------------------------------
 
   -- A blazing fast and easy to configure Neovim statusline.
   use {
     "nvim-lualine/lualine.nvim",
-    commit = "3cf45404d4ab5e3b5da283877f57b676cb78d41d",
+    commit = "f564015a23b7874ee83ae1b1c9ace723d915e16d",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------ Tabline --------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Tabline                              --
+  ----------------------------------------------------------------------
 
   -- A snazzy buffer line for Neovim built using Lua.
   use {
     "akinsho/bufferline.nvim",
-    commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
+    commit = "0606ceeea77e85428ba06e21c9121e635992ccc7",
   }
 
-  -----------------------------------------------------------------------------
-  ----------------------------- Cursorline ------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                            Cursorline                            --
+  ----------------------------------------------------------------------
 
   -- Highlight the word under the cursor.
   use {
     "RRethy/vim-illuminate",
-    commit = "1c8132dc81078fc1ec7a4a1492352b8f541ee84b",
+    commit = "0603e75fc4ecde1ee5a1b2fc8106ed6704f34d14",
   }
 
-  -----------------------------------------------------------------------------
-  ----------------------------- Startup ------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Startup                              --
+  ----------------------------------------------------------------------
 
   -- A fast and highly customizable greeter for Neovim.
   use {
@@ -266,19 +265,19 @@ return packer.startup(function(use)
     commit = "0bb6fc0646bcd1cdb4639737a1cee8d6e08bcc31",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Icon -------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                               Icon                               --
+  ----------------------------------------------------------------------
 
   -- A Lua fork of vim-devicons.
   use {
     "kyazdani42/nvim-web-devicons",
-    commit = "2d02a56189e2bde11edd4712fea16f08a6656944",
+    commit = "a8cf88cbdb5c58e2b658e179c4b2aa997479b3da",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Utility -------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Utility                              --
+  ----------------------------------------------------------------------
 
   -- Automatically create missing directories when saving a file.
   use {
@@ -289,19 +288,19 @@ return packer.startup(function(use)
   -- A fancy, configurable, notification manager for Neovim.
   use {
     "rcarriga/nvim-notify",
-    commit = "3a8ec89e1918ea2acbb9b22c5ac2006d31773052",
+    commit = "414465468c93f693be4e2f69f47586cf37f3f751",
   }
 
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   use {
     "stevearc/dressing.nvim",
-    commit = "9cdb3e0f0973447b940b35d3175dc780301de427",
+    commit = "12b808a6867e8c38015488ad6cee4e3d58174182",
   }
 
   -- Display a line as colorcolumn.
   use {
     "lukas-reineke/virt-column.nvim",
-    commit = "29db24c5e94243df1f34f47bbcb4e7803204cae4",
+    commit = "36fa3be9cba9195081e934b4f9729021726c5889",
   }
 
   -- Delete Neovim buffers without losing window layout.
@@ -310,39 +309,49 @@ return packer.startup(function(use)
     commit = "46255e4a76c4fb450a94885527f5e58a7d96983c",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------ Terminal integration  ------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                       Terminal Integration                       --
+  ----------------------------------------------------------------------
 
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   use {
     "akinsho/toggleterm.nvim",
-    commit = "5e393e558f7c41d132542c8e9626aa824a1caa59",
+    commit = "2a787c426ef00cb3488c11b14f5dcf892bbd0bda",
   }
 
-  -----------------------------------------------------------------------------
-  ----------------------- Neovim Lua Development ------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                      Neovim Lua Development                      --
+  ----------------------------------------------------------------------
 
   -- Useful lua functions used by lots of plugins.
   use {
     "nvim-lua/plenary.nvim",
-    commit = "4b66054e75356ac0b909bbfee9c682e703f535c2",
+    commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7",
   }
 
-  -----------------------------------------------------------------------------
-  --------------------------------- Git ---------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                               Git                                --
+  ----------------------------------------------------------------------
 
   -- Git integration: signs, hunk actions, blame, etc.
   use {
     "lewis6991/gitsigns.nvim",
-    commit = "d7e0bcbe45bd9d5d106a7b2e11dc15917d272c7a",
+    commit = "f98c85e7c3d65a51f45863a34feb4849c82f240f",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Keybindig -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                              Motion                              --
+  ----------------------------------------------------------------------
+
+  -- Add fancy sub-cursor to signcolumn to show your scroll or jump direction.
+  use {
+    "gen740/SmoothCursor.nvim",
+    commit = "abc2065f748f346c02bed19b3a075d561b20aa6f",
+  }
+
+  ----------------------------------------------------------------------
+  --                            Keybinding                            --
+  ----------------------------------------------------------------------
 
   -- Neovim plugin that shows a popup with possible keybindings of the command
   -- you started typing.
@@ -357,9 +366,9 @@ return packer.startup(function(use)
     commit = "d5ee0cef56a7e41a86048c14f25e964876ac20c1",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Scrolling -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                            Scrolling                             --
+  ----------------------------------------------------------------------
 
   -- Smooth scrolling for Neovim.
   use {
@@ -367,27 +376,20 @@ return packer.startup(function(use)
     commit = "54c5c419f6ee2b35557b3a6a7d631724234ba97a",
   }
 
-  -----------------------------------------------------------------------------
-  -------------------------- Editing support ----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                         Editing Support                          --
+  ----------------------------------------------------------------------
 
   -- A minimalist autopairs for Neovim written by Lua.
   use {
     "windwp/nvim-autopairs",
-    commit = "0a18e10a0c3fde190437567e40557dcdbbc89ea1",
-  }
-
-  -- A Neovim plugin for saving your work before the world collapses or you
-  -- type :qa!
-  use {
-    "Pocco81/auto-save.nvim",
-    commit = "2c7a2943340ee2a36c6a61db812418fca1f57866",
+    commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347",
   }
 
   -- Shows floating hover with the current function/block context.
   use {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "82631f666f186dbccb8190bc37a65d7cfab45d16",
+    commit = "8d0759eb798fee2e1201b26c3279713ac67c44c2",
   }
 
   -- Peek lines in a non-obtrusive way.
@@ -402,25 +404,31 @@ return packer.startup(function(use)
     commit = "ecced899435c6bcdd81becb5efc6d5751d0dc4c8",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------ Comment --------------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                             Comment                              --
+  ----------------------------------------------------------------------
 
   -- Smart and Powerful comment plugin for Neovim.
   use {
     "numToStr/Comment.nvim",
-    commit = "30d23aa2e1ba204a74d5dfb99777e9acbe9dd2d6",
+    commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67",
   }
 
   -- Highlight, list and search todo comments in your projects.
   use {
     "folke/todo-comments.nvim",
-    commit = "a57b18c8b3fe9340d48585371df2c793fff417a7",
+    commit = "8df75dbb9ddd78a378b9661f25f0b193f38f06dd",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Indent --------------------------------------
-  -----------------------------------------------------------------------------
+  -- Adds a comment frame based on the source file.
+  use {
+    "s1n7ax/nvim-comment-frame",
+    commit = "1c6379300d7ce306657481c4b7a51d72f387ae89",
+  }
+
+  ----------------------------------------------------------------------
+  --                              Indent                              --
+  ----------------------------------------------------------------------
 
   -- IndentLine replacement in Lua with more features and treesitter support.
   use {
@@ -428,14 +436,14 @@ return packer.startup(function(use)
     commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6",
   }
 
-  -----------------------------------------------------------------------------
-  ------------------------------- Impatient -----------------------------------
-  -----------------------------------------------------------------------------
+  ----------------------------------------------------------------------
+  --                            Impatient                             --
+  ----------------------------------------------------------------------
 
   -- Speed up loading Lua modules
   use {
     "lewis6991/impatient.nvim",
-    commit = "969f2c5c90457612c09cf2a13fee1adaa986d350",
+    commit = "b842e16ecc1a700f62adb9802f8355b99b52a5a6",
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

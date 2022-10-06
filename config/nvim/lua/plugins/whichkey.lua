@@ -26,7 +26,7 @@ local opts = {
 }
 
 local mappings = {
-  a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Action" },
+  a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   v = { "<cmd>vsplit<cr>", "vsplit" },
@@ -38,6 +38,17 @@ local mappings = {
     "Comment",
   },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
+  C = {
+    name = "Comment Frame",
+    f = {
+      "<cmd>lua require('nvim-comment-frame').add_comment()<cr>",
+      "Single line comment",
+    },
+    m = {
+      "<cmd>lua require('nvim-comment-frame').add_multiline_comment()<cr>",
+      "Multiline comment",
+    },
+  },
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -48,17 +59,13 @@ local mappings = {
   },
   f = {
     name = "Find",
-    b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
+    b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files<cr>", "Find files" },
-    t = { "<cmd>Telescope live_grep<cr>", "Find Text" },
+    g = { "<cmd>Telescope live_grep<cr>", "Find Text" },
     s = { "<cmd>Telescope grep_string<cr>", "Find String" },
     h = { "<cmd>Telescope help_tags<cr>", "Help" },
     H = { "<cmd>Telescope highlights<cr>", "Highlights" },
-    i = {
-      "<cmd>lua require('telescope').extensions.media_files.media_files()<cr>",
-      "Media",
-    },
     l = { "<cmd>Telescope resume<cr>", "Last Search" },
     M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
     r = { "<cmd>Telescope oldfiles<cr>", "Recent File" },

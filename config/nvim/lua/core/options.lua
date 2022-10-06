@@ -3,6 +3,9 @@ local options = {
   -- This option is a list of comma-separated names.
   clipboard = "unnamedplus",
 
+  -- Number of screen lines to use for the command-line.
+  cmdheight = 0,
+
   -- 'colorcolumn' is a comma-separated list of screen columns that are
   -- highlighted with ColorColumn.
   colorcolumn = "80",

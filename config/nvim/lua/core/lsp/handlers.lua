@@ -55,13 +55,7 @@ local function lsp_keymaps(bufnr)
   keymap(bufnr, "n", "gI", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
   keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-  keymap(
-    bufnr,
-    "n",
-    "<leader>lf",
-    "<cmd>lua vim.lsp.buf.formatting()<cr>",
-    opts
-  )
+  keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", opts)
   keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
   keymap(bufnr, "n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
   keymap(
@@ -100,8 +94,10 @@ local function lsp_keymaps(bufnr)
     "<cmd>lua vim.diagnostic.setloclist()<CR>",
     opts
   )
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
 end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 M.on_attach = function(client, bufnr)
   local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
@@ -111,7 +107,7 @@ M.on_attach = function(client, bufnr)
   end
 
   if client.name == "sumneko_lua" then
-    client.resolved_capabilities.document_formatting = false
+    client.server_capabilities.document_formatting = false
   end
 
   M.capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -132,6 +128,17 @@ M.on_attach = function(client, bufnr)
       vim.diagnostic.open_float(nil, opts)
     end,
   })
+
+  if client.supports_method "textDocument/formatting" then
+    vim.api.nvim_clear_autocmds { group = augroup, buffer = bufnr }
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      group = augroup,
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format { bufnr = bufnr }
+      end,
+    })
+  end
 
   lsp_keymaps(bufnr)
 end
