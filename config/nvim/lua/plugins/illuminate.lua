@@ -8,5 +8,10 @@ illuminate.configure {
   filetypes_denylist = {
     "alpha",
     "NvimTree",
+    "packer",
+    "Trouble",
+    "toggleterm",
+    "DressingSelect",
+    "TelescopePrompt",
   },
 }
