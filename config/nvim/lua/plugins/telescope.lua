@@ -6,6 +6,8 @@ end
 
 local actions = require "telescope.actions"
 
+telescope.load_extension "aerial"
+
 telescope.setup {
   defaults = {
     path_display = { "smart" },
@@ -39,5 +41,8 @@ telescope.setup {
         ["<esc>"] = actions.close,
       },
     },
+  },
+  extensions = {
+    aerial = {},
   },
 }

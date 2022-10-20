@@ -49,10 +49,47 @@ for _, server in pairs(servers) do
     capabilities = require("core.lsp.handlers").capabilities,
   }
 
+  server = vim.split(server, "@")[1]
+
   local require_ok, conf_opts = pcall(require, "core.lsp.settings." .. server)
   if require_ok then
     opts = vim.tbl_deep_extend("force", conf_opts, opts)
   end
 
+  if server == "rust_analyzer" then
+    local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
+    if not rust_tools_status_ok then
+      vim.notfiy("Failed to load rust-tools", "error")
+      return
+    end
+
+    rust_tools.setup {
+      tools = {
+        on_initialized = function()
+          vim.cmd [[
+            autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
+          ]]
+        end,
+      },
+      server = {
+        on_attach = require("core.lsp.handlers").on_attach,
+        capabilities = require("core.lsp.handlers").capabilities,
+        settings = {
+          ["rust-analyzer"] = {
+            lens = {
+              enable = true,
+            },
+            checkOnSave = {
+              command = "clippy",
+            },
+          },
+        },
+      },
+    }
+
+    goto continue
+  end
+
   lspconfig[server].setup(opts)
+  ::continue::
 end

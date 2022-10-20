@@ -61,6 +61,12 @@ return packer.startup(function(use)
     commit = "fc2f44dc6024bddb75b82e471c642ad1f4483094",
   }
 
+  -- A code outline window for skimming and quick navigation.
+  use {
+    "stevearc/aerial.nvim",
+    commit = "c2487319c083bc1da3aecf21e054c6cf1bbda9b3",
+  }
+
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   use {
@@ -150,6 +156,12 @@ return packer.startup(function(use)
   use {
     "akinsho/flutter-tools.nvim",
     commit = "15b770dcdca7ad2dab11cdf0dfdca34f04739471",
+  }
+
+  -- Tools for better development in rust using Neovim's builtin LSP.
+  use {
+    "simrat39/rust-tools.nvim",
+    commit = "86a2b4e31f504c00715d0dd082a6b8b5d4afbf03",
   }
 
   ----------------------------------------------------------------------
@@ -327,6 +339,16 @@ return packer.startup(function(use)
   use {
     "nvim-lua/plenary.nvim",
     commit = "4b7e52044bbb84242158d977a50c4cbcd85070c7",
+  }
+
+  ----------------------------------------------------------------------
+  --                      Dependency management                       --
+  ----------------------------------------------------------------------
+
+  -- Rust dependency management for Cargo.toml.
+  use {
+    "Saecki/crates.nvim",
+    commit = "1dffccc0a95f656ebe00cacb4de282473430c5a1",
   }
 
   ----------------------------------------------------------------------
