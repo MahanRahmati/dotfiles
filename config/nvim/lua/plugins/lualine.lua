@@ -96,7 +96,7 @@ lualine.setup {
     lualine_a = { "mode" },
     lualine_b = { branch },
     lualine_c = { diff, diagnostics },
-    lualine_x = { lsp, filetype },
+    lualine_x = { "searchcount", lsp, filetype },
     lualine_y = { "location" },
     lualine_z = { "progress" },
   },

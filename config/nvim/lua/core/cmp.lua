@@ -104,6 +104,8 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        nerdfont = "[Nerd Font]",
+        look = "[Look]",
       })[entry.source.name]
       return vim_item
     end,
@@ -116,6 +118,16 @@ cmp.setup {
     { name = "buffer" },
     { name = "path" },
     { name = "crates" },
+    { name = "nerdfont" },
+    {
+      name = "look",
+      keyword_length = 2,
+      option = {
+        convert_case = true,
+        loud = true,
+        --dict = '/usr/share/dict/words'
+      },
+    },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
