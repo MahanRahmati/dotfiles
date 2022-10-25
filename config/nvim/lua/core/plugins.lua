@@ -192,6 +192,12 @@ return packer.startup(function(use)
     commit = "c4c358e9badb181f4a05a4d8fd0c986a1cf5001b",
   }
 
+  -- A plugin for adding/changing/deleting surrounding delimiter pairs.
+  use {
+    "kylechui/nvim-surround",
+    commit = "81f672ad6525b5d8cc27bc6ff84636cc12664485",
+  }
+
   ----------------------------------------------------------------------
   --                             Snippet                              --
   ----------------------------------------------------------------------

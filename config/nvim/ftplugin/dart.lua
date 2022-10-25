@@ -24,6 +24,11 @@ local mappings = {
     o = { "<cmd>FlutterOutlineToggle<Cr>", "Outline Toggle" },
     R = { "<cmd>FlutterRestart<Cr>", "Restart" },
     r = { "<cmd>FlutterRun<Cr>", "Run" },
+    p = {
+      name = "Pub",
+      g = { "<cmd>FlutterPubGet<Cr>", "Pub Get" },
+      u = { "<cmd>FlutterPubUpgrade<Cr>", "Pub Upgrade" },
+    },
     q = { "<cmd>FlutterQuit<Cr>", "Quit" },
   },
 }

@@ -68,6 +68,7 @@ local filetype = {
 local winbar_filetype = {
   "filetype",
   icon_only = true,
+  padding = { left = 1, right = 0 },
   color = { bg = "#1e222a" },
 }
 
