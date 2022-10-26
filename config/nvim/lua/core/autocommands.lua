@@ -45,3 +45,30 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, {
     vim.cmd "hi link illuminatedWord LspReferenceText"
   end,
 })
+
+-- Make cursor stay centered.
+function StayCentered(inInsert)
+  local line = vim.api.nvim_win_get_cursor(0)[1]
+  if line ~= vim.b.last_line then
+    vim.cmd "norm! zz"
+    vim.b.last_line = line
+    if inInsert then
+      local column = vim.fn.getcurpos()[5]
+      vim.fn.cursor(line, column)
+    end
+  end
+end
+
+local group = vim.api.nvim_create_augroup("StayCentered", { clear = true })
+vim.api.nvim_create_autocmd("CursorMovedI", {
+  group = group,
+  callback = function()
+    StayCentered(true)
+  end,
+})
+vim.api.nvim_create_autocmd("CursorMoved", {
+  group = group,
+  callback = function()
+    StayCentered(false)
+  end,
+})

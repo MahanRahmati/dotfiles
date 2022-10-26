@@ -426,6 +426,16 @@ return packer.startup(function(use)
   }
 
   ----------------------------------------------------------------------
+  --                            Scrollbar                             --
+  ----------------------------------------------------------------------
+
+  -- Extensible scrollbar that shows diagnostics and search results.
+  use {
+    "petertriho/nvim-scrollbar",
+    commit = "49b5a0f2e2d275df4f2e224f3e1cd7f4c64ecafe",
+  }
+
+  ----------------------------------------------------------------------
   --                         Editing Support                          --
   ----------------------------------------------------------------------
 
