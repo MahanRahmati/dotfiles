@@ -10,4 +10,5 @@ aerial.setup {
     filter_kind = false,
     show_guides = true,
   },
+  filter_kind = false,
 }
