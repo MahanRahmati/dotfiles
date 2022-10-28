@@ -189,7 +189,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "3cab7b4346840dfe62cbcfeb90c6ed398e7a2ece",
+    commit = "287ffdccc1dd7ed017d844a4fad069fd3340fa94",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -231,7 +231,7 @@ return packer.startup(function(use)
   -- A simple and fast file explorer tree for Neovim.
   use {
     "nvim-tree/nvim-tree.lua",
-    commit = "1be1e17be5841274253fb445f1b5db90bade7539",
+    commit = "65c2ba895213c3641fc58dd33bc7a44423a6cdbe",
   }
 
   ----------------------------------------------------------------------
@@ -262,6 +262,7 @@ return packer.startup(function(use)
   -- NvChad's base46 theme plugin
   use {
     "NvChad/base46",
+    commit = "c152bc5e719945d2a252d303bf95cb38a8cd424b",
   }
 
   ----------------------------------------------------------------------
@@ -406,7 +407,7 @@ return packer.startup(function(use)
   -- you started typing.
   use {
     "folke/which-key.nvim",
-    commit = "1b7f09a38afb48e295109137790c3a3099881c2f",
+    commit = "61553aeb3d5ca8c11eea8be6eadf478062982ac9",
   }
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -476,7 +477,7 @@ return packer.startup(function(use)
   -- Highlight, list and search todo comments in your projects.
   use {
     "folke/todo-comments.nvim",
-    commit = "41dd70e581ff4a4c3512c5e1f3d063b00f68cc16",
+    commit = "530eb3a896e9eef270f00f4baafa102361afc93b",
   }
 
   -- Adds a comment frame based on the source file.
