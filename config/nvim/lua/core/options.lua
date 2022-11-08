@@ -28,6 +28,10 @@ local options = {
   -- Ignore case in search patterns.
   ignorecase = true,
 
+  -- If on, Vim will wrap long lines at a character in 'breakat' rather than
+  -- at the last character that fits on the screen.
+  linebreak = true,
+
   -- Enables mouse support.
   mouse = "a",
 
@@ -120,6 +124,10 @@ vim.opt.shortmess:append "c"
 -- previous/next line when the cursor is on the first/last character in the
 -- line.
 vim.opt.whichwrap:append "<,>,[,],h,l"
+
+-- This is a sequence of letters which describes how automatic formatting is to
+-- be done
+vim.opt.formatoptions:remove { "c", "r", "o" }
 
 -- Disable some builtin vim plugins
 local default_plugins = {

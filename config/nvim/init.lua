@@ -5,6 +5,7 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
+require "plugins.impatient"
 require "core.options"
 require "core.keymaps"
 require "core.plugins"
@@ -28,7 +29,6 @@ require "plugins.fidget"
 require "plugins.flutter-tools"
 require "plugins.gitsigns"
 require "plugins.illuminate"
-require "plugins.impatient"
 require "plugins.indentline"
 require "plugins.lastplace"
 require "plugins.lualine"
