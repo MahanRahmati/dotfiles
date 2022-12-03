@@ -4,4 +4,14 @@ if not status_ok then
   return
 end
 
-scrollbar.setup {}
+scrollbar.setup {
+  hide_if_all_visible = true,
+  handlers = {
+    cursor = true,
+    diagnostic = true,
+    gitsigns = true,
+    handle = true,
+  },
+}
+
+require("scrollbar.handlers.gitsigns").setup()
