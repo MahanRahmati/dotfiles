@@ -166,6 +166,18 @@ return packer.startup(function(use)
     commit = "b39c50bcdf6199dddda56adc466c2bd9c951a960",
   }
 
+  -- A nvim-cmp source for math calculation.
+  use {
+    "hrsh7th/cmp-calc",
+    commit = "50792f34a628ea6eb31d2c90e8df174671e4e7a0",
+  }
+
+  -- A nvim-cmp source for vim's cmdline.
+  use {
+    "hrsh7th/cmp-cmdline",
+    commit = "23c51b2a3c00f6abc4e922dbd7c3b9aca6992063",
+  }
+
   ----------------------------------------------------------------------
   --                  Programming Languages Support                   --
   ----------------------------------------------------------------------

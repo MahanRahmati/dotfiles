@@ -11,7 +11,7 @@ local options = {
   colorcolumn = "80",
 
   -- A comma-separated list of options for Insert mode completion.
-  completeopt = { "menuone", "noselect" },
+  completeopt = {"menu", "menuone", "noselect" },
 
   -- Highlight the text line of the cursor with CursorLine |hl-CursorLine|.
   cursorline = true,
