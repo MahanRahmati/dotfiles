@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "f938e3b68675770471d5d03ffb595abdc9410b31",
+    commit = "ac132be91a6a8170788e7139964288e673b31c5e",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -84,7 +84,7 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "22129c714fcb0acd2cebba77980e6461a2c69d6b",
+    commit = "d8e2422fdbf4c011f91244911e0b776faa32c79c",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -201,7 +201,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "8e7b61e4aad6f4e9fcf39cb53d5f830e655ce7a9",
+    commit = "b6beb5e7d0b0cdace80f61468ec76a81baa286ca",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -358,7 +358,7 @@ return packer.startup(function(use)
   -- Delete Neovim buffers without losing window layout.
   use {
     "famiu/bufdelete.nvim",
-    commit = "3ebf4a98c380ec27b3066eaa5f1fdda332df1a9d",
+    commit = "f79e9d186b42fba5f1b1362006e7c70240db97a4",
   }
 
   ----------------------------------------------------------------------
