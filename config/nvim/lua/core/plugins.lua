@@ -48,7 +48,7 @@ return packer.startup(function(use)
   -- A use-package inspired plugin manager for Neovim.
   use {
     "wbthomason/packer.nvim",
-    commit = "dcd2f380bb49ec2dfe208f186236dd366434a4d5",
+    commit = "502a89f72ee5db3907dd0c7ee36287d49cfa56a0",
   }
 
   ----------------------------------------------------------------------
@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "ac132be91a6a8170788e7139964288e673b31c5e",
+    commit = "e96f639b608a596aa1ea8abb7e5b799cedbb0b1a",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -71,7 +71,7 @@ return packer.startup(function(use)
   -- and more via Lua.
   use {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "a67897283fdb0051ad5c72e840e1845e195b979b",
+    commit = "b3d2ebdb75cf1fa4290822b43dc31f61bd0023f8",
   }
 
   -- Standalone UI for LSP progress.
@@ -84,7 +84,7 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "d8e2422fdbf4c011f91244911e0b776faa32c79c",
+    commit = "2381f507189e3e10a43c3932a3ec6c2847180abc",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -201,7 +201,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "b6beb5e7d0b0cdace80f61468ec76a81baa286ca",
+    commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -217,13 +217,13 @@ return packer.startup(function(use)
   -- A snippet engine for Neovim written in Lua.
   use {
     "L3MON4D3/LuaSnip",
-    commit = "bc9ba285be806cd8f1db9e7dbd50e33a300e11c2",
+    commit = "5ce70a08442e97ac55ce14e71dd7d151ea5f4d8e",
   }
 
   -- Set of preconfigured snippets for different languages.
   use {
     "rafamadriz/friendly-snippets",
-    commit = "b4f857a1d94d05e747951b1e8cb1a6c567396898",
+    commit = "3a65fa52275d620eb0acee6f460dc86cfbba14de",
   }
 
   ----------------------------------------------------------------------
@@ -340,13 +340,13 @@ return packer.startup(function(use)
   -- A fancy, configurable, notification manager for Neovim.
   use {
     "rcarriga/nvim-notify",
-    commit = "859056ff7aec327255578c7a98ef02d0cd829f65",
+    commit = "e51722ee86bd8e1da02ae1dcd10a1d2e3ee7c062",
   }
 
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   use {
     "stevearc/dressing.nvim",
-    commit = "872cc4e5ea32295eb1102141a444d6d83b8f9c25",
+    commit = "ed44aa798ab07dc298f43f35c8e0c93a1b335abb",
   }
 
   -- Display a line as colorcolumn.
