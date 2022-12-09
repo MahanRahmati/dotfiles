@@ -48,7 +48,7 @@ return packer.startup(function(use)
   -- A use-package inspired plugin manager for Neovim.
   use {
     "wbthomason/packer.nvim",
-    commit = "502a89f72ee5db3907dd0c7ee36287d49cfa56a0",
+    commit = "64ae65fea395d8dc461e3884688f340dd43950ba",
   }
 
   ----------------------------------------------------------------------
@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "e96f639b608a596aa1ea8abb7e5b799cedbb0b1a",
+    commit = "b03ff434790b42b03a6c34b97ba0c5dd0afe5142",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -71,7 +71,7 @@ return packer.startup(function(use)
   -- and more via Lua.
   use {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "b3d2ebdb75cf1fa4290822b43dc31f61bd0023f8",
+    commit = "a0acd495f5edce6d4d5d3c6bd63d2319ccded9ed",
   }
 
   -- Standalone UI for LSP progress.
@@ -84,21 +84,21 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "2381f507189e3e10a43c3932a3ec6c2847180abc",
+    commit = "01464927921c97d4e5ddbd985c6d27b29b927c17",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   use {
     "williamboman/mason-lspconfig.nvim",
-    commit = "4674ed145fd0e72c9bfdb32b647f968b221bf2f2",
+    commit = "e8bd50153b94cc5bbfe3f59fc10ec7c4902dd526",
   }
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
   -- mason.nvim
   use {
     "jayp0521/mason-null-ls.nvim",
-    commit = "3058cabd8419cd9a9c96958db77b37cc512df666",
+    commit = "ab5d99619de2263508abb7fb05ef3a0f24a8d73d",
   }
 
   -- A pretty diagnostics list to help you solve all the trouble your code is
@@ -201,7 +201,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4953fdf73ef5ada18e1e969019803605f4f4a4ac",
+    commit = "35ad87384b3e47b3b5758d1642bbea08c70200c0",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -223,7 +223,7 @@ return packer.startup(function(use)
   -- Set of preconfigured snippets for different languages.
   use {
     "rafamadriz/friendly-snippets",
-    commit = "3a65fa52275d620eb0acee6f460dc86cfbba14de",
+    commit = "9b3e497cf0c3abcf73d791968a9768a22405fa13",
   }
 
   ----------------------------------------------------------------------
@@ -340,7 +340,7 @@ return packer.startup(function(use)
   -- A fancy, configurable, notification manager for Neovim.
   use {
     "rcarriga/nvim-notify",
-    commit = "e51722ee86bd8e1da02ae1dcd10a1d2e3ee7c062",
+    commit = "b005821516f1f37801a73067afd1cef2dbc4dfe8",
   }
 
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
@@ -388,7 +388,7 @@ return packer.startup(function(use)
   -- Rust dependency management for Cargo.toml.
   use {
     "Saecki/crates.nvim",
-    commit = "e11e27864428a68b25e43b833e9081e350a38d96",
+    commit = "22fcb7a623bab743fcae1532b272ae52a6e24fda",
   }
 
   ----------------------------------------------------------------------
@@ -408,7 +408,7 @@ return packer.startup(function(use)
   -- Add fancy sub-cursor to signcolumn to show your scroll or jump direction.
   use {
     "gen740/SmoothCursor.nvim",
-    commit = "abc2065f748f346c02bed19b3a075d561b20aa6f",
+    commit = "cdec4c0ca2b07142b96b7e8466d4c4f8f16a8048",
   }
 
   ----------------------------------------------------------------------
@@ -445,7 +445,7 @@ return packer.startup(function(use)
   -- Extensible scrollbar that shows diagnostics and search results.
   use {
     "petertriho/nvim-scrollbar",
-    commit = "2cb0a0b36a45118e075699bb3a884ab819a85256",
+    commit = "f45aecbba9c402282dfc99721e0ad4c08710907c",
   }
 
   ----------------------------------------------------------------------
@@ -455,7 +455,7 @@ return packer.startup(function(use)
   -- A minimalist autopairs for Neovim written by Lua.
   use {
     "windwp/nvim-autopairs",
-    commit = "99f696339266c22e7313d6a85a95bd538c3fc226",
+    commit = "9fa996123031b4cad100bd5afad04384a622c8a7",
   }
 
   -- Shows floating hover with the current function/block context.
@@ -505,7 +505,7 @@ return packer.startup(function(use)
   -- IndentLine replacement in Lua with more features and treesitter support.
   use {
     "lukas-reineke/indent-blankline.nvim",
-    commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6",
+    commit = "c4c203c3e8a595bc333abaf168fcb10c13ed5fb7",
   }
 
   ----------------------------------------------------------------------
