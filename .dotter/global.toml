@@ -1,0 +1,4 @@
+[helpers]
+
+[nvim.files]
+"config/nvim" = "~/.config/nvim"
