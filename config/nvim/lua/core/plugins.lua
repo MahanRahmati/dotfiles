@@ -48,7 +48,7 @@ return packer.startup(function(use)
   -- A use-package inspired plugin manager for Neovim.
   use {
     "wbthomason/packer.nvim",
-    commit = "64ae65fea395d8dc461e3884688f340dd43950ba",
+    commit = "dac4088c70f4337c6c40d1a2751266a324765797",
   }
 
   ----------------------------------------------------------------------
@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "e95c12cea141632d3502fad4fb1c9260a91a65f4",
+    commit = "973aa14d0992df82ff82f714d978a3eb8d676600",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -84,7 +84,7 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "2668bbd9427d9edddcaf42b0fd06be3a3cf373d8",
+    commit = "a1af30116e1bfbd3aa8048b396c324373415958f",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -201,7 +201,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "36c6826274ac85e04558e875a30e82aca676e3fe",
+    commit = "ee095abeac5842943a94a27c0ca75c61e7c614a2",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -223,7 +223,7 @@ return packer.startup(function(use)
   -- Set of preconfigured snippets for different languages.
   use {
     "rafamadriz/friendly-snippets",
-    commit = "2379c6245be10fbf0ebd057f0d1f89fe356bf8bc",
+    commit = "1a6a02350568d6830bcfa167c72f9b6e75e454ae",
   }
 
   ----------------------------------------------------------------------
@@ -243,7 +243,7 @@ return packer.startup(function(use)
   -- A simple and fast file explorer tree for Neovim.
   use {
     "nvim-tree/nvim-tree.lua",
-    commit = "87409bb4afd0093193e1364faa47327fbfdfca87",
+    commit = "29788cc32a153e42b2fe48344d315da8367fc6fa",
   }
 
   ----------------------------------------------------------------------
@@ -388,7 +388,7 @@ return packer.startup(function(use)
   -- Rust dependency management for Cargo.toml.
   use {
     "Saecki/crates.nvim",
-    commit = "22fcb7a623bab743fcae1532b272ae52a6e24fda",
+    commit = "a70328ae638e20548bcfc64eb9561101104b3008",
   }
 
   ----------------------------------------------------------------------
@@ -398,7 +398,7 @@ return packer.startup(function(use)
   -- Git integration: signs, hunk actions, blame, etc.
   use {
     "lewis6991/gitsigns.nvim",
-    commit = "683187285385a0dde6c62e2e6b16e325effdcf04",
+    commit = "71644a2907adc076f1c5e712f59d897f5197d5d6",
   }
 
   ----------------------------------------------------------------------
@@ -408,7 +408,7 @@ return packer.startup(function(use)
   -- Add fancy sub-cursor to signcolumn to show your scroll or jump direction.
   use {
     "gen740/SmoothCursor.nvim",
-    commit = "cdec4c0ca2b07142b96b7e8466d4c4f8f16a8048",
+    commit = "255035d1c58e7a51db83e4b22d22627540c1b87c",
   }
 
   ----------------------------------------------------------------------
@@ -455,13 +455,13 @@ return packer.startup(function(use)
   -- A minimalist autopairs for Neovim written by Lua.
   use {
     "windwp/nvim-autopairs",
-    commit = "9fa996123031b4cad100bd5afad04384a622c8a7",
+    commit = "b5994e6547d64f781cfca853a1aa6174d238fe0e",
   }
 
   -- Shows floating hover with the current function/block context.
   use {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "5d0367be7471f50c6b5f8338521b9e851b1d177d",
+    commit = "d28654b012d4c56beafec630ef7143275dff76f8",
   }
 
   -- Peek lines in a non-obtrusive way.
