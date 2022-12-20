@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "973aa14d0992df82ff82f714d978a3eb8d676600",
+    commit = "d597b0f3605f43526f1b6948c6d7ca2919ea32ac",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -71,7 +71,7 @@ return packer.startup(function(use)
   -- and more via Lua.
   use {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "5d8e925d31d8ef8462832308c016ac4ace17597a",
+    commit = "db1c7cb5f6d6f6036b7f8433bb3cfcbe985cb3d1",
   }
 
   -- Standalone UI for LSP progress.
@@ -84,14 +84,14 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "a1af30116e1bfbd3aa8048b396c324373415958f",
+    commit = "ca77c845f71b669a3378c976d1f7cf729aee2614",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   use {
     "williamboman/mason-lspconfig.nvim",
-    commit = "e8bd50153b94cc5bbfe3f59fc10ec7c4902dd526",
+    commit = "5bea0e851b8f48479d2cb927cd26733b4058b2b3",
   }
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -157,7 +157,7 @@ return packer.startup(function(use)
   -- A nvim-cmp source for nerdfont icons.
   use {
     "chrisgrieser/cmp-nerdfont",
-    commit = "3645eb1f9ca53dce3fa7a666b9b784c5d86d742f",
+    commit = "989baa81b3cb82890f232ae0b58dbea13ebf8f23",
   }
 
   -- A nvim-cmp source for look.
@@ -201,7 +201,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "ee095abeac5842943a94a27c0ca75c61e7c614a2",
+    commit = "6e37050e50e80e4324202a6b8fbac6c7fb90c546",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -243,7 +243,7 @@ return packer.startup(function(use)
   -- A simple and fast file explorer tree for Neovim.
   use {
     "nvim-tree/nvim-tree.lua",
-    commit = "29788cc32a153e42b2fe48344d315da8367fc6fa",
+    commit = "e14c2895b4f36a22001f7773244041c173dcf867",
   }
 
   ----------------------------------------------------------------------
@@ -398,7 +398,7 @@ return packer.startup(function(use)
   -- Git integration: signs, hunk actions, blame, etc.
   use {
     "lewis6991/gitsigns.nvim",
-    commit = "71644a2907adc076f1c5e712f59d897f5197d5d6",
+    commit = "2ab3bdf0a40bab53033048c6be75bda86316b55d",
   }
 
   ----------------------------------------------------------------------
