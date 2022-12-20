@@ -11,7 +11,7 @@ local options = {
   colorcolumn = "80",
 
   -- A comma-separated list of options for Insert mode completion.
-  completeopt = {"menu", "menuone", "noselect" },
+  completeopt = { "menu", "menuone", "noselect" },
 
   -- Highlight the text line of the cursor with CursorLine |hl-CursorLine|.
   cursorline = true,
@@ -162,3 +162,7 @@ local default_plugins = {
 for _, plugin in pairs(default_plugins) do
   vim.g["loaded_" .. plugin] = 1
 end
+
+--Remap space as leader key
+vim.keymap.set("", "<Space>", "<Nop>", { silent = true })
+vim.g.mapleader = " "

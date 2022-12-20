@@ -142,10 +142,6 @@ local n_mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
   u = { "<cmd>Telescope undo<cr>", "Undo" },
-  s = {
-    ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left><Left>",
-    "Replace current word",
-  },
 }
 
 local v_opts = {
@@ -164,7 +160,7 @@ local v_mappings = {
   },
 }
 
-local lsp_opts = {
+local normal_opts = {
   mode = "n",
   prefix = nil,
   buffer = nil,
@@ -173,27 +169,7 @@ local lsp_opts = {
   nowait = true,
 }
 
-local lsp_mappings = {
-  K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
-  g = {
-    d = { "<cmd>Telescope lsp_definitions<cr>", "Definition" },
-    r = { "<cmd>Telescope lsp_references<cr>", "References" },
-    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
-    I = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
-    l = { "<cmd>lua vim.diagnostics.open_float()<cr>", "Open Float" },
-  },
-}
-
-local search_normal_opts = {
-  mode = "n",
-  prefix = nil,
-  buffer = nil,
-  silent = true,
-  noremap = true,
-  nowait = true,
-}
-
-local search_visual_opts = {
+local visual_opts = {
   mode = "v",
   prefix = nil,
   buffer = nil,
@@ -202,13 +178,39 @@ local search_visual_opts = {
   nowait = true,
 }
 
-local search_mappings = {
+local normal_mappings = {
   ["/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
   ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
+  K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
+  g = {
+    d = { "<cmd>Telescope lsp_definitions<cr>", "Definition" },
+    r = { "<cmd>Telescope lsp_references<cr>", "References" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
+    I = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
+    l = { "<cmd>lua vim.diagnostics.open_float()<cr>", "Open Float" },
+  },
+  s = {
+    ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
+    "Replace current word",
+  },
+  ["<C-h>"] = { "<C-w>h", "Better window navigation" },
+  ["<C-j>"] = { "<C-w>j", "Better window navigation" },
+  ["<C-k>"] = { "<C-w>k", "Better window navigation" },
+  ["<C-l>"] = { "<C-w>l", "Better window navigation" },
+  ["<C-Up>"] = { ":resize -2<cr>", "Resize with arrows" },
+  ["<C-Down>"] = { ":resize +2<cr>", "Resize with arrows" },
+  ["<C-Left>"] = { ":vertical resize -2<cr>", "Resize with arrows" },
+  ["<C-Right>"] = { ":vertical resize -2<cr>", "Resize with arrows" },
+}
+
+local visual_mappings = {
+  ["/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
+  ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
+  J = { ":m '>+1<CR>gv=gv", "Move Line" },
+  K = { ":m '<-2<CR>gv=gv", "Move Line" },
 }
 
 which_key.register(n_mappings, n_opts)
 which_key.register(v_mappings, v_opts)
-which_key.register(lsp_mappings, lsp_opts)
-which_key.register(search_mappings, search_normal_opts)
-which_key.register(search_mappings, search_visual_opts)
+which_key.register(normal_mappings, normal_opts)
+which_key.register(visual_mappings, visual_opts)
