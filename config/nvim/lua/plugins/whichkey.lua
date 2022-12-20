@@ -17,7 +17,7 @@ which_key.setup {
 }
 
 local n_opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",
   prefix = "<leader>",
   buffer = nil,
   silent = true,
@@ -74,7 +74,6 @@ local n_mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     w = { "<cmd>Telescope grep_string<cr>", "Search Current Word" },
-    ["/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
   },
   g = {
     name = "Git",
@@ -143,10 +142,14 @@ local n_mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
   u = { "<cmd>Telescope undo<cr>", "Undo" },
+  s = {
+    ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left><Left>",
+    "Replace current word",
+  },
 }
 
 local v_opts = {
-  mode = "v", -- VISUAL mode
+  mode = "v",
   prefix = "<leader>",
   buffer = nil,
   silent = true,
@@ -162,7 +165,7 @@ local v_mappings = {
 }
 
 local lsp_opts = {
-  mode = "n", -- VISUAL mode
+  mode = "n",
   prefix = nil,
   buffer = nil,
   silent = true,
@@ -181,6 +184,31 @@ local lsp_mappings = {
   },
 }
 
+local search_normal_opts = {
+  mode = "n",
+  prefix = nil,
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
+}
+
+local search_visual_opts = {
+  mode = "v",
+  prefix = nil,
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
+}
+
+local search_mappings = {
+  ["/"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
+  ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
+}
+
 which_key.register(n_mappings, n_opts)
 which_key.register(v_mappings, v_opts)
 which_key.register(lsp_mappings, lsp_opts)
+which_key.register(search_mappings, search_normal_opts)
+which_key.register(search_mappings, search_visual_opts)
