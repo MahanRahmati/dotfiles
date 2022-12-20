@@ -84,7 +84,7 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "ca77c845f71b669a3378c976d1f7cf729aee2614",
+    commit = "f21b829357b8b4c4640c927e3921b6815ed90886",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -194,7 +194,7 @@ return packer.startup(function(use)
   -- Neovim Treesitter configurations and abstraction layer.
   use {
     "nvim-treesitter/nvim-treesitter",
-    commit = "6e37050e50e80e4324202a6b8fbac6c7fb90c546",
+    commit = "eedb7b9c69b13afe86461b0742266bb62b811ece",
   }
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
