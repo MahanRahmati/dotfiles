@@ -469,6 +469,13 @@ return packer.startup(function(use)
     commit = "ecced899435c6bcdd81becb5efc6d5751d0dc4c8",
   }
 
+  -- A telescope extension to visualize your undo tree and fuzzy-search changes
+  -- in it.
+  use {
+    "debugloop/telescope-undo.nvim",
+    commit = "fb6aae8b1d4c62d35fea34608ac1715275056fb6",
+  }
+
   ----------------------------------------------------------------------
   --                             Comment                              --
   ----------------------------------------------------------------------

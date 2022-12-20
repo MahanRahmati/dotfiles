@@ -7,6 +7,7 @@ end
 local actions = require "telescope.actions"
 
 telescope.load_extension "aerial"
+telescope.load_extension "undo"
 
 telescope.setup {
   defaults = {
@@ -44,5 +45,6 @@ telescope.setup {
   },
   extensions = {
     aerial = {},
+    undo = {},
   },
 }
