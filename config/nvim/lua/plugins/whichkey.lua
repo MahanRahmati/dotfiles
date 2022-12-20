@@ -16,7 +16,7 @@ which_key.setup {
   },
 }
 
-local opts = {
+local n_opts = {
   mode = "n", -- NORMAL mode
   prefix = "<leader>",
   buffer = nil,
@@ -25,7 +25,7 @@ local opts = {
   nowait = true,
 }
 
-local mappings = {
+local n_mappings = {
   a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
@@ -144,7 +144,7 @@ local mappings = {
   },
 }
 
-local vopts = {
+local v_opts = {
   mode = "v", -- VISUAL mode
   prefix = "<leader>",
   buffer = nil,
@@ -153,12 +153,33 @@ local vopts = {
   nowait = true,
 }
 
-local vmappings = {
+local v_mappings = {
   ["/"] = {
     '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
     "Comment",
   },
 }
 
-which_key.register(mappings, opts)
-which_key.register(vmappings, vopts)
+local lsp_opts = {
+  mode = "n", -- VISUAL mode
+  prefix = nil,
+  buffer = nil,
+  silent = true,
+  noremap = true,
+  nowait = true,
+}
+
+local lsp_mappings = {
+  K = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
+  g = {
+    d = { "<cmd>Telescope lsp_definitions<cr>", "Definition" },
+    r = { "<cmd>Telescope lsp_references<cr>", "References" },
+    D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
+    I = { "<cmd>lua vim.lsp.buf.implementation()<cr>", "Implementation" },
+    l = { "<cmd>lua vim.diagnostics.open_float()<cr>", "Open Float" },
+  },
+}
+
+which_key.register(n_mappings, n_opts)
+which_key.register(v_mappings, v_opts)
+which_key.register(lsp_mappings, lsp_opts)
