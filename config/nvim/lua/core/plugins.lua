@@ -101,13 +101,6 @@ return packer.startup(function(use)
     commit = "0fcc40394b8d0f525a8be587268cbfac3e70a5bc",
   }
 
-  -- A pretty diagnostics list to help you solve all the trouble your code is
-  -- causing.
-  use {
-    "folke/trouble.nvim",
-    commit = "897542f90050c3230856bc6e45de58b94c700bbf",
-  }
-
   ----------------------------------------------------------------------
   --                            Completion                            --
   ----------------------------------------------------------------------

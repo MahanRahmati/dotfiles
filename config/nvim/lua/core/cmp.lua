@@ -12,11 +12,6 @@ end
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
-local check_backspace = function()
-  local col = vim.fn.col "." - 1
-  return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
-end
-
 local kind_icons = {
   Text = "",
   Method = "m",
@@ -67,12 +62,8 @@ cmp.setup {
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expandable() then
-        luasnip.expand()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
-      elseif check_backspace() then
-        fallback()
       else
         fallback()
       end
@@ -148,7 +139,7 @@ cmp.setup {
     ghost_text = true,
   },
 }
-  -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
+-- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline({ "/", "?" }, {
   mapping = cmp.mapping.preset.cmdline(),
   sources = {
