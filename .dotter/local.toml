@@ -1,0 +1,6 @@
+includes = []
+packages = ["nvim", "wezterm"]
+
+[files]
+
+[variables]
