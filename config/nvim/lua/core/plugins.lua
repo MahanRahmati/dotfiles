@@ -58,7 +58,7 @@ return packer.startup(function(use)
   -- Quickstart configurations for the Neovim LSP client.
   use {
     "neovim/nvim-lspconfig",
-    commit = "d597b0f3605f43526f1b6948c6d7ca2919ea32ac",
+    commit = "5292d60976b3084a987bf5634150f6201830ac18",
   }
 
   -- A code outline window for skimming and quick navigation.
@@ -84,7 +84,7 @@ return packer.startup(function(use)
   -- formatters.
   use {
     "williamboman/mason.nvim",
-    commit = "f21b829357b8b4c4640c927e3921b6815ed90886",
+    commit = "dd04b4105e84620685c37efb6ca935d282e11465",
   }
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -108,7 +108,7 @@ return packer.startup(function(use)
   -- Completion plugin for Neovim
   use {
     "hrsh7th/nvim-cmp",
-    commit = "8bbaeda725d5db6e4e1be2867a64b43bf547cf06",
+    commit = "8868cf9a09e5f3c2612a22ccb82dcc6d9f0d0d35",
   }
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -210,7 +210,7 @@ return packer.startup(function(use)
   -- A snippet engine for Neovim written in Lua.
   use {
     "L3MON4D3/LuaSnip",
-    commit = "8b25e74761eead3dc47ce04b5e017fd23da7ad7e",
+    commit = "5570fd797eae0790affb54ea669a150cad76db5d",
   }
 
   -- Set of preconfigured snippets for different languages.
@@ -473,7 +473,7 @@ return packer.startup(function(use)
   -- in it.
   use {
     "debugloop/telescope-undo.nvim",
-    commit = "fb6aae8b1d4c62d35fea34608ac1715275056fb6",
+    commit = "3be830694f2d8c9705f6cf40a5ffee8a0c2aa6e5",
   }
 
   ----------------------------------------------------------------------
