@@ -41,7 +41,7 @@ return {
     selection_fg = base_16.base04,
   },
   font = wezterm.font "Hack Nerd Font",
-  font_size = 15,
+  font_size = 16,
   hide_tab_bar_if_only_one_tab = true,
   show_tab_index_in_tab_bar = false,
   window_background_opacity = 0.97,
