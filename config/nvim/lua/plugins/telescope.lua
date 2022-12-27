@@ -6,9 +6,6 @@ end
 
 local actions = require "telescope.actions"
 
-telescope.load_extension "aerial"
-telescope.load_extension "undo"
-
 telescope.setup {
   defaults = {
     path_display = { "smart" },
@@ -46,5 +43,14 @@ telescope.setup {
   extensions = {
     aerial = {},
     undo = {},
+    file_browser = {
+      collapse_dirs = true,
+      hijack_netrw = true,
+      hidden = true,
+    },
   },
 }
+
+telescope.load_extension "aerial"
+telescope.load_extension "undo"
+telescope.load_extension "file_browser"

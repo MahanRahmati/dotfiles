@@ -233,10 +233,10 @@ return packer.startup(function(use)
   --                          File Explorer                           --
   ----------------------------------------------------------------------
 
-  -- A simple and fast file explorer tree for Neovim.
+  -- File Browser extension for telescope.nvim.
   use {
-    "nvim-tree/nvim-tree.lua",
-    commit = "9e4c39572f631bb60ee15cb9d46e1daa9927a45e",
+    "nvim-telescope/telescope-file-browser.nvim",
+    commit = "b8581d00afa02c6bb4c947348e3cee62db65b119",
   }
 
   ----------------------------------------------------------------------
