@@ -53,8 +53,8 @@ local options = {
   -- If in Insert, Replace or Visual mode put a message on the last line.
   showmode = false,
 
-  -- Always display the line with tab page labels.
-  showtabline = 2,
+  -- Never display the line with tab page labels.
+  showtabline = 0,
 
   -- The minimal number of screen columns to keep to the left and to the right
   -- of the cursor if 'nowrap' is set.
