@@ -49,6 +49,6 @@ return {
     left = "0.25cell",
     right = "0.25cell",
     top = "0.25cell",
-    bottom = "0",
+    bottom = "0.25cell",
   },
 }
