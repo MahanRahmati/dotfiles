@@ -26,3 +26,30 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
   end,
 })
+
+-- Hide lualine in alpha
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  pattern = { "alpha" },
+  callback = function()
+    local status_ok, lualine = pcall(require, "lualine")
+    if status_ok then
+      lualine.hide()
+    end
+  end,
+})
+
+-- Show lualine in every other buffer
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+  pattern = { "*" },
+  callback = function()
+    if vim.bo.filetype ~= "alpha" then
+      local status_ok, lualine = pcall(require, "lualine")
+      if status_ok then
+        lualine.hide { unhide = true }
+        lualine.hide {
+          place = { "statusline" },
+        }
+      end
+    end
+  end,
+})
