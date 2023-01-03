@@ -41,7 +41,6 @@ telescope.setup {
     },
   },
   extensions = {
-    aerial = {},
     undo = {},
     file_browser = {
       collapse_dirs = true,
@@ -51,6 +50,5 @@ telescope.setup {
   },
 }
 
-telescope.load_extension "aerial"
 telescope.load_extension "undo"
 telescope.load_extension "file_browser"

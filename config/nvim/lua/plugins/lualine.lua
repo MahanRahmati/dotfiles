@@ -78,8 +78,8 @@ lualine.setup {
   sections = {},
   tabline = {
     lualine_a = { "mode" },
-    lualine_b = { "filename", branch },
-    lualine_c = { diff, diagnostics },
+    lualine_b = { "filename" },
+    lualine_c = { branch, diff, diagnostics },
     lualine_x = { "searchcount", lsp, filetype },
     lualine_y = { "location" },
     lualine_z = { "progress" },
