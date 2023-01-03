@@ -61,12 +61,6 @@ return packer.startup(function(use)
     commit = "42ca8ce0f2252be795da4789fadfa91f6c3f7464",
   }
 
-  -- A code outline window for skimming and quick navigation.
-  use {
-    "stevearc/aerial.nvim",
-    commit = "7e2fef6ec501a3fe8bc6c4051b3a1014dc098a06",
-  }
-
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   use {

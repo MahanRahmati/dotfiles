@@ -65,24 +65,6 @@ local filetype = {
   end,
 }
 
-local winbar_filetype = {
-  "filetype",
-  icon_only = true,
-  padding = { left = 1, right = 0 },
-  color = { bg = "#1e222a" },
-}
-
-local winbar_filename = {
-  "filename",
-  color = { bg = "#1e222a" },
-}
-
-local winbar_aerial = {
-  "aerial",
-  sep = " ❯ ",
-  color = { bg = "#1e222a" },
-}
-
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -93,27 +75,18 @@ lualine.setup {
     always_divide_middle = true,
     globalstatus = true,
   },
-  sections = {
+  sections = {},
+  tabline = {
     lualine_a = { "mode" },
-    lualine_b = { branch },
+    lualine_b = { "filename", branch },
     lualine_c = { diff, diagnostics },
     lualine_x = { "searchcount", lsp, filetype },
     lualine_y = { "location" },
     lualine_z = { "progress" },
   },
-  tabline = {},
-  winbar = {
-    lualine_b = {
-      winbar_filetype,
-      winbar_filename,
-      winbar_aerial,
-    },
-  },
-  inactive_winbar = {
-    lualine_c = {
-      winbar_filetype,
-      winbar_filename,
-    },
-  },
   extensions = {},
+}
+
+lualine.hide {
+  place = { "statusline" },
 }

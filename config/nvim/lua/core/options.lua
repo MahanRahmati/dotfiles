@@ -28,6 +28,10 @@ local options = {
   -- Ignore case in search patterns.
   ignorecase = true,
 
+  -- The value of this option influences when the last window will have a
+  -- status line
+  laststatus = 0,
+
   -- If on, Vim will wrap long lines at a character in 'breakat' rather than
   -- at the last character that fits on the screen.
   linebreak = true,
@@ -43,6 +47,10 @@ local options = {
 
   -- Show the line number relative to the line with the cursor.
   relativenumber = true,
+
+  -- Show the line and column number of the cursor position, separated by a
+  -- comma.
+  ruler = false,
 
   -- Minimal number of screen lines to keep above and below the cursor.
   scrolloff = 999,

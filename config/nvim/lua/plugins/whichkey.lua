@@ -59,7 +59,6 @@ local n_mappings = {
   },
   f = {
     name = "Find",
-    a = { "<cmd>Telescope aerial<cr>", "Aerial" },
     b = { "<cmd>Telescope buffers<cr>", "Buffers" },
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files<cr>", "Find Files" },
