@@ -8,9 +8,18 @@ local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
 
+local open_lazygit = function()
+  vim.cmd "lua _LAZYGIT_TOGGLE()"
+end
+
+local open_diagnostic = function()
+  vim.cmd "Telescope diagnostics"
+end
+
 local branch = {
   "b:gitsigns_head",
   icon = "",
+  on_click = open_lazygit,
 }
 
 local function diff_source()
@@ -30,6 +39,7 @@ local diff = {
   symbols = { added = " ", modified = " ", removed = " " },
   cond = hide_in_width,
   source = diff_source,
+  on_click = open_lazygit,
 }
 
 local diagnostics = {
@@ -41,6 +51,7 @@ local diagnostics = {
   update_in_insert = false,
   always_visible = false,
   cond = hide_in_width,
+  on_click = open_diagnostic,
 }
 
 local lsp = function()
@@ -83,7 +94,7 @@ lualine.setup {
     lualine_a = { "mode" },
     lualine_b = { "filename" },
     lualine_c = { branch, diff, diagnostics },
-    lualine_x = { "searchcount", lsp, filetype },
+    lualine_x = { lsp, filetype },
     lualine_y = { "location" },
     lualine_z = { "progress" },
   },
