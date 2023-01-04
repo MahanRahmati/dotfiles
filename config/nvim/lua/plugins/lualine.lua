@@ -71,12 +71,15 @@ lualine.setup {
     theme = "auto",
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
-    disabled_filetypes = { "alpha", "dashboard" },
+    disabled_filetypes = {
+      statusline = { "alpha" },
+      tabline = { "alpha" },
+      winbar = {},
+    },
     always_divide_middle = true,
     globalstatus = true,
   },
-  sections = {},
-  tabline = {
+  sections = {
     lualine_a = { "mode" },
     lualine_b = { "filename" },
     lualine_c = { branch, diff, diagnostics },
@@ -84,9 +87,6 @@ lualine.setup {
     lualine_y = { "location" },
     lualine_z = { "progress" },
   },
+  tabline = {},
   extensions = {},
-}
-
-lualine.hide {
-  place = { "statusline" },
 }
