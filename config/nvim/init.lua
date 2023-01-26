@@ -5,10 +5,9 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
-require "plugins.impatient"
+require "core.autocommands"
 require "core.options"
 require "core.plugins"
-require "core.autocommands"
 require "plugins.notify"
 require "core.colorscheme"
 require "core.cmp"
