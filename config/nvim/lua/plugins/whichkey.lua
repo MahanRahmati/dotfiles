@@ -214,6 +214,7 @@ local normal_mappings = {
   ["<Right>"] = { "<Right>zz", "Center Cursor" },
   ["<C-d>"] = { "<C-d>zz", "Center Cursor" },
   ["<C-u>"] = { "<C-u>zz", "Center Cursor" },
+  G = { "Gzz", "Center Cursor" },
 }
 
 local visual_mappings = {
@@ -237,6 +238,7 @@ local visual_mappings = {
   ["<Right>"] = { "<Right>zz", "Center Cursor" },
   ["<C-d>"] = { "<C-d>zz", "Center Cursor" },
   ["<C-u>"] = { "<C-u>zz", "Center Cursor" },
+  G = { "Gzz", "Center Cursor" },
 }
 
 which_key.register(n_mappings, n_opts)
