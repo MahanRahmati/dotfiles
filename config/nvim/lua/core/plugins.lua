@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "1d3203b4c39ea5ec63cf1271d9e3b14a91706897",
+    commit = "1e988250a0f52a68ddb72905d623405d634e9c5d",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -48,14 +48,14 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "e7303a1632c004ebd2dcd0be1aaa4354586c030b",
+    commit = "e9c49c79a0cde734fbd8b90d3d0c5509da5df1f0",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "c29f9a9f9b01528ca6a44cd14814f5af20778f7a",
+    commit = "422b9745143150e16cd3fe331c74f6737de75e72",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -72,7 +72,7 @@ lazy.setup {
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "11a95792a5be0f5a40bab5fc5b670e5b1399a939",
+    commit = "e7e2ef7031db8e0cfad7ad9916ec766ddd9dbb3b",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d508f9aceb8f1e3138aaea60ca5610a24d6561b6",
+    commit = "14a360c72d26f5ed00cda81c76d8895cec08bf47",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "3181cef8a5c6a71f263a28e61651233d7a7afeb2",
+    commit = "500981ff6cefc7343e3959ef0f939bd0bfd49ba9",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "046e4d3491baf664e0eef5231d28beb49333578b",
+    commit = "a6f7a1609addb4e57daa6bedc300f77f8d225ab7",
   },
 
   ----------------------------------------------------------------------
