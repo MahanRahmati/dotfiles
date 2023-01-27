@@ -198,23 +198,6 @@ local normal_mappings = {
   ["<C-Down>"] = { ":resize +2<cr>", "Resize with arrows" },
   ["<C-Left>"] = { ":vertical resize -2<cr>", "Resize with arrows" },
   ["<C-Right>"] = { ":vertical resize -2<cr>", "Resize with arrows" },
-  h = { "hzz", "Center Cursor" },
-  j = { "jzz", "Center Cursor" },
-  k = { "kzz", "Center Cursor" },
-  l = { "lzz", "Center Cursor" },
-  w = { "wzz", "Center Cursor" },
-  W = { "Wzz", "Center Cursor" },
-  b = { "bzz", "Center Cursor" },
-  B = { "Bzz", "Center Cursor" },
-  e = { "ezz", "Center Cursor" },
-  E = { "Ezz", "Center Cursor" },
-  ["<Left>"] = { "<Left>zz", "Center Cursor" },
-  ["<Down>"] = { "<Down>zz", "Center Cursor" },
-  ["<Up>"] = { "<Up>zz", "Center Cursor" },
-  ["<Right>"] = { "<Right>zz", "Center Cursor" },
-  ["<C-d>"] = { "<C-d>zz", "Center Cursor" },
-  ["<C-u>"] = { "<C-u>zz", "Center Cursor" },
-  G = { "Gzz", "Center Cursor" },
 }
 
 local visual_mappings = {
@@ -222,26 +205,39 @@ local visual_mappings = {
   ["?"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Fuzzy Find" },
   J = { ":m '>+1<CR>gv=gv", "Move Line" },
   K = { ":m '<-2<CR>gv=gv", "Move Line" },
-  h = { "hzz", "Center Cursor" },
-  j = { "jzz", "Center Cursor" },
-  k = { "kzz", "Center Cursor" },
-  l = { "lzz", "Center Cursor" },
-  w = { "wzz", "Center Cursor" },
+}
+
+local center_mappings = {
+  h = { "hzz", "Left" },
+  j = { "jzz", "Down" },
+  k = { "kzz", "Up" },
+  l = { "lzz", "Right" },
+  w = { "wzz", "Next word" },
   W = { "Wzz", "Center Cursor" },
-  b = { "bzz", "Center Cursor" },
+  b = { "bzz", "Previous word" },
   B = { "Bzz", "Center Cursor" },
-  e = { "ezz", "Center Cursor" },
+  e = { "ezz", "Next end of word" },
   E = { "Ezz", "Center Cursor" },
-  ["<Left>"] = { "<Left>zz", "Center Cursor" },
-  ["<Down>"] = { "<Down>zz", "Center Cursor" },
-  ["<Up>"] = { "<Up>zz", "Center Cursor" },
-  ["<Right>"] = { "<Right>zz", "Center Cursor" },
+  ["<Left>"] = { "<Left>zz", "Left" },
+  ["<Down>"] = { "<Down>zz", "Down" },
+  ["<Up>"] = { "<Up>zz", "Up" },
+  ["<Right>"] = { "<Right>zz", "Right" },
   ["<C-d>"] = { "<C-d>zz", "Center Cursor" },
   ["<C-u>"] = { "<C-u>zz", "Center Cursor" },
-  G = { "Gzz", "Center Cursor" },
+  ["$"] = { "$zz", "End of line" },
+  ["%"] = { "%zz", "Matching character: '()', '{}', ' ..." },
+  ["0"] = { "0zz", "Start of line" },
+  G = { "Gzz", "Last line" },
+  ["^"] = { "^zz", "Start of line (non-blank)" },
+  ["{"] = { "{zz", "Previous empty line" },
+  ["}"] = { "}zz", "Next empty line" },
+  ["<Enter>"] = { "<Enter>zz", "Center Cursor" },
+  ["<BS>"] = { "<BS>zz", "Center Cursor" },
 }
 
 which_key.register(n_mappings, n_opts)
 which_key.register(v_mappings, v_opts)
 which_key.register(normal_mappings, normal_opts)
 which_key.register(visual_mappings, visual_opts)
+which_key.register(center_mappings, normal_opts)
+which_key.register(center_mappings, visual_opts)
