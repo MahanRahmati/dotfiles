@@ -19,10 +19,6 @@ null_ls.setup {
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
 
-    -- Python
-    formatting.black.with { extra_args = { "--fast" } },
-    diagnostics.flake8,
-
     -- Lua
     formatting.stylua,
 
@@ -48,8 +44,6 @@ end
 mason_null_ls.setup {
   ensure_installed = {
     "prettier",
-    "black",
-    "flake8",
     "stylua",
     "fish",
     "shellcheck",

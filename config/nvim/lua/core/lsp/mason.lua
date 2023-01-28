@@ -6,7 +6,6 @@ end
 
 local servers = {
   "sumneko_lua",
-  "pyright",
   "bashls",
   "jsonls",
   "yamlls",

@@ -8,9 +8,8 @@ configs.setup {
   ensure_installed = {
     "lua",
     "dart",
-    "rust",
-    "python",
     "yaml",
+    "rust",
     "toml",
     "bash",
     "json",
