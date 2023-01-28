@@ -35,7 +35,7 @@ lazy.setup {
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "2ff0a4ed1985d04bae3f21915ee0b1be3932c164",
+    commit = "7b2b28e207a1df4ebb13c7dc0bd83f69b5403d71",
   },
 
   -- Standalone UI for LSP progress.
@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "e9c49c79a0cde734fbd8b90d3d0c5509da5df1f0",
+    commit = "2469bfc2538652cb0cf88c129f67d38e46a9cb59",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "14a360c72d26f5ed00cda81c76d8895cec08bf47",
+    commit = "5812ae26f749f38fb6a315bd0c3544e6ed9905d4",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "500981ff6cefc7343e3959ef0f939bd0bfd49ba9",
+    commit = "94f192cf5f0a1931b3035c2d8affdebec460968c",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -271,7 +271,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "3548363849878ef895ce54edda02421279b419d8",
+    commit = "a421d183ef37dfa13f51a5805bed2381aebf9080",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup {
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "c52162b7b34a21bdc476425a4ab562c2f7bf1bb1",
+    commit = "0d4fe37ba5285171f3729da955955205f3fa945b",
   },
 
   ----------------------------------------------------------------------
