@@ -26,7 +26,12 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 })
 
 -- Keep cursor center
-vim.api.nvim_create_autocmd({ "CursorMoved", "TextYankPost", "InsertEnter" }, {
+vim.api.nvim_create_autocmd({
+  "CursorMoved",
+  "TextYankPost",
+  "InsertEnter",
+  "InsertLeave",
+}, {
   pattern = { "*" },
   callback = function()
     vim.cmd [[ normal! zz]]
