@@ -99,5 +99,5 @@ lualine.setup {
     lualine_z = { "progress" },
   },
   tabline = {},
-  extensions = {},
+  extensions = { "toggleterm" },
 }

@@ -71,7 +71,8 @@ local n_mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
-    w = { "<cmd>Telescope grep_string<cr>", "Search Current Word" },
+    w = { "<cmd>Telescope grep_string<cr>", "Word" },
+    t = { "<cmd>TodoTelescope<cr>", "Todos" },
   },
   g = {
     name = "Git",

@@ -5,6 +5,9 @@ if not status_ok then
 end
 
 fidget.setup {
+  text = {
+    spinner = "dots_scrolling",
+  },
   window = {
     blend = 0,
   },

@@ -8,11 +8,9 @@ indent_blankline.setup {
   char = "▏",
   filetype_exclude = {
     "lspinfo",
-    "packer",
     "checkhealth",
     "help",
     "man",
-    "terminal",
     "",
   },
   show_trailing_blankline_indent = false,

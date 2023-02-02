@@ -31,6 +31,7 @@ vim.api.nvim_create_autocmd({
   "TextYankPost",
   "InsertEnter",
   "InsertLeave",
+  "TextChanged",
 }, {
   pattern = { "*" },
   callback = function()

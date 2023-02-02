@@ -5,7 +5,7 @@ if not status_ok then
 end
 
 npairs.setup {
-  check_ts = true,
+  check_ts = true, -- Use treesitter to check for a pair.
 }
 
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
