@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "07de1d12940a6580c125720d37e26abc318f778a",
+    commit = "24846a00941ec020c8addc7f52040a1b2fc12174",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -142,7 +142,7 @@ lazy.setup {
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "ae0be3cef35c0cb41d6c7f814a19b3402d50fd7a",
+    commit = "f84836a906fac21e9fb096ce15478051cd7df589",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4f291bdaf7c6ad4de1636852c6f0b409e3e72d54",
+    commit = "69867ffe7e05559fdb055f6b5a2589fc6bee1070",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "94f192cf5f0a1931b3035c2d8affdebec460968c",
+    commit = "d404ec306bfa4cdb0c3605dbb17e8a93a9597337",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -315,7 +315,7 @@ lazy.setup {
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "a54e6c471ce1cd8ef8357e34598a28a955297131",
+    commit = "19aad0f41f47affbba1274f05e3c067e6d718e1e",
   },
 
   ----------------------------------------------------------------------
@@ -335,7 +335,7 @@ lazy.setup {
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "c2e9929c3ac40776c30bc7b328a7dff98756050a",
+    commit = "1bca9122ddc4bf4c6573402bf6686fc084470a7e",
   },
 
   ----------------------------------------------------------------------
