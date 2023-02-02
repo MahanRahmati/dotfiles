@@ -4,15 +4,6 @@ if not status_ok then
   return
 end
 
-local servers = {
-  "sumneko_lua",
-  "bashls",
-  "jsonls",
-  "yamlls",
-  "rust_analyzer",
-  "taplo",
-}
-
 mason.setup {
   ui = {
     border = "rounded",
@@ -30,6 +21,15 @@ if not mason_lspconfig_status_ok then
   vim.notify("Failed to load mason-lspconfig", "error")
   return
 end
+
+local servers = {
+  "sumneko_lua",
+  "bashls",
+  "jsonls",
+  "yamlls",
+  "rust_analyzer",
+  "taplo",
+}
 
 mason_lspconfig.setup {
   ensure_installed = servers,
