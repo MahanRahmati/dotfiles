@@ -234,6 +234,7 @@ local center_mappings = {
   ["}"] = { "}zz", "Next empty line" },
   ["<Enter>"] = { "<Enter>zz", "Center Cursor" },
   ["<BS>"] = { "<BS>zz", "Center Cursor" },
+  ["<ESC>"] = { "<ESC>zz", "Center Cursor" },
 }
 
 which_key.register(n_mappings, n_opts)
