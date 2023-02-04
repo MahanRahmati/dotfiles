@@ -12,6 +12,10 @@ flutter_tools.setup {
     border = "rounded",
     notification_style = "plugin",
   },
+  dev_log = {
+    enabled = true,
+    open_cmd = "15new",
+  },
   lsp = {
     color = {
       enabled = true,
