@@ -99,5 +99,6 @@ lualine.setup {
     lualine_z = { "progress" },
   },
   tabline = {},
-  extensions = { "toggleterm" },
+  winbar = {},
+  extensions = { "man", "toggleterm" },
 }

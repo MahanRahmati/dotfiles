@@ -4,7 +4,7 @@ local options = {
   clipboard = "unnamedplus",
 
   -- Number of screen lines to use for the command-line.
-  cmdheight = 1,
+  cmdheight = 0,
 
   -- 'colorcolumn' is a comma-separated list of screen columns that are
   -- highlighted with ColorColumn.
