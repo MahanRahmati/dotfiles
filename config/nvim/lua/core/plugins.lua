@@ -35,7 +35,7 @@ lazy.setup {
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "c3e678110d5f31854c6575cf4bda3b82f3d4a884",
+    commit = "8f5d730021497233c39d3adbf4b8043d4be163f8",
   },
 
   -- Standalone UI for LSP progress.
@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "24846a00941ec020c8addc7f52040a1b2fc12174",
+    commit = "222bf1136215634d084f189d31780618876d06e3",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -72,7 +72,7 @@ lazy.setup {
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "e7e2ef7031db8e0cfad7ad9916ec766ddd9dbb3b",
+    commit = "cfafe0a1ca8933f7b7968a287d39904156f2c57d",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -108,7 +108,7 @@ lazy.setup {
   -- A nvim-cmp source for displaying function signatures.
   {
     "hrsh7th/cmp-nvim-lsp-signature-help",
-    commit = "d2768cb1b83de649d57d967085fe73c5e01f8fd7",
+    commit = "3d8912ebeb56e5ae08ef0906e3a54de1c66b92f1",
   },
 
   -- A nvim-cmp source for nerdfont icons.
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "69867ffe7e05559fdb055f6b5a2589fc6bee1070",
+    commit = "3fa887eaaef03960a87cdfec0eda508d4bfb97d8",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -271,7 +271,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "a421d183ef37dfa13f51a5805bed2381aebf9080",
+    commit = "2b96193abe4372e18e4f4533895a42a466d53c17",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup {
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "0d4fe37ba5285171f3729da955955205f3fa945b",
+    commit = "ec4742a7eebf68bec663041d359b95637242b5c3",
   },
 
   ----------------------------------------------------------------------
