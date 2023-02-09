@@ -28,34 +28,34 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "902d6aa31450d26e11bedcbef8af5b6fe2e1ffe8",
+    commit = "aeb76066212b09c7c01a3abb42fe82f0130ef402",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "8f5d730021497233c39d3adbf4b8043d4be163f8",
+    commit = "60b4a7167c79c7d04d1ff48b55f2235bf58158a7",
   },
 
   -- Standalone UI for LSP progress.
   {
     "j-hui/fidget.nvim",
-    commit = "44585a0c0085765195e6961c15529ba6c5a2a13b",
+    commit = "9dc6d15fdb877b2fb09ea0ba2dfde9beccb5965a",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "222bf1136215634d084f189d31780618876d06e3",
+    commit = "0efc7ceb29a933317e625544d3eb160e7c46dc81",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "53f3a8bdcb77d4a95b082fd57e12173f353c6c3e",
+    commit = "7a97a77eee486ae152d2c559a459eda7c8aa12aa",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -78,7 +78,7 @@ lazy.setup {
   -- A nvim-cmp source for Neovim builtin LSP client.
   {
     "hrsh7th/cmp-nvim-lsp",
-    commit = "59224771f91b86d1de12570b4070fe4ad7cd1eeb",
+    commit = "0e6b2ed705ddcff9738ec4ea838141654f12eeef",
   },
 
   -- A nvim-cmp source for luasnip completion.
@@ -142,13 +142,13 @@ lazy.setup {
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "f84836a906fac21e9fb096ce15478051cd7df589",
+    commit = "d67caa7dd17eccb89bfda1c0657d0723e339ef60",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
   {
     "simrat39/rust-tools.nvim",
-    commit = "b297167d9e01accc9b9afe872ce91e791df2dde0",
+    commit = "bd1aa99ffb911a1cf99b3fcf3b44c0391c57e3ef",
   },
 
   ----------------------------------------------------------------------
@@ -158,13 +158,13 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "3fa887eaaef03960a87cdfec0eda508d4bfb97d8",
+    commit = "f6df07be122de665fb363476cc3680c90f5bdf05",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "ad56e6234bf42fb7f7e4dccc7752e25abd5ec80e",
+    commit = "abccb2313b581c920b1117b60f91d00f0f469e17",
   },
 
   ----------------------------------------------------------------------
@@ -174,7 +174,7 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "d404ec306bfa4cdb0c3605dbb17e8a93a9597337",
+    commit = "9bff06b570df29434a88f9c6a9cea3b21ca17208",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -261,7 +261,7 @@ lazy.setup {
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "21a0f2520ad3a7c32c0822f943368dc063a569fb",
+    commit = "f4aa42b68e62efed26b92b86b844336cadaa0096",
   },
 
   ----------------------------------------------------------------------
@@ -271,7 +271,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "2b96193abe4372e18e4f4533895a42a466d53c17",
+    commit = "ade34ca7d19543904b28b903e606be8930fb9ee3",
   },
 
   ----------------------------------------------------------------------
@@ -293,7 +293,7 @@ lazy.setup {
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "4436d6f41e2f6b8ada57588acd1a9f8b3d21453c",
+    commit = "db716a0f1279f79a886c0e0b6ab3c3d5ffdb42fe",
   },
 
   -- Display a line as colorcolumn.
@@ -392,7 +392,7 @@ lazy.setup {
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "5a3523ddb573804752de6c021c5cb82e267b79ca",
+    commit = "45ae3122a4c7744db41298b41f9f5a3f092123e6",
   },
 
   -- Shows floating hover with the current function/block context.
