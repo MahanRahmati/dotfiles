@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "aeb76066212b09c7c01a3abb42fe82f0130ef402",
+    commit = "b5bb6e3d7c775c241726d1ef564902263e93e2cd",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "0efc7ceb29a933317e625544d3eb160e7c46dc81",
+    commit = "14ae1ca58440b158a0a35cf90773013caddf788a",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -164,7 +164,7 @@ lazy.setup {
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "abccb2313b581c920b1117b60f91d00f0f469e17",
+    commit = "90821ad682aac189cd0a38fd83fc96f0cbcc5d29",
   },
 
   ----------------------------------------------------------------------
@@ -180,7 +180,7 @@ lazy.setup {
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "a6f7a1609addb4e57daa6bedc300f77f8d225ab7",
+    commit = "80597f3ea824946c87fd29f82b5ed4f24ef473f3",
   },
 
   ----------------------------------------------------------------------
@@ -251,7 +251,7 @@ lazy.setup {
   -- Highlight the word under the cursor.
   {
     "RRethy/vim-illuminate",
-    commit = "d6ca7f77eeaf61b3e6ce9f0e5a978d606df44298",
+    commit = "49062ab1dd8fec91833a69f0a1344223dd59d643",
   },
 
   ----------------------------------------------------------------------
@@ -261,7 +261,7 @@ lazy.setup {
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "f4aa42b68e62efed26b92b86b844336cadaa0096",
+    commit = "0349fc0aa0c1d940ec3be395cb110483b416bc84",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup {
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "ec4742a7eebf68bec663041d359b95637242b5c3",
+    commit = "f29f0b22fd66c910b892aae3bc18a4872c002738",
   },
 
   ----------------------------------------------------------------------
