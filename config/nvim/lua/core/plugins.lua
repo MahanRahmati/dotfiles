@@ -28,14 +28,14 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "b5bb6e3d7c775c241726d1ef564902263e93e2cd",
+    commit = "27e6eb27f31d1ef41427e1008029284c02dc856f",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "60b4a7167c79c7d04d1ff48b55f2235bf58158a7",
+    commit = "ab4e9261843236d773f49a23fcfb3d2167a3c500",
   },
 
   -- Standalone UI for LSP progress.
@@ -48,14 +48,14 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "14ae1ca58440b158a0a35cf90773013caddf788a",
+    commit = "47e9f6bc4c5bb3d6453949f07b8280c725ef7490",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "7a97a77eee486ae152d2c559a459eda7c8aa12aa",
+    commit = "d2d55255a0295ba0a75ef2dd5535e4c89c46e773",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -72,7 +72,7 @@ lazy.setup {
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "cfafe0a1ca8933f7b7968a287d39904156f2c57d",
+    commit = "aae0c3e4e778ca4be6fabc52e388cbd5b844b7a5",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -261,7 +261,7 @@ lazy.setup {
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "0349fc0aa0c1d940ec3be395cb110483b416bc84",
+    commit = "da15a10f8875fed409241816bacd9378c5696449",
   },
 
   ----------------------------------------------------------------------
@@ -271,7 +271,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "ade34ca7d19543904b28b903e606be8930fb9ee3",
+    commit = "4475fe5ffd32360fb6c351abbfee8d7529a511e6",
   },
 
   ----------------------------------------------------------------------
@@ -335,7 +335,7 @@ lazy.setup {
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "1bca9122ddc4bf4c6573402bf6686fc084470a7e",
+    commit = "3fc7ddac13ddf65914a733ef074317c4c72ef05b",
   },
 
   ----------------------------------------------------------------------
@@ -366,7 +366,7 @@ lazy.setup {
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "684e96c5e8477f1ee9b3f2e9a12d802fd12c5531",
+    commit = "5224c261825263f46f6771f1b644cae33cd06995",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
