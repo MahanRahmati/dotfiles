@@ -39,3 +39,11 @@ vim.api.nvim_create_autocmd({
     vim.cmd [[ normal! zz]]
   end,
 })
+
+-- Auto format
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*",
+  callback = function()
+    vim.lsp.buf.format { async = true }
+  end,
+})

@@ -420,12 +420,6 @@ lazy.setup {
     commit = "b5e31b358095074b60d87690bd1dc0a020a2afab",
   },
 
-  -- Extremely simple auto saving on InsertLeave & TextChanged.
-  {
-    "aidenlangley/auto-save.nvim",
-    commit = "9e7fe4608432b1736132cdeb0edfc3d3c56ca60f",
-  },
-
   ----------------------------------------------------------------------
   --                             Comment                              --
   ----------------------------------------------------------------------
@@ -446,17 +440,6 @@ lazy.setup {
   {
     "s1n7ax/nvim-comment-frame",
     commit = "7a7d34ee7a236a89ffe5674bf794358ee12a7df8",
-  },
-
-  ----------------------------------------------------------------------
-  --                            Formatting                            --
-  ----------------------------------------------------------------------
-
-  -- Does no formatting by itself, but sets up an autocmd to format on save,
-  -- preferring null-ls over LSP client formatting.
-  {
-    "aidenlangley/auto-format.nvim",
-    commit = "42d20826d5c56f5592e8872e3170120fb68c1388",
   },
 
   ----------------------------------------------------------------------
