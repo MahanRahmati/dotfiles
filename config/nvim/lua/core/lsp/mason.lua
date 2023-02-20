@@ -23,7 +23,7 @@ if not mason_lspconfig_status_ok then
 end
 
 local servers = {
-  "sumneko_lua",
+  "lua_ls",
   "bashls",
   "jsonls",
   "yamlls",
