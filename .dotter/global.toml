@@ -1,5 +1,9 @@
 [helpers]
 
+
+[fish.files]
+"config/fish" = "~/.config/fish"
+
 [nvim.files]
 "config/nvim" = "~/.config/nvim"
 

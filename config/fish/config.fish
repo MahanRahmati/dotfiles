@@ -11,10 +11,29 @@ set fish_greeting
 fish_add_path .local/bin
 fish_add_path .cargo/bin
 fish_add_path .pub-cache/bin
+fish_add_path /usr/local/bin/
+
+switch (uname)
+    case Darwin
+        fish_add_path /opt/homebrew/bin
+        fish_add_path /opt/homebrew/opt/openjdk/bin
+        fish_add_path /opt/homebrew/opt/openjdk@11/bin
+        fish_add_path /opt/homebrew/opt/mbedtls@2/bin
+    case '*'
+
+end
+
 
 # Neovim
 set -x EDITOR nvim
 set -x VISUAL nvim
+
+switch (uname)
+    case Darwin
+        set -x CHROME_EXECUTABLE '/Applications/Chromium.app/Contents/MacOS/Chromium'
+    case '*'
+
+end
 
 #    ___     __ _
 #   /   |   / /(_)____ _ _____ ___   _____
@@ -86,7 +105,7 @@ end
 
 function prompt_color_for_status
     if test $argv[1] -eq 0
-        echo magenta
+        echo cyan
     else
         echo red
     end
@@ -95,7 +114,7 @@ end
 function fish_prompt
     set -l last_status $status
 
-    print_in_color '['(prompt_pwd)']' cyan
+    print_in_color '['(prompt_pwd)']' (prompt_color_for_status $last_status)
 
-    print_in_color ' ❯❯❯ ' (prompt_color_for_status $last_status)
+    printf ':'
 end
