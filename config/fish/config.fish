@@ -23,10 +23,13 @@ switch (uname)
 
 end
 
-
 # Neovim
-set -x EDITOR nvim
-set -x VISUAL nvim
+if type -q nvim
+    set -x EDITOR nvim
+    set -x VISUAL nvim
+else
+    echo "Install Neovim"
+end
 
 switch (uname)
     case Darwin
@@ -46,14 +49,27 @@ end
 alias ..='cd ..'
 alias cd..='cd ..'
 
-# Color
-alias ls='exa --icons --color=always -a --group-directories-first'
-alias ll='exa --icons --color=always -al --group-directories-first'
-alias grep='rg --color=auto'
+# Exa
+if type -q exa
+    alias ls='exa --icons --color=always -a --group-directories-first'
+    alias ll='exa --icons --color=always -al --group-directories-first'
+else
+    echo "Install Exa"
+end
+
+# Ripgrep
+if type -q rg
+    alias grep='rg --color=auto'
+else
+    echo "Install Ripgrep"
+end
 
 # Others
 alias q='exit'
-alias v='nvim'
+
+if type -q nvim
+    alias v='nvim'
+end
 
 #    ______                     __   _
 #   / ____/__  __ ____   _____ / /_ (_)____   ____   _____
@@ -66,19 +82,31 @@ alias v='nvim'
 function cd
     if [ -n $argv[1] ]
         builtin cd $argv[1]
-        and exa --icons --color=always -a --group-directories-first
+        if type -q exa
+            and exa --icons --color=always -a --group-directories-first
+        else
+            and ls
+        end
     else
         builtin cd ~
-        and exa --icons --color=always -a --group-directories-first
+        if type -q exa
+            and exa --icons --color=always -a --group-directories-first
+        else
+            and ls
+        end
     end
 end
 
 # Git Clone
-function g
-    git clone $argv[1]
-    and set git_folder (echo $argv[1] | awk -F '/' '{ print $5 }' | awk -F '.git' '{ print $1 }')
-    and mv $git_folder $HOME/Development/Git/
-    and cd $HOME/Development/Git/$git_folder
+if type -q git
+    function g
+        git clone $argv[1]
+        and set git_folder (echo $argv[1] | awk -F '/' '{ print $5 }' | awk -F '.git' '{ print $1 }')
+        and mv $git_folder $HOME/Development/Git/
+        and cd $HOME/Development/Git/$git_folder
+    end
+else
+    echo "Install Git"
 end
 
 #    ____                                  __
@@ -90,7 +118,6 @@ end
 #
 
 set fish_prompt_pwd_dir_length 1
-
 set fish_color_command green
 set fish_color_param $fish_color_normal
 
