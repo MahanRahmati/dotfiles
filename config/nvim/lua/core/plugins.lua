@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "69e2fe3d638566a812c39bc4ea1980f7b833e2fc",
+    commit = "62856b20751b748841b0f3ec5a10b1e2f6a6dbc9",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -72,7 +72,7 @@ lazy.setup {
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "7cd39409e7378fa711624687d3b430b8a56c3af9",
+    commit = "7a3b1e76f74934b12fda82158237c6ad8bfd3d40",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "598b878a2b44e7e7a981acc5fc99bf8273cd1d0f",
+    commit = "b401b7423d18c78371c5ff1a5f8d3c14292b2047",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "d33cf7de14eea209b8ed4a7edaed72f0b8cedb30",
+    commit = "f7c845749aba6096f041a73a26ba64f3817bab99",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -293,7 +293,7 @@ lazy.setup {
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "db716a0f1279f79a886c0e0b6ab3c3d5ffdb42fe",
+    commit = "5f44f829481640be0f96759c965ae22a3bcaf7ce",
   },
 
   -- Display a line as colorcolumn.
@@ -392,7 +392,7 @@ lazy.setup {
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "d80d93f182262a91674f472e90488f67a7230fe7",
+    commit = "6a5faeabdbcc86cfbf1561ae430a451a72126e81",
   },
 
   -- Shows floating hover with the current function/block context.

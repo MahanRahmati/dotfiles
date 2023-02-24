@@ -1,5 +1,5 @@
 includes = []
-packages = ["fish", "nvim", "wezterm"]
+packages = ["bin", "fish", "nvim", "wezterm"]
 
 [files]
 

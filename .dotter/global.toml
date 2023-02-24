@@ -1,5 +1,7 @@
 [helpers]
 
+[bin.files]
+"local/bin" = "~/.local/bin/"
 
 [fish.files]
 "config/fish" = "~/.config/fish"
