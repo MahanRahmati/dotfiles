@@ -48,14 +48,14 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "01dfdfd36be77cb1195b60d580315bf4e2d8e62c",
+    commit = "1c23135467af667c61aef72a7c08b9a032c50a52",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "93e58e100f37ef4fb0f897deeed20599dae9d128",
+    commit = "3f9c0ea157e88b08e2d11ec65002eeb6e421f0da",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -72,7 +72,7 @@ lazy.setup {
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "7a3b1e76f74934b12fda82158237c6ad8bfd3d40",
+    commit = "01f697a68905f9dcae70960a9eb013695a17f9a2",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -142,7 +142,7 @@ lazy.setup {
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "d67caa7dd17eccb89bfda1c0657d0723e339ef60",
+    commit = "4c3c440f1a87aa8db7020d7393ae9924b168953e",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "b401b7423d18c78371c5ff1a5f8d3c14292b2047",
+    commit = "f95ffd09ed35880c3a46ad2b968df361fa592a76",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -190,7 +190,7 @@ lazy.setup {
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "a486ac3e8fb2198f3636da1927ed57a28836fbd8",
+    commit = "a3f17d3baf70df58b9d3544ea30abe52a7a832c2",
   },
 
   ----------------------------------------------------------------------
@@ -210,7 +210,7 @@ lazy.setup {
   -- An all in one Neovim plugin that provides superior project management.
   {
     "ahmedkhalf/project.nvim",
-    commit = "685bc8e3890d2feb07ccf919522c97f7d33b94e4",
+    commit = "1c2e9c93c7c85126c2197f5e770054f53b1926fb",
   },
 
   ----------------------------------------------------------------------
@@ -221,7 +221,7 @@ lazy.setup {
   -- dependencies.
   {
     "NvChad/nvim-colorizer.lua",
-    commit = "550332c5791c6cad6fc7a80c26104de1d00b4692",
+    commit = "dde3084106a70b9a79d48f426f6d6fec6fd203f7",
   },
 
   ----------------------------------------------------------------------
@@ -271,7 +271,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "4709a504d2cd2680fb511675e64ef2790d491d36",
+    commit = "c2c2317f356c8b7da0252f5da758f71bb60bb6b2",
   },
 
   ----------------------------------------------------------------------
@@ -315,7 +315,7 @@ lazy.setup {
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "1f47ea9cda973af3f1742a71841f3914f5b1469f",
+    commit = "31d38d11390bcd35a568fcc65a79b7d6ec89de62",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup {
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "f388995990aba04cfdc7c3ab870c33e280601109",
+    commit = "76b71f74ce002119fce322df13bd21cc52c1d112",
   },
 
   ----------------------------------------------------------------------
@@ -366,13 +366,13 @@ lazy.setup {
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "5224c261825263f46f6771f1b644cae33cd06995",
+    commit = "6e190f4732a0f2fc517036f2fcf7727893bc5329",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
   {
     "max397574/better-escape.nvim",
-    commit = "5cd64c0afb82688748d415710d0187df5bdb96f9",
+    commit = "426d29708064d5b1bfbb040424651c92af1f3f64",
   },
 
   ----------------------------------------------------------------------
