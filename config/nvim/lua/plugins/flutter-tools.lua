@@ -24,3 +24,11 @@ flutter_tools.setup {
     capabilities = capabilities,
   },
 }
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.dart" },
+  callback = function()
+    vim.cmd [[lua vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })]]
+    vim.cmd [[lua vim.lsp.buf.code_action({ context = { only = { 'source.fixAll' } }, apply = true })]]
+  end,
+})
