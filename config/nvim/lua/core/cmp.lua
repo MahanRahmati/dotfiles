@@ -40,6 +40,17 @@ local kind_icons = {
   TypeParameter = "",
 }
 
+local has_words_before = function()
+  unpack = unpack or table.unpack
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0
+    and vim.api
+        .nvim_buf_get_lines(0, line - 1, line, true)[1]
+        :sub(col, col)
+        :match "%s"
+      == nil
+end
+
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -64,13 +75,12 @@ cmp.setup {
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
+      elseif has_words_before() then
+        cmp.complete()
       else
         fallback()
       end
-    end, {
-      "i",
-      "s",
-    }),
+    end, { "i", "s" }),
     ["<S-Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -79,10 +89,7 @@ cmp.setup {
       else
         fallback()
       end
-    end, {
-      "i",
-      "s",
-    }),
+    end, { "i", "s" }),
   },
   formatting = {
     fields = { "kind", "abbr", "menu" },
@@ -91,7 +98,7 @@ cmp.setup {
       vim_item.menu = ({
         nvim_lsp_signature_help = "[LSP]",
         nvim_lsp = "[LSP]",
-        nvim_lua = "[NVIM-Lua]",
+        nvim_lua = "[Lua]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
@@ -103,13 +110,13 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp_signature_help" },
-    { name = "calc" },
+    { name = "luasnip" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
-    { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
     { name = "crates" },
+    { name = "calc" },
     { name = "nerdfont" },
     {
       name = "look",
