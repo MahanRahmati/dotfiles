@@ -16,6 +16,10 @@ local open_diagnostic = function()
   vim.cmd "Telescope diagnostics"
 end
 
+local open_lsp_info = function()
+  vim.cmd "LspInfo"
+end
+
 local branch = {
   "b:gitsigns_head",
   icon = "",
@@ -44,7 +48,7 @@ local diff = {
 
 local diagnostics = {
   "diagnostics",
-  sources = { "nvim_diagnostic" },
+  sources = { "nvim_lsp", "nvim_diagnostic", "nvim_workspace_diagnostic" },
   sections = { "error", "warn", "info", "hint" },
   symbols = { error = " ", warn = " ", info = " ", hint = " " },
   colored = false,
@@ -54,26 +58,12 @@ local diagnostics = {
   on_click = open_diagnostic,
 }
 
-local lsp = function()
-  local clients = vim.lsp.get_active_clients()
-  if next(clients) == nil then
-    return ""
-  end
-  local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-  for _, client in ipairs(clients) do
-    local filetypes = client.config.filetypes
-    if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-      return "漣" .. client.name
-    end
-  end
-  return ""
-end
-
 local filetype = {
   "filetype",
   fmt = function(str)
     return str:gsub("^%l", str.upper)
   end,
+  on_click = open_lsp_info,
 }
 
 lualine.setup {
@@ -92,9 +82,9 @@ lualine.setup {
   },
   sections = {
     lualine_a = { "mode" },
-    lualine_b = { "filename" },
-    lualine_c = { branch, diff, diagnostics },
-    lualine_x = { lsp, filetype },
+    lualine_b = { branch },
+    lualine_c = { diff, diagnostics },
+    lualine_x = { filetype },
     lualine_y = { "location" },
     lualine_z = { "progress" },
   },
