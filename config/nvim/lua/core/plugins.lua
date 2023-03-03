@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "62856b20751b748841b0f3ec5a10b1e2f6a6dbc9",
+    commit = "e0926b6abc84578f44fb8917d61cdee22188639e",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -48,21 +48,21 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "1c23135467af667c61aef72a7c08b9a032c50a52",
+    commit = "7175340eee0b1b4a86b38794d8c21fdcfa01376b",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "3f9c0ea157e88b08e2d11ec65002eeb6e421f0da",
+    commit = "e4badf7984f7a5f0ac7dc10657dbedbd99a82f94",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
   -- mason.nvim
   {
     "jayp0521/mason-null-ls.nvim",
-    commit = "bee43f4911548445f85d2ce123c4422e98d1fb31",
+    commit = "c05de94bfedfa42060b09037d5faac4025c9374d",
   },
 
   ----------------------------------------------------------------------
@@ -142,7 +142,7 @@ lazy.setup {
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "4c3c440f1a87aa8db7020d7393ae9924b168953e",
+    commit = "5a32382da12dc129f2f5893dfbab4f369a081a5b",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,13 +158,13 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "f95ffd09ed35880c3a46ad2b968df361fa592a76",
+    commit = "f225f53510986997ae843b2a825df8083d85a191",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "ebdd22d2040798d0b5a5e50d72d940e95f308121",
+    commit = "8680311f6de05d45b010883db7cc1912b7f0d0e4",
   },
 
   ----------------------------------------------------------------------
@@ -174,13 +174,13 @@ lazy.setup {
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "f7c845749aba6096f041a73a26ba64f3817bab99",
+    commit = "58236e8b2f20de23ff35106dace9212b41d78860",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "6fa50a94ba5378bb73013a6e163376d8e69bd8a5",
+    commit = "009887b76f15d16f69ae1341f86a7862f61cf2a1",
   },
 
   ----------------------------------------------------------------------
@@ -200,7 +200,7 @@ lazy.setup {
   -- File Browser extension for telescope.nvim.
   {
     "nvim-telescope/telescope-file-browser.nvim",
-    commit = "6eb6bb45b7a9bed94a464a3e1dadfe870459628c",
+    commit = "61b3769065131129716974f7fb63f82ee409bd80",
   },
 
   ----------------------------------------------------------------------
@@ -261,7 +261,7 @@ lazy.setup {
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "b6c7b5d9d6d2633722255abf2be3ecb8733e8d2d",
+    commit = "4b0ba68022d8612b04b26844f1ce5e708c0d23b0",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup {
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "76b71f74ce002119fce322df13bd21cc52c1d112",
+    commit = "3b6c0a6412b31b91eb26bb8f712562cf7bb1d3be",
   },
 
   ----------------------------------------------------------------------
@@ -366,7 +366,7 @@ lazy.setup {
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "6e190f4732a0f2fc517036f2fcf7727893bc5329",
+    commit = "fb027738340502b556c3f43051f113bcaa7e8e63",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -392,7 +392,7 @@ lazy.setup {
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "6a5faeabdbcc86cfbf1561ae430a451a72126e81",
+    commit = "ab49517cfd1765b3f3de52c1f0fda6190b44e27b",
   },
 
   -- Shows floating hover with the current function/block context.
