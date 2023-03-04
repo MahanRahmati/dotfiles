@@ -52,9 +52,14 @@ local n_mappings = {
   p = {
     name = "Package Manager",
     c = { "<cmd>Lazy check<cr>", "Check for updates" },
+    d = { "<cmd>Lazy debug<cr>", "Debug" },
     i = { "<cmd>Lazy install<cr>", "Install" },
+    l = { "<cmd>Lazy log<cr>", "Log" },
+    p = { "<cmd>Lazy profile<cr>", "Profile" },
+    r = { "<cmd>Lazy restore<cr>", "Restore" },
     s = { "<cmd>Lazy sync<cr>", "Sync" },
     u = { "<cmd>Lazy update<cr>", "Update" },
+    x = { "<cmd>Lazy clean<cr>", "Clean" },
   },
   f = {
     name = "Find",
