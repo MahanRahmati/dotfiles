@@ -47,3 +47,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.lsp.buf.format { timeout = 2000 }
   end,
 })
+
+-- Reopen files at your last edit position.
+vim.api.nvim_create_autocmd("BufReadPost", {
+  pattern = "*",
+  callback = function()
+    vim.cmd [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif]]
+  end,
+})

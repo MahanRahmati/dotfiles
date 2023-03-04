@@ -407,12 +407,6 @@ lazy.setup {
     commit = "d95b7ea62e320b02ca1aa9df3635471a88d6f3b1",
   },
 
-  -- Reopen files at your last edit position.
-  {
-    "ethanholz/nvim-lastplace",
-    commit = "65c5d6e2501a3af9c2cd15c6548e67fa035bf640",
-  },
-
   -- A telescope extension to visualize your undo tree and fuzzy-search changes
   -- in it.
   {
