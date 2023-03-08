@@ -36,6 +36,9 @@ vim.api.nvim_create_autocmd({
 }, {
   pattern = { "*" },
   callback = function()
+    if vim.bo.filetype == "alpha" then
+      return
+    end
     vim.cmd [[ normal! zz]]
   end,
 })
