@@ -10,7 +10,7 @@ return {
   font_size = 16,
   hide_tab_bar_if_only_one_tab = true,
   show_tab_index_in_tab_bar = false,
-  window_background_opacity = 0.97,
+  window_background_opacity = 0.90,
   window_padding = {
     left = "0.25cell",
     right = "0.25cell",
