@@ -37,16 +37,15 @@ colorscheme.setup {
     },
   },
   integrations = {
-    gitsigns = true,
-    mason = true,
     cmp = true,
-    telescope = true,
-    notify = true,
-    treesitter_context = true,
-    treesitter = true,
+    gitsigns = true,
     illuminate = true,
+    mason = true,
+    notify = true,
+    telescope = true,
+    treesitter = true,
+    treesitter_context = true,
     which_key = true,
-    fidget = true,
   },
 }
 
