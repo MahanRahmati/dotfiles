@@ -28,14 +28,14 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "f3e6c034d103e3476821af596a67df71d76f85a9",
+    commit = "2ba6e268d92934e14fe561fe446a49540803e57f",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "900c38cfa91eb7ff2716da70f2f2c1d33741cf0a",
+    commit = "b359a0a1da2fcda0b5cd84fdf1a4efa508b39a4c",
   },
 
   -- Standalone UI for LSP progress.
@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "a8cef27f071fe34696a9c8fa55829900e2291e86",
+    commit = "50ed86031979a930237c88fa4ce6a5dce9a5797c",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -158,13 +158,13 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d086563c02a582a552086ea94bfabd5f49d6872a",
+    commit = "fc1ca10bfbdee17e29374d0d1bac8ea030539dc3",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "a207e3b9906f86ecf48a90d94bb2eb703c141798",
+    commit = "e3d0cd0c70b7e96fd2f62c4979f1997d96c86673",
   },
 
   ----------------------------------------------------------------------
@@ -200,7 +200,7 @@ lazy.setup {
   -- File Browser extension for telescope.nvim.
   {
     "nvim-telescope/telescope-file-browser.nvim",
-    commit = "61b3769065131129716974f7fb63f82ee409bd80",
+    commit = "94fe37a1ea217dd2f90d91222bc1531521146ac3",
   },
 
   ----------------------------------------------------------------------
@@ -232,7 +232,7 @@ lazy.setup {
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "a2bb81951ef18137d4e25a7972f234937f5ee747",
+    commit = "90c4d1c6e1f8dd2cff9962b36a70b1e681947621",
   },
 
   ----------------------------------------------------------------------
@@ -262,7 +262,7 @@ lazy.setup {
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "906649c3991903d14cef8fae1fe5557193ca743c",
+    commit = "4e1c4dedf5983e84b3ed305228b2235c56c7023c",
   },
 
   ----------------------------------------------------------------------
@@ -399,7 +399,7 @@ lazy.setup {
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "a7463ae4a5f68d42bd053afbfbd125f89cb6042b",
+    commit = "0421dd87d962c9eb768ec08f118d74e9c1ee5fa6",
   },
 
   -- Peek lines in a non-obtrusive way.
