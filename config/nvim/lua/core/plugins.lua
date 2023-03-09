@@ -228,10 +228,11 @@ lazy.setup {
   --                           Colorscheme                            --
   ----------------------------------------------------------------------
 
-  -- NvChad's base46 theme plugin
+  -- Warm mid-tone dark theme to show off your vibrant self! with support for
+  -- native LSP, Tree-sitter, and more 🍨!
   {
-    "NvChad/base46",
-    commit = "be301b2cd309394dfa62e8c569250e4fb58dd763",
+    "catppuccin/nvim",
+    commit = "a2bb81951ef18137d4e25a7972f234937f5ee747",
   },
 
   ----------------------------------------------------------------------

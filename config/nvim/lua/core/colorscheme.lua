@@ -1,31 +1,53 @@
-local status_ok, colorscheme = pcall(require, "base46")
+local status_ok, colorscheme = pcall(require, "catppuccin")
 if not status_ok then
   vim.notify("Failed to load colorscheme", "error")
   return
 end
 
-local config = require("core.utils").load_config()
-
-vim.g.nvchad_theme = config.ui.theme
-vim.g.transparency = config.ui.transparency
-
-colorscheme.load_theme()
-
-local highlights = {
-  "alpha",
-  "blankline",
-  "cmp",
-  "devicons",
-  "git",
-  "lsp",
-  "mason",
-  "notify",
-  "nvimtree",
-  "telescope",
-  "treesitter",
-  "whichkey",
+colorscheme.setup {
+  flavour = "mocha",
+  color_overrides = {
+    mocha = {
+      -- rosewater = "#F5E0DC", -- Winbar
+      -- flamingo = "#F2CDCD", -- Target word
+      -- pink = "#F5C2E7", Just pink
+      -- mauve = "#CBA6F7", Tag
+      -- red = "#F38BA8", Error
+      -- maroon = "#EBA0AC", Lighter red
+      -- peach = "#FAB387", -- Number
+      -- yellow = "#F9E2AF", Warning
+      -- green = "#A6E3A1", Diff add
+      -- teal = "#94E2D5", Hint
+      -- sky = "#89DCEB", Operator
+      -- sapphire = "#74C7EC", Constructor
+      -- blue = "#89B4FA", Diff changed
+      -- lavender = "#B4BEFE", -- CursorLine Nr
+      -- text = "#CDD6F4", -- Default fg
+      -- subtext1 = "#BAC2DE", -- Indicator
+      -- subtext0 = "#A6ADC8", Float title
+      -- overlay2 = "#9399B2", Popup fg
+      -- overlay1 = "#7F849C", Conceal color
+      -- overlay0 = "#6C7086", Fold color
+      -- surface2 = "#585B70", Default comment
+      -- surface1 = "#45475A", Darker comment
+      -- surface0 = "#313244", Darkest comment
+      base = "#161616", -- Default bg
+      mantle = "#161616", -- Darker bg
+      crust = "#161616", -- Darkest bg
+    },
+  },
+  integrations = {
+    gitsigns = true,
+    mason = true,
+    cmp = true,
+    telescope = true,
+    notify = true,
+    treesitter_context = true,
+    treesitter = true,
+    illuminate = true,
+    which_key = true,
+    fidget = true,
+  },
 }
 
-for _, highlight in pairs(highlights) do
-  colorscheme.load_highlight(highlight)
-end
+vim.cmd.colorscheme "catppuccin"
