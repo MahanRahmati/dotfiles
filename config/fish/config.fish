@@ -7,6 +7,9 @@
 
 set fish_greeting
 
+# Theme
+fish_config theme save "Catppuccin Mocha"
+
 # PATH
 fish_add_path .local/bin
 fish_add_path .cargo/bin
