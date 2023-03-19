@@ -415,6 +415,12 @@ lazy.setup {
     commit = "03ff45fab0c4adad4d252e25b5b194e22caf5b4f",
   },
 
+  -- Bionic-like reading inside Neovim
+  {
+    "JellyApple102/easyread.nvim",
+    commit = "73df5f4dc8fd38bef079b890b2a34412844c00b1",
+  },
+
   ----------------------------------------------------------------------
   --                             Comment                              --
   ----------------------------------------------------------------------
