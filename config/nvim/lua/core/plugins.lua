@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "5a871409199d585b52b69952532e3fb435e64566",
+    commit = "064ec8bc38ec7e281fad2ee32b936583ed690f91",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -158,7 +158,7 @@ lazy.setup {
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4536156f32b8ab0aab264e3cd7819fc8e3daede4",
+    commit = "25b656a4b771ee7d440e506280b9ae546d6f7233",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -272,7 +272,7 @@ lazy.setup {
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "585dbc29315ca60be67d18ae6175771c3fb6791e",
+    commit = "467d135bbefa6fbe8380c8b6498228f8b21244a6",
   },
 
   ----------------------------------------------------------------------
@@ -367,7 +367,7 @@ lazy.setup {
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "7b423209137cb936ec221ad12b94cf5b85054e53",
+    commit = "d1afcd48f309af58fdb43adc4581bf4b5684768b",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -383,7 +383,7 @@ lazy.setup {
   -- Extensible scrollbar that shows diagnostics and search results.
   {
     "petertriho/nvim-scrollbar",
-    commit = "75210c554e935740448cfb532d8a671ae544bb1b",
+    commit = "f85b29805cf917f9b1d5ff0c9a52c5b1bdca5943",
   },
 
   ----------------------------------------------------------------------
@@ -428,7 +428,7 @@ lazy.setup {
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
-    commit = "6ccb0bebeb22dbe31940776a750db54b844ae653",
+    commit = "14e2cd9a6e5e67483a03660f08471ca9a981c4a5",
   },
 
   -- Adds a comment frame based on the source file.
