@@ -20,10 +20,18 @@ local open_lsp_info = function()
   vim.cmd "LspInfo"
 end
 
+local mode = {
+  "mode",
+  icon = "",
+  separator = { left = "", right = "" },
+  padding = 0,
+}
+
 local branch = {
   "b:gitsigns_head",
   icon = "",
   on_click = open_lazygit,
+  padding = { left = 2, right = 1 },
 }
 
 local function diff_source()
@@ -58,13 +66,6 @@ local diagnostics = {
   on_click = open_diagnostic,
 }
 
-local location = function()
-  local cursor = vim.fn.line "."
-  local total = vim.fn.line "$"
-  local column = vim.fn.virtcol "."
-  return "[" .. cursor .. "/" .. total .. "]" .. ":" .. column
-end
-
 local filetype = {
   "filetype",
   fmt = function(str)
@@ -72,6 +73,13 @@ local filetype = {
   end,
   on_click = open_lsp_info,
 }
+
+local location = function()
+  local cursor = vim.fn.line "."
+  local total = vim.fn.line "$"
+  local column = vim.fn.virtcol "."
+  return "[" .. cursor .. "/" .. total .. "]" .. ":" .. column
+end
 
 lualine.setup {
   options = {
@@ -88,7 +96,7 @@ lualine.setup {
     globalstatus = true,
   },
   sections = {
-    lualine_a = { "mode" },
+    lualine_a = { mode },
     lualine_b = {},
     lualine_c = { branch, diff, diagnostics },
     lualine_x = { filetype, location },
