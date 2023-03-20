@@ -31,9 +31,9 @@ colorscheme.setup {
       -- surface2 = "#585B70", -- Default comment
       -- surface1 = "#45475A", -- Darker comment
       -- surface0 = "#313244", -- Darkest comment
-      base = "#161616", -- Default bg
-      mantle = "#161616", -- Darker bg
-      crust = "#161616", -- Darkest bg
+      base = "#0E1116", -- Default bg
+      mantle = "#0E1116", -- Darker bg
+      crust = "#585B70", -- Darkest bg
     },
   },
   integrations = {
