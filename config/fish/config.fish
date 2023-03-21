@@ -37,6 +37,7 @@ end
 switch (uname)
     case Darwin
         set -x CHROME_EXECUTABLE '/Applications/Chromium.app/Contents/MacOS/Chromium'
+        set -x XDG_CONFIG_HOME $HOME/.config
     case '*'
 
 end

@@ -6,6 +6,9 @@
 [fish.files]
 "config/fish" = "~/.config/fish"
 
+[lazygit.files]
+"config/lazygit" = "~/.config/lazygit"
+
 [nvim.files]
 "config/nvim" = "~/.config/nvim"
 
