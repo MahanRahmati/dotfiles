@@ -65,9 +65,18 @@ for _, server in pairs(servers) do
     rust_tools.setup {
       tools = {
         on_initialized = function()
-          vim.cmd [[
-            autocmd BufEnter,CursorHold,InsertLeave,BufWritePost *.rs silent! lua vim.lsp.codelens.refresh()
-          ]]
+          vim.api.nvim_create_autocmd(
+            "BufEnter",
+            "CursorHold",
+            "InsertLeave",
+            "BufWritePost",
+            {
+              pattern = { "*.rs" },
+              callback = function()
+                vim.cmd [[silent! lua vim.lsp.codelens.refresh() ]]
+              end,
+            }
+          )
         end,
       },
       server = {
