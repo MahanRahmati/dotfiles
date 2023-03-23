@@ -7,6 +7,7 @@ end
 fidget.setup {
   text = {
     spinner = "dots_scrolling",
+    done = "",
   },
   window = {
     blend = 0,
