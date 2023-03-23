@@ -43,6 +43,10 @@ colorscheme.setup {
       WhichKeyGroup = { fg = colors.green },
       WhichKeyDesc = { fg = colors.mauve },
       TreesitterContext = { bg = "#242633" },
+      TreesitterContextLineNumber = { fg = colors.surface2 },
+      LineNr = { fg = colors.surface2 },
+      CursorLineNr = { fg = colors.yellow },
+      SmoothCursor = { fg = colors.yellow },
     }
   end,
   integrations = {
