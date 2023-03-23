@@ -36,6 +36,15 @@ colorscheme.setup {
       crust = "#585B70", -- Darkest bg
     },
   },
+  custom_highlights = function(colors)
+    return {
+      Pmenu = { bg = colors.base },
+      WhichKey = { fg = colors.blue },
+      WhichKeyGroup = { fg = colors.green },
+      WhichKeyDesc = { fg = colors.mauve },
+      TreesitterContext = { bg = "#242633" },
+    }
+  end,
   integrations = {
     cmp = true,
     gitsigns = true,
