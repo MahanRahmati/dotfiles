@@ -44,14 +44,8 @@ telescope.setup {
   },
   extensions = {
     undo = {},
-    file_browser = {
-      collapse_dirs = true,
-      hijack_netrw = true,
-      hidden = true,
-    },
   },
 }
 
 telescope.load_extension "undo"
-telescope.load_extension "file_browser"
 telescope.load_extension "projects"

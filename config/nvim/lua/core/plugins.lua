@@ -197,10 +197,12 @@ lazy.setup {
   --                          File Explorer                           --
   ----------------------------------------------------------------------
 
-  -- File Browser extension for telescope.nvim.
+  -- Neo-tree is a Neovim plugin to browse the file system and other tree like
+  -- structures in whatever style suits you, including sidebars, floating
+  -- windows, netrw split style, or all of them at once.
   {
-    "nvim-telescope/telescope-file-browser.nvim",
-    commit = "24389d847f931e3822c5babdd308d20e2e8c638f",
+    "nvim-neo-tree/neo-tree.nvim",
+    commit = "20c2f2f5ba083bbb1e37b8bc3d590621434f31e9",
   },
 
   ----------------------------------------------------------------------
@@ -327,6 +329,12 @@ lazy.setup {
   {
     "nvim-lua/plenary.nvim",
     commit = "253d34830709d690f013daf2853a9d21ad7accab",
+  },
+
+  -- UI Component Library.
+  {
+    "MunifTanjim/nui.nvim",
+    commit = "0dc148c6ec06577fcf06cbab3b7dac96d48ba6be",
   },
 
   ----------------------------------------------------------------------

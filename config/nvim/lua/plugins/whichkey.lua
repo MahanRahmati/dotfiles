@@ -28,7 +28,7 @@ local n_opts = {
 local n_mappings = {
   a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
   b = { "<cmd>Telescope buffers<cr>", "Buffers" },
-  e = { "<cmd>Telescope file_browser path=%:p:h<cr>", "Explorer" },
+  e = { "<cmd>Neotree toggle<cr>", "Explorer" },
   v = { "<cmd>vsplit<cr>", "vsplit" },
   h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
