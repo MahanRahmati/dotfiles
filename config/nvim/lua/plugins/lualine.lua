@@ -66,6 +66,12 @@ local diagnostics = {
   on_click = open_diagnostic,
 }
 
+local location = function()
+  local cursor = vim.fn.line "."
+  local column = vim.fn.virtcol "."
+  return cursor .. ":" .. column
+end
+
 local filetype = {
   "filetype",
   fmt = function(str)
@@ -74,12 +80,22 @@ local filetype = {
   on_click = open_lsp_info,
 }
 
-local location = function()
-  local cursor = vim.fn.line "."
-  local total = vim.fn.line "$"
-  local column = vim.fn.virtcol "."
-  return "[" .. cursor .. "/" .. total .. "]" .. ":" .. column
+local function toggleterm_statusline()
+  return "ToggleTerm #" .. vim.b.toggle_number
 end
+
+local toggleterm = {
+  toggleterm_statusline,
+  separator = { left = "", right = "" },
+  padding = 0,
+}
+
+local toggleterm_extension = {
+  sections = {
+    lualine_a = { toggleterm },
+  },
+  filetypes = { "toggleterm" },
+}
 
 lualine.setup {
   options = {
@@ -99,11 +115,11 @@ lualine.setup {
     lualine_a = { mode },
     lualine_b = {},
     lualine_c = { branch, diff, diagnostics },
-    lualine_x = { filetype, location },
+    lualine_x = { location, filetype },
     lualine_y = {},
     lualine_z = {},
   },
   tabline = {},
   winbar = {},
-  extensions = { "man", "toggleterm" },
+  extensions = { "man", toggleterm_extension },
 }
