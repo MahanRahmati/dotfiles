@@ -238,6 +238,23 @@ lazy.setup {
   },
 
   ----------------------------------------------------------------------
+  --                          Bars and Lines                          --
+  ----------------------------------------------------------------------
+
+  -- A VS Code like winbar.
+  {
+    "utilyre/barbecue.nvim",
+    commit = "19ceea1e4eac33e69a836739e7e6e9b07777d737",
+  },
+
+  -- A simple statusline/winbar component that uses LSP to show your current
+  -- code context.
+  {
+    "SmiteshP/nvim-navic",
+    commit = "ca34afcd15c7f6dd0836fc4fca2e37024bfa5019",
+  },
+
+  ----------------------------------------------------------------------
   --                            Statusline                            --
   ----------------------------------------------------------------------
 
