@@ -4,4 +4,26 @@ if not status_ok then
   return
 end
 
-barbecue.setup {}
+barbecue.setup {
+  create_autocmd = false,
+  show_dirname = false,
+  show_modified = true,
+  symbols = {
+    modified = "",
+  },
+}
+
+vim.api.nvim_create_autocmd({
+  "WinScrolled", -- or WinResized on NVIM-v0.9 and higher
+  "BufWinEnter",
+  "CursorHold",
+  "InsertLeave",
+  "BufWritePost",
+  "TextChanged",
+  "TextChangedI",
+}, {
+  group = vim.api.nvim_create_augroup("barbecue.updater", {}),
+  callback = function()
+    require("barbecue.ui").update()
+  end,
+})
