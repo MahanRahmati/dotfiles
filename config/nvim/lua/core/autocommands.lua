@@ -58,3 +58,18 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     vim.cmd [[if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif]]
   end,
 })
+
+-- Show cursor line only in active window
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter", "CmdlineLeave" }, {
+  pattern = "*",
+  callback = function()
+    vim.cmd [[set cursorline]]
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
+  pattern = "*",
+  callback = function()
+    vim.cmd [[set nocursorline]]
+  end,
+})
