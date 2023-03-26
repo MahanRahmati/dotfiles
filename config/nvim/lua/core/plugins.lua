@@ -374,6 +374,13 @@ lazy.setup({
     commit = "ca473e28382f1524aa3d2b6f04bcf54f2e6a64cb",
   },
 
+  --  Single tabpage interface for easily cycling through diffs for all
+  --  modified files for any git rev.
+  {
+    "sindrets/diffview.nvim",
+    commit = "58035354fc79c6ec42fa7b218dab90bd3968615f",
+  },
+
   ----------------------------------------------------------------------
   --                              Motion                              --
   ----------------------------------------------------------------------
