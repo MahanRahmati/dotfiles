@@ -2,7 +2,7 @@
 
 echo "Checking Plugins..."
 
-PLUGINS=$(grep -A 2000 'lazy.setup {' ~/.config/nvim/lua/core/plugins.lua | grep -A 1 '{' | grep ',' | cut -d'"' -f 2)
+PLUGINS=$(grep -A 2000 'lazy.setup({' ~/.config/nvim/lua/core/plugins.lua | grep -A 1 '  {' | grep ',' | cut -d'"' -f 2)
 
 for repo in ${PLUGINS[*]}; do
 	ORIGINCOMMIT=$(git ls-remote https://github.com/"$repo".git HEAD | awk '{print $1}')

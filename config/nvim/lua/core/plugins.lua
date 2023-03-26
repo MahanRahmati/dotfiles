@@ -19,7 +19,7 @@ if not status_ok then
   return
 end
 
-lazy.setup {
+lazy.setup({
 
   ----------------------------------------------------------------------
   --                               LSP                                --
@@ -28,7 +28,7 @@ lazy.setup {
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "79982ef99377aede4b7508ac71b05c12b6c4613a",
+    commit = "e99d1590c7dc4c97b7dbc6a9c7e2dd830e204eea",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -48,7 +48,7 @@ lazy.setup {
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "1263a622bd33752bf5f32eeed478e50139d9cf21",
+    commit = "5a910000a450d234e13e80a51a227c1e1ebb3bcd",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -180,7 +180,7 @@ lazy.setup {
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "25ddcd96540a2ce41d714bd7fea2e7f75fea8ead",
+    commit = "8d91ba2dc2421a54981115f61b914974f938fa77",
   },
 
   ----------------------------------------------------------------------
@@ -251,7 +251,7 @@ lazy.setup {
   -- code context.
   {
     "SmiteshP/nvim-navic",
-    commit = "bef1eb33111e177cc765c3e97f563a6313320408",
+    commit = "59b997feb5915b8dbcbe5f34b07b12de332ea9de",
   },
 
   ----------------------------------------------------------------------
@@ -335,7 +335,7 @@ lazy.setup {
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "0aa936445b895cd5d3387860f96ce424ce32b072",
+    commit = "ed6c92d6708e5208360347f2281de99602061dc8",
   },
 
   ----------------------------------------------------------------------
@@ -392,7 +392,7 @@ lazy.setup {
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "87b1459b3e0be0340da2183fc4ec8a00b2960678",
+    commit = "4b73390eec680b4c061ea175eb32c0ff3412271d",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -414,7 +414,7 @@ lazy.setup {
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "3a48e2d3c91218ad4b198bb48e813e6573230f0b",
+    commit = "fc7db280562455590c4592499542d6d5061dbe4b",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -443,7 +443,7 @@ lazy.setup {
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
-    commit = "14e2cd9a6e5e67483a03660f08471ca9a981c4a5",
+    commit = "0874bda6848ff6f3da3ffdf4bd8297a5c951c5d4",
   },
 
   -- Adds a comment frame based on the source file.
@@ -461,4 +461,37 @@ lazy.setup {
     "lukas-reineke/indent-blankline.nvim",
     commit = "018bd04d80c9a73d399c1061fa0c3b14a7614399",
   },
-}
+}, {
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "2html_plugin",
+        "getscript",
+        "getscriptPlugin",
+        "gzip",
+        "logipat",
+        "netrw",
+        "netrwPlugin",
+        "netrwSettings",
+        "netrwFileHandlers",
+        "matchit",
+        "tar",
+        "tarPlugin",
+        "rrhelper",
+        "spellfile_plugin",
+        "vimball",
+        "vimballPlugin",
+        "zip",
+        "zipPlugin",
+        "tutor",
+        "rplugin",
+        "syntax",
+        "synmenu",
+        "optwin",
+        "compiler",
+        "bugreport",
+        "ftplugin",
+      },
+    },
+  },
+})
