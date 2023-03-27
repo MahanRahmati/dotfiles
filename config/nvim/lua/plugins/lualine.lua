@@ -97,6 +97,19 @@ local toggleterm_extension = {
   filetypes = { "toggleterm" },
 }
 
+local lsp_progress_module = {}
+
+local status_lsp_progress_ok, lsp_progress = pcall(require, "lsp-progress")
+if status_lsp_progress_ok then
+  table.insert(lsp_progress_module, lsp_progress.progress)
+  vim.cmd [[
+augroup lualine_augroup
+    autocmd!
+    autocmd User LspProgressStatusUpdated lua require("lualine").refresh()
+augroup END
+]]
+end
+
 lualine.setup {
   options = {
     icons_enabled = true,
@@ -115,7 +128,7 @@ lualine.setup {
     lualine_a = { mode },
     lualine_b = {},
     lualine_c = { branch, diff, diagnostics },
-    lualine_x = { location, filetype },
+    lualine_x = { lsp_progress_module, location, filetype },
     lualine_y = {},
     lualine_z = {},
   },

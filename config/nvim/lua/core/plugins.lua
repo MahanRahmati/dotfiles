@@ -38,12 +38,6 @@ lazy.setup({
     commit = "0180603b6f3cee40f83c6fc226b9ac5f85e691c4",
   },
 
-  -- Standalone UI for LSP progress.
-  {
-    "j-hui/fidget.nvim",
-    commit = "688b4fec4517650e29c3e63cfbb6e498b3112ba1",
-  },
-
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
@@ -63,6 +57,12 @@ lazy.setup({
   {
     "jayp0521/mason-null-ls.nvim",
     commit = "4070ec7c543b67df16143ee206e436d24bb9c01b",
+  },
+
+  -- Another lsp progress status for Neovim.
+  {
+    "linrongbin16/lsp-progress.nvim",
+    commit = "72967c0e7030783c3d93b5c540b1343ecc349275",
   },
 
   ----------------------------------------------------------------------
