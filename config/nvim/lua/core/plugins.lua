@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "e99d1590c7dc4c97b7dbc6a9c7e2dd830e204eea",
+    commit = "c5505c70571b094663745167d40388edd40f6450",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -48,7 +48,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "5a910000a450d234e13e80a51a227c1e1ebb3bcd",
+    commit = "8829f9539f501ac99d6a556309a672478ca78e98",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -142,7 +142,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "727df22e2ae72a0482e5eb923e3d1c861a157a94",
+    commit = "92e12ab64b2440f45f346eeeeb30c425e8a65f11",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,13 +158,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "c9ef5e58f7d59aba875324825ff47900d0be61f2",
+    commit = "25dd24ed0e3b4456b1987cdd744e261be5dc6c7c",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "056f69ed494198ff6ea0070cfc66997cfe0a6c8b",
+    commit = "ed4e95c89f96019688463f30a3ee218ed3682bd3",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "dc216c6241fd8439fe6018cca834200aca1a04ad",
+    commit = "73587f9c454da81679202f1668c30fea6cdafd5e",
   },
 
   ----------------------------------------------------------------------
@@ -251,7 +251,7 @@ lazy.setup({
   -- code context.
   {
     "SmiteshP/nvim-navic",
-    commit = "59b997feb5915b8dbcbe5f34b07b12de332ea9de",
+    commit = "35731604fb5adab5fe939975879d22994aa8b575",
   },
 
   ----------------------------------------------------------------------
@@ -415,7 +415,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "e755f366721bc9e189ddecd39554559045ac0a18",
+    commit = "0fd6519d44eac3a6736aafdb3fe9da916c3701d4",
   },
 
   -- Shows floating hover with the current function/block context.
@@ -434,7 +434,7 @@ lazy.setup({
   -- in it.
   {
     "debugloop/telescope-undo.nvim",
-    commit = "03ff45fab0c4adad4d252e25b5b194e22caf5b4f",
+    commit = "231b5ebb4328d2768c830c9a8d1b9c696116848d",
   },
 
   ----------------------------------------------------------------------
