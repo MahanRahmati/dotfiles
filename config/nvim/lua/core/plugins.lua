@@ -418,6 +418,12 @@ lazy.setup({
     commit = "0fd6519d44eac3a6736aafdb3fe9da916c3701d4",
   },
 
+  -- Rainbow delimiters for Neovim through Tree-sitter
+  {
+    "HiPhish/nvim-ts-rainbow2",
+    commit = "51d835d411df45b14b9531789eff0c590cabf018",
+  },
+
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",

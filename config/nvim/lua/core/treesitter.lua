@@ -23,5 +23,14 @@ configs.setup {
     enable = true,
     disable = { "" },
   },
-  indent = { enable = true, disable = { "yaml", "python" } },
+  indent = {
+    enable = true,
+    disable = { "yaml", "python" },
+  },
+  rainbow = {
+    enable = true,
+    disable = { "jsx", "cpp" },
+    query = "rainbow-parens",
+    strategy = require("ts-rainbow").strategy.global,
+  },
 }
