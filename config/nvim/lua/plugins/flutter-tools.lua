@@ -22,6 +22,13 @@ flutter_tools.setup {
     },
     on_attach = on_attach,
     capabilities = capabilities,
+    settings = {
+      completeFunctionCalls = true,
+      showTodos = true,
+      renameFilesWithClasses = "always",
+      enableSnippets = true,
+      updateImportsOnRename = true,
+    },
   },
 }
 
