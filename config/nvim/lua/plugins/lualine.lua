@@ -66,6 +66,19 @@ local diagnostics = {
   on_click = open_diagnostic,
 }
 
+local lsp_progress_module = {}
+
+local status_lsp_progress_ok, lsp_progress = pcall(require, "lsp-progress")
+if status_lsp_progress_ok then
+  table.insert(lsp_progress_module, lsp_progress.progress)
+  vim.cmd [[
+augroup lualine_augroup
+    autocmd!
+    autocmd User LspProgressStatusUpdated lua require("lualine").refresh()
+augroup END
+]]
+end
+
 local location = function()
   local cursor = vim.fn.line "."
   local column = vim.fn.virtcol "."
@@ -79,6 +92,16 @@ local filetype = {
   end,
   on_click = open_lsp_info,
 }
+
+local datetime = {
+  "datetime",
+  style = "%H:%M",
+  icon = "󰥔",
+}
+
+----------------------------------------------------------------------
+--                            Extensions                            --
+----------------------------------------------------------------------
 
 local function toggleterm_statusline()
   return "ToggleTerm #" .. vim.b.toggle_number
@@ -96,19 +119,6 @@ local toggleterm_extension = {
   },
   filetypes = { "toggleterm" },
 }
-
-local lsp_progress_module = {}
-
-local status_lsp_progress_ok, lsp_progress = pcall(require, "lsp-progress")
-if status_lsp_progress_ok then
-  table.insert(lsp_progress_module, lsp_progress.progress)
-  vim.cmd [[
-augroup lualine_augroup
-    autocmd!
-    autocmd User LspProgressStatusUpdated lua require("lualine").refresh()
-augroup END
-]]
-end
 
 lualine.setup {
   options = {
@@ -128,7 +138,13 @@ lualine.setup {
     lualine_a = { mode },
     lualine_b = {},
     lualine_c = { branch, diff, diagnostics },
-    lualine_x = { lsp_progress_module, location, filetype },
+    lualine_x = {
+      lsp_progress_module,
+      "selectioncount",
+      location,
+      filetype,
+      datetime,
+    },
     lualine_y = {},
     lualine_z = {},
   },
