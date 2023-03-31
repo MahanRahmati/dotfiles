@@ -31,6 +31,7 @@
   "mason.nvim": { "branch": "main", "commit": "7e1c9309161a49e01cb9d2bdeea2a39fc6d5e977" },
   "mkdir.nvim": { "branch": "main", "commit": "c55d1dee4f099528a1853b28bb28caa802eba217" },
   "neo-tree.nvim": { "branch": "v2.x", "commit": "20c2f2f5ba083bbb1e37b8bc3d590621434f31e9" },
+  "nomodoro": { "branch": "main", "commit": "42c6775da86558ca96b5d20b7782f442187ca8d8" },
   "nui.nvim": { "branch": "main", "commit": "4eaec2ac66af2ca6ddddd3f665ad0909b90ae36a" },
   "null-ls.nvim": { "branch": "main", "commit": "d112a351ef8ff20060100fdc20e402a5880c4ef0" },
   "numb.nvim": { "branch": "master", "commit": "2c89245d1185e02fec1494c45bc765a38b6b40b3" },

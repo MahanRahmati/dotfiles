@@ -67,7 +67,6 @@ local diagnostics = {
 }
 
 local lsp_progress_module = {}
-
 local status_lsp_progress_ok, lsp_progress = pcall(require, "lsp-progress")
 if status_lsp_progress_ok then
   table.insert(lsp_progress_module, lsp_progress.progress)
@@ -77,6 +76,17 @@ augroup lualine_augroup
     autocmd User LspProgressStatusUpdated lua require("lualine").refresh()
 augroup END
 ]]
+end
+
+local nomodoro_module = {}
+local status_nomodoro_ok, nomodoro = pcall(require, "nomodoro")
+if status_nomodoro_ok then
+  local nomodoro_component = {
+    nomodoro.status,
+    icon = "󰞌",
+    color = { fg = "#F38BA8" },
+  }
+  nomodoro_module = nomodoro_component
 end
 
 local location = function()
@@ -144,6 +154,7 @@ lualine.setup {
       "selectioncount",
       location,
       filetype,
+      nomodoro_module,
       datetime,
     },
     lualine_y = {},

@@ -142,6 +142,12 @@ local n_mappings = {
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
   u = { "<cmd>Telescope undo<cr>", "Undo" },
+  n = {
+    name = "Nomodoro",
+    w = { "<cmd>NomoWork<cr>", "Nomo Work" },
+    b = { "<cmd>NomoBreak<cr>", "Nomo Break" },
+    s = { "<cmd>NomoStop<cr>", "Nomo Stop" },
+  },
 }
 
 local v_opts = {

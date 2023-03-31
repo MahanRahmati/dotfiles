@@ -328,6 +328,12 @@ lazy.setup({
     commit = "8933abc09df6c381d47dc271b1ee5d266541448e",
   },
 
+  -- Pomodoro time tracker for NeoVim written entirely in LUA
+  {
+    "dbinagi/nomodoro",
+    commit = "42c6775da86558ca96b5d20b7782f442187ca8d8",
+  },
+
   ----------------------------------------------------------------------
   --                       Terminal Integration                       --
   ----------------------------------------------------------------------
