@@ -28,21 +28,21 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "c34522092bee6e4abf68ed3b24dceee4bd5a48fc",
+    commit = "94291c924f0efdbc16ac625cf77ae7d3a7fa5821",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "01e035ac1c0ba1cc7a688110e3a9f939cab1f454",
+    commit = "d112a351ef8ff20060100fdc20e402a5880c4ef0",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "5e059a03b2273d918e9742d38e5e1cb37c2239f2",
+    commit = "7e1c9309161a49e01cb9d2bdeea2a39fc6d5e977",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -142,7 +142,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "7751a10b4cedc3f38cde75520437177405fa9996",
+    commit = "dcc415e487207126814bccf57e3181009bb11c1c",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -244,7 +244,7 @@ lazy.setup({
   -- A VS Code like winbar.
   {
     "utilyre/barbecue.nvim",
-    commit = "19ceea1e4eac33e69a836739e7e6e9b07777d737",
+    commit = "a0e19486ccc1fb134f6ef7bf914d07bbb462e346",
   },
 
   -- A simple statusline/winbar component that uses LSP to show your current
@@ -261,7 +261,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "e80465d721bdafcd234e890d1677ca4afb905144",
+    commit = "0ddacf01ed74c8fca4af4ea926bab5b100e71616",
   },
 
   ----------------------------------------------------------------------
@@ -371,7 +371,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "ca473e28382f1524aa3d2b6f04bcf54f2e6a64cb",
+    commit = "f412f51d0eaf0905a2759c8087090071689bb8fb",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -427,7 +427,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "fc7db280562455590c4592499542d6d5061dbe4b",
+    commit = "959265a5d438462dc5d3dde215b915109c3d6fcb",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -456,7 +456,7 @@ lazy.setup({
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
-    commit = "0874bda6848ff6f3da3ffdf4bd8297a5c951c5d4",
+    commit = "82311fa82ffab9640ca3493306371100ffb063bb",
   },
 
   -- Adds a comment frame based on the source file.
