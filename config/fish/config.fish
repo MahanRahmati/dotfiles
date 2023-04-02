@@ -19,9 +19,6 @@ fish_add_path /usr/local/bin/
 switch (uname)
     case Darwin
         fish_add_path /opt/homebrew/bin
-        fish_add_path /opt/homebrew/opt/openjdk/bin
-        fish_add_path /opt/homebrew/opt/openjdk@11/bin
-        fish_add_path /opt/homebrew/opt/mbedtls@2/bin
     case '*'
 
 end
