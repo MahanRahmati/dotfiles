@@ -20,7 +20,7 @@ local options = {
   ignorecase = true,
   -- The value of this option influences when the last window will have a
   -- status line
-  laststatus = 0,
+  laststatus = 3,
   -- If on, Vim will wrap long lines at a character in 'breakat' rather than
   -- at the last character that fits on the screen.
   linebreak = true,
