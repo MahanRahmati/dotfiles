@@ -42,6 +42,11 @@ telescope.setup {
       },
     },
   },
+  pickers = {
+    find_files = {
+      follow = true,
+    },
+  },
   extensions = {
     undo = {},
   },
