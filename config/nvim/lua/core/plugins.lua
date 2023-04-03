@@ -42,7 +42,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "aa8b3055868a1a2740ee50317cf4bbdfea6d49cb",
+    commit = "dbf34eecc1f06733a2c518ddd5fe6b1472e7d837",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -142,7 +142,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "a21326dfcbb74ad6a71b935c4cdd288091fbc0a7",
+    commit = "0a7e6b40aebd874e957ed630420a267e6cac0967",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,13 +158,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "cbfa7cae1b38e1b843b2275d633ddbb05a105906",
+    commit = "0a20d1bb63ff0352b1254cc21ad99f4d04327ea6",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "50f667861fac75592fc9e482472c12672e1cd723",
+    commit = "e6047128e57c1aff1566fb9f627521d2887fc77a",
   },
 
   ----------------------------------------------------------------------
@@ -261,7 +261,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "9170434aa100f3967b43d5d34bb9adc56fae1986",
+    commit = "c28a7427c3fb29322db136f0564ec58807b26747",
   },
 
   ----------------------------------------------------------------------
@@ -291,7 +291,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "d92b3f4275f4774c0cb23b8b094a41d1dbb3e78c",
+    commit = "0568104bf8d0c3ab16395433fcc5c1638efc25d4",
   },
 
   ----------------------------------------------------------------------
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "4eaec2ac66af2ca6ddddd3f665ad0909b90ae36a",
+    commit = "1f43b13d133eb4b4f53a4485379d9afa58808389",
   },
 
   ----------------------------------------------------------------------
@@ -384,7 +384,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "4a55b5e2d2c3d6bd89cd3299a9ca276d49d25463",
+    commit = "90f7d498bd8f3fd7600c0b7b23c6ce434e3a1969",
   },
 
   ----------------------------------------------------------------------
