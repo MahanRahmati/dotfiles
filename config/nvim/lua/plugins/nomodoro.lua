@@ -1,6 +1,6 @@
 local status_ok, nomodoro = pcall(require, "nomodoro")
 if not status_ok then
-  vim.notify("Failed to load nomodoro", "error")
+  vim.notify("Failed to load nomodoro", vim.log.levels.ERROR)
   return
 end
 

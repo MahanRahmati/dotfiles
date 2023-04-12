@@ -1,12 +1,12 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
 if not cmp_status_ok then
-  vim.notify("Failed to load cmp", "error")
+  vim.notify("Failed to load cmp", vim.log.levels.ERROR)
   return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
 if not snip_status_ok then
-  vim.notify("Failed to load luasnip", "error")
+  vim.notify("Failed to load luasnip", vim.log.levels.ERROR)
   return
 end
 

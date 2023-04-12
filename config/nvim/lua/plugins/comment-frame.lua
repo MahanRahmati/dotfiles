@@ -1,6 +1,6 @@
 local status_ok, comment_frame = pcall(require, "nvim-comment-frame")
 if not status_ok then
-  vim.notify("Failed to load nvim-comment-frame", "error")
+  vim.notify("Failed to load nvim-comment-frame", vim.log.levels.ERROR)
   return
 end
 

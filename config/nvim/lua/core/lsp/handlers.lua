@@ -51,7 +51,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 M.on_attach = function(client, bufnr)
   local status_cmp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
   if not status_cmp_ok then
-    vim.notify("Failed to load cmp-nvim-lsp", "error")
+    vim.notify("Failed to load cmp-nvim-lsp", vim.log.levels.ERROR)
     return
   end
 

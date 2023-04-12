@@ -1,6 +1,6 @@
 local status_ok, neotree = pcall(require, "neo-tree")
 if not status_ok then
-  vim.notify("Failed to load neo-tree", "error")
+  vim.notify("Failed to load neo-tree", vim.log.levels.ERROR)
   return
 end
 

@@ -1,6 +1,6 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
-  vim.notify("Failed to load null_ls", "error")
+  vim.notify("Failed to load null_ls", vim.log.levels.ERROR)
   return
 end
 
@@ -37,7 +37,7 @@ null_ls.setup {
 
 local mason_null_ls_status_ok, mason_null_ls = pcall(require, "mason-null-ls")
 if not mason_null_ls_status_ok then
-  vim.notify("Failed to load mason-null-ls", "error")
+  vim.notify("Failed to load mason-null-ls", vim.log.levels.ERROR)
   return
 end
 

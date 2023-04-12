@@ -1,6 +1,6 @@
 local status_ok, lsp_progress = pcall(require, "lsp-progress")
 if not status_ok then
-  vim.notify("Failed to load lsp_progress", "error")
+  vim.notify("Failed to load lsp_progress", vim.log.levels.ERROR)
   return
 end
 

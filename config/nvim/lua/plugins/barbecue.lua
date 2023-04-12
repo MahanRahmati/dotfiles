@@ -1,6 +1,6 @@
 local status_ok, barbecue = pcall(require, "barbecue")
 if not status_ok then
-  vim.notify("Failed to load barbecue", "error")
+  vim.notify("Failed to load barbecue", vim.log.levels.ERROR)
   return
 end
 

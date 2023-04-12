@@ -1,6 +1,6 @@
 local status_ok, diffview = pcall(require, "diffview")
 if not status_ok then
-  vim.notify("Failed to load diffview", "error")
+  vim.notify("Failed to load diffview", vim.log.levels.ERROR)
   return
 end
 

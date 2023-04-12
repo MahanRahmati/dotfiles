@@ -1,6 +1,6 @@
 local status_ok, surround = pcall(require, "nvim-surround")
 if not status_ok then
-  vim.notify("Failed to load nvim-surround", "error")
+  vim.notify("Failed to load nvim-surround", vim.log.levels.ERROR)
   return
 end
 

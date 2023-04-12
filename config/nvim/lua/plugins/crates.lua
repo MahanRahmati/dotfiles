@@ -1,6 +1,6 @@
 local status_ok, crates = pcall(require, "crates")
 if not status_ok then
-  vim.notify("Failed to load crates", "error")
+  vim.notify("Failed to load crates", vim.log.levels.ERROR)
   return
 end
 
