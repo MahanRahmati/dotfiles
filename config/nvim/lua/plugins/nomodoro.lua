@@ -14,8 +14,12 @@ nomodoro.setup {
     status_icon = "",
     timer_format = "!%0M:%0S",
   },
-  on_work_complete = function() end,
-  on_break_complete = function() end,
+  on_work_complete = function()
+    vim.notify("Time for a break!", vim.log.levels.ERROR)
+  end,
+  on_break_complete = function()
+    vim.notify("Go back to work!", vim.log.levels.ERROR)
+  end,
 }
 
 -- Enable nomodoro on vim enter.
