@@ -23,7 +23,7 @@ end
 local mode = {
   "mode",
   icon = "",
-  separator = { left = "", right = "" },
+  separator = { left = " ", right = "" },
   padding = 0,
 }
 
@@ -110,6 +110,25 @@ local datetime = {
   color = { fg = "#A6E3A1" },
 }
 
+local function progress_function()
+  local cur = vim.fn.line "."
+  local total = vim.fn.line "$"
+  if cur == 1 then
+    return "0%%"
+  elseif cur == total then
+    return "100%%"
+  else
+    return string.format("%2d%%%%", math.floor(cur / total * 100))
+  end
+end
+
+local progress = {
+  progress_function,
+  icon = "",
+  separator = { left = "", right = " " },
+  padding = 0,
+}
+
 ----------------------------------------------------------------------
 --                            Extensions                            --
 ----------------------------------------------------------------------
@@ -158,7 +177,7 @@ lualine.setup {
       datetime,
     },
     lualine_y = {},
-    lualine_z = {},
+    lualine_z = { progress },
   },
   tabline = {},
   winbar = {},
