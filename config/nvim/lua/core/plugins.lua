@@ -481,6 +481,7 @@ lazy.setup({
     commit = "018bd04d80c9a73d399c1061fa0c3b14a7614399",
   },
 }, {
+  ui = { border = "rounded" },
   performance = {
     rtp = {
       disabled_plugins = {
