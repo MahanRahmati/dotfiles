@@ -29,6 +29,7 @@ lazy.setup({
   {
     "neovim/nvim-lspconfig",
     commit = "7f776b7d0a028e9d63d2e9389d7fdfc48cbb15d6",
+    lazy = true,
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -36,6 +37,7 @@ lazy.setup({
   {
     "jose-elias-alvarez/null-ls.nvim",
     commit = "f8ffcd7cb8fb3325c711d459152ef132b5b65aed",
+    event = "BufReadPre",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -43,6 +45,7 @@ lazy.setup({
   {
     "williamboman/mason.nvim",
     commit = "6845ccfe009d6fbc5a6a266c285779ad462b234b",
+    event = "BufReadPre",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -50,6 +53,7 @@ lazy.setup({
   {
     "williamboman/mason-lspconfig.nvim",
     commit = "b81c50c4baae7d80b1723b3fa86e814d7754d15b",
+    lazy = true,
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -73,6 +77,7 @@ lazy.setup({
   {
     "hrsh7th/nvim-cmp",
     commit = "777450fd0ae289463a14481673e26246b5e38bf2",
+    event = { "InsertEnter", "CmdlineEnter" },
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -159,6 +164,7 @@ lazy.setup({
   {
     "nvim-treesitter/nvim-treesitter",
     commit = "ba6c55b203748ec099127914d34554a575e051c0",
+    event = { "BufReadPost", "BufNewFile" },
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -175,6 +181,7 @@ lazy.setup({
   {
     "L3MON4D3/LuaSnip",
     commit = "a6355b12a3b7da0aef71f02560e17ff480182b97",
+    event = "InsertEnter",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -191,6 +198,7 @@ lazy.setup({
   {
     "nvim-telescope/telescope.nvim",
     commit = "6258d50b09f9ae087317e392efe7c05a7323492d",
+    event = "Bufenter",
   },
 
   ----------------------------------------------------------------------
@@ -203,6 +211,7 @@ lazy.setup({
   {
     "nvim-neo-tree/neo-tree.nvim",
     commit = "2b2f74828eeb02cf29d6b21aa32eedadadc94ca7",
+    event = "VimEnter",
   },
 
   ----------------------------------------------------------------------
@@ -235,6 +244,8 @@ lazy.setup({
   {
     "catppuccin/nvim",
     commit = "ee59992d4f35212db27dee0fe3d7cd592858e33c",
+    lazy = false,
+    priority = 1000,
   },
 
   ----------------------------------------------------------------------
@@ -262,6 +273,14 @@ lazy.setup({
   {
     "nvim-lualine/lualine.nvim",
     commit = "84ffb80e452d95e2c46fa29a98ea11a240f7843e",
+    event = {
+      "VimEnter",
+      "InsertEnter",
+      "BufReadPre",
+      "BufAdd",
+      "BufNew",
+      "BufReadPost",
+    },
   },
 
   ----------------------------------------------------------------------
@@ -272,6 +291,7 @@ lazy.setup({
   {
     "RRethy/vim-illuminate",
     commit = "a2907275a6899c570d16e95b9db5fd921c167502",
+    event = { "BufReadPost", "BufNewFile" },
   },
 
   ----------------------------------------------------------------------
@@ -282,6 +302,7 @@ lazy.setup({
   {
     "goolord/alpha-nvim",
     commit = "dafa11a6218c2296df044e00f88d9187222ba6b0",
+    event = "VimEnter",
   },
 
   ----------------------------------------------------------------------
@@ -292,6 +313,7 @@ lazy.setup({
   {
     "nvim-tree/nvim-web-devicons",
     commit = "4ec26d67d419c12a4abaea02f1b6c57b40c08d7e",
+    event = "VeryLazy",
   },
 
   ----------------------------------------------------------------------
@@ -342,6 +364,7 @@ lazy.setup({
   {
     "akinsho/toggleterm.nvim",
     commit = "1c5996ee3c30b54751093fe68d40676859e7778f",
+    event = "VeryLazy",
   },
 
   ----------------------------------------------------------------------
@@ -352,6 +375,7 @@ lazy.setup({
   {
     "nvim-lua/plenary.nvim",
     commit = "9ac3e9541bbabd9d73663d757e4fe48a675bb054",
+    lazy = true,
   },
 
   -- UI Component Library.
@@ -378,6 +402,7 @@ lazy.setup({
   {
     "lewis6991/gitsigns.nvim",
     commit = "372d5cb485f2062ac74abc5b33054abac21d8b58",
+    event = { "BufReadPre", "BufNewFile" },
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -406,12 +431,14 @@ lazy.setup({
   {
     "folke/which-key.nvim",
     commit = "4b73390eec680b4c061ea175eb32c0ff3412271d",
+    event = "VeryLazy",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
   {
     "max397574/better-escape.nvim",
     commit = "426d29708064d5b1bfbb040424651c92af1f3f64",
+    event = "InsertCharPre",
   },
 
   ----------------------------------------------------------------------
@@ -422,6 +449,7 @@ lazy.setup({
   {
     "windwp/nvim-autopairs",
     commit = "7470af886ffb3df32800e5ef9c072a6cd825770d",
+    event = "InsertEnter",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -457,12 +485,14 @@ lazy.setup({
   {
     "numToStr/Comment.nvim",
     commit = "a89339ffbee677ab0521a483b6dac7e2e67c907e",
+    event = "BufRead",
   },
 
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
     commit = "8febc60a76feefd8203077ef78b6a262ea1a41f9",
+    event = { "BufReadPost", "BufNewFile" },
   },
 
   -- Adds a comment frame based on the source file.
@@ -479,8 +509,11 @@ lazy.setup({
   {
     "lukas-reineke/indent-blankline.nvim",
     commit = "018bd04d80c9a73d399c1061fa0c3b14a7614399",
+    event = "BufReadPre",
   },
 }, {
+  defaults = { lazy = true },
+  ui = { border = "rounded" },
   performance = {
     rtp = {
       disabled_plugins = {
