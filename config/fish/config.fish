@@ -133,16 +133,29 @@ end
 
 function prompt_color_for_status
     if test $argv[1] -eq 0
-        echo cyan
+        echo green
     else
         echo red
     end
 end
 
+function print_pwd
+    set_color blue
+    printf ""
+    set_color -b blue
+    set_color black
+    printf " "
+    printf (prompt_pwd)
+    set_color normal
+    set_color -b normal
+    set_color blue
+    printf ""
+    set_color -b normal
+    set_color normal
+end
+
 function fish_prompt
     set -l last_status $status
-
-    print_in_color '['(prompt_pwd)']' (prompt_color_for_status $last_status)
-
-    printf ':'
+    print_pwd
+    print_in_color '  ' (prompt_color_for_status $last_status)
 end
