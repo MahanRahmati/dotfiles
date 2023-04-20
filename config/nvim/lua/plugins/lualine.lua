@@ -139,7 +139,7 @@ end
 
 local toggleterm = {
   toggleterm_statusline,
-  separator = { left = "", right = "" },
+  separator = { left = " ", right = "" },
   padding = 0,
 }
 
