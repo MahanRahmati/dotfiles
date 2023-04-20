@@ -10,10 +10,10 @@ local capabilities = require("core.lsp.handlers").capabilities
 flutter_tools.setup {
   ui = {
     border = "rounded",
-    notification_style = "plugin",
   },
   dev_log = {
     enabled = true,
+    notify_errors = false,
     open_cmd = "15new",
   },
   lsp = {
