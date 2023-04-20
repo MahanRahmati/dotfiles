@@ -34,6 +34,7 @@ vim.api.nvim_create_autocmd({
   "InsertLeave",
   "TextChanged",
 }, {
+  group = vim.api.nvim_create_augroup("CenterCursor", { clear = true }),
   pattern = { "*" },
   callback = function()
     if vim.bo.filetype == "alpha" then
@@ -45,6 +46,7 @@ vim.api.nvim_create_autocmd({
 
 -- Auto format
 vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("AutoFormat", { clear = true }),
   pattern = "*",
   callback = function()
     vim.lsp.buf.format { timeout = 2000 }
@@ -53,6 +55,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 
 -- Reopen files at your last edit position.
 vim.api.nvim_create_autocmd("BufReadPost", {
+  group = vim.api.nvim_create_augroup("RestorePosition", { clear = true }),
   pattern = "*",
   callback = function()
     if vim.fn.line "'\"" > 0 and vim.fn.line "'\"" <= vim.fn.line "$" then
