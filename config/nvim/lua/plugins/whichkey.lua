@@ -78,6 +78,7 @@ local n_mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     w = { "<cmd>Telescope grep_string<cr>", "Word" },
     t = { "<cmd>TodoTelescope<cr>", "Todos" },
+    u = { "<cmd>Telescope undo<cr>", "Undo" },
   },
   g = {
     name = "Git",
@@ -107,7 +108,7 @@ local n_mappings = {
       "Workspace Diagnostics",
     },
     f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
-    F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
+    F = { "<cmd>FixAll<cr>", "Fix All" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     h = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
     m = { "<cmd>Mason<cr>", "Mason" },
@@ -121,7 +122,7 @@ local n_mappings = {
     },
     v = { "<cmd>lua require('lsp_lines').toggle()<cr>", "Virtual Text" },
     l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-    o = { "<cmd>SymbolsOutline<cr>", "Outline" },
+    o = { "<cmd>OrganizeImports<cr>", "Organize Imports" },
     q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
     r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
     R = { "<cmd>Telescope lsp_references<cr>", "References" },
@@ -130,7 +131,6 @@ local n_mappings = {
       "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
       "Workspace Symbols",
     },
-    u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
   },
   t = {
     name = "Terminal",
@@ -141,7 +141,6 @@ local n_mappings = {
     h = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  u = { "<cmd>Telescope undo<cr>", "Undo" },
   n = {
     name = "Nomodoro",
     w = { "<cmd>NomoWork<cr>", "Nomo Work" },

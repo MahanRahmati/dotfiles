@@ -36,7 +36,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = vim.api.nvim_create_augroup("FlutterActions", { clear = true }),
   pattern = { "*.dart" },
   callback = function()
-    vim.cmd [[lua vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })]]
-    vim.cmd [[lua vim.lsp.buf.code_action({ context = { only = { 'source.fixAll' } }, apply = true })]]
+    vim.cmd "OrganizeImports"
+    vim.cmd "FixAll"
   end,
 })
