@@ -1,6 +1,5 @@
-local status_ok, project = pcall(require, "project_nvim")
-if not status_ok then
-  vim.notify("Failed to load project-nvim", vim.log.levels.ERROR)
+local project = require("core.import").import "project_nvim"
+if project == nil then
   return
 end
 

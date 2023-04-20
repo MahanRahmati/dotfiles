@@ -1,6 +1,5 @@
-local status_ok, flutter_tools = pcall(require, "flutter-tools")
-if not status_ok then
-  vim.notfiy("Failed to load flutter-tools", vim.log.levels.ERROR)
+local flutter_tools = require("core.import").import "flutter-tools"
+if flutter_tools == nil then
   return
 end
 

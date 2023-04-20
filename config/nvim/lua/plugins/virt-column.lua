@@ -1,6 +1,5 @@
-local status_ok, virt_column = pcall(require, "virt-column")
-if not status_ok then
-  vim.notify("Failed to load virt-column", vim.log.levels.ERROR)
+local virt_column = require("core.import").import "virt-column"
+if virt_column == nil then
   return
 end
 

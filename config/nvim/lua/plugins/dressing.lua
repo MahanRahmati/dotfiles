@@ -1,6 +1,5 @@
-local status_ok, dressing = pcall(require, "dressing")
-if not status_ok then
-  vim.notify("Failed to load dressing", vim.log.levels.ERROR)
+local dressing = require("core.import").import "dressing"
+if dressing == nil then
   return
 end
 

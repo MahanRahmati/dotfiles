@@ -1,6 +1,5 @@
-local status_ok, surround = pcall(require, "nvim-surround")
-if not status_ok then
-  vim.notify("Failed to load nvim-surround", vim.log.levels.ERROR)
+local surround = require("core.import").import "nvim-surround"
+if surround == nil then
   return
 end
 

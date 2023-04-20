@@ -1,6 +1,5 @@
-local status_ok, nomodoro = pcall(require, "nomodoro")
-if not status_ok then
-  vim.notify("Failed to load nomodoro", vim.log.levels.ERROR)
+local nomodoro = require("core.import").import "nomodoro"
+if nomodoro == nil then
   return
 end
 

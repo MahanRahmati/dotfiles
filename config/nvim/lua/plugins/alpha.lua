@@ -1,6 +1,5 @@
-local status_ok, alpha = pcall(require, "alpha")
-if not status_ok then
-  vim.notify("Failed to load alpha", vim.log.levels.ERROR)
+local alpha = require("core.import").import "alpha"
+if alpha == nil then
   return
 end
 

@@ -1,6 +1,5 @@
-local status_ok, better_escape = pcall(require, "better_escape")
-if not status_ok then
-  vim.notify("Failed to load better-escape", vim.log.levels.ERROR)
+local better_escape = require("core.import").import "better_escape"
+if better_escape == nil then
   return
 end
 

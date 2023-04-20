@@ -1,10 +1,9 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-  vim.notify("Failed to load nvim-treesitter.configs", vim.log.levels.ERROR)
+local treesitter = require("core.import").import "nvim-treesitter.configs"
+if treesitter == nil then
   return
 end
 
-configs.setup {
+treesitter.setup {
   ensure_installed = {
     "lua",
     "vim",

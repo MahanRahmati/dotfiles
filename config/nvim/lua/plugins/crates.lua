@@ -1,6 +1,5 @@
-local status_ok, crates = pcall(require, "crates")
-if not status_ok then
-  vim.notify("Failed to load crates", vim.log.levels.ERROR)
+local crates = require("core.import").import "crates"
+if crates == nil then
   return
 end
 

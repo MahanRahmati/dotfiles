@@ -1,6 +1,5 @@
-local status_ok, numb = pcall(require, "numb")
-if not status_ok then
-  vim.notify("Failed to load numb", vim.log.levels.ERROR)
+local numb = require("core.import").import "numb"
+if numb == nil then
   return
 end
 

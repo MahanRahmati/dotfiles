@@ -1,6 +1,5 @@
-local status_ok, which_key = pcall(require, "which-key")
-if not status_ok then
-  vim.notify("Failed to load which-key", vim.log.levels.ERROR)
+local which_key = require("core.import").import "which-key"
+if which_key == nil then
   return
 end
 

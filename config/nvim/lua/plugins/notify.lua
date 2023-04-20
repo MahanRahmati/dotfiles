@@ -1,11 +1,20 @@
-local status_ok, notify = pcall(require, "notify")
-if not status_ok then
-  vim.api.nvim_err_writeln "Failed to load notify"
+local notify = require("core.import").import "notify"
+if notify == nil then
   return
+end
+
+vim.notify = notify
+
+print = function(...)
+  local print_safe_args = {}
+  local _ = { ... }
+  for i = 1, #_ do
+    table.insert(print_safe_args, tostring(_[i]))
+  end
+  notify(table.concat(print_safe_args, " "), "info")
 end
 
 notify.setup {
   background_colour = "#000000",
+  render = "minimal",
 }
-
-vim.notify = notify

@@ -1,6 +1,5 @@
-local status_ok, telescope = pcall(require, "telescope")
-if not status_ok then
-  vim.notify("Failed to load telescope", vim.log.levels.ERROR)
+local telescope = require("core.import").import "telescope"
+if telescope == nil then
   return
 end
 

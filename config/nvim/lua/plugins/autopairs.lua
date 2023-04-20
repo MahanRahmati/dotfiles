@@ -1,17 +1,16 @@
-local status_ok, npairs = pcall(require, "nvim-autopairs")
-if not status_ok then
-  vim.notify("Failed to load nvim-autopairs", vim.log.levels.ERROR)
+local nvim_autopairs = require("core.import").import "nvim-autopairs"
+if nvim_autopairs == nil then
   return
 end
 
-npairs.setup {
+nvim_autopairs.setup {
   check_ts = true, -- Use treesitter to check for a pair.
 }
 
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
-local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-  vim.notify("Failed to load cmp", vim.log.levels.ERROR)
+
+local cmp = require("core.import").import "cmp"
+if cmp == nil then
   return
 end
 

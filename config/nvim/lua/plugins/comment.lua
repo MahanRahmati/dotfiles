@@ -1,6 +1,5 @@
-local status_ok, comment = pcall(require, "Comment")
-if not status_ok then
-  vim.notify("Failed to load Comment", vim.log.levels.ERROR)
+local comment = require("core.import").import "Comment"
+if comment == nil then
   return
 end
 

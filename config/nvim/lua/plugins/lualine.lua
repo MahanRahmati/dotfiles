@@ -1,6 +1,5 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-  vim.notify("Failed to load lualine", vim.log.levels.ERROR)
+local lualine = require("core.import").import "lualine"
+if lualine == nil then
   return
 end
 

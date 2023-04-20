@@ -1,6 +1,5 @@
-local status_ok, barbecue = pcall(require, "barbecue")
-if not status_ok then
-  vim.notify("Failed to load barbecue", vim.log.levels.ERROR)
+local barbecue = require("core.import").import "barbecue"
+if barbecue == nil then
   return
 end
 

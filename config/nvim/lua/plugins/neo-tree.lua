@@ -1,12 +1,11 @@
-local status_ok, neotree = pcall(require, "neo-tree")
-if not status_ok then
-  vim.notify("Failed to load neo-tree", vim.log.levels.ERROR)
+local neo_tree = require("core.import").import "neo-tree"
+if neo_tree == nil then
   return
 end
 
 vim.cmd [[ let g:neo_tree_remove_legacy_commands = 1 ]]
 
-neotree.setup {
+neo_tree.setup {
   close_if_last_window = true,
   popup_border_style = "rounded",
   default_component_configs = {

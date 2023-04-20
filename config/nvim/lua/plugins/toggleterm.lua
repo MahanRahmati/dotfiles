@@ -1,6 +1,5 @@
-local status_ok, toggleterm = pcall(require, "toggleterm")
-if not status_ok then
-  vim.notify("Failed to load toggleterm", vim.log.levels.ERROR)
+local toggleterm = require("core.import").import "toggleterm"
+if toggleterm == nil then
   return
 end
 

@@ -1,6 +1,5 @@
-local status_ok, smoothcursor = pcall(require, "smoothcursor")
-if not status_ok then
-  vim.notify("Failed to load smoothcursor", vim.log.levels.ERROR)
+local smoothcursor = require("core.import").import "smoothcursor"
+if smoothcursor == nil then
   return
 end
 

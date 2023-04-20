@@ -1,6 +1,5 @@
-local status_ok, comment_frame = pcall(require, "nvim-comment-frame")
-if not status_ok then
-  vim.notify("Failed to load nvim-comment-frame", vim.log.levels.ERROR)
+local comment_frame = require("core.import").import "nvim-comment-frame"
+if comment_frame == nil then
   return
 end
 

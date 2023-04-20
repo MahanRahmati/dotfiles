@@ -1,6 +1,5 @@
-local status_ok, lsp_progress = pcall(require, "lsp-progress")
-if not status_ok then
-  vim.notify("Failed to load lsp_progress", vim.log.levels.ERROR)
+local lsp_progress = require("core.import").import "lsp-progress"
+if lsp_progress == nil then
   return
 end
 

@@ -1,13 +1,10 @@
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
-if not null_ls_status_ok then
-  vim.notify("Failed to load null_ls", vim.log.levels.ERROR)
+local null_ls = require("core.import").import "null-ls"
+if null_ls == nil then
   return
 end
 
 local code_actions = null_ls.builtins.code_actions
-
 local diagnostics = null_ls.builtins.diagnostics
-
 local formatting = null_ls.builtins.formatting
 
 null_ls.setup {
@@ -35,9 +32,8 @@ null_ls.setup {
   },
 }
 
-local mason_null_ls_status_ok, mason_null_ls = pcall(require, "mason-null-ls")
-if not mason_null_ls_status_ok then
-  vim.notify("Failed to load mason-null-ls", vim.log.levels.ERROR)
+local mason_null_ls = require("core.import").import "mason-null-ls"
+if mason_null_ls == nil then
   return
 end
 

@@ -1,6 +1,5 @@
-local status_ok, _ = pcall(require, "lspconfig")
-if not status_ok then
-  vim.notify("Failed to load lspconfig", vim.log.levels.ERROR)
+local lspconfig = require("core.import").import "lspconfig"
+if lspconfig == nil then
   return
 end
 

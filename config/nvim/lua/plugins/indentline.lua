@@ -1,6 +1,5 @@
-local status_ok, indent_blankline = pcall(require, "indent_blankline")
-if not status_ok then
-  vim.notify("Failed to load indent-blankline", vim.log.levels.ERROR)
+local indent_blankline = require("core.import").import "indent_blankline"
+if indent_blankline == nil then
   return
 end
 

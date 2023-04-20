@@ -1,6 +1,5 @@
-local status_ok, colorscheme = pcall(require, "catppuccin")
-if not status_ok then
-  vim.notify("Failed to load colorscheme", vim.log.levels.ERROR)
+local colorscheme = require("core.import").import "catppuccin"
+if colorscheme == nil then
   return
 end
 
