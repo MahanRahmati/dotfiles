@@ -18,3 +18,10 @@ notify.setup {
   background_colour = "#000000",
   render = "minimal",
 }
+
+vim.keymap.set(
+  "",
+  "<Esc>",
+  "<ESC>:noh<CR>:lua require('notify').dismiss()<CR>",
+  { silent = true }
+)
