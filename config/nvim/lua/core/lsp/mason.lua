@@ -53,9 +53,8 @@ for _, server in pairs(servers) do
   end
 
   if server == "rust_analyzer" then
-    local rust_tools_status_ok, rust_tools = pcall(require, "rust-tools")
-    if not rust_tools_status_ok then
-      vim.notfiy("Failed to load rust-tools", "error")
+    local rust_tools = require("core.import").import "rust-tools"
+    if rust_tools == nil then
       return
     end
 
