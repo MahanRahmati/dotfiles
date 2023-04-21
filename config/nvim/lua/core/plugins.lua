@@ -42,7 +42,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "b20a4bd32247411d39d8dd5c94e2e5c87d98556d",
+    commit = "7f364a3c9b3f77ead3dc5316cf6918d944fc3621",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -56,7 +56,7 @@ lazy.setup({
   -- mason.nvim
   {
     "jayp0521/mason-null-ls.nvim",
-    commit = "04fc5094269c4354f0409d515d1d9539a0d076e3",
+    commit = "834bb5d6dd72db0a82d4b90a25500fdc14a3bc43",
   },
 
   -- Another lsp progress status for Neovim.
@@ -142,7 +142,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "8d7cb14f71eaef861f7f03f72939798448292898",
+    commit = "bd82eed8ed710e538fb0752c4c8ec36089d5d239",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "831f37635df26864a397a5e35450eec97bfe60cd",
+    commit = "654216eb04f3fdf0f847ff2d410319fba6cee847",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "46bf7de94cb3820553067747cdd65d4605dbc908",
+    commit = "939be5f7fcbc15abeaad9214bb253a4551f6f6e6",
   },
 
   ----------------------------------------------------------------------
@@ -251,7 +251,7 @@ lazy.setup({
   -- code context.
   {
     "SmiteshP/nvim-navic",
-    commit = "226c1c0c0bf67e103b609f18907c778acc9095c2",
+    commit = "63a5d2d6af20d7818b94b4bdc2133107a88107e2",
   },
 
   ----------------------------------------------------------------------
@@ -377,14 +377,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "372d5cb485f2062ac74abc5b33054abac21d8b58",
+    commit = "5d840679cfba0a93b28ba573f982613ca25d3909",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "63720aa5a70ce4aa386be407d0e612cd9e63861a",
+    commit = "f9ddbe798cb92854a383e2377482a49139a52c3d",
   },
 
   ----------------------------------------------------------------------
@@ -421,7 +421,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "58985de5eeab159462bc262de5cc1b9c9b375595",
+    commit = "7566a86f44bb72ba2b1a609f528a27d93241502d",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -433,7 +433,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "0d730df898f3dc27fd88f03cfa6d26d2405554b4",
+    commit = "8b6861ebf0ba88e5f57796372eb194787705d25a",
   },
 
   -- Peek lines in a non-obtrusive way.
