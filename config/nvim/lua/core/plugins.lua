@@ -65,6 +65,12 @@ lazy.setup({
     commit = "1cf6b32c27e2288712031ca8a5751529707541bd",
   },
 
+  -- Display function references above function definition like IDEA codelens.
+  {
+    "VidocqH/lsp-lens.nvim",
+    commit = "450736ecde76e4e127a7724ec8f6e260870863f8",
+  },
+
   ----------------------------------------------------------------------
   --                            Completion                            --
   ----------------------------------------------------------------------
