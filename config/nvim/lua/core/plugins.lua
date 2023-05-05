@@ -78,7 +78,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "8d2f190506013064775ec328377e196ab343ad61",
+    commit = "1cad30fcffa282c0a9199c524c821eadc24bf939",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -148,7 +148,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "97f9bdea0374c3553a3a11b8e4d2b21f11855463",
+    commit = "627fadf8200bacb0b55db29d9bbab305a1b43c65",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4fe6b4c07f2383053a3f4ccc1bd621f19ddd3ff6",
+    commit = "f0b50973f334a7a5bb5831cb52b9fd4c770e6cba",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -267,7 +267,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "84ffb80e452d95e2c46fa29a98ea11a240f7843e",
+    commit = "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9",
   },
 
   ----------------------------------------------------------------------
@@ -373,7 +373,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "5a529df8fe3504ccf1ca9526e196f48b2f723c72",
+    commit = "bb5ce73e9c41865e22329da118d91a565089e4d7",
   },
 
   ----------------------------------------------------------------------
@@ -411,7 +411,7 @@ lazy.setup({
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "4acffc92953a90a790603bfdab7c92319ab167b1",
+    commit = "af8f26bfbb61b5f722c9fbc72b296dc9db0bcfdc",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -439,7 +439,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "e1dc868e61766499746b5b7b22671efc1f33181e",
+    commit = "0226dd639712141235d5c9eefde47365d15d0535",
   },
 
   -- Peek lines in a non-obtrusive way.
