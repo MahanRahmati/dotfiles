@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "32a5543fe3a7f108c1488c265052572abbf6f588",
+    commit = "10142ff298f5fc3f8bf9d277c806593401b0fd06",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -49,7 +49,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "90a8bbf106b85b76951a34c542058ffa807de2b1",
+    commit = "c55d18f3947562e699d34d89681edbf9f0e250d3",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "1aea2eee29b43c7ac42aa7487082d1163cd433e3",
+    commit = "f2778bd1a28b74adf5b1aa51aa57da85adfa3d16",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "b4bc24c4925aeb05fd47d2ee9b24b7f73f5d7e32",
+    commit = "fcdaa4313305fe20d928551134c1ec2266e7af2a",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "1d0dac346de7c6895ac72528df3276386c6b149b",
+    commit = "2bb3958e1fe0a613e028f3c6fd2d2923fc23bd0c",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "8338b02e9a8ffcb999520de7f15943712618760f",
+    commit = "cc517bdcb66a0f8dee90bab10ccdd651fa967bbe",
   },
 
   ----------------------------------------------------------------------
@@ -291,7 +291,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "986875b7364095d6535e28bd4aac3a9357e91bbe",
+    commit = "e283ab937e0197b37ec5d8013e49495193407324",
   },
 
   ----------------------------------------------------------------------
@@ -313,7 +313,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "66e4990240f92e31b0d5e4df6deb6bb0160ae832",
+    commit = "2f17eee4d7709dacfad2a28f35e2acfe9a6cb09d",
   },
 
   -- Display a line as colorcolumn.
@@ -341,7 +341,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "26f16d3bab1761d0d11117a8e431faba11a1b865",
+    commit = "a44313fb28ed9bc9837c2b99dec1c6eed3a4f47f",
   },
 
   ----------------------------------------------------------------------
@@ -367,7 +367,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "dca1949b0405c6ee5173d0627a523a10a63eca3c",
+    commit = "3648f8787656d7572740560331553abdaa8cb982",
   },
 
   ----------------------------------------------------------------------
@@ -377,14 +377,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "814158f6c4b1724c039fcefe79b0be72c9131c2d",
+    commit = "c18b7ca0b5b50596722f3a1572eb9b8eb520c0f1",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "7987d7f5c9ca3838ef950053b6d00c4251efadb0",
+    commit = "15861892ce62d8f4ab6e72bc4ff5b829f994430a",
   },
 
   ----------------------------------------------------------------------
@@ -405,7 +405,7 @@ lazy.setup({
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "5a6c954a5a46023c19acc03a8b6d7c3e57964fc5",
+    commit = "e271c28118998c93a14d189af3395812a1aa646c",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -462,7 +462,7 @@ lazy.setup({
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
-    commit = "8febc60a76feefd8203077ef78b6a262ea1a41f9",
+    commit = "09b0b17d824d2d56f02ff15967e8a2499a89c731",
   },
 
   -- Adds a comment frame based on the source file.
