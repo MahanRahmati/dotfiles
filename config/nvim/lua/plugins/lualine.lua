@@ -28,7 +28,7 @@ local mode = {
 
 local branch = {
   "b:gitsigns_head",
-  icon = "",
+  icon = "󰊢",
   on_click = open_lazygit,
   padding = { left = 2, right = 1 },
 }
@@ -57,7 +57,7 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_lsp", "nvim_diagnostic", "nvim_workspace_diagnostic" },
   sections = { "error", "warn", "info", "hint" },
-  symbols = { error = " ", warn = " ", info = " ", hint = " " },
+  symbols = { error = " ", warn = " ", info = " ", hint = "󰌵 " },
   colored = true,
   update_in_insert = false,
   always_visible = false,
@@ -123,7 +123,7 @@ end
 
 local progress = {
   progress_function,
-  icon = "",
+  icon = "󰦪",
   separator = { left = "", right = " " },
   padding = 0,
 }

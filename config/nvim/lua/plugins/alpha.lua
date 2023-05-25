@@ -32,13 +32,13 @@ local buttons = {
       opts = { hl = "SpecialComment", position = "center" },
     },
     { type = "padding", val = 1 },
-    dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
+    dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
     { type = "padding", val = 1 },
     dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
     { type = "padding", val = 1 },
     dashboard.button(
       "r",
-      "ﱮ  Recent Projects ",
+      "  Recent Projects ",
       "<CMD>Telescope projects<CR>"
     ),
     { type = "padding", val = 1 },

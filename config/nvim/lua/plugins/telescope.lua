@@ -9,8 +9,8 @@ telescope.setup {
   defaults = {
     path_display = { "smart" },
     layout_strategy = "flex",
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = " ",
+    selection_caret = " ",
     file_ignore_patterns = {
       ".git/",
       "%.lock",
