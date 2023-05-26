@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "8a3d2dd7641f75c1b6291311f56454adba79a196",
+    commit = "a0225043ab823fcad8d0d802e276d9838fb48c30",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "274438dfa05c621771a1e787be08a491f13224a3",
+    commit = "2fc3ad4cba48ecbe15503d894d30d8f7e6d0d393",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -421,7 +421,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "7747bbae60074acf0b9e3a4c13950be7a2dff444",
+    commit = "59df87a84c80a357ca8d8fe86e451b93ac476ccc",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -478,7 +478,7 @@ lazy.setup({
   -- IndentLine replacement in Lua with more features and treesitter support.
   {
     "lukas-reineke/indent-blankline.nvim",
-    commit = "86d1b71c5c26168c3a3a9ff5f69e833889a09c1d",
+    commit = "ceaf730b13e332cd76600d9795722413c236c684",
   },
 }, {
   ui = { border = "rounded" },
