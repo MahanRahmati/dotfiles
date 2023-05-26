@@ -55,22 +55,36 @@ cmp.setup {
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
-  mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    ["<C-j>"] = cmp.mapping.select_next_item(),
-    ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
-    ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
-    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    ["<C-e>"] = cmp.mapping {
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
+  window = {
+    completion = cmp.config.window.bordered {
+      scrollbar = false,
     },
-    -- Accept currently selected item. If none selected, `select` first item.
-    -- Set `select` to `false` to only confirm explicitly selected items.
-    ["<CR>"] = cmp.mapping.confirm { select = true },
+    documentation = cmp.config.window.bordered(),
+  },
+  mapping = cmp.mapping.preset.insert {
+    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+    ["<C-f>"] = cmp.mapping.scroll_docs(4),
+    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-e>"] = cmp.mapping.abort(),
+    ["<CR>"] = cmp.mapping {
+      i = function(fallback)
+        if cmp.visible() and cmp.get_active_entry() then
+          cmp.confirm { behavior = cmp.ConfirmBehavior.Replace, select = false }
+        else
+          fallback()
+        end
+      end,
+      s = cmp.mapping.confirm { select = true },
+      c = cmp.mapping.confirm {
+        behavior = cmp.ConfirmBehavior.Replace,
+        select = true,
+      },
+    },
     ["<Tab>"] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
+        -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+        -- they way you will only jump inside the snippet region
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
       elseif has_words_before() then
@@ -90,27 +104,28 @@ cmp.setup {
     end, { "i", "s" }),
   },
   formatting = {
-    fields = { "kind", "abbr", "menu" },
+    fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
-        nvim_lsp_signature_help = "[LSP]",
-        nvim_lsp = "[LSP]",
-        nvim_lua = "[Lua]",
-        luasnip = "[Snippet]",
-        buffer = "[Buffer]",
-        path = "[Path]",
-        nerdfont = "[Nerd Font]",
-        look = "[Look]",
+        nvim_lsp_signature_help = "LSP",
+        nvim_lsp = "LSP",
+        nvim_lua = "Lua",
+        luasnip = "Snippet",
+        buffer = "Buffer",
+        path = "Path",
+        nerdfont = "Nerd Font",
+        look = "Look",
       })[entry.source.name]
       return vim_item
     end,
   },
-  sources = {
+  sources = cmp.config.sources({
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
+  }, {
     { name = "buffer" },
     { name = "path" },
     { name = "crates" },
@@ -125,23 +140,15 @@ cmp.setup {
         --dict = '/usr/share/dict/words'
       },
     },
-  },
+  }),
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
   },
-  window = {
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
-    },
-    completion = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "NormalFloat:Pmenu,NormalFloat:Pmenu,CursorLine:PmenuSel,Search:None",
-    },
-  },
   experimental = {
-    ghost_text = true,
+    ghost_text = {
+      hl_group = "LspCodeLens",
+    },
   },
 }
 -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
