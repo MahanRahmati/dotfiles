@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "570aae82f8c6bc15fb6e559ed7d5a3fd85374329",
+    commit = "465042c0f786992212284311ebb5da1f89479774",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "a0225043ab823fcad8d0d802e276d9838fb48c30",
+    commit = "1088b3743b83ffd8973ad65e6b5fed010da0ffd2",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "dae928b3bbbcdd3890c61549bdc4c50e1e0d3094",
+    commit = "a76db88548bb7fe008cd7e4f2d2ec2ccc080dede",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "2fc3ad4cba48ecbe15503d894d30d8f7e6d0d393",
+    commit = "a83e4b1ba7edc6fecdad09e39753a7d5eee1d01c",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -291,7 +291,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "e283ab937e0197b37ec5d8013e49495193407324",
+    commit = "2a125024a137677930efcfdf720f205504c97268",
   },
 
   ----------------------------------------------------------------------
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "698e75814cd7c56b0dd8af4936bcef2d13807f3c",
+    commit = "2b2732528e4a79eb8542568bd51d25f710395bd6",
   },
 
   ----------------------------------------------------------------------
@@ -384,7 +384,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "9d3c633efff67f276b1af0ef3ab15fd0bed866ca",
+    commit = "bff58a6ea3e081ca50049700f9848b2f84ea57be",
   },
 
   ----------------------------------------------------------------------
@@ -427,7 +427,7 @@ lazy.setup({
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "a1e460f126db0bc3dc9e0cbad157e5671ffd2046",
+    commit = "c00d61ab7517530c49457ba49186776e6611a3e1",
   },
 
   -- Shows floating hover with the current function/block context.
