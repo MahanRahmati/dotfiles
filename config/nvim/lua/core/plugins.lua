@@ -35,7 +35,7 @@ lazy.setup({
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "77e53bc3bac34cc273be8ed9eb9ab78bcf67fa48",
+    commit = "4b055d84be42c90a7240785d3c83340d259d3d46",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "1088b3743b83ffd8973ad65e6b5fed010da0ffd2",
+    commit = "b43bfaf3229d6b39d8baaa567b13c6be0623bf12",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,13 +158,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "a76db88548bb7fe008cd7e4f2d2ec2ccc080dede",
+    commit = "e23d5493cf14401ef02ec2e4e99b65f199869966",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "26b5067c3b56815eafbf41b7b830f1ab52819a45",
+    commit = "ff9c981202f4bd45dd3c8e6c6aad965d437a7cb8",
   },
 
   ----------------------------------------------------------------------
@@ -180,7 +180,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "ef6547d2f586e08e071efeebac835e545f3015cc",
+    commit = "8875cccf779160303bf2bed7d422717676f214fd",
   },
 
   ----------------------------------------------------------------------
@@ -325,7 +325,7 @@ lazy.setup({
   -- Delete Neovim buffers without losing window layout.
   {
     "famiu/bufdelete.nvim",
-    commit = "8933abc09df6c381d47dc271b1ee5d266541448e",
+    commit = "ccfa2589fa68512770639839ab3850097fbbf4dc",
   },
 
   -- Pomodoro time tracker for NeoVim written entirely in LUA
@@ -427,7 +427,7 @@ lazy.setup({
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "c00d61ab7517530c49457ba49186776e6611a3e1",
+    commit = "5becf2cec4b8e06b6df745cf515ac35c6c2e6308",
   },
 
   -- Shows floating hover with the current function/block context.
