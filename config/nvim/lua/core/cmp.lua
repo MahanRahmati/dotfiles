@@ -120,12 +120,11 @@ cmp.setup {
       return vim_item
     end,
   },
-  sources = cmp.config.sources({
+  sources = cmp.config.sources {
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
-  }, {
     { name = "buffer" },
     { name = "path" },
     { name = "crates" },
@@ -140,7 +139,7 @@ cmp.setup {
         --dict = '/usr/share/dict/words'
       },
     },
-  }),
+  },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
