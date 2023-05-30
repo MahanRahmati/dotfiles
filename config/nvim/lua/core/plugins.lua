@@ -28,21 +28,21 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "465042c0f786992212284311ebb5da1f89479774",
+    commit = "9166622781a39a829878d1fd24c174529d996838",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "4b055d84be42c90a7240785d3c83340d259d3d46",
+    commit = "c89333e034a8daba654ebfcf9a4ec9f87765f01e",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "08b2fd308e0107eab9f0b59d570b69089fd0b522",
+    commit = "7d7efc738e08fc5bee822857db45cb6103f0b0c1",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "b43bfaf3229d6b39d8baaa567b13c6be0623bf12",
+    commit = "fc0f694af1a742ada77e5b1c91ff405c746f4a26",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,13 +158,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "e23d5493cf14401ef02ec2e4e99b65f199869966",
+    commit = "23dfae4db84f71e2ddb56c024845b322035182ee",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "ff9c981202f4bd45dd3c8e6c6aad965d437a7cb8",
+    commit = "10b20ca7d9da1ac8df8339e140ffef94f9ab3b18",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "1d3eda15703ba70f57e94e6451db55914ff7017f",
+    commit = "c9cc5a997f1dae3f35b4bdd62f35958fee363ab4",
   },
 
   ----------------------------------------------------------------------
@@ -341,7 +341,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "a44313fb28ed9bc9837c2b99dec1c6eed3a4f47f",
+    commit = "cf146a267a6a7db62b1e2aff40414b20081048a1",
   },
 
   ----------------------------------------------------------------------
@@ -433,7 +433,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "7cd5ac1c384b89e7e607238a936f13963f97ba32",
+    commit = "24535437a9b62b9ec503c545f35e2ac298cd29df",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -478,7 +478,7 @@ lazy.setup({
   -- IndentLine replacement in Lua with more features and treesitter support.
   {
     "lukas-reineke/indent-blankline.nvim",
-    commit = "ceaf730b13e332cd76600d9795722413c236c684",
+    commit = "7075d7861f7a6bbf0de0298c83f8a13195e6ec01",
   },
 }, {
   ui = { border = "rounded" },
