@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "23dfae4db84f71e2ddb56c024845b322035182ee",
+    commit = "cb6d94ef7b9ff820c5f2f1789df4bb651552ff2d",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "a83e4b1ba7edc6fecdad09e39753a7d5eee1d01c",
+    commit = "51ebb4b6637290e1b8e0fb0d6f38b605d3c24940",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "8875cccf779160303bf2bed7d422717676f214fd",
+    commit = "0dd6114bea08276d9111d58c5dce5e256bbc8921",
   },
 
   ----------------------------------------------------------------------
@@ -351,7 +351,7 @@ lazy.setup({
   -- Useful lua functions used by lots of plugins.
   {
     "nvim-lua/plenary.nvim",
-    commit = "52544825d6b8be677eb395983515ad5e30ae1f2e",
+    commit = "499e0743cf5e8075cd32af68baa3946a1c76adf1",
   },
 
   -- UI Component Library.
@@ -384,7 +384,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "bff58a6ea3e081ca50049700f9848b2f84ea57be",
+    commit = "86bf6182e2ea767c21711de8a3c396d9b635d970",
   },
 
   ----------------------------------------------------------------------
@@ -433,7 +433,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "24535437a9b62b9ec503c545f35e2ac298cd29df",
+    commit = "e2ea37627c0681421ccf4a3cf19d68bb958e1817",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -456,7 +456,7 @@ lazy.setup({
   -- Smart and Powerful comment plugin for Neovim.
   {
     "numToStr/Comment.nvim",
-    commit = "e1fe53117aab24c378d5e6deaad786789c360123",
+    commit = "c8043290f2d77f61025494d839d88e414608c460",
   },
 
   -- Highlight, list and search todo comments in your projects.
