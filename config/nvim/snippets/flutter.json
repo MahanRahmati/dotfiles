@@ -1,0 +1,44 @@
+{
+  "Screen Widget": {
+    "prefix": "screen",
+    "body": [
+      "import 'package:flutter/material.dart';\n",
+      "class ${1:name} extends StatelessWidget {",
+      " const ${1:name}({super.key});\n",
+      " @override",
+      " Widget build(final BuildContext context) {",
+      "   return ChangeNotifierProvider<${1:name}Provider>(",
+      "     create: (final _) => ${1:name}Provider(context),",
+      "     child: const _${1:name}(),",
+      "   );",
+      " }",
+      "}\n",
+      "class _${1:name} extends StatelessWidget {",
+      " const _${1:name}();\n",
+      " @override",
+      " Widget build(final BuildContext context) {",
+      "   final ${1:name}Provider watch = context.watch<${1:name}Provider>();",
+      "   return Scaffold(",
+      "     body: Container(),",
+      "   );",
+      " }",
+      "}"
+    ],
+    "description": "Create a Screen."
+  },
+  "Screen Provider": {
+    "prefix": "provider",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:safe_change_notifier/safe_change_notifier.dart';\n",
+      "class ${1:name}Provider extends SafeChangeNotifier {",
+      "  ${1:name}Provider(this.context) {",
+      "   _init();",
+      " }\n",
+      " final BuildContext context;\n",
+      " Future<void> _init() async {}",
+      "}"
+    ],
+    "description": "Create a Screen provider."
+  }
+}

@@ -8,8 +8,6 @@ if luasnip == nil then
   return
 end
 
-require("luasnip.loaders.from_vscode").lazy_load()
-
 local kind_icons = {
   Text = " ",
   Method = " ",
