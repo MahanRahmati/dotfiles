@@ -2,7 +2,8 @@
   "Screen Widget": {
     "prefix": "screen",
     "body": [
-      "import 'package:flutter/material.dart';\n",
+      "import 'package:flutter/material.dart';",
+      "import 'package:provider/provider.dart';\n",
       "class ${1:name} extends StatelessWidget {",
       " const ${1:name}({super.key});\n",
       " @override",
