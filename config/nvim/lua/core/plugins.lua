@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "458fa2ee2115c693ca48a04afa65f6de6b40a2db",
+    commit = "0f598b9ab9f2a6d7e137074be99c8d89af44b990",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -62,7 +62,7 @@ lazy.setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "1cf6b32c27e2288712031ca8a5751529707541bd",
+    commit = "df2db65ac9bde2404ed810e09bbca3bd4421d928",
   },
 
   ----------------------------------------------------------------------
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "fc0f694af1a742ada77e5b1c91ff405c746f4a26",
+    commit = "09ff53ff579cfa3368f8051b0dbe88406891aabe",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -132,7 +132,7 @@ lazy.setup({
   -- A nvim-cmp source for vim's cmdline.
   {
     "hrsh7th/cmp-cmdline",
-    commit = "5af1bb7d722ef8a96658f01d6eb219c4cf746b32",
+    commit = "8ee981b4a91f536f52add291594e89fb6645e451",
   },
 
   ----------------------------------------------------------------------
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "ab3bf7d95615098f47596ab245282c03149195e7",
+    commit = "51dfcfdfdea564c7a6bf155cf5b7c9831193ddae",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "51ebb4b6637290e1b8e0fb0d6f38b605d3c24940",
+    commit = "a13af80734eb28f744de6c875330c9d3c24b5f3b",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "b471f5419155ce832eff71ad8920ea8cfbd54840",
+    commit = "0eb246a7dbb06d3d9e560696be210241cc27c081",
   },
 
   ----------------------------------------------------------------------
@@ -190,7 +190,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "6d3fbffe426794296a77bb0b37b6ae0f4f14f807",
+    commit = "8c998877f1b3d8b56523d0c10eef2191f24fadc1",
   },
 
   ----------------------------------------------------------------------
@@ -202,7 +202,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "8c89efb93b8383666a6f989762c2f610f5f2c930",
+    commit = "d883632bf8f92f1d5abea4a9c28fb2f90aa795aa",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "233c4175780d9b4e39ae4fe4535c1e4c14bd76ed",
+    commit = "e9fbeec106562475e82bae79304b6a421eee73f3",
   },
 
   ----------------------------------------------------------------------
@@ -325,7 +325,7 @@ lazy.setup({
   -- Delete Neovim buffers without losing window layout.
   {
     "famiu/bufdelete.nvim",
-    commit = "ccfa2589fa68512770639839ab3850097fbbf4dc",
+    commit = "f476dc9d264136b72d386c53bbf77a29598e4b7b",
   },
 
   -- Pomodoro time tracker for NeoVim written entirely in LUA
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "d5a82aae64426a805e19d8ef5a379292f9dc55d3",
+    commit = "062e366afcdf2bc1e9d28313a1df4ff14f05cb4e",
   },
 
   ----------------------------------------------------------------------
@@ -377,14 +377,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "f868d82a36f7f7f5e110eb0a9659993984f59875",
+    commit = "4455bb5364d29ff86639dfd5533d4fe4b48192d4",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "6ca4cce071d527fa16c27781f98b843774ae84a7",
+    commit = "77cd1e12e5acff62b7be9027325a6c3d9521dcdb",
   },
 
   ----------------------------------------------------------------------
