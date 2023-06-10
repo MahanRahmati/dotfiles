@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "0f598b9ab9f2a6d7e137074be99c8d89af44b990",
+    commit = "08f1f347c718e945c3b1712ebb68c6834182cf3a",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "09ff53ff579cfa3368f8051b0dbe88406891aabe",
+    commit = "69e7d280cbe17e318b549a10ae3cae5810946be6",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "51dfcfdfdea564c7a6bf155cf5b7c9831193ddae",
+    commit = "f9d701176cb9a3e206a4c690920a8993630c3ec8",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -180,7 +180,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "0eb246a7dbb06d3d9e560696be210241cc27c081",
+    commit = "b71d1ddc30a10ce0474156f7ee93bc9006d0cd74",
   },
 
   ----------------------------------------------------------------------
@@ -190,7 +190,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "8c998877f1b3d8b56523d0c10eef2191f24fadc1",
+    commit = "116dbea5800c908de4afa6e793f28f782621c65d",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "e9fbeec106562475e82bae79304b6a421eee73f3",
+    commit = "2df7036c5c303c9184869936e40ca18935e4afcb",
   },
 
   ----------------------------------------------------------------------
@@ -281,7 +281,7 @@ lazy.setup({
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "1838ae926e8d49fe5330d1498ee8289ae2c340bc",
+    commit = "9e33db324b8bb7a147bce9ea5496686ee859461d",
   },
 
   ----------------------------------------------------------------------
@@ -325,7 +325,7 @@ lazy.setup({
   -- Delete Neovim buffers without losing window layout.
   {
     "famiu/bufdelete.nvim",
-    commit = "f476dc9d264136b72d386c53bbf77a29598e4b7b",
+    commit = "a7c1ce91c05df5685a974695aa46840da628a6a3",
   },
 
   -- Pomodoro time tracker for NeoVim written entirely in LUA
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "062e366afcdf2bc1e9d28313a1df4ff14f05cb4e",
+    commit = "64bdc579873fa5bd303f6951ead2b419493c88e8",
   },
 
   ----------------------------------------------------------------------
@@ -384,7 +384,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "77cd1e12e5acff62b7be9027325a6c3d9521dcdb",
+    commit = "6780a8a27f5cd326f502653cecef701611641fdf",
   },
 
   ----------------------------------------------------------------------
