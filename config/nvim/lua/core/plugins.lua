@@ -62,7 +62,7 @@ lazy.setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "df2db65ac9bde2404ed810e09bbca3bd4421d928",
+    commit = "52bd3da14392c54a1b0dedf8ef81ee6628de9d6e",
   },
 
   ----------------------------------------------------------------------
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "5822a8c6886f0238a315b57e5e96acdd74d04448",
+    commit = "10b0da9f931c734b531eb095ea01cce53984205c",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "a13af80734eb28f744de6c875330c9d3c24b5f3b",
+    commit = "bfbd03952f428db6e28bb199c713b1b25576cec9",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "49ca2a0e0e26427b550b1f64272d7fe7e4d7d51b",
+    commit = "b3cd8d77feb7871d8b04bb45bcd8154120a796a1",
   },
 
   ----------------------------------------------------------------------
@@ -325,7 +325,7 @@ lazy.setup({
   -- Delete Neovim buffers without losing window layout.
   {
     "famiu/bufdelete.nvim",
-    commit = "42ccf4f63310ddfe5f7572ae5a9ffdf5b7bee1c7",
+    commit = "8d15a0a3189b02ac7ad9dd6dc089cc62edf095c6",
   },
 
   -- Pomodoro time tracker for NeoVim written entirely in LUA
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "72b24ab29c5b5e9254b030a4365663d6a1463cf5",
+    commit = "e916f67b6bae1d290efa7c824ae4e04023cdfb20",
   },
 
   ----------------------------------------------------------------------
@@ -377,14 +377,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "6680427dd050a3a76c67245780eb7625bd400dfa",
+    commit = "4f8f66da9816ec4c4847653c9ab9bcb9c609508c",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "0ad3e4f834093412ebbf317b7eaa9c59568824b9",
+    commit = "b3a763f8c7810b352226c95faa7d3ac9fb93b8d9",
   },
 
   ----------------------------------------------------------------------
@@ -427,7 +427,7 @@ lazy.setup({
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "f3c70493bb23f83eee7b29aa6043c5caa38d111e",
+    commit = "9e228dc94d083cb2dfddac64d524483f452dab40",
   },
 
   -- Shows floating hover with the current function/block context.
