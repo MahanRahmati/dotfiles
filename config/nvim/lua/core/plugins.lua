@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "80861dc087982a6ed8ba91ec4836adce619f5a8a",
+    commit = "444eab07bb7881cad984c68c89fde276f7a26d81",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -42,7 +42,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "ed989357ec71ed8d91deda7122a93f7570e19041",
+    commit = "f7f81ab41b153e2902ebded401a8a0a6abe28607",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -56,13 +56,13 @@ lazy.setup({
   -- mason.nvim
   {
     "jayp0521/mason-null-ls.nvim",
-    commit = "54d702020bf94e4eefd357f0b738317af30217eb",
+    commit = "73c68abdf65279e41526eb152876511a8ae84ea2",
   },
 
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "2ee346a54f46fefcb1dec2eb531ef1ea1a137353",
+    commit = "2c8e2c3871d59d3cb10e2863f50a259da86708a6",
   },
 
   ----------------------------------------------------------------------
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "b8c2a62b3bd3827aa059b43be3dd4b5c45037d65",
+    commit = "fa492591fecdc41798cd5d3d1713232a5088fba0",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "840e5d71787b02789f909315f646a6dd66a0de2c",
+    commit = "517a79c84890507e0868982f23c7723541a0d0ea",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "4964cd11e19de4671189b97de37f3c4930d43191",
+    commit = "3d2ad0c0fa25e4e272ade48a62a185ebd0fe26c1",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "70b727d3454cceb3a818b1746be09786568b7e33",
+    commit = "91dc01efa4cbb6d6a2b77eb98953b9a1d5c78f5f",
   },
 
   ----------------------------------------------------------------------
@@ -291,7 +291,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "2a125024a137677930efcfdf720f205504c97268",
+    commit = "14b3a5ba63b82b60cde98d0a40319d80f25e8301",
   },
 
   ----------------------------------------------------------------------
@@ -357,7 +357,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "e319f2554d14a521f4271576ebff2685105d7628",
+    commit = "d146966a423e60699b084eeb28489fe3b6427599",
   },
 
   ----------------------------------------------------------------------
@@ -377,7 +377,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "256569c2fe697a3003dbd49ff474e5935af9066c",
+    commit = "3ef12dfdc293969fac736a7a580d6ae1f57ea406",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -405,7 +405,7 @@ lazy.setup({
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "e271c28118998c93a14d189af3395812a1aa646c",
+    commit = "d871f2b664afd5aed3dc1d1573bef2fb24ce0484",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -421,19 +421,19 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "41803bdbf75569571f93fd4571f6c654635b1b46",
+    commit = "e8f7dd7a72de3e7b6626c050a802000e69d53ff0",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "9e228dc94d083cb2dfddac64d524483f452dab40",
+    commit = "09214437d00b2e6863f95578d72abe5bca2d0f6b",
   },
 
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "05aa871a41078ae82158a37940972f6fea057c01",
+    commit = "6eccc445394df5ab9b1c1e2c445c033949a6a784",
   },
 
   -- Peek lines in a non-obtrusive way.
