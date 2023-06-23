@@ -5,7 +5,7 @@ end
 
 barbecue.setup {
   create_autocmd = false,
-  show_dirname = false,
+  show_dirname = true,
   show_modified = true,
   symbols = {
     modified = "",
