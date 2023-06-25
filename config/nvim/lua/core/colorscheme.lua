@@ -6,6 +6,7 @@ end
 colorscheme.setup {
   flavour = "mocha",
   transparent_background = true,
+  no_underline = true,
   color_overrides = {
     mocha = {
       -- rosewater = "#F5E0DC", -- Winbar
