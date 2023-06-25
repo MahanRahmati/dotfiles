@@ -61,7 +61,6 @@ local diagnostics = {
   colored = true,
   update_in_insert = false,
   always_visible = false,
-  cond = hide_in_width,
   on_click = open_diagnostic,
 }
 
