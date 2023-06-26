@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "b75f79bc5f68b552743d2136b80fe545871d5501",
+    commit = "d49ba798c95398e62321b40041e8ac4654fea251",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -202,7 +202,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "7e0113195b4010cae9b022310a5bc60a11e818c6",
+    commit = "70d3daa22bf24de9e3e284ac659506b1374e3ae2",
   },
 
   ----------------------------------------------------------------------
@@ -313,7 +313,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "1cbc4eef2ef7d745aa1a559b22589e33860cf077",
+    commit = "e6eff7a5a950a853c3903d906dbcea03f778db5f",
   },
 
   -- Display a line as colorcolumn.
