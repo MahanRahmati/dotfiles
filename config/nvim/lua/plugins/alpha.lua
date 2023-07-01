@@ -48,6 +48,8 @@ local buttons = {
       ":e ~/.config/nvim/init.lua <CR>"
     ),
     { type = "padding", val = 1 },
+    dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+    { type = "padding", val = 1 },
     dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
     { type = "padding", val = 1 },
   },
