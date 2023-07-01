@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "e1f1b40790a8cb7e64091fb12cc5ffe350363aa0",
+    commit = "2743dd989e9b932e1b4813a4927d7b84272a14e2",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "0522bbe90d6f9bb7080621fe70f8ab565e072b98",
+    commit = "3fde1587d0850d46b5a1473e5d1e59254e947496",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -180,7 +180,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "1723ae01d83f3b3ac1530f1ae22b7b9d5da7749b",
+    commit = "ad7cef5d538b023ee3af0fe3170cadb096171b1f",
   },
 
   ----------------------------------------------------------------------
@@ -190,7 +190,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "e651c3731749f71a36d414e7cbb6b36bcf30aee6",
+    commit = "b14de80d1cdf66f988f6550ca8577c43bb3797cd",
   },
 
   ----------------------------------------------------------------------
@@ -367,7 +367,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "258961973c2cbef5717d4a726c68a0730fb0f94b",
+    commit = "6b61b51a3240b4cb03020c00c28c7ebe98db19ad",
   },
 
   ----------------------------------------------------------------------
