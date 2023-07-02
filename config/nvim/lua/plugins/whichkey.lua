@@ -146,6 +146,10 @@ local n_mappings = {
     b = { "<cmd>NomoBreak<cr>", "Nomo Break" },
     s = { "<cmd>NomoStop<cr>", "Nomo Stop" },
   },
+  m = {
+    "<cmd>lua require('muren.api').toggle_ui()<cr>",
+    "Muren",
+  },
 }
 
 local v_opts = {
