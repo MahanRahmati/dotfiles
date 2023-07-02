@@ -56,7 +56,7 @@ lazy.setup({
   -- mason.nvim
   {
     "jayp0521/mason-null-ls.nvim",
-    commit = "73c68abdf65279e41526eb152876511a8ae84ea2",
+    commit = "ce6b1b55088ac2f6bc3bde2ca9e2977b581e5d33",
   },
 
   -- Another lsp progress status for Neovim.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "3fde1587d0850d46b5a1473e5d1e59254e947496",
+    commit = "254f3da6832252d579962ca6dcafae9c164de4ed",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -367,7 +367,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "6b61b51a3240b4cb03020c00c28c7ebe98db19ad",
+    commit = "4ce7c51b881e58f1e2f8f437f30e4e583cbac319",
   },
 
   ----------------------------------------------------------------------
