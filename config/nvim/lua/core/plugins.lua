@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "51739a8bc531542079698c58512feb68469f5d27",
+    commit = "deade69789089c3da15237697156334fb3e943f0",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "1ef286e5b0cfd17f56586a8445cd83d61647f851",
+    commit = "d9104a1d10023ed9e7eacf68639ad887425246eb",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -180,7 +180,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "a94db1ee6ddfd238e725b0f90163fdd65d382464",
+    commit = "7f6681b7d1eebba024f0caf6576fc1e94578b9cc",
   },
 
   ----------------------------------------------------------------------
@@ -244,7 +244,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "cc8d3abc944d78cb6bf2a4cc88871ab383c4da62",
+    commit = "278bfeb61bd627dc2a8885180a0441a1ebe65a41",
   },
 
   ----------------------------------------------------------------------
@@ -394,7 +394,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "94f5f40543e393d9028bae9ce2fedf6da3af701a",
+    commit = "b0cc22f5708f6b2b4f873b44fbc5eb93020f4e0c",
   },
 
   ----------------------------------------------------------------------
@@ -488,7 +488,7 @@ lazy.setup({
   -- IndentLine replacement in Lua with more features and treesitter support.
   {
     "lukas-reineke/indent-blankline.nvim",
-    commit = "fedad189e6ab1037939b79d32b7acaf05a0d4fb0",
+    commit = "4541d690816cb99a7fc248f1486aa87f3abce91c",
   },
 }, {
   ui = { border = "rounded" },
