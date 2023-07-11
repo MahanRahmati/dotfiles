@@ -49,7 +49,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "82685fdd0f67a694b244cb058b83761f54664d68",
+    commit = "796008869e67ef27a5aa5ac44c08ce2a60b89f55",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "2743dd989e9b932e1b4813a4927d7b84272a14e2",
+    commit = "c4e491a87eeacf0408902c32f031d802c7eafce8",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -148,7 +148,7 @@ lazy.setup({
   -- Tools for better development in rust using Neovim's builtin LSP.
   {
     "simrat39/rust-tools.nvim",
-    commit = "71d2cf67b5ed120a0e31b2c8adb210dd2834242f",
+    commit = "0cc8adab23117783a0292a0c8a2fbed1005dc645",
   },
 
   ----------------------------------------------------------------------
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d9104a1d10023ed9e7eacf68639ad887425246eb",
+    commit = "3af1220e18034eb2ce7d1c8e77055bc3bf3c1c36",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,13 +174,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "a658ae2906344a1d2b9c507738e585cf68e685c7",
+    commit = "45a4e899ca8f54936fe32ead6bba65f2a8d42e12",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "7f6681b7d1eebba024f0caf6576fc1e94578b9cc",
+    commit = "6e0afe3be0ba43ef03d495a529de8fb22721c0d0",
   },
 
   ----------------------------------------------------------------------
@@ -244,7 +244,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "278bfeb61bd627dc2a8885180a0441a1ebe65a41",
+    commit = "3ffd2f511f3dc6c01258923d7170ccaf1445634b",
   },
 
   ----------------------------------------------------------------------
@@ -261,7 +261,7 @@ lazy.setup({
   -- code context.
   {
     "SmiteshP/nvim-navic",
-    commit = "e3b9d8a974bec71b88d5640f1c87bf5b4a7e4113",
+    commit = "6e8850a524307814decc1b195a2c8a51482a9886",
   },
 
   ----------------------------------------------------------------------
@@ -351,7 +351,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "2249e974faed67e795ffc2ca2be13b93c5d51938",
+    commit = "83aa231fa414a5dcb72aed97437446a6ca5a81f2",
   },
 
   ----------------------------------------------------------------------
@@ -387,7 +387,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "dc2962f7fce953a2a98e7c6d3d7fc4c1d1f66758",
+    commit = "48c3ae8ec74cb83f9570ceb0c5ab8217db7a2220",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -437,7 +437,7 @@ lazy.setup({
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "d6e82e23f877f488563437237abbc85d7cededea",
+    commit = "d2ea7b31b805cf4b7a05d032d0ec9d356345d3df",
   },
 
   -- Shows floating hover with the current function/block context.
