@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "deade69789089c3da15237697156334fb3e943f0",
+    commit = "b88b227cf8d61d6e43dd23d8a39b8b2897bc17e5",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "3af1220e18034eb2ce7d1c8e77055bc3bf3c1c36",
+    commit = "a51236f068547487ed34c3a32d9a0b3bf793afa7",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -180,7 +180,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "6e0afe3be0ba43ef03d495a529de8fb22721c0d0",
+    commit = "6153166d5a3dcc7e2809ea4f17f9edb34d026026",
   },
 
   ----------------------------------------------------------------------
@@ -387,7 +387,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "48c3ae8ec74cb83f9570ceb0c5ab8217db7a2220",
+    commit = "5a04466685008f29c71fa5ec25d421deb1c83fea",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -431,19 +431,19 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "e8f7dd7a72de3e7b6626c050a802000e69d53ff0",
+    commit = "a16989a5453e0a0a8250deab340f429353876da4",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
-    commit = "d2ea7b31b805cf4b7a05d032d0ec9d356345d3df",
+    commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f",
   },
 
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "63f3ffc50b0afc59be1015153d00922498085be8",
+    commit = "6f8f788738b968f24a108ee599c5be0031f94f06",
   },
 
   -- Peek lines in a non-obtrusive way.
