@@ -13,11 +13,11 @@ neo_tree.setup {
       with_expanders = true,
     },
   },
+  nesting_rules = {
+    ["dart"] = { "g.dart", "freezed.dart" },
+  },
   window = {
     width = 35,
-    mappings = {
-      ["<space>"] = "none",
-    },
   },
   filesystem = {
     filtered_items = {
