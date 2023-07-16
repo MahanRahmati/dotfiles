@@ -30,7 +30,7 @@ neo_tree.setup {
     {
       event = "file_opened",
       handler = function(_)
-        require("neo-tree").close_all()
+        vim.cmd "Neotree close"
       end,
     },
     {
