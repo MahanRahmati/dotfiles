@@ -9,6 +9,20 @@ telescope.setup {
   defaults = {
     path_display = { "smart" },
     layout_strategy = "flex",
+    layout_config = {
+      horizontal = {
+        height = 0.999,
+        preview_cutoff = 1,
+        prompt_position = "bottom",
+        width = 0.999,
+      },
+      vertical = {
+        height = 0.999,
+        preview_cutoff = 1,
+        prompt_position = "bottom",
+        width = 0.999,
+      },
+    },
     prompt_prefix = " ",
     selection_caret = " ",
     file_ignore_patterns = {
@@ -44,6 +58,7 @@ telescope.setup {
   pickers = {
     find_files = {
       follow = true,
+      hidden = true,
     },
   },
   extensions = {
