@@ -87,10 +87,32 @@ if status_nomodoro_ok then
   nomodoro_module = nomodoro_component
 end
 
+local function selectioncount()
+  local nvim_mode = vim.fn.mode(true)
+  local line_start, col_start = vim.fn.line "v", vim.fn.col "v"
+  local line_end, col_end = vim.fn.line ".", vim.fn.col "."
+  if nvim_mode:match "" then
+    return "("
+      .. string.format(
+        "%dx%d",
+        math.abs(line_start - line_end) + 1,
+        math.abs(col_start - col_end) + 1
+      )
+      .. ")"
+  elseif nvim_mode:match "V" or line_start ~= line_end then
+    return "(" .. math.abs(line_start - line_end) + 1 .. ")"
+  elseif nvim_mode:match "v" then
+    return "(" .. math.abs(col_start - col_end) + 1 .. ")"
+  else
+    return ""
+  end
+end
+
 local location = function()
   local cursor = vim.fn.line "."
   local column = vim.fn.virtcol "."
-  return cursor .. ":" .. column
+  local selected = selectioncount()
+  return cursor .. ":" .. column .. selected
 end
 
 local filetype = {
@@ -168,7 +190,6 @@ lualine.setup {
     lualine_c = { branch, diff, diagnostics },
     lualine_x = {
       lsp_progress_module,
-      "selectioncount",
       location,
       filetype,
       nomodoro_module,
