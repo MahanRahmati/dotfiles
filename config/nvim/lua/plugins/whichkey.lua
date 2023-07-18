@@ -196,10 +196,6 @@ local normal_mappings = {
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
     I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
   },
-  s = {
-    ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
-    "Replace current word",
-  },
   ["<C-h>"] = { "<C-w>h", "Better window navigation" },
   ["<C-j>"] = { "<C-w>j", "Better window navigation" },
   ["<C-k>"] = { "<C-w>k", "Better window navigation" },
