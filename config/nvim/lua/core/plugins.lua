@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "ba3ec2527aa7aae9b989d69966174a22b7d1b1dd",
+    commit = "447443a2404adc323ad2efc7c0a346a904ce694c",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -62,7 +62,7 @@ lazy.setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "951570c8474cea1bc9c4f11208b076f59cd7792f",
+    commit = "dbbf6c40c72fd04cdaf8a6755962296ff9c35c8f",
   },
 
   ----------------------------------------------------------------------
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "19b29f7cb046317b74e60fc7bff2f86ece4dc118",
+    commit = "4115fad9fded72571bdc3e0f7351e64b31799a3d",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "1f72e43a446961a1372c54038882c1d36e105cab",
+    commit = "0b4950a237ce441a6a3a947d501622453f6860ea",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -212,7 +212,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "293395c80224fd6f179dffc1c641430c85f999b0",
+    commit = "3c68ae5968b75aea8d445b3bb024e007b0bd0b65",
   },
 
   ----------------------------------------------------------------------
@@ -244,7 +244,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "bfe91dfb3a19ffd4445e43611fcde68acbb3fed4",
+    commit = "a84ee1848bfac4601771805396552bdbaa0a0e91",
   },
 
   ----------------------------------------------------------------------
@@ -387,14 +387,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "1e01b2958aebb79f1c33e7427a1bac131a678e0d",
+    commit = "adcf2c7f2f495f5df148683764bf7cba6a70f34c",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "b0cc22f5708f6b2b4f873b44fbc5eb93020f4e0c",
+    commit = "e91110d2a7f8e2f667666aba6ea089ff823f8748",
   },
 
   ----------------------------------------------------------------------
