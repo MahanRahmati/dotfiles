@@ -60,6 +60,10 @@ telescope.setup {
       follow = true,
       hidden = true,
     },
+    buffers = {
+      theme = "dropdown",
+      previewer = false,
+    },
   },
   extensions = {},
 }
