@@ -138,7 +138,12 @@ local function progress_function()
   elseif cur == total then
     return "100%%"
   else
-    return string.format("%2d%%%%", math.floor(cur / total * 100))
+    local percentage = math.floor(cur / total * 100)
+    if percentage < 10 then
+      return string.format("%d%%%%", percentage)
+    else
+      return string.format("%2d%%%%", percentage)
+    end
   end
 end
 
