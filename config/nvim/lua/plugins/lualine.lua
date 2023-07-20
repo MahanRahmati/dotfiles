@@ -237,7 +237,7 @@ lualine.setup {
     disabled_filetypes = {
       statusline = { "alpha" },
       tabline = { "alpha" },
-      winbar = { "alpha", "toggleterm" },
+      winbar = { "alpha", "toggleterm", "neo-tree" },
     },
     always_divide_middle = true,
     globalstatus = true,
