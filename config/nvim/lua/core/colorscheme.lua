@@ -48,6 +48,8 @@ colorscheme.setup {
       LineNr = { fg = colors.surface2 },
       CursorLineNr = { fg = colors.yellow },
       SmoothCursor = { fg = colors.yellow },
+      NavicText = { fg = colors.text },
+      NavicSeparator = { fg = colors.surface2 },
     }
   end,
   integrations = {
@@ -60,6 +62,9 @@ colorscheme.setup {
     treesitter = true,
     treesitter_context = true,
     which_key = true,
+    navic = {
+      enabled = true,
+    },
   },
 }
 

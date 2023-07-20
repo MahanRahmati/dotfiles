@@ -150,6 +150,59 @@ local progress = {
 }
 
 ----------------------------------------------------------------------
+--                              Winbar                              --
+----------------------------------------------------------------------
+
+local winbar_filetype = {
+  "filetype",
+  colored = true,
+  icon_only = true,
+  padding = 1,
+}
+
+local winbar_filename = {
+  "filename",
+  file_status = true,
+  newfile_status = false,
+  path = 0,
+  symbols = {
+    modified = "",
+    readonly = "",
+    unnamed = " No Name",
+    newfile = " New",
+  },
+  padding = 0,
+}
+
+local winbar_separator_module = {}
+local navic_module = {}
+local status_navic_ok, navic = pcall(require, "nvim-navic")
+if status_navic_ok then
+  local _separator = function()
+    return ">"
+  end
+
+  local winbar_separator = {
+    _separator,
+    cond = function()
+      return navic.is_available()
+    end,
+    color = { fg = "#585B70" },
+    padding = { left = 1, right = 0 },
+  }
+  winbar_separator_module = winbar_separator
+  local navic_component = {
+    function()
+      return navic.get_location()
+    end,
+    cond = function()
+      return navic.is_available()
+    end,
+  }
+  navic_module = navic_component
+end
+
+----------------------------------------------------------------------
 --                            Extensions                            --
 ----------------------------------------------------------------------
 
@@ -179,7 +232,7 @@ lualine.setup {
     disabled_filetypes = {
       statusline = { "alpha" },
       tabline = { "alpha" },
-      winbar = {},
+      winbar = { "alpha", "toggleterm" },
     },
     always_divide_middle = true,
     globalstatus = true,
@@ -199,6 +252,13 @@ lualine.setup {
     lualine_z = { progress },
   },
   tabline = {},
-  winbar = {},
+  winbar = {
+    lualine_c = {
+      winbar_filetype,
+      winbar_filename,
+      winbar_separator_module,
+      navic_module,
+    },
+  },
   extensions = { "man", toggleterm_extension },
 }
