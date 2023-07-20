@@ -446,13 +446,6 @@ lazy.setup({
     commit = "2c89245d1185e02fec1494c45bc765a38b6b40b3",
   },
 
-  -- A telescope extension to visualize your undo tree and fuzzy-search changes
-  -- in it.
-  {
-    "debugloop/telescope-undo.nvim",
-    commit = "3dec002ea3e7952071d26fbb5d01e2038a58a554",
-  },
-
   ----------------------------------------------------------------------
   --                             Comment                              --
   ----------------------------------------------------------------------

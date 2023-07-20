@@ -61,10 +61,7 @@ telescope.setup {
       hidden = true,
     },
   },
-  extensions = {
-    undo = {},
-  },
+  extensions = {},
 }
 
-telescope.load_extension "undo"
 telescope.load_extension "projects"
