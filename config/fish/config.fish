@@ -122,6 +122,10 @@ set fish_prompt_pwd_dir_length 1
 set fish_color_command green
 set fish_color_param $fish_color_normal
 
+function postexec_test --on-event fish_postexec
+    echo
+end
+
 function print_in_color
     set -l string $argv[1]
     set -l color $argv[2]
@@ -157,5 +161,6 @@ end
 function fish_prompt
     set -l last_status $status
     print_pwd
+    __fish_git_prompt " 󰊢 %s"
     print_in_color '  ' (prompt_color_for_status $last_status)
 end
