@@ -24,7 +24,7 @@ treesitter.setup {
   },
   indent = {
     enable = true,
-    disable = { "yaml", "python" },
+    disable = { "yaml", "python", "dart" },
   },
   rainbow = {
     enable = true,
