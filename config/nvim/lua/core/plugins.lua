@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "6f426c34c8e21af2f934e56be9d1198a507ecc9f",
+    commit = "b6091272422bb0fbd729f7f5d17a56d37499c54f",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "74a7da4e4be5ee71e9efb6d7bdffa16ad620cc57",
+    commit = "5e27645a2b7ecce1f8e0971d78f55de0f392ba23",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "0b4950a237ce441a6a3a947d501622453f6860ea",
+    commit = "e81cbe6004051c390721d8570a4a0541ceb0df10",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -200,7 +200,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "1228f3b15ca3d9b95dcb92efda6a3448871030bd",
+    commit = "22735947d84d78f29436c203f0a4b8dc15dda204",
   },
 
   ----------------------------------------------------------------------
@@ -212,7 +212,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "3c68ae5968b75aea8d445b3bb024e007b0bd0b65",
+    commit = "93fcf0a3056c60829c0a210fe35523cda7ef0369",
   },
 
   ----------------------------------------------------------------------
@@ -244,7 +244,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "6425df128d46f2db2cccf9aa7a66ca2823c1d153",
+    commit = "737f60a3a25c79d9bb9574092f6c6c958a3d747a",
   },
 
   ----------------------------------------------------------------------
@@ -381,7 +381,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "11b80e7eea249affc8776483272bcfc627b5552a",
+    commit = "5d73da785a3c05fd63ac31769079db05169a6ec7",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
