@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "a59d74e12340242c0735666fb2e91afdbe6f2496",
+    commit = "c0de180ddb3df36feef8ac3607670894d0e7497f",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "bec1ceee160a456158495849769bbfae4165642e",
+    commit = "6c93c86272633937090806fedb2a20fe11025876",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "e81cbe6004051c390721d8570a4a0541ceb0df10",
+    commit = "99a94cc35ec99bf06263d0346128e908a204575c",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -265,7 +265,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "05d78e9fd0cdfb4545974a5aa14b1be95a86e9c9",
+    commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
   },
 
   ----------------------------------------------------------------------
@@ -345,7 +345,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "0e4e89aff78ad178e1f3cf5d565a6b4155fbb45b",
+    commit = "12cba0a1967b4f3f31903484dec72a6100dcf515",
   },
 
   ----------------------------------------------------------------------
@@ -388,7 +388,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "e91110d2a7f8e2f667666aba6ea089ff823f8748",
+    commit = "500d8b2013812e05ab87db83a8d22319986519f2",
   },
 
   ----------------------------------------------------------------------
@@ -437,7 +437,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "6f8f788738b968f24a108ee599c5be0031f94f06",
+    commit = "3d4ab25056dcaf6dd11ebacf1da8525c8df6550f",
   },
 
   -- Peek lines in a non-obtrusive way.
