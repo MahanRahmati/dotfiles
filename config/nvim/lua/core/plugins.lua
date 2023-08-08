@@ -158,13 +158,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "6c93c86272633937090806fedb2a20fe11025876",
+    commit = "2f5b4a65dc065b5a6581429d5c1ca87e62fcb120",
   },
 
   -- A plugin for adding/changing/deleting surrounding delimiter pairs.
   {
     "kylechui/nvim-surround",
-    commit = "10b20ca7d9da1ac8df8339e140ffef94f9ab3b18",
+    commit = "0d6882635817a2677749a330127d12ac30a4f3c8",
   },
 
   ----------------------------------------------------------------------
@@ -200,7 +200,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "d2e17ba18a6840b7e7079764b282616c3188e0de",
+    commit = "dc192faceb2db64231ead71539761e055df66d73",
   },
 
   ----------------------------------------------------------------------
@@ -212,7 +212,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "7951701fd21291ac473ea92d3fd57ec5c8bf10bb",
+    commit = "38293fe690981aba6cfef5e440f26d8b956d463e",
   },
 
   ----------------------------------------------------------------------
@@ -244,7 +244,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "057c34f849cf21059487d849e2f3b3efcd4ee0eb",
+    commit = "371430f32f2637d2dd5796399b3982d4cada61d8",
   },
 
   ----------------------------------------------------------------------
@@ -295,7 +295,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "efbfed0567ef4bfac3ce630524a0f6c8451c5534",
+    commit = "eb8f80f30fd5e9a6176dee5c46661ebd7437ac46",
   },
 
   ----------------------------------------------------------------------
@@ -317,7 +317,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "829bc80400651aea31b03d8fc9a99135512fe67a",
+    commit = "713b56e13c58ad519920e0e634763345cb4fc832",
   },
 
   -- Display a line as colorcolumn.
@@ -381,7 +381,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "5d73da785a3c05fd63ac31769079db05169a6ec7",
+    commit = "31178496552584e84fa9e74e087dec1f6c347f5d",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -453,7 +453,7 @@ lazy.setup({
   -- Smart and Powerful comment plugin for Neovim.
   {
     "numToStr/Comment.nvim",
-    commit = "d0cbbfb539898a275dc4398446ab0ae3b94819bf",
+    commit = "0236521ea582747b58869cb72f70ccfa967d2e89",
   },
 
   -- Highlight, list and search todo comments in your projects.
