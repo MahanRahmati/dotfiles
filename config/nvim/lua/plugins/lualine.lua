@@ -3,6 +3,8 @@ if lualine == nil then
   return
 end
 
+local icons = require "core.icons"
+
 local hide_in_width = function()
   return vim.fn.winwidth(0) > 80
 end
@@ -21,14 +23,14 @@ end
 
 local mode = {
   "mode",
-  icon = "",
+  icon = icons.mode,
   separator = { left = " ", right = "" },
   padding = 0,
 }
 
 local branch = {
   "b:gitsigns_head",
-  icon = "󰊢",
+  icon = icons.branch,
   on_click = open_lazygit,
   padding = { left = 2, right = 1 },
 }
@@ -47,7 +49,11 @@ end
 local diff = {
   "diff",
   colored = true,
-  symbols = { added = " ", modified = " ", removed = " " },
+  symbols = {
+    added = icons.added,
+    modified = icons.modified,
+    removed = icons.removed,
+  },
   cond = hide_in_width,
   source = diff_source,
   on_click = open_lazygit,
@@ -57,7 +63,12 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_lsp", "nvim_diagnostic", "nvim_workspace_diagnostic" },
   sections = { "error", "warn", "info", "hint" },
-  symbols = { error = " ", warn = " ", info = " ", hint = "󰌵 " },
+  symbols = {
+    error = icons.error,
+    warn = icons.warn,
+    info = icons.info,
+    hint = icons.hint,
+  },
   colored = true,
   update_in_insert = false,
   always_visible = false,
@@ -81,7 +92,7 @@ local status_nomodoro_ok, nomodoro = pcall(require, "nomodoro")
 if status_nomodoro_ok then
   local nomodoro_component = {
     nomodoro.status,
-    icon = "󰞌",
+    icon = icons.pomodoro,
     color = { fg = "#F38BA8" },
   }
   nomodoro_module = nomodoro_component
@@ -126,7 +137,7 @@ local filetype = {
 local datetime = {
   "datetime",
   style = "%H:%M",
-  icon = "󰥔",
+  icon = icons.datetime,
   color = { fg = "#A6E3A1" },
 }
 
@@ -149,7 +160,7 @@ end
 
 local progress = {
   progress_function,
-  icon = "󰦪",
+  icon = icons.progress,
   separator = { left = "", right = " " },
   padding = 0,
 }
@@ -171,8 +182,8 @@ local winbar_filename = {
   newfile_status = false,
   path = 0,
   symbols = {
-    modified = "",
-    readonly = "",
+    modified = icons.modified,
+    readonly = icons.readonly,
     unnamed = " No Name",
     newfile = " New",
   },
