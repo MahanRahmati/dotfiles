@@ -4,6 +4,7 @@ if telescope == nil then
 end
 
 local actions = require "telescope.actions"
+local icons = require "core.icons"
 
 telescope.setup {
   defaults = {
@@ -23,8 +24,8 @@ telescope.setup {
         width = 0.999,
       },
     },
-    prompt_prefix = " ",
-    selection_caret = " ",
+    prompt_prefix = " " .. icons.find .. " ",
+    selection_caret = icons.selection_caret,
     file_ignore_patterns = {
       ".git/",
       "%.lock",

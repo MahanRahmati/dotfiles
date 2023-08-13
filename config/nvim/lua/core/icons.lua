@@ -66,4 +66,5 @@ return {
   package_uninstalled = " ",
   folder_filled = "",
   folder_empty = "",
+  selection_caret = " ",
 }
