@@ -5,12 +5,35 @@ end
 
 vim.cmd [[ let g:neo_tree_remove_legacy_commands = 1 ]]
 
+local icons = require "core.icons"
+
 neo_tree.setup {
   close_if_last_window = true,
   popup_border_style = "rounded",
   default_component_configs = {
     indent = {
       with_expanders = true,
+    },
+    icon = {
+      folder_closed = icons.folder_filled,
+      folder_open = icons.folder_filled,
+      folder_empty = icons.folder_empty,
+    },
+    modified = {
+      symbol = icons.modified,
+    },
+    git_status = {
+      symbols = {
+        added = icons.added,
+        modified = icons.modified,
+        deleted = icons.removed,
+        renamed = icons.renamed,
+        untracked = icons.untracked,
+        ignored = icons.ignored,
+        unstaged = icons.unstaged,
+        staged = icons.staged,
+        conflict = icons.conflict,
+      },
     },
   },
   nesting_rules = {

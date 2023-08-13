@@ -11,5 +11,6 @@ illuminate.configure {
     "toggleterm",
     "DressingSelect",
     "TelescopePrompt",
+    "neo-tree",
   },
 }
