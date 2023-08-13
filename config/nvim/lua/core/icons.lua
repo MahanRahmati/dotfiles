@@ -55,4 +55,7 @@ return {
   info = " ",
   hint = "󰌵 ",
   readonly = "",
+  package_installed = " ",
+  package_pending = " ",
+  package_uninstalled = " ",
 }

@@ -8,33 +8,7 @@ if luasnip == nil then
   return
 end
 
-local kind_icons = {
-  Text = " ",
-  Method = " ",
-  Function = "󰊕 ",
-  Constructor = " ",
-  Field = " ",
-  Variable = " ",
-  Class = " ",
-  Interface = " ",
-  Module = " ",
-  Property = " ",
-  Unit = " ",
-  Value = " ",
-  Enum = " ",
-  Keyword = " ",
-  Snippet = " ",
-  Color = " ",
-  File = " ",
-  Reference = " ",
-  Folder = " ",
-  EnumMember = " ",
-  Constant = " ",
-  Struct = " ",
-  Event = " ",
-  Operator = " ",
-  TypeParameter = " ",
-}
+local icons = require "core.icons"
 
 local has_words_before = function()
   unpack = unpack or table.unpack
@@ -104,7 +78,7 @@ cmp.setup {
   formatting = {
     fields = { "abbr", "kind", "menu" },
     format = function(entry, vim_item)
-      vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
+      vim_item.kind = string.format("%s", icons.kind_icons[vim_item.kind])
       vim_item.menu = ({
         nvim_lsp_signature_help = "LSP",
         nvim_lsp = "LSP",

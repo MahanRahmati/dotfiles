@@ -3,8 +3,10 @@ if indent_blankline == nil then
   return
 end
 
+local icons = require "core.icons"
+
 indent_blankline.setup {
-  char = "▏",
+  char = icons.indent_line,
   filetype_exclude = {
     "lspinfo",
     "checkhealth",

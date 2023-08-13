@@ -23,6 +23,8 @@ local header = {
   },
 }
 
+local icons = require "core.icons"
+
 local buttons = {
   type = "group",
   val = {
@@ -32,25 +34,33 @@ local buttons = {
       opts = { hl = "SpecialComment", position = "center" },
     },
     { type = "padding", val = 1 },
-    dashboard.button("n", "  New File", ":ene <BAR> startinsert <CR>"),
+    dashboard.button(
+      "n",
+      icons.file .. " New File",
+      ":ene <BAR> startinsert <CR>"
+    ),
     { type = "padding", val = 1 },
-    dashboard.button("f", "  Find File", ":Telescope find_files <CR>"),
+    dashboard.button(
+      "f",
+      icons.find .. " Find File",
+      ":Telescope find_files <CR>"
+    ),
     { type = "padding", val = 1 },
     dashboard.button(
       "r",
-      "  Recent Projects ",
+      icons.folder .. " Recent Projects ",
       "<CMD>Telescope projects<CR>"
     ),
     { type = "padding", val = 1 },
     dashboard.button(
       "c",
-      "  Configuration",
+      icons.configuration .. " Configuration",
       ":e ~/.config/nvim/init.lua <CR>"
     ),
     { type = "padding", val = 1 },
-    dashboard.button("l", "󰒲  Lazy", ":Lazy<CR>"),
+    dashboard.button("l", icons.lazy .. " Lazy", ":Lazy<CR>"),
     { type = "padding", val = 1 },
-    dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+    dashboard.button("q", icons.quit .. " Quit Neovim", ":qa<CR>"),
     { type = "padding", val = 1 },
   },
   position = "center",

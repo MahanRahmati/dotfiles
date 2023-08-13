@@ -3,13 +3,15 @@ if mason == nil then
   return
 end
 
+local icons = require "core.icons"
+
 mason.setup {
   ui = {
     border = "rounded",
     icons = {
-      package_installed = "✓",
-      package_pending = "➜",
-      package_uninstalled = "✗",
+      package_installed = icons.package_installed,
+      package_pending = icons.package_pending,
+      package_uninstalled = icons.package_uninstalled,
     },
   },
 }

@@ -3,6 +3,8 @@ if virt_column == nil then
   return
 end
 
+local icons = require "core.icons"
+
 virt_column.setup {
-  char = "┆",
+  char = icons.virt_line,
 }
