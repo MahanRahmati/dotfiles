@@ -161,12 +161,6 @@ lazy.setup({
     commit = "2f5b4a65dc065b5a6581429d5c1ca87e62fcb120",
   },
 
-  -- A plugin for adding/changing/deleting surrounding delimiter pairs.
-  {
-    "kylechui/nvim-surround",
-    commit = "0d6882635817a2677749a330127d12ac30a4f3c8",
-  },
-
   ----------------------------------------------------------------------
   --                             Snippet                              --
   ----------------------------------------------------------------------
