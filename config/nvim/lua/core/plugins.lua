@@ -28,21 +28,21 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "c0de180ddb3df36feef8ac3607670894d0e7497f",
+    commit = "a981d4447b92c54a4d464eb1a76b799bc3f9a771",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
   -- and more via Lua.
   {
     "jose-elias-alvarez/null-ls.nvim",
-    commit = "db09b6c691def0038c456551e4e2772186449f35",
+    commit = "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "fe9e34a9ab4d64321cdc3ecab4ea1809239bb73f",
+    commit = "74eac861b013786bf231b204b4ba9a7d380f4bd9",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -72,7 +72,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "c4e491a87eeacf0408902c32f031d802c7eafce8",
+    commit = "51f1e11a89ec701221877532ee1a23557d291dd5",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "2f5b4a65dc065b5a6581429d5c1ca87e62fcb120",
+    commit = "b5f203031282a6e9e025080fe71b58dbb43f7509",
   },
 
   ----------------------------------------------------------------------
@@ -168,13 +168,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "99a94cc35ec99bf06263d0346128e908a204575c",
+    commit = "409535b8fc54c650eb845b0c35e0cc7f08810284",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "bc38057e513458cb2486b6cd82d365fa294ee398",
+    commit = "377d45475b49e37460a902d6d569d2093d4037d0",
   },
 
   ----------------------------------------------------------------------
@@ -194,7 +194,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "dc192faceb2db64231ead71539761e055df66d73",
+    commit = "2d92125620417fbea82ec30303823e3cd69e90e8",
   },
 
   ----------------------------------------------------------------------
@@ -206,7 +206,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "38293fe690981aba6cfef5e440f26d8b956d463e",
+    commit = "cac2e1bfa1ecd5bd0ce7ae29e12efb3ba5a7347d",
   },
 
   ----------------------------------------------------------------------
@@ -238,7 +238,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "371430f32f2637d2dd5796399b3982d4cada61d8",
+    commit = "490078b1593c6609e6a50ad5001e7902ea601824",
   },
 
   ----------------------------------------------------------------------
@@ -289,7 +289,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "eb8f80f30fd5e9a6176dee5c46661ebd7437ac46",
+    commit = "ab899311f8ae00a47eae8e0879506cead8eb1561",
   },
 
   ----------------------------------------------------------------------
@@ -311,7 +311,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "713b56e13c58ad519920e0e634763345cb4fc832",
+    commit = "6bde51adabba06f7fd4a469885a85f36d78a5f52",
   },
 
   -- Display a line as colorcolumn.
@@ -365,7 +365,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "4ce7c51b881e58f1e2f8f437f30e4e583cbac319",
+    commit = "d5caf28aba49e81ac4099426231f3cf3c151013a",
   },
 
   ----------------------------------------------------------------------
@@ -375,7 +375,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "31178496552584e84fa9e74e087dec1f6c347f5d",
+    commit = "bae45ef449d8811061cc940459e70e883a3aa83a",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
