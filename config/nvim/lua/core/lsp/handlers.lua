@@ -50,24 +50,11 @@ end
 
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-local function attach_navic(client, bufnr)
-  local navic = require("core.import").import "nvim-navic"
-  if navic == nil then
-    return
-  end
-
-  if client.server_capabilities.documentSymbolProvider then
-    navic.attach(client, bufnr)
-  end
-end
-
 M.on_attach = function(client, bufnr)
   local cmp_nvim_lsp = require("core.import").import "cmp_nvim_lsp"
   if cmp_nvim_lsp == nil then
     return
   end
-
-  attach_navic(client, bufnr)
 
   if client.name == "sumneko_lua" then
     client.server_capabilities.documentFormattingProvider = false
