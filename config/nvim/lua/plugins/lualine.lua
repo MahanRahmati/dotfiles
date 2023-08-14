@@ -169,15 +169,28 @@ local progress = {
 --                              Winbar                              --
 ----------------------------------------------------------------------
 
--- local separator = function()
---   return ">"
--- end
+local function stl_escape(str)
+  if type(str) ~= "string" then
+    return str
+  end
+  return str:gsub("%%", "%%%%")
+end
 
--- local winbar_separator = {
---   separator,
---   color = { fg = "#585B70" },
---   padding = { left = 1, right = 0 },
--- }
+local function filepath_function()
+  local path = vim.fn.expand "%:~:.:h"
+  path = stl_escape(path)
+  if path == "" then
+    return ""
+  end
+  path = path:gsub("/", " " .. icons.separator .. " ")
+  return path .. " " .. icons.separator
+end
+
+local winbar_filepath = {
+  filepath_function,
+  color = { fg = "#585B70" },
+  padding = { left = 1, right = 0 },
+}
 
 local winbar_filetype = {
   "filetype",
@@ -252,7 +265,7 @@ lualine.setup {
   tabline = {},
   winbar = {
     lualine_c = {
-      -- winbar_separator,
+      winbar_filepath,
       winbar_filetype,
       winbar_filename,
     },

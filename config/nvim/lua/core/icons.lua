@@ -67,4 +67,5 @@ return {
   folder_filled = "",
   folder_empty = "",
   selection_caret = " ",
+  separator = "",
 }
