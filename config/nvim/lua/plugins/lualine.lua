@@ -179,7 +179,7 @@ end
 local function filepath_function()
   local path = vim.fn.expand "%:~:.:h"
   path = stl_escape(path)
-  if path == "" then
+  if path == "" or path == "." then
     return ""
   end
   path = path:gsub("/", " " .. icons.separator .. " ")
