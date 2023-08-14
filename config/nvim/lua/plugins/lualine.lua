@@ -270,5 +270,12 @@ lualine.setup {
       winbar_filename,
     },
   },
+  inactive_winbar = {
+    lualine_c = {
+      winbar_filepath,
+      winbar_filetype,
+      winbar_filename,
+    },
+  },
   extensions = { "man", toggleterm_extension },
 }
