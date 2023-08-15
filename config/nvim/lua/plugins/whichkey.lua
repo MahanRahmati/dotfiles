@@ -145,10 +145,6 @@ local n_mappings = {
     b = { "<cmd>NomoBreak<cr>", "Nomo Break" },
     s = { "<cmd>NomoStop<cr>", "Nomo Stop" },
   },
-  m = {
-    "<cmd>lua require('muren.api').toggle_ui()<cr>",
-    "Muren",
-  },
 }
 
 local v_opts = {
@@ -194,6 +190,10 @@ local normal_mappings = {
     r = { "<cmd>Telescope lsp_references<cr>", "References" },
     D = { "<cmd>lua vim.lsp.buf.declaration()<cr>", "Declaration" },
     I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
+  },
+  s = {
+    ":%s/<C-r><C-w>/<C-r><C-w>/g<Left><Left>",
+    "Replace current word",
   },
   ["<C-h>"] = { "<C-w>h", "Better window navigation" },
   ["<C-j>"] = { "<C-w>j", "Better window navigation" },
