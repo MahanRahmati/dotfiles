@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "a981d4447b92c54a4d464eb1a76b799bc3f9a771",
+    commit = "0d29cad8de3b2c654315203fc1fe12fde722a18a",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -42,7 +42,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "74eac861b013786bf231b204b4ba9a7d380f4bd9",
+    commit = "68e6a153d7cd1251eb85ebb48d2e351e9ab940b8",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -62,7 +62,7 @@ lazy.setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "1286d70781aa77685ec1be8a829d8c5c741219ba",
+    commit = "49e52ce6525bd10da144aec274172652a997ee64",
   },
 
   ----------------------------------------------------------------------
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "b5f203031282a6e9e025080fe71b58dbb43f7509",
+    commit = "f7bb866405530e863135596900781e73cbf6f4ed",
   },
 
   ----------------------------------------------------------------------
@@ -258,7 +258,7 @@ lazy.setup({
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "e4fc5e29b731bdf55d204c5c6a11dc3be70f3b65",
+    commit = "7a6b9487dba044a43fde534bf5036f0fda5b6b23",
   },
 
   ----------------------------------------------------------------------
@@ -268,7 +268,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "ab899311f8ae00a47eae8e0879506cead8eb1561",
+    commit = "cfc8824cc1db316a276b36517f093baccb8e799a",
   },
 
   ----------------------------------------------------------------------
@@ -354,14 +354,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "bae45ef449d8811061cc940459e70e883a3aa83a",
+    commit = "5a2b1205841bc06ffb15719b14d54987e17b22ae",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "500d8b2013812e05ab87db83a8d22319986519f2",
+    commit = "db97e667e03294bfa9f15e544e78f3082247bf79",
   },
 
   ----------------------------------------------------------------------
@@ -400,7 +400,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "3d4ab25056dcaf6dd11ebacf1da8525c8df6550f",
+    commit = "a17c31268b56d53624fdc9cb03a225d4a17cabdb",
   },
 
   -- Peek lines in a non-obtrusive way.
