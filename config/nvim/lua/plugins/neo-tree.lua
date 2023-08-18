@@ -17,7 +17,7 @@ neo_tree.setup {
     icon = {
       folder_closed = icons.folder_filled,
       folder_open = icons.folder_filled,
-      folder_empty = icons.folder_empty,
+      folder_empty = icons.folder_filled,
     },
     modified = {
       symbol = icons.modified,

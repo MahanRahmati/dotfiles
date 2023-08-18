@@ -65,7 +65,6 @@ return {
   package_pending = " ",
   package_uninstalled = " ",
   folder_filled = "",
-  folder_empty = "",
   selection_caret = " ",
   separator = "",
 }
