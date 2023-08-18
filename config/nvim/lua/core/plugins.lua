@@ -275,12 +275,6 @@ lazy.setup({
   --                             Utility                              --
   ----------------------------------------------------------------------
 
-  -- Automatically create missing directories when saving a file.
-  {
-    "jghauser/mkdir.nvim",
-    commit = "c55d1dee4f099528a1853b28bb28caa802eba217",
-  },
-
   -- A fancy, configurable, notification manager for Neovim.
   {
     "rcarriga/nvim-notify",
