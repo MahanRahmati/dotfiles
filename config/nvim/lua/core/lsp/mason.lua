@@ -8,6 +8,7 @@ local icons = require "core.icons"
 mason.setup {
   ui = {
     border = "rounded",
+    max_concurrent_installers = 4,
     icons = {
       package_installed = icons.package_installed,
       package_pending = icons.package_pending,
