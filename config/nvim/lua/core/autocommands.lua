@@ -1,11 +1,14 @@
 -- Use 'q' to quit from common plugins
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "qf", "help", "man", "lspinfo" },
-  callback = function()
-    vim.cmd [[
-      nnoremap <silent> <buffer> q :close<CR>
-      set nobuflisted
-    ]]
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set(
+      "n",
+      "q",
+      "<cmd>close<cr>",
+      { buffer = event.buf, silent = true }
+    )
   end,
 })
 
@@ -76,5 +79,26 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
   pattern = "*",
   callback = function()
     vim.cmd [[set nocursorline]]
+  end,
+})
+
+-- Resize splits if window got resized
+vim.api.nvim_create_autocmd({ "VimResized" }, {
+  group = vim.api.nvim_create_augroup("ResizeSplits", { clear = true }),
+  callback = function()
+    vim.cmd "tabdo wincmd ="
+  end,
+})
+
+-- Auto create dir when saving a file, in case some intermediate directory does
+-- not exist
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  group = vim.api.nvim_create_augroup("AutoCreateDir", { clear = true }),
+  callback = function(event)
+    if event.match:match "^%w%w+://" then
+      return
+    end
+    local file = vim.loop.fs_realpath(event.match) or event.match
+    vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
