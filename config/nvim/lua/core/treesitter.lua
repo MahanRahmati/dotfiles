@@ -13,6 +13,10 @@ treesitter.setup {
     "toml",
     "bash",
     "json",
+    "go",
+    "gomod",
+    "gowork",
+    "gosum",
   },
   ignore_install = { "" },
   autopairs = {

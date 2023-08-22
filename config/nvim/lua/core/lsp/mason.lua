@@ -29,6 +29,7 @@ local servers = {
   "yamlls",
   "rust_analyzer",
   "taplo",
+  "gopls",
 }
 
 mason_lspconfig.setup {

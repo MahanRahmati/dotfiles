@@ -60,6 +60,20 @@ M.on_attach = function(client, bufnr)
     client.server_capabilities.documentFormattingProvider = false
   end
 
+  if client.name == "gopls" then
+    if not client.server_capabilities.semanticTokensProvider then
+      local semantic = client.config.capabilities.textDocument.semanticTokens
+      client.server_capabilities.semanticTokensProvider = {
+        full = true,
+        legend = {
+          tokenTypes = semantic.tokenTypes,
+          tokenModifiers = semantic.tokenModifiers,
+        },
+        range = true,
+      }
+    end
+  end
+
   M.capabilities = vim.lsp.protocol.make_client_capabilities()
   M.capabilities.textDocument.completion.completionItem.snippetSupport = true
   M.capabilities = cmp_nvim_lsp.default_capabilities()

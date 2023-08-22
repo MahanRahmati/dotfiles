@@ -29,6 +29,12 @@ null_ls.setup {
     -- Bash
     code_actions.shellcheck,
     formatting.shfmt,
+
+    -- Go
+    code_actions.gomodifytags,
+    code_actions.impl,
+    formatting.gofumpt,
+    formatting.goimports_reviser,
   },
 }
 
