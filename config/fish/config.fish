@@ -23,6 +23,10 @@ switch (uname)
 
 end
 
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_CACHE_HOME $HOME/.cache
+set -x XDG_DATA_HOME $HOME/.local/share
+
 # Neovim
 if type -q nvim
     set -x EDITOR nvim
@@ -34,10 +38,19 @@ end
 switch (uname)
     case Darwin
         set -x CHROME_EXECUTABLE '/Applications/Chromium.app/Contents/MacOS/Chromium'
-        set -x XDG_CONFIG_HOME $HOME/.config
     case '*'
 
 end
+
+# Go
+if type -q go
+    set -x GOPATH $XDG_DATA_HOME/go
+    set -x GOMODCACHE $XDG_CACHE_HOME/go/mod
+else
+    echo "Install Go"
+end
+
+
 
 #    ___     __ _
 #   /   |   / /(_)____ _ _____ ___   _____
