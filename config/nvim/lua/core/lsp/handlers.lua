@@ -104,7 +104,6 @@ M.on_attach = function(client, bufnr)
     })
   end
 
-  vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]
   vim.cmd [[ command! OrganizeImports execute 'lua vim.lsp.buf.code_action({ context = { only = { "source.organizeImports" } }, apply = true })' ]]
   vim.cmd [[ command! FixAll execute 'lua vim.lsp.buf.code_action({ context = { only = { "source.fixAll" } }, apply = true })' ]]
 end

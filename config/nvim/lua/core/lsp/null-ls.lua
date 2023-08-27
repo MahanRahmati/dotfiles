@@ -16,24 +16,16 @@ null_ls.setup {
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
 
-    -- Lua
-    formatting.stylua,
-
-    -- Gitsigns
-    code_actions.gitsigns,
-
     -- Fish
     diagnostics.fish,
     formatting.fish_indent,
 
     -- Bash
     code_actions.shellcheck,
-    formatting.shfmt,
 
     -- Go
     code_actions.gomodifytags,
     code_actions.impl,
-    formatting.gofumpt,
     formatting.goimports_reviser,
   },
 }

@@ -105,7 +105,7 @@ local n_mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
+    f = { "<cmd>lua require 'conform'.format()<cr>", "Format" },
     F = { "<cmd>FixAll<cr>", "Fix All" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     h = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
