@@ -9,9 +9,6 @@ conform.setup {
     sh = { "shfmt" },
     dart = { "dart_format" },
     go = { "gofumpt" },
-    format_on_save = {
-      timeout_ms = 1500,
-      lsp_fallback = true,
-    },
+    fish = { "fish_indent" },
   },
 }

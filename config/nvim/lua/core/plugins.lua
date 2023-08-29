@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d0b17cc0b9c8c3055530770a9dd4de659232c692",
+    commit = "d94e1ad9575cc211b5726f09b28ca9454aba22fe",
   },
 
   ----------------------------------------------------------------------
@@ -174,7 +174,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "7ff46f90aad07a9be1eb9e2f24e5d7256ecc766b",
+    commit = "00e191fea2cfbbdd378243f35b5953296537a116",
   },
 
   ----------------------------------------------------------------------
@@ -184,7 +184,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "207285ccec21b69996a4d3bcfa59df35d48610e8",
+    commit = "1dfa66b845673effc8771f9ebe511bb36a09f560",
   },
 
   ----------------------------------------------------------------------
@@ -196,7 +196,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "9b5b4c874b13e372500f07c37187ba06c0c1ac0a",
+    commit = "2c992760f154285dff9f798647954b363cf35963",
   },
 
   ----------------------------------------------------------------------
@@ -394,7 +394,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "64828e2665081de062f426641c7049eb7f446599",
+    commit = "3e7c60982c98a9f5e7b6b0fb7c9ba5318f752fe1",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -432,7 +432,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "f86cd7f475d5b0d3ab0b0b57b8edaa06ac911e0b",
+    commit = "bf68b4a987231b18018f9621cfb15670a9a681b3",
   },
 
   ----------------------------------------------------------------------

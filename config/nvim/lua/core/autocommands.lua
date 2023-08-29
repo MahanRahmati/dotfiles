@@ -47,6 +47,19 @@ vim.api.nvim_create_autocmd({
   end,
 })
 
+-- Auto format
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = vim.api.nvim_create_augroup("AutoFormat", { clear = true }),
+  pattern = "*",
+  callback = function(args)
+    require("conform").format {
+      timeout_ms = 2000,
+      lsp_fallback = true,
+      buf = args.buf,
+    }
+  end,
+})
+
 -- Reopen files at your last edit position.
 vim.api.nvim_create_autocmd("BufReadPost", {
   group = vim.api.nvim_create_augroup("RestorePosition", { clear = true }),
