@@ -42,7 +42,7 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "c811fbf09c7642eebb37d6694f1a016a043f6ed3",
+    commit = "0942198fb9a998b6ccee36fb8dd7495eb8ba659c",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -158,7 +158,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d94e1ad9575cc211b5726f09b28ca9454aba22fe",
+    commit = "6def3eea22c213a475fc42644cd48c924b67a03f",
   },
 
   ----------------------------------------------------------------------
@@ -184,7 +184,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "1dfa66b845673effc8771f9ebe511bb36a09f560",
+    commit = "32e6792f865221dfaf2a3751fd3cfeac96557433",
   },
 
   ----------------------------------------------------------------------
@@ -328,7 +328,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "0f913a3ae1a24c8a4487fbf111b4044cc22b1b0d",
+    commit = "aa1b4c1e05983ff7debd2b4b2788651db099de2f",
   },
 
   ----------------------------------------------------------------------
@@ -432,7 +432,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "bf68b4a987231b18018f9621cfb15670a9a681b3",
+    commit = "ca56b02c8cce467713021b038d536918579633b1",
   },
 
   ----------------------------------------------------------------------
