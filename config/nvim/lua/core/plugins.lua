@@ -135,6 +135,12 @@ lazy.setup({
     commit = "8ee981b4a91f536f52add291594e89fb6645e451",
   },
 
+  -- The official Sourcegraph/Cody plugin for Neovim
+  {
+    "sourcegraph/sg.nvim",
+    commit = "ef9deec58ac515f2a743f6e251eb8e464a654e41",
+  },
+
   ----------------------------------------------------------------------
   --                  Programming Languages Support                   --
   ----------------------------------------------------------------------
