@@ -14,19 +14,14 @@ conform.setup {
 }
 
 -- Auto format
-vim.api.nvim_create_autocmd("BufWritePost", {
+vim.api.nvim_create_autocmd("BufWritePre", {
   group = vim.api.nvim_create_augroup("AutoFormat", { clear = true }),
   pattern = "*",
   callback = function(args)
-    require("conform").format(
-      { async = true, lsp_fallback = true, bufnr = args.buf },
-      function(err)
-        if not err then
-          vim.api.nvim_buf_call(args.buf, function()
-            vim.cmd.update()
-          end)
-        end
-      end
-    )
+    require("conform").format {
+      timeout_ms = 2000,
+      lsp_fallback = true,
+      buf = args.buf,
+    }
   end,
 })
