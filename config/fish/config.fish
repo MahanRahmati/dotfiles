@@ -174,6 +174,6 @@ end
 function fish_prompt
     set -l last_status $status
     print_pwd
-    __fish_git_prompt " 󰊢 %s"
+    # __fish_git_prompt " 󰊢 %s"
     print_in_color '  ' (prompt_color_for_status $last_status)
 end
