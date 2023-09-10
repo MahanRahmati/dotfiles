@@ -80,6 +80,7 @@ cmp.setup {
     format = function(entry, vim_item)
       vim_item.kind = string.format("%s", icons.kind_icons[vim_item.kind])
       vim_item.menu = ({
+        cody = "Cody",
         nvim_lsp_signature_help = "LSP",
         nvim_lsp = "LSP",
         nvim_lua = "Lua",
@@ -93,6 +94,7 @@ cmp.setup {
     end,
   },
   sources = cmp.config.sources {
+    { name = "cody" },
     { name = "nvim_lsp_signature_help" },
     { name = "luasnip" },
     { name = "nvim_lsp" },
