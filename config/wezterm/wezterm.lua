@@ -1,6 +1,7 @@
 local wezterm = require "wezterm"
 
 return {
+  bidi_enabled = true,
   check_for_updates = false,
   color_scheme = "Catppuccin Mocha",
   colors = {

@@ -80,6 +80,8 @@ local options = {
   wrap = false,
   -- Make a backup before overwriting a file.
   writebackup = false,
+  -- Disabling Arabic support.
+  arabicshape = false,
 }
 
 for k, v in pairs(options) do
