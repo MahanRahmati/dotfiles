@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "d177ad277a638f262edb73c75ffe33e377b95dc5",
+    commit = "360a895125ac4f39df6aa8f763635eff07e69fff",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -42,14 +42,14 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "ee6a7f179ebf8aa9da9d53b1cf1b57d292ea0182",
+    commit = "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "20fd7f50f34b59031a7c3bbc2c207f4f60037628",
+    commit = "01b4b6724ebcf5b43fc021486f6a260f1d09311e",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -138,7 +138,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "4d0c1e52c03ede3eaab29b897aea04113c9d28c4",
+    commit = "1662df1751fbf052f2a85c6bd5c8ddf346834473",
   },
 
   ----------------------------------------------------------------------
@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "d5f57cd4794d8f0a541f140229e5764e2f41d63a",
+    commit = "9567185621e532a9e29a671c66a11011334b80ea",
   },
 
   ----------------------------------------------------------------------
@@ -234,7 +234,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "a937d546f4783a1ff67f84043d2d7871ad4ecd83",
+    commit = "85e93601e0f0b48aa2c6bbfae4d0e9d7a1898280",
   },
 
   ----------------------------------------------------------------------
@@ -254,7 +254,7 @@ lazy.setup({
   -- Highlight the word under the cursor.
   {
     "RRethy/vim-illuminate",
-    commit = "76f28e858f1caae87bfa45fb4fd09e4b053fc45b",
+    commit = "8c910b2f84ae6acd9b4b17330bb94dd783c0c11a",
   },
 
   ----------------------------------------------------------------------
@@ -274,7 +274,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "ecdeb4e2a4af34fc873bbfbf1f4c4e447e632255",
+    commit = "925e2aa30dc9fe9332060199c19f132ec0f3d493",
   },
 
   ----------------------------------------------------------------------
@@ -284,7 +284,7 @@ lazy.setup({
   -- A fancy, configurable, notification manager for Neovim.
   {
     "rcarriga/nvim-notify",
-    commit = "4a0da37b881c764a237f6ea07ca99fc4eb70e343",
+    commit = "94859430020f5cf32a1b97ddd9e596fed9db7981",
   },
 
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
@@ -318,7 +318,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "f2c720746238bc3ec620fe4bf92b58368317c266",
+    commit = "0427b908ebefcb3701c7f2cfbdafa37d11afe71a",
   },
 
   ----------------------------------------------------------------------
@@ -328,7 +328,7 @@ lazy.setup({
   -- Useful lua functions used by lots of plugins.
   {
     "nvim-lua/plenary.nvim",
-    commit = "0232372b906f275f76ac42029eba25eaf95e76b9",
+    commit = "9ce85b0f7dcfe5358c0be937ad23e456907d410b",
   },
 
   -- UI Component Library.
@@ -344,7 +344,7 @@ lazy.setup({
   -- Rust dependency management for Cargo.toml.
   {
     "Saecki/crates.nvim",
-    commit = "d5caf28aba49e81ac4099426231f3cf3c151013a",
+    commit = "db629b5cfb2aa8de9e44efb795657297ee95ca91",
   },
 
   ----------------------------------------------------------------------
@@ -354,7 +354,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "fef5d90953f0a730483b44745fae5938ba8227f8",
+    commit = "907ae8636016aab2f283576fc60d46ca3427e579",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -438,7 +438,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "a72f0fe173ea1506cf0d2bf97007876cb07f3ae4",
+    commit = "dd5b2f2f7ca01c2f28239cbbc7f97e6f9024cd94",
   },
 
   ----------------------------------------------------------------------
