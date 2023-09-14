@@ -27,6 +27,10 @@ flutter_tools.setup {
       renameFilesWithClasses = "always",
       enableSnippets = true,
       updateImportsOnRename = true,
+      analysisExcludedFolders = {
+        "$HOME/.pub-cache/",
+        "/opt/homebrew/",
+      },
     },
   },
 }
