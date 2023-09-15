@@ -25,3 +25,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     }
   end,
 })
+
+-- Format command
+vim.api.nvim_create_user_command("Format", function(args)
+  require("conform").format {
+    timeout_ms = 2000,
+    lsp_fallback = true,
+    buf = args.buf,
+  }
+end, {})

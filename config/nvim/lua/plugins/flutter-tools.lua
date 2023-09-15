@@ -39,7 +39,8 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = vim.api.nvim_create_augroup("FlutterActions", { clear = true }),
   pattern = { "*.dart" },
   callback = function()
-    vim.cmd "OrganizeImports"
-    vim.cmd "FixAll"
+    vim.cmd.OrganizeImports()
+    vim.cmd.FixAll()
+    vim.cmd.Format()
   end,
 })
