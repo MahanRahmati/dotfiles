@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "57139c690dc8d594b2f9de8d1e609f2854a4fe45",
+    commit = "cc388d3f6b9c7c943ae2b2dcd46ad470fd257f91",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "48b237fd3f482aef2f5896b8b7a6ece71c19ad99",
+    commit = "c617560e1b0240e5c1d72b5f1c45f86c8b9b7d7a",
   },
 
   ----------------------------------------------------------------------
@@ -190,7 +190,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "59812c26d826e8c717e29406267ea1260f71e103",
+    commit = "b543aaa2c9cf8123ed2fe7dbb6c211a9cd415124",
   },
 
   ----------------------------------------------------------------------
@@ -202,7 +202,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "2d89ca96e08eb6e9c8e50e1bb4738bc5125c9f12",
+    commit = "54fe2a5f6f698094b34461a11370fcc29b8a4393",
   },
 
   ----------------------------------------------------------------------
@@ -438,7 +438,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "b43690264ebcb152365d5b46faa6561f12ea062a",
+    commit = "a589750635fcc5bb52c7e572cd853446c2c63855",
   },
 
   ----------------------------------------------------------------------
