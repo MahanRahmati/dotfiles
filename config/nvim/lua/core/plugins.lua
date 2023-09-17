@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "c617560e1b0240e5c1d72b5f1c45f86c8b9b7d7a",
+    commit = "794266a4edc8ab57b0d637626f01b5278a9123d8",
   },
 
   ----------------------------------------------------------------------
