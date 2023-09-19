@@ -10,6 +10,7 @@ conform.setup {
     dart = { "dart_format" },
     go = { "gofumpt" },
     fish = { "fish_indent" },
+    ["*"] = { "squeeze_blanks" },
   },
 }
 
