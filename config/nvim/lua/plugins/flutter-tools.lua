@@ -10,6 +10,7 @@ flutter_tools.setup {
   ui = {
     border = "rounded",
   },
+  root_patterns = { ".git", ".metadata" },
   dev_log = {
     enabled = true,
     notify_errors = false,
