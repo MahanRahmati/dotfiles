@@ -11,7 +11,7 @@ This is my personal collection of configuration files.
 | [celluloid](https://github.com/celluloid-player/celluloid) | Video Player           |
 | [nvim](https://github.com/neovim/neovim)                   | Text Editor            |
 | [figlet](https://github.com/cmatsuoka/figlet)              | ASCII Text Generator   |
-| [exa](https://github.com/ogham/exa)                        | Replacement for ‘ls’   |
+| [eza](https://github.com/eza-community/eza)                | Replacement for ‘ls’   |
 | [ripgrep](https://github.com/BurntSushi/ripgrep)           | Replacement for ‘grep’ |
 | [lazygit](https://github.com/jesseduffield/lazygit)        | TUI for git            |
 

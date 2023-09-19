@@ -50,8 +50,6 @@ else
     echo "Install Go"
 end
 
-
-
 #    ___     __ _
 #   /   |   / /(_)____ _ _____ ___   _____
 #  / /| |  / // // __ `// ___// _ \ / ___/
@@ -63,12 +61,12 @@ end
 alias ..='cd ..'
 alias cd..='cd ..'
 
-# Exa
-if type -q exa
-    alias ls='exa --icons --color=always -a --group-directories-first'
-    alias ll='exa --icons --color=always -al --group-directories-first'
+# Eza
+if type -q eza
+    alias ls='eza --icons --color=always -a --group-directories-first'
+    alias ll='eza --icons --color=always -al --group-directories-first'
 else
-    echo "Install Exa"
+    echo "Install Eza"
 end
 
 # Ripgrep
