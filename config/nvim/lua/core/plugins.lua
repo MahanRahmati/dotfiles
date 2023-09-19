@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "cc388d3f6b9c7c943ae2b2dcd46ad470fd257f91",
+    commit = "f3195835c0447ee2c80152b893ab51ca162b04a9",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -148,7 +148,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "974859e9fafbff48450a85c0c7f57cb576c53626",
+    commit = "8690d0b2685a39e50bd6e34b352dfcb420529460",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "794266a4edc8ab57b0d637626f01b5278a9123d8",
+    commit = "940916074833159bf7b8cbb4bf5e59161461fa5a",
   },
 
   ----------------------------------------------------------------------
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "ea7d7ea510c641c4f15042becd27f35b3e5b3c2b",
+    commit = "3657c3f3cb2214a681fc7e95b6ffb509d076ebfb",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -296,7 +296,7 @@ lazy.setup({
   -- Display a line as colorcolumn.
   {
     "lukas-reineke/virt-column.nvim",
-    commit = "1917bfb519729dea7b4f5d13aa9c810c9579b0ea",
+    commit = "5fc72873dc3175eddbdbbedea8071919c99ad755",
   },
 
   -- Delete Neovim buffers without losing window layout.
@@ -354,14 +354,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "907ae8636016aab2f283576fc60d46ca3427e579",
+    commit = "bce4576a9047085a528c479a7fe1e2f6b787b6c1",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "7e5a85c186027cab1e825d018f07c350177077fc",
+    commit = "a111d19ccceac6530448d329c63f998f77b5626e",
   },
 
   ----------------------------------------------------------------------
@@ -388,7 +388,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "defad64afbf19381fe31488a7582bbac421d6e38",
+    commit = "7b3eb9b5813a22188c4dbb248475fcbaf9f4d195",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -438,7 +438,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "a589750635fcc5bb52c7e572cd853446c2c63855",
+    commit = "da5b9402bc3d114c93bc49bcbb4bf3e5c6c14527",
   },
 
   ----------------------------------------------------------------------
