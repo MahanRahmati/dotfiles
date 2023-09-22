@@ -21,3 +21,4 @@ gui:
       - '#313244'
     unstagedChangesColor:
       - red
+  showBottomLine: false
