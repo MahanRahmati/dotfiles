@@ -5,14 +5,30 @@ end
 
 conform.setup {
   formatters_by_ft = {
-    lua = { "stylua" },
-    sh = { "shfmt" },
     dart = { "dart_format" },
-    go = { "gofumpt" },
     fish = { "fish_indent" },
+    go = { "gofumpt" },
+    json = { { "prettier" } },
+    lua = { "stylua" },
+    markdown = { { "prettier" } },
+    sh = { "shfmt" },
+    yaml = { { "prettier" } },
     ["*"] = { "squeeze_blanks" },
   },
 }
+
+local util = require "conform.util"
+local prettier = require "conform.formatters.prettier"
+conform.formatters.prettier = vim.tbl_deep_extend("force", prettier, {
+  args = util.extend_args(
+    prettier.args,
+    { "--no-semi", "--single-quote", "--jsx-single-quote" }
+  ),
+  range_args = util.extend_args(
+    prettier.range_args,
+    { "--no-semi", "--single-quote", "--jsx-single-quote" }
+  ),
+})
 
 -- Auto format
 vim.api.nvim_create_autocmd("BufWritePre", {

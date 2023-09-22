@@ -11,14 +11,8 @@ null_ls.setup {
   debug = false,
   sources = {
 
-    -- JSON YAML Markdown
-    formatting.prettier.with {
-      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-    },
-
     -- Fish
     diagnostics.fish,
-    formatting.fish_indent,
 
     -- Bash
     code_actions.shellcheck,
