@@ -1,6 +1,6 @@
 gui:
   border: 'rounded'
-  showIcons: true
+  nerdFontsVersion: '3'
   theme:
     activeBorderColor:
       - '#a6e3a1'
