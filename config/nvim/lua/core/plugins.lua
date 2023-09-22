@@ -31,13 +31,6 @@ lazy.setup({
     commit = "4266f9bb36b4fb09edd19b67d95043cf7ff88ddf",
   },
 
-  -- Use Neovim as a language server to inject LSP diagnostics, code actions,
-  -- and more via Lua.
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    commit = "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7",
-  },
-
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
@@ -50,13 +43,6 @@ lazy.setup({
   {
     "williamboman/mason-lspconfig.nvim",
     commit = "2451adb9bdb0fd32140bf3aa8dbc17ff60050db3",
-  },
-
-  -- Extension to mason.nvim that makes it easier to use null-ls with
-  -- mason.nvim
-  {
-    "jayp0521/mason-null-ls.nvim",
-    commit = "ae0c5fa57468ac65617f1bf821ba0c3a1e251f0c",
   },
 
   -- Another lsp progress status for Neovim.
@@ -341,16 +327,6 @@ lazy.setup({
   {
     "MunifTanjim/nui.nvim",
     commit = "c8de23342caf8d50b15d6b28368d36a56a69d76f",
-  },
-
-  ----------------------------------------------------------------------
-  --                      Dependency management                       --
-  ----------------------------------------------------------------------
-
-  -- Rust dependency management for Cargo.toml.
-  {
-    "Saecki/crates.nvim",
-    commit = "db629b5cfb2aa8de9e44efb795657297ee95ca91",
   },
 
   ----------------------------------------------------------------------
