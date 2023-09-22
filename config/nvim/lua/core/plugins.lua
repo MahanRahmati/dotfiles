@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "f3195835c0447ee2c80152b893ab51ca162b04a9",
+    commit = "4266f9bb36b4fb09edd19b67d95043cf7ff88ddf",
   },
 
   -- Use Neovim as a language server to inject LSP diagnostics, code actions,
@@ -49,7 +49,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "f014db32437aa61c86fc0ef1067cd2bc6a37205c",
+    commit = "2451adb9bdb0fd32140bf3aa8dbc17ff60050db3",
   },
 
   -- Extension to mason.nvim that makes it easier to use null-ls with
@@ -148,7 +148,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "8690d0b2685a39e50bd6e34b352dfcb420529460",
+    commit = "0b01c71ecf05a2edd955b5b53d808bc64f143069",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -164,7 +164,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "940916074833159bf7b8cbb4bf5e59161461fa5a",
+    commit = "fc93fa5c07df7cd578a3ea82d7c075c0460a6884",
   },
 
   ----------------------------------------------------------------------
@@ -174,7 +174,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "3657c3f3cb2214a681fc7e95b6ffb509d076ebfb",
+    commit = "c5fb16a934892086d4ba01bac48b77c65435025e",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -190,7 +190,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "b543aaa2c9cf8123ed2fe7dbb6c211a9cd415124",
+    commit = "40c8d2fc2b729dd442eda093cf8c9496d6e23732",
   },
 
   ----------------------------------------------------------------------
@@ -202,7 +202,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "54fe2a5f6f698094b34461a11370fcc29b8a4393",
+    commit = "71f1841ba6c652908678cece623f52c1fea8a6cd",
   },
 
   ----------------------------------------------------------------------
@@ -254,7 +254,7 @@ lazy.setup({
   -- Highlight the word under the cursor.
   {
     "RRethy/vim-illuminate",
-    commit = "8c910b2f84ae6acd9b4b17330bb94dd783c0c11a",
+    commit = "6acf7d4a18255a3ddc43770866c8e148fe85af7b",
   },
 
   ----------------------------------------------------------------------
@@ -438,7 +438,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "da5b9402bc3d114c93bc49bcbb4bf3e5c6c14527",
+    commit = "4a4c92715b174b847ba0fcdccf9dfea71c8ed33e",
   },
 
   ----------------------------------------------------------------------
