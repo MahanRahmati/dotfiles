@@ -41,6 +41,7 @@ neo_tree.setup {
   },
   window = {
     width = 35,
+    auto_expand_width = true,
   },
   filesystem = {
     filtered_items = {
