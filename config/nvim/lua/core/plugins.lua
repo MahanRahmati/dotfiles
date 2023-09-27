@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "ede4114e1fd41acb121c70a27e1b026ac68c42d6",
+    commit = "bfdf2e91e7297a54bcc09d3e092a12bff69a1cf4",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "a6a677225bffd66bc98e03ed77438cde93a6fd31",
+    commit = "b0b543285dfefd47eeae93f3f5c812c1dce26ff4",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "f3fb301b267e85e4cbc725561da4a82b1c3089c8",
+    commit = "cb139d880bcf9b3a6f29f2bd088a7491d1662918",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "ed9574dd6dde143d009b2528ea6d79bd34bbe6c8",
+    commit = "84d53dfdbefbdf84e861a288abc71ef8ccafd04e",
   },
 
   ----------------------------------------------------------------------
@@ -246,7 +246,7 @@ lazy.setup({
   -- Highlight the word under the cursor.
   {
     "RRethy/vim-illuminate",
-    commit = "6acf7d4a18255a3ddc43770866c8e148fe85af7b",
+    commit = "1b5d70332a51a1de05f281069851865a2bb1e6d7",
   },
 
   ----------------------------------------------------------------------
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "6795de086ef713383e06b53faa534a597436159a",
+    commit = "44d270e9d1647088de596a2e04fdc806a50cd838",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "34daf23415e9d212697f79506039498db2b35240",
+    commit = "368fe9217dc9c83772292042a26ba2a9f0aed324",
   },
 
   ----------------------------------------------------------------------
