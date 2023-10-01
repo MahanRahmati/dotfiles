@@ -41,5 +41,59 @@
       "}"
     ],
     "description": "Create a Screen provider."
+  },
+  "Riverpod: simple instance": {
+    "prefix": "riverpod",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';\n",
+      "part '${TM_FILENAME_BASE}.g.dart';\n",
+      "@riverpod",
+      "$1 $2(${2/(.*)/${1:/capitalize}/}Ref ref) {",
+      "\treturn $3;",
+      "}"
+    ],
+    "description": "Creates a simple Provider"
+  },
+  "Riverpod: simple keep alive instance": {
+    "prefix": "riverpodKeepAlive",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';\n",
+      "part '${TM_FILENAME_BASE}.g.dart';\n",
+      "@Riverpod(keepAlive: true)",
+      "$1 $2(${2/(.*)/${1:/capitalize}/}Ref ref) {",
+      "\treturn $3;",
+      "}"
+    ],
+    "description": "Creates a simple keep alive Provider"
+  },
+  "Riverpod: class": {
+    "prefix": "riverpodClass",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';\n",
+      "part '${TM_FILENAME_BASE}.g.dart';\n",
+      "@riverpod",
+      "class $1 extends _$$1 {",
+      "\t@override",
+      "\t$2 build() {",
+      "\t\treturn $3;",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a class Provider"
+  },
+  "Riverpod: keep alive class": {
+    "prefix": "riverpodClassKeepAlive",
+    "body": [
+      "import 'package:riverpod_annotation/riverpod_annotation.dart';\n",
+      "part '${TM_FILENAME_BASE}.g.dart';\n",
+      "@Riverpod(keepAlive: true)",
+      "class $1 extends _$$1 {",
+      "\t@override",
+      "\t$2 build() {",
+      "\t\treturn $3;",
+      "\t}",
+      "}"
+    ],
+    "description": "Creates a keep alive class Provider"
   }
 }
