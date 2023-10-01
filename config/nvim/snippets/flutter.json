@@ -95,5 +95,39 @@
       "}"
     ],
     "description": "Creates a keep alive class Provider"
+  },
+  "Consumer Stateless": {
+    "prefix": "stlessConsumer",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_riverpod/flutter_riverpod.dart';\n",
+      "class $1 extends ConsumerWidget {",
+      "\tconst $1({super.key});\n",
+      " @override",
+      "\tWidget build(final BuildContext context, final WidgetRef ref) {",
+      "\t\treturn Container();",
+      "\t}",
+      "}\n"
+    ],
+    "description": "Create a ConsumerStatelessWidget"
+  },
+  "Consumer Stateful": {
+    "prefix": "stfulConsumer",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter_riverpod/flutter_riverpod.dart';\n",
+      "class $1 extends ConsumerStatefulWidget {",
+      "\tconst $1({super.key});\n",
+      "\t@override",
+      "\tConsumerState<ConsumerStatefulWidget> createState() => _$1State();",
+      "}\n",
+      "class _$1State extends ConsumerState<$1> {\n",
+      " @override",
+      "\tWidget build(final BuildContext context) {",
+      "\t\treturn Container();",
+      "\t}",
+      "}\n"
+    ],
+    "description": "Create a ConsumerStatefulWidget"
   }
 }
