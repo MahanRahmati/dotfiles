@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "50fcf96ec5a6e7bfdcbbea4f905c33e85408f170",
+    commit = "eb1b53162755888ff75e495797071644d983bff7",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -42,13 +42,13 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "81e30dd629de24cbb26d08073ee938ab40006695",
+    commit = "48025d62f45af52ba47e4193b854864839392e4c",
   },
 
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "eb1cb142a44310ad4934d7a8540e61217b2b393a",
+    commit = "0655d95f17e391829ddb3f23fe50a2f7833fea14",
   },
 
   ----------------------------------------------------------------------
@@ -134,7 +134,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "0b01c71ecf05a2edd955b5b53d808bc64f143069",
+    commit = "1119125206075c4703f2147f964ed0a45f84c6ab",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "dd4e2dbc002dfce109d621e8bdcd9d89438b0a32",
+    commit = "811e8ba4f37821a9e7fe645573ceac4ee47cd542",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -172,7 +172,7 @@ lazy.setup({
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "0368bee1cecaf3c58d436524234baad4c0e0b8cb",
+    commit = "43727c2ff84240e55d4069ec3e6158d74cb534b6",
   },
 
   ----------------------------------------------------------------------
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "ffe90fac32122f401429b14d383137bd92a685d0",
+    commit = "7d51950854a3f8853c5c0d570757095e9a5af313",
   },
 
   ----------------------------------------------------------------------
@@ -282,7 +282,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "73a7d54b5289000108c7f52402a36cf380fced67",
+    commit = "8f4d62b7817455896a3c73cab642002072c114bc",
   },
 
   -- Display a line as colorcolumn.
@@ -336,7 +336,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "bdeba1cec3faddd89146690c10b9a87949c0ee66",
+    commit = "e32efa6d6acb4a2e2e270f329df6a65080702066",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "44d270e9d1647088de596a2e04fdc806a50cd838",
+    commit = "bc19b78e9c705d67be98d56e9fab96470af45f33",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "3f8927532bc8ce4fc4b5b75eab1bf8f1fc83f6b9",
+    commit = "37d036704a100ef6e6457be45b4dfc2f8e429572",
   },
 
   ----------------------------------------------------------------------
