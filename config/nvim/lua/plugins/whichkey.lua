@@ -38,6 +38,18 @@ local n_mappings = {
   },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   C = {
+    name = "Cody",
+    c = { "<cmd>CodyToggle<cr>", "Cody Toggle" },
+    h = {
+      '<cmd>lua require("sg.cody.commands").focus_history()<cr>',
+      "Cody Focus History",
+    },
+    p = {
+      '<cmd>lua require("sg.cody.commands").focus_prompt()<cr>',
+      "Cody Focus Prompt",
+    },
+  },
+  F = {
     name = "Comment Frame",
     f = {
       "<cmd>lua require('nvim-comment-frame').add_comment()<cr>",
@@ -161,6 +173,10 @@ local v_mappings = {
     '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
     "Comment",
   },
+  d = { ":CodyAsk Generate code documentation<cr>", "Cody Doc" },
+  e = { ":CodyAsk Explain code<cr>", "Cody Explain" },
+  t = { ":CodyAsk Generate unit tests<cr>", "Cody Test" },
+  s = { ":CodyAsk Find code smells<cr>", "Cody Smell" },
 }
 
 local normal_opts = {
