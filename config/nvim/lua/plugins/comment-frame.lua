@@ -3,7 +3,4 @@ if comment_frame == nil then
   return
 end
 
-comment_frame.setup {
-  keymap = "<leader>Cf",
-  multiline_keymap = "<leader>Cm",
-}
+comment_frame.setup {}
