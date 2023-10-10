@@ -35,20 +35,20 @@ lazy.setup({
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a",
+    commit = "cd7835b15f5a4204fc37e0aa739347472121a54c",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "e2705063f395b44f676cd26596a11007a2cbd3bd",
+    commit = "ddefe5ab051e7ca6a7b374754f0920c44668b54f",
   },
 
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "d4457c65fc968b4c0c2736be9b1b307b133a0254",
+    commit = "d4c5440e6bccfcd0aeb3070a53290272cf5a332a",
   },
 
   ----------------------------------------------------------------------
@@ -70,7 +70,7 @@ lazy.setup({
   -- A nvim-cmp source for luasnip completion.
   {
     "saadparwaiz1/cmp_luasnip",
-    commit = "18095520391186d634a0045dacaa346291096566",
+    commit = "05a9ab28b53f71d1aece421ef32fee2cb857a843",
   },
 
   -- A nvim-cmp source for filesystem paths.
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "4647497086f80be317963a2204f9f6521bc1d0f4",
+    commit = "f34223bc99d066b5e5944d245b69906146de0938",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "10bfa4826f2235c600c073a82e0d78718aa7240e",
+    commit = "0eb1a0ad1c82e080e77e7b9d7a5e42632cefb543",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "205f469244916716c49cc2b9026566749425c5ba",
+    commit = "5a747a9587e4bfc4ae086a38cc679fe54f983b69",
   },
 
   ----------------------------------------------------------------------
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "7e2a3caf999e2028abb643eb0472f351b2777591",
+    commit = "6f8c49956c89e9fefae6acdfe1d57c6293b0a03d",
   },
 
   ----------------------------------------------------------------------
@@ -266,7 +266,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "45d0237c427baba8cd05e0ab26d30e2ee58c2c82",
+    commit = "a1e6268779411048a87f767a27380089362a0ce2",
   },
 
   ----------------------------------------------------------------------
@@ -282,7 +282,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "8f4d62b7817455896a3c73cab642002072c114bc",
+    commit = "70fcf2a33c55e76854a9b3d2e3338a6526fd56f5",
   },
 
   -- Display a line as colorcolumn.
@@ -326,7 +326,7 @@ lazy.setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "c8de23342caf8d50b15d6b28368d36a56a69d76f",
+    commit = "c0c8e347ceac53030f5c1ece1c5a5b6a17a25b32",
   },
 
   ----------------------------------------------------------------------
@@ -370,7 +370,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "de4f7138a68d5d5063170f2182fd27faf06b0b54",
+    commit = "748e72c05495a3d30e88a6ef04b21697019a9aa9",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "2095f231dfe796d228eedea96fdaa31f2e343fb2",
+    commit = "4cf64264c049c55f256550ad247b606f3e53bc77",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "e5ed0635d9aa66c6c2f7eac3235e6a8eb2de0653",
+    commit = "80f2f70740431b07d725cc66f63abbfd66aaae6d",
   },
 
   ----------------------------------------------------------------------
