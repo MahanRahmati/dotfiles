@@ -142,15 +142,7 @@ local n_mappings = {
       "Workspace Symbols",
     },
   },
-  t = {
-    name = "Terminal",
-    ["1"] = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Horizontal" },
-    ["2"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-    ["3"] = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-    f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
-    h = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Horizontal" },
-    v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
-  },
+  t = { "<cmd>ToggleTerm size=15 direction=horizontal<cr>", "Terminal" },
   n = {
     name = "Nomodoro",
     w = { "<cmd>NomoWork<cr>", "Nomo Work" },
