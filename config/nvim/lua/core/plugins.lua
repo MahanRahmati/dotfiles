@@ -48,7 +48,7 @@ lazy.setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "d4c5440e6bccfcd0aeb3070a53290272cf5a332a",
+    commit = "606e36eaf84fc602a27acbf556655300d05dcd23",
   },
 
   ----------------------------------------------------------------------
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "f34223bc99d066b5e5944d245b69906146de0938",
+    commit = "acdc88fb410762828797e8816fa790b96b71bb97",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "0eb1a0ad1c82e080e77e7b9d7a5e42632cefb543",
+    commit = "e5198778dbefa14823099dd6d8fba3819a5e7b8a",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "5a747a9587e4bfc4ae086a38cc679fe54f983b69",
+    commit = "550055e640fd6eea88430ba5da3a3bc08679cf94",
   },
 
   ----------------------------------------------------------------------
@@ -282,7 +282,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "70fcf2a33c55e76854a9b3d2e3338a6526fd56f5",
+    commit = "1f2d1206a03bd3add8aedf6251e4534611de577f",
   },
 
   -- Display a line as colorcolumn.
