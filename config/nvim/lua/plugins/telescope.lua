@@ -12,16 +12,16 @@ telescope.setup {
     layout_strategy = "flex",
     layout_config = {
       horizontal = {
-        height = 0.999,
+        height = { padding = 0 },
+        width = { padding = 0 },
         preview_cutoff = 1,
         prompt_position = "bottom",
-        width = 0.999,
       },
       vertical = {
-        height = 0.999,
+        height = { padding = 0 },
+        width = { padding = 0 },
         preview_cutoff = 1,
         prompt_position = "bottom",
-        width = 0.999,
       },
     },
     prompt_prefix = " " .. icons.find .. " ",
