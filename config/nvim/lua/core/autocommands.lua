@@ -93,21 +93,3 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
-
--- Resize terminal window
-vim.api.nvim_create_autocmd({
-  "TermOpen",
-  "TermEnter",
-  "TermLeave",
-  "TermClose",
-  "TermResponse",
-  "VimResized",
-  "WinResized",
-}, {
-  callback = function()
-    if vim.bo.filetype ~= "toggleterm" then
-      return
-    end
-    vim.cmd "resize 15"
-  end,
-})

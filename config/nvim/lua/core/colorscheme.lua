@@ -32,9 +32,9 @@ colorscheme.setup {
       -- surface2 = "#585B70", -- Default comment
       -- surface1 = "#45475A", -- Darker comment
       -- surface0 = "#313244", -- Darkest comment
-      base = "#0E1116",   -- Default bg
+      base = "#0E1116", -- Default bg
       mantle = "#0E1116", -- Darker bg
-      crust = "#585B70",  -- Darkest bg
+      crust = "#585B70", -- Darkest bg
     },
   },
   custom_highlights = function(colors)
