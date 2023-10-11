@@ -45,3 +45,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     vim.cmd.Format()
   end,
 })
+
+-- Resize dev log window
+vim.api.nvim_create_autocmd({ "VimResized", "WinResized" }, {
+  callback = function()
+    if vim.fn.expand "%" ~= "__FLUTTER_DEV_LOG__" then
+      return
+    end
+    vim.cmd "resize 15"
+  end,
+})
