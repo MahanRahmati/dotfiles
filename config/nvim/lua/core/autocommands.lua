@@ -28,25 +28,6 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
   end,
 })
 
--- Keep cursor center
-vim.api.nvim_create_autocmd({
-  "CursorHold",
-  "CursorMoved",
-  "TextYankPost",
-  "InsertEnter",
-  "InsertLeave",
-  "TextChanged",
-}, {
-  group = vim.api.nvim_create_augroup("CenterCursor", { clear = true }),
-  pattern = { "*" },
-  callback = function()
-    if vim.bo.filetype == "alpha" then
-      return
-    end
-    vim.cmd [[ normal! zz]]
-  end,
-})
-
 -- Reopen files at your last edit position.
 vim.api.nvim_create_autocmd("BufReadPost", {
   group = vim.api.nvim_create_augroup("RestorePosition", { clear = true }),

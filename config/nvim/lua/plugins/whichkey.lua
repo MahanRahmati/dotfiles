@@ -220,37 +220,7 @@ local visual_mappings = {
   K = { ":m '<-2<CR>gv=gv", "Move Line" },
 }
 
-local center_mappings = {
-  h = { "hzz", "Left" },
-  j = { "jzz", "Down" },
-  k = { "kzz", "Up" },
-  l = { "lzz", "Right" },
-  w = { "wzz", "Next word" },
-  W = { "Wzz", "Center Cursor" },
-  b = { "bzz", "Previous word" },
-  B = { "Bzz", "Center Cursor" },
-  e = { "ezz", "Next end of word" },
-  E = { "Ezz", "Center Cursor" },
-  ["<Left>"] = { "<Left>zz", "Left" },
-  ["<Down>"] = { "<Down>zz", "Down" },
-  ["<Up>"] = { "<Up>zz", "Up" },
-  ["<Right>"] = { "<Right>zz", "Right" },
-  ["<C-d>"] = { "<C-d>zz", "Center Cursor" },
-  ["<C-u>"] = { "<C-u>zz", "Center Cursor" },
-  ["$"] = { "$zz", "End of line" },
-  ["%"] = { "%zz", "Matching character: '()', '{}', ' ..." },
-  ["0"] = { "0zz", "Start of line" },
-  G = { "Gzz", "Last line" },
-  ["^"] = { "^zz", "Start of line (non-blank)" },
-  ["{"] = { "{zz", "Previous empty line" },
-  ["}"] = { "}zz", "Next empty line" },
-  ["<Enter>"] = { "<Enter>zz", "Center Cursor" },
-  ["<BS>"] = { "<BS>zz", "Center Cursor" },
-}
-
 which_key.register(n_mappings, n_opts)
 which_key.register(v_mappings, v_opts)
 which_key.register(normal_mappings, normal_opts)
 which_key.register(visual_mappings, visual_opts)
-which_key.register(center_mappings, normal_opts)
-which_key.register(center_mappings, visual_opts)
