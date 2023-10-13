@@ -19,7 +19,7 @@ vim.api.nvim_create_autocmd({
 })
 
 vim.api.nvim_create_autocmd({ "CursorMovedI" }, {
-  group = vim.api.nvim_create_augroup("CenterCursor", { clear = true }),
+  group = vim.api.nvim_create_augroup("CenterCursorI", { clear = true }),
   pattern = { "*" },
   callback = function()
     if
