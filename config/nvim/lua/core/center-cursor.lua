@@ -1,9 +1,4 @@
-vim.api.nvim_create_autocmd({
-  "CursorMoved",
-  "BufEnter",
-  "TextChanged",
-  "WinScrolled",
-}, {
+vim.api.nvim_create_autocmd({ "CursorMoved", "BufEnter", "TextChanged" }, {
   group = vim.api.nvim_create_augroup("CenterCursor", { clear = true }),
   pattern = { "*" },
   callback = function()
@@ -18,7 +13,7 @@ vim.api.nvim_create_autocmd({
   end,
 })
 
-vim.api.nvim_create_autocmd({ "CursorMovedI" }, {
+vim.api.nvim_create_autocmd({ "CursorMovedI", "WinScrolled" }, {
   group = vim.api.nvim_create_augroup("CenterCursorI", { clear = true }),
   pattern = { "*" },
   callback = function()
