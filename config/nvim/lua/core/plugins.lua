@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "2b361e043810d5587d9af0787f8ce40da92ec5e9",
+    commit = "bb8e3dfbe10d80c294bb609c4bb4bba3ecdfbfe2",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -42,13 +42,13 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "ddefe5ab051e7ca6a7b374754f0920c44668b54f",
+    commit = "397273083f988c1a17acf3816947cd198338e700",
   },
 
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "606e36eaf84fc602a27acbf556655300d05dcd23",
+    commit = "df7a3d0d865d584552ab571295e73868e736e60f",
   },
 
   ----------------------------------------------------------------------
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "acdc88fb410762828797e8816fa790b96b71bb97",
+    commit = "0a3c7f76a5e81452b5d4bd78a7bb8cd2603445b5",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "e5198778dbefa14823099dd6d8fba3819a5e7b8a",
+    commit = "783e5fc3079680b307e8ac518935317907e71a59",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -166,7 +166,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "cdbf6f41381e5ee4810b4b09284b603d8f18365d",
+    commit = "0df29db3543837f8b41597f2640397c5ec792b7b",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "550055e640fd6eea88430ba5da3a3bc08679cf94",
+    commit = "74ce793a60759e3db0d265174f137fb627430355",
   },
 
   ----------------------------------------------------------------------
@@ -320,7 +320,7 @@ lazy.setup({
   -- Useful lua functions used by lots of plugins.
   {
     "nvim-lua/plenary.nvim",
-    commit = "9ce85b0f7dcfe5358c0be937ad23e456907d410b",
+    commit = "50012918b2fc8357b87cff2a7f7f0446e47da174",
   },
 
   -- UI Component Library.
@@ -343,7 +343,7 @@ lazy.setup({
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "0437ef8bfdd67156d87140d692840a3c2824fa20",
+    commit = "d38c1b5266850f77f75e006bcc26213684e1e141",
   },
 
   ----------------------------------------------------------------------
@@ -354,7 +354,7 @@ lazy.setup({
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "7ccf476ebe0445a741b64e36c78a682c1c6118b7",
+    commit = "6962dae3565369363b59dd51fb206051555fcb4d",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "80f2f70740431b07d725cc66f63abbfd66aaae6d",
+    commit = "4db76a68b47aa6e9777e4da4aed16f0fff74920e",
   },
 
   ----------------------------------------------------------------------
