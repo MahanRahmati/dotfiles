@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "8f3ddc448769f563248654a5099c943c7139137e",
+    commit = "e49b1e90c1781ce372013de3fa93a91ea29fc34a",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "0a3c7f76a5e81452b5d4bd78a7bb8cd2603445b5",
+    commit = "6185fcb842082b6871e1ee48b1c6444c1efdc681",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "f8fcb0da0618be551560a57fa1457dc6f889e568",
+    commit = "49e71322db582147ce8f4df1853d9dab08da0826",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -226,7 +226,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "f03cbfb65664e55451d91616242bd1c63919da10",
+    commit = "dcef0a062de380885193fb0f919217d58b979753",
   },
 
   ----------------------------------------------------------------------
@@ -370,7 +370,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "4c21ec0b9068cd5c22e960260467b94b841fd4f8",
+    commit = "f6c71641f6f183427a651c0ce4ba3fb89404fa9e",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "ea44a6f0a5b8f3924537b004a76e8aef26f2b22a",
+    commit = "1281e26948fc06994e0e0cdcaafdd9bbd28929e7",
   },
 
   ----------------------------------------------------------------------
