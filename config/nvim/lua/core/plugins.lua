@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "49e71322db582147ce8f4df1853d9dab08da0826",
+    commit = "9c4fc86b67c1d68141cef57846d24cbee9b74fb0",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -236,7 +236,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
+    commit = "1a3f6bba410aff5a51bf8c84287aaa3a8ba30d0d",
   },
 
   ----------------------------------------------------------------------
