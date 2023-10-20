@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "e49b1e90c1781ce372013de3fa93a91ea29fc34a",
+    commit = "38da5bbe1eaab2394056109e48c7e195bdb8fdfe",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "7956fd3cf13485c0af59264f74787ecf8b47cb37",
+    commit = "6c592e9e78e68cd2bf4385da1b2a633219a22aab",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "afa103385a2b5ef060596ed822ef63276ae88016",
+    commit = "4a68f0778c05083cc458a3a144205cfc41474439",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "63ebe879ad4798b66d29c0b2c8d04942389d438e",
+    commit = "887a95853412cba01dc48b20f5a2bf743431b7a3",
   },
 
   ----------------------------------------------------------------------
@@ -236,7 +236,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "7533b0ead663d80452210c0c089e5105089697e5",
+    commit = "2248ef254d0a1488a72041cfb45ca9caada6d994",
   },
 
   ----------------------------------------------------------------------
@@ -354,7 +354,7 @@ lazy.setup({
   -- you started typing.
   {
     "folke/which-key.nvim",
-    commit = "ce741eb559c924d72e3a67d2189ad3771a231414",
+    commit = "4433e5ec9a507e5097571ed55c02ea9658fb268a",
   },
 
   -- Create shortcuts to escape insert mode without getting delay.
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "7227dca17316384e9b62bd6fc6b4d892572d6d4e",
+    commit = "8aa32aa6b84dda357849dbc0f775e69f2e04c041",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "2e8b826cb4af5cf36b5febc5e7a71d3284f161f2",
+    commit = "4897996612adeb9cb39325f95c9b0481ce892edf",
   },
 
   ----------------------------------------------------------------------
