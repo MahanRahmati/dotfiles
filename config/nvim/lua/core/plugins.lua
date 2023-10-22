@@ -42,7 +42,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "e7b64c11035aa924f87385b72145e0ccf68a7e0a",
+    commit = "09be3766669bfbabbe2863c624749d8da392c916",
   },
 
   -- Another lsp progress status for Neovim.
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4a68f0778c05083cc458a3a144205cfc41474439",
+    commit = "0179a89656b4ce395a4487c07ae385b8425524ae",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "887a95853412cba01dc48b20f5a2bf743431b7a3",
+    commit = "2c782550d8a6675f1735970d18ef5d0701f2d789",
   },
 
   ----------------------------------------------------------------------
@@ -266,7 +266,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "3af745113ea537f58c4b1573b64a429fefad9e07",
+    commit = "f0267921c845c42685968401bc49aa65e18d3e09",
   },
 
   ----------------------------------------------------------------------
@@ -370,7 +370,7 @@ lazy.setup({
   -- A minimalist autopairs for Neovim written by Lua.
   {
     "windwp/nvim-autopairs",
-    commit = "f6c71641f6f183427a651c0ce4ba3fb89404fa9e",
+    commit = "0f04d78619cce9a5af4f355968040f7d675854a1",
   },
 
   -- Rainbow delimiters for Neovim through Tree-sitter
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "4897996612adeb9cb39325f95c9b0481ce892edf",
+    commit = "7f5ff6d253ae3543f186787bccafdc411d3f4b0a",
   },
 
   ----------------------------------------------------------------------
