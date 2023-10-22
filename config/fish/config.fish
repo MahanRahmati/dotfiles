@@ -133,10 +133,6 @@ set fish_prompt_pwd_dir_length 1
 set fish_color_command green
 set fish_color_param $fish_color_normal
 
-function postexec_test --on-event fish_postexec
-    echo
-end
-
 function print_in_color
     set -l string $argv[1]
     set -l color $argv[2]
@@ -155,18 +151,9 @@ function prompt_color_for_status
 end
 
 function print_pwd
-    set_color blue
-    printf ""
-    set_color -b blue
-    set_color black
-    printf " "
+    printf "["
     printf (prompt_pwd)
-    set_color normal
-    set_color -b normal
-    set_color blue
-    printf ""
-    set_color -b normal
-    set_color normal
+    printf "]"
 end
 
 function fish_prompt
