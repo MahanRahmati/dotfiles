@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "0179a89656b4ce395a4487c07ae385b8425524ae",
+    commit = "5c08a5301c0fa79016fa2b6aee57396eefab685b",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "74ce793a60759e3db0d265174f137fb627430355",
+    commit = "8c9fd22952d5665f54f03052440e610c1a8d84cf",
   },
 
   ----------------------------------------------------------------------
