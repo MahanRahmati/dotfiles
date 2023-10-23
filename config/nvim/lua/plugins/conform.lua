@@ -13,6 +13,7 @@ conform.setup {
     markdown = { { "prettier" } },
     sh = { "shfmt" },
     yaml = { { "prettier" } },
+    css = { { "prettier" } },
     ["*"] = { "squeeze_blanks" },
   },
 }
