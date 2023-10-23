@@ -1,0 +1,74 @@
+/* Hide show all tabs button */
+#alltabs-button {
+  display: none !important;
+}
+
+/* Rounded url preview on bottom */
+#statuspanel-label {
+  background-color: var(--toolbar-field-background-color) !important;
+  border-radius: 0 16px 0 0 !important;
+  padding: 8px !important;
+}
+
+/* Add margin and border radius to the find bar */
+findbar {
+  border-radius: 16px !important;
+  margin: 0px 16px 16px 16px !important;
+  z-index: 2;
+  padding: 8px !important;
+}
+
+/* Add margin and border radius to the main browser container */
+.browserStack > browser {
+  margin: 16px !important;
+  border-radius: 16px !important;
+}
+
+#browser {
+  --sidebar-border-color: transparent !important;
+}
+
+.browserContainer,
+.browserStack,
+.browserSidebarContainer,
+#browser,
+#appcontent {
+  background-color: var(--lwt-accent-color) !important;
+}
+
+/* Add margin and border radius to the side bar*/
+#sidebar-box {
+  margin: 16px 0px 16px 16px !important;
+  border-radius: 16px !important;
+  z-index: 1;
+  border-color: transparent;
+  background-color: var(--newtab-background-color) !important;
+}
+
+#sidebar {
+  background-color: var(--newtab-background-color) !important;
+}
+
+#sidebar-box > * {
+  border-radius: 16px !important;
+  background-image: none;
+  background-color: var(--newtab-background-color) !important;
+}
+
+#sidebar-splitter {
+  display: none;
+}
+
+#sidebar-header {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+  background-color: var(--newtab-background-color) !important;
+}
+
+#sidebar-search-container {
+  background-color: var(--newtab-background-color) !important;
+}
+
+.sidebar-placesTreechildren {
+  background-color: var(--newtab-background-color) !important;
+}
