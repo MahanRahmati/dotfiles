@@ -1,0 +1,10 @@
+/* Compact urlbar */
+.urlbarView {
+  margin-inline: 4px !important;
+}
+.urlbarView-row {
+  padding: 4px !important;
+}
+.urlbarView-row-inner {
+  padding-inline-start: 4px !important;
+}

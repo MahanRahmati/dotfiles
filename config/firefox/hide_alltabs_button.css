@@ -1,0 +1,4 @@
+/* Hide show all tabs button */
+#alltabs-button {
+  display: none !important;
+}

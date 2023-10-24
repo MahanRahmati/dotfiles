@@ -1,0 +1,17 @@
+/* Add margin and border radius to the main browser container */
+.browserStack > browser {
+  margin: 16px !important;
+  border-radius: 16px !important;
+}
+
+#browser {
+  --sidebar-border-color: transparent !important;
+}
+
+.browserContainer,
+.browserStack,
+.browserSidebarContainer,
+#browser,
+#appcontent {
+  background-color: var(--lwt-accent-color) !important;
+}

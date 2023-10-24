@@ -1,0 +1,8 @@
+/* Add margin and border radius to the find bar */
+findbar {
+  border-radius: 16px !important;
+  border-color: transparent !important;
+  margin: 0px 16px 16px 16px !important;
+  z-index: 2;
+  padding: 8px !important;
+}

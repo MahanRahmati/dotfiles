@@ -1,0 +1,19 @@
+toolbar#TabsToolbar {
+  -moz-appearance: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+toolbar-menubar,
+#menubar-items,
+#main-menubar {
+  background-color: var(--toolbar-bgcolor) !important;
+  background-image: none !important;
+}
+
+#TabsToolbar {
+  padding: 0px 3px;
+}
+
+#TabsToolbar > .titlebar-buttonbox-container {
+  margin-top: -12px !important;
+}

@@ -1,0 +1,6 @@
+/* Rounded url preview on bottom */
+#statuspanel-label {
+  background-color: var(--toolbar-field-background-color) !important;
+  border-radius: 0 16px 0 0 !important;
+  padding: 8px !important;
+}
