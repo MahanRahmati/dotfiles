@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "6428fcab6f3c09e934bc016c329806314384a41e",
+    commit = "cb49a4cd622d7ed775c31561bb8aa6a50712d6b9",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -42,7 +42,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "09be3766669bfbabbe2863c624749d8da392c916",
+    commit = "40301e1c74bc0946eece13edf2b1c561cc497491",
   },
 
   -- Another lsp progress status for Neovim.
@@ -58,7 +58,7 @@ lazy.setup({
   -- Completion plugin for Neovim
   {
     "hrsh7th/nvim-cmp",
-    commit = "d3a3056204e1a9dbb7c7fe36c114dc43b681768c",
+    commit = "51260c02a8ffded8e16162dcf41a23ec90cfba62",
   },
 
   -- A nvim-cmp source for Neovim builtin LSP client.
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4199be485cd85662d8ff1dc8c4cc78d819fad6cd",
+    commit = "107e61afb7129d637ea6c3c68b97a22194b0bf16",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "2c782550d8a6675f1735970d18ef5d0701f2d789",
+    commit = "1236db954ce502eb5b340bcdb69aa057cc372e8d",
   },
 
   ----------------------------------------------------------------------
@@ -226,7 +226,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "ea52fe8a0b1e4a820df0d0cf9a6a5a0e18c3eaa0",
+    commit = "b359f3eec32dcc6b7c9a26901dc235bbb6cd8a0b",
   },
 
   ----------------------------------------------------------------------
@@ -336,7 +336,7 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "5a9a6ac29a7805c4783cda21b80a1e361964b3f2",
+    commit = "af0f583cd35286dd6f0e3ed52622728703237e50",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
@@ -404,7 +404,7 @@ lazy.setup({
   -- Highlight, list and search todo comments in your projects.
   {
     "folke/todo-comments.nvim",
-    commit = "3094ead8edfa9040de2421deddec55d3762f64d1",
+    commit = "4a6737a8d70fe1ac55c64dfa47fcb189ca431872",
   },
 
   -- Adds a comment frame based on the source file.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "e4ecb6e8ed3163c86d7e647f1dc3d94de77ca687",
+    commit = "278bcd8bf2017e187e963b515017341fdd87fe2f",
   },
 
   ----------------------------------------------------------------------
