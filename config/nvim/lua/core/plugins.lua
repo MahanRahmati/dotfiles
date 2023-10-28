@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "107e61afb7129d637ea6c3c68b97a22194b0bf16",
+    commit = "bf0a96568a54618138ac42c84758945cdafef86b",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "1236db954ce502eb5b340bcdb69aa057cc372e8d",
+    commit = "dcef81d96e0678b01cca5445cffb9a3ae0e9ce4f",
   },
 
   ----------------------------------------------------------------------
@@ -300,7 +300,7 @@ lazy.setup({
   -- Pomodoro time tracker for NeoVim written entirely in LUA
   {
     "dbinagi/nomodoro",
-    commit = "42c6775da86558ca96b5d20b7782f442187ca8d8",
+    commit = "e35b3ab91b64a010bed4809048826f59682adf46",
   },
 
   ----------------------------------------------------------------------
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "8aa32aa6b84dda357849dbc0f775e69f2e04c041",
+    commit = "2806d83e3965017382ce08792ee527e708fa1bd4",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "278bcd8bf2017e187e963b515017341fdd87fe2f",
+    commit = "253878436e2b6d73dfd91ccf0ac12d04cc683d34",
   },
 
   ----------------------------------------------------------------------
