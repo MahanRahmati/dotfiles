@@ -2,7 +2,7 @@
 findbar {
   border-radius: 16px !important;
   border-color: transparent !important;
-  margin: 0px 16px 16px 16px !important;
+  margin: 0px 8px 8px 8px !important;
   z-index: 2;
   padding: 8px !important;
 }

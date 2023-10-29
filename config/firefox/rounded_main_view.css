@@ -1,6 +1,6 @@
 /* Add margin and border radius to the main browser container */
 .browserStack > browser {
-  margin: 16px !important;
+  margin: 8px !important;
   border-radius: 16px !important;
 }
 
