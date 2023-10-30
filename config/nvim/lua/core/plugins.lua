@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "cb49a4cd622d7ed775c31561bb8aa6a50712d6b9",
+    commit = "d0467b9574b48429debf83f8248d8cee79562586",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "bf0a96568a54618138ac42c84758945cdafef86b",
+    commit = "a8c14d68b024ffc20baec92d1acc91796bcfb485",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "dcef81d96e0678b01cca5445cffb9a3ae0e9ce4f",
+    commit = "936b029e514adc1fa7ab51c6c1a8a2c872a58797",
   },
 
   ----------------------------------------------------------------------
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "253878436e2b6d73dfd91ccf0ac12d04cc683d34",
+    commit = "f7766d2fbe23f0f22a3db1513beba7d03a8dc261",
   },
 
   ----------------------------------------------------------------------
