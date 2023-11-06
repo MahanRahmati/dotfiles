@@ -26,6 +26,9 @@ local options = {
   linebreak = true,
   -- Enables mouse support.
   mouse = "a",
+  -- This option controls the number of lines / columns to scroll by when
+  -- scrolling with a mouse wheel
+  mousescroll = "ver:3,hor:0",
   -- Print the line number in front of each line.
   number = true,
   -- Maximum number of items to show in the popup menu.
