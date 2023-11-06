@@ -28,14 +28,14 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "d0467b9574b48429debf83f8248d8cee79562586",
+    commit = "b44737605807023d32e6310b87ba69f4dbf10e0e",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
   -- formatters.
   {
     "williamboman/mason.nvim",
-    commit = "cd7835b15f5a4204fc37e0aa739347472121a54c",
+    commit = "eabf6d347fdb75be360d4c0ced1145670a171453",
   },
 
   -- Extension to mason.nvim that makes it easier to use lspconfig with
@@ -150,13 +150,13 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "a8c14d68b024ffc20baec92d1acc91796bcfb485",
+    commit = "80f66cdef147bd8d8a619dfd9b18da37af5ceaf6",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
   {
     "fei6409/log-highlight.nvim",
-    commit = "8b7dd3c3ccaa553d6ed45ebcae32552689f56108",
+    commit = "c18d1fd20c411f9fd9702d6d0d09edf3faa2bb96",
   },
 
   ----------------------------------------------------------------------
@@ -166,7 +166,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "80a8528f084a97b624ae443a6f50ff8074ba486b",
+    commit = "a4de64570b9620875c8ea04175cd07ed8e32ac99",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "4522d7e3ea75ffddabdc39957168a8a7060b5df0",
+    commit = "20bf20500c95208c3ac0ef07245065bf94dcab15",
   },
 
   ----------------------------------------------------------------------
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "936b029e514adc1fa7ab51c6c1a8a2c872a58797",
+    commit = "76dd1b49c302620f2e11946ac7a7201105180be2",
   },
 
   ----------------------------------------------------------------------
@@ -226,7 +226,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "b359f3eec32dcc6b7c9a26901dc235bbb6cd8a0b",
+    commit = "d7521f6050b94cb0e23067f63829d86886f870fe",
   },
 
   ----------------------------------------------------------------------
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "f7766d2fbe23f0f22a3db1513beba7d03a8dc261",
+    commit = "0d43691a092bd8c81f617a99519dde4b2f19fdf2",
   },
 
   ----------------------------------------------------------------------
