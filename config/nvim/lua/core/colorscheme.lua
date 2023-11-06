@@ -5,7 +5,7 @@ end
 
 colorscheme.setup {
   flavour = "mocha",
-  transparent_background = true,
+  -- transparent_background = false,
   no_underline = true,
   color_overrides = {
     mocha = {
