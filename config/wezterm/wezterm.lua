@@ -8,7 +8,7 @@ return {
     background = "#0E1116",
   },
   enable_tab_bar = false,
-  font = wezterm.font "Hack Nerd Font",
+  font = wezterm.font("Hack Nerd Font", { weight = "Regular" }),
   font_size = 16,
   keys = {
     {
