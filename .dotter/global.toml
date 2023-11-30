@@ -12,5 +12,8 @@
 [nvim.files]
 "config/nvim" = "~/.config/nvim"
 
+[neovide.files]
+"config/neovide" = "~/.config/neovide"
+
 [wezterm.files]
 "config/wezterm" = "~/.config/wezterm"
