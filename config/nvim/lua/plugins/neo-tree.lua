@@ -42,6 +42,17 @@ neo_tree.setup {
   window = {
     width = 35,
     auto_expand_width = true,
+    popup = {
+      position = { col = "0%", row = "2" },
+      size = function(state)
+        local root_name = vim.fn.fnamemodify(state.path, ":~")
+        local root_len = string.len(root_name) + 4
+        return {
+          width = math.max(root_len, 50),
+          height = vim.o.lines - 4,
+        }
+      end,
+    },
   },
   filesystem = {
     filtered_items = {
@@ -55,22 +66,6 @@ neo_tree.setup {
       event = "file_opened",
       handler = function(_)
         vim.cmd "Neotree close"
-      end,
-    },
-    {
-      event = "neo_tree_window_after_open",
-      handler = function(args)
-        if args.position == "left" or args.position == "right" then
-          vim.cmd "wincmd ="
-        end
-      end,
-    },
-    {
-      event = "neo_tree_window_after_close",
-      handler = function(args)
-        if args.position == "left" or args.position == "right" then
-          vim.cmd "wincmd ="
-        end
       end,
     },
   },
