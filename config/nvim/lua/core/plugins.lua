@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "36e4ffec0a9e373ac9dbf7949d3567c8f04ca3df",
+    commit = "fcf153fbbf1facd16a71d46b92be8be495123a9f",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -42,13 +42,13 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "6eb8cae80f2e4322ec82cd9f8fa423f6d1eb02c3",
+    commit = "41674c9d50f23cfa3e11f0ca964eb9100c2a8922",
   },
 
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "b2d2aaf10fadf58d299a33b6ba057ffe4c458762",
+    commit = "670cd71586f3464f2e341627ea434498fa0de7d2",
   },
 
   ----------------------------------------------------------------------
@@ -100,7 +100,7 @@ lazy.setup({
   -- A nvim-cmp source for nerdfont icons.
   {
     "chrisgrieser/cmp-nerdfont",
-    commit = "853a946eda00016f60c0602a20d8595c6eb074a6",
+    commit = "a3b7c0cadb7bd389f513eecda376d4c6bec90003",
   },
 
   -- A nvim-cmp source for look.
@@ -124,7 +124,7 @@ lazy.setup({
   -- The official Sourcegraph/Cody plugin for Neovim
   {
     "sourcegraph/sg.nvim",
-    commit = "6c592e9e78e68cd2bf4385da1b2a633219a22aab",
+    commit = "41378567217097a3d78b624c9f11d29436381e99",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "8996612bfbebe1657e1bb55a95201c96cab945c6",
+    commit = "93750d388162f5658cfdb77bdcfe80711e637647",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -166,13 +166,13 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "a4de64570b9620875c8ea04175cd07ed8e32ac99",
+    commit = "1def35377854535bb3b0f4cc7a33c083cdb12571",
   },
 
   -- Set of preconfigured snippets for different languages.
   {
     "rafamadriz/friendly-snippets",
-    commit = "43727c2ff84240e55d4069ec3e6158d74cb534b6",
+    commit = "53d3df271d031c405255e99410628c26a8f0d2b0",
   },
 
   ----------------------------------------------------------------------
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "20bf20500c95208c3ac0ef07245065bf94dcab15",
+    commit = "84c5a71d825b6687a55aed6f41e98b92fd8e5454",
   },
 
   ----------------------------------------------------------------------
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "f053f09962819c1558cd93639aa80edf7c314c17",
+    commit = "230ff118613fa07138ba579b89d13ec2201530b9",
   },
 
   ----------------------------------------------------------------------
@@ -226,7 +226,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "d7521f6050b94cb0e23067f63829d86886f870fe",
+    commit = "919d1f786338ebeced798afbf28cd085cd54542a",
   },
 
   ----------------------------------------------------------------------
@@ -256,7 +256,7 @@ lazy.setup({
   -- A fast and highly customizable greeter for Neovim.
   {
     "goolord/alpha-nvim",
-    commit = "234822140b265ec4ba3203e3e0be0e0bb826dff5",
+    commit = "29074eeb869a6cbac9ce1fbbd04f5f5940311b32",
   },
 
   ----------------------------------------------------------------------
@@ -266,7 +266,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "47103b80c38c59f7a1b5408c232b92bf5d018651",
+    commit = "5efb8bd06841f91f97c90e16de85e96d57e9c862",
   },
 
   ----------------------------------------------------------------------
@@ -288,7 +288,7 @@ lazy.setup({
   -- Display a line as colorcolumn.
   {
     "lukas-reineke/virt-column.nvim",
-    commit = "9c82009c53e5f9d43b6c0f5e8cb69c53663b786a",
+    commit = "b62b4ef0774d19452d4ed18e473e824c7a756f2f",
   },
 
   -- Delete Neovim buffers without losing window layout.
@@ -310,7 +310,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "c80844fd52ba76f48fabf83e2b9f9b93273f418d",
+    commit = "6b334b9d1266b0f58ab1b6965c1e5b7eb5c34523",
   },
 
   ----------------------------------------------------------------------
@@ -320,13 +320,13 @@ lazy.setup({
   -- Useful lua functions used by lots of plugins.
   {
     "nvim-lua/plenary.nvim",
-    commit = "50012918b2fc8357b87cff2a7f7f0446e47da174",
+    commit = "366b0837486f60ae0e7550c15de8ff66d057c4cd",
   },
 
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "c0c8e347ceac53030f5c1ece1c5a5b6a17a25b32",
+    commit = "257dccc43b4badc735978f0791d216f7d665b75a",
   },
 
   ----------------------------------------------------------------------
@@ -336,14 +336,14 @@ lazy.setup({
   -- Git integration: signs, hunk actions, blame, etc.
   {
     "lewis6991/gitsigns.nvim",
-    commit = "af0f583cd35286dd6f0e3ed52622728703237e50",
+    commit = "6ef8c54fb526bf3a0bc4efb0b2fe8e6d9a7daed2",
   },
 
   --  Single tabpage interface for easily cycling through diffs for all
   --  modified files for any git rev.
   {
     "sindrets/diffview.nvim",
-    commit = "d38c1b5266850f77f75e006bcc26213684e1e141",
+    commit = "3dc498c9777fe79156f3d32dddd483b8b3dbd95f",
   },
 
   ----------------------------------------------------------------------
@@ -382,7 +382,7 @@ lazy.setup({
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
-    commit = "2806d83e3965017382ce08792ee527e708fa1bd4",
+    commit = "bf4d15ee4e96ff5201f16a4ed14443670662eb90",
   },
 
   -- Peek lines in a non-obtrusive way.
@@ -420,7 +420,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "161d95bfbb1ad1a2b89ba2ea75ca1b5e012a111e",
+    commit = "3fc2c956d99216b2816f07d2b946020ba2e02457",
   },
 
   ----------------------------------------------------------------------
