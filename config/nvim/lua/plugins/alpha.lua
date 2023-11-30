@@ -19,7 +19,6 @@ local header = {
   opts = {
     position = "center",
     hl = "Type",
-    -- wrap = "overflow";
   },
 }
 
