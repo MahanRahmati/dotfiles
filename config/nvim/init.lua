@@ -5,6 +5,7 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
+require "core.neovide"
 require "core.autocommands"
 require "core.options"
 require "core.plugins"
