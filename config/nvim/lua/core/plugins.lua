@@ -357,12 +357,6 @@ lazy.setup({
     commit = "4433e5ec9a507e5097571ed55c02ea9658fb268a",
   },
 
-  -- Create shortcuts to escape insert mode without getting delay.
-  {
-    "max397574/better-escape.nvim",
-    commit = "7031dc734add47bb71c010e0551829fa5799375f",
-  },
-
   ----------------------------------------------------------------------
   --                         Editing Support                          --
   ----------------------------------------------------------------------
