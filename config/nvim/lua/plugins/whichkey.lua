@@ -50,7 +50,7 @@ local n_mappings = {
     },
   },
   F = {
-    name = "Comment Frame",
+    name = "Frame",
     f = {
       "<cmd>lua require('nvim-comment-frame').add_comment()<cr>",
       "Single line comment",
