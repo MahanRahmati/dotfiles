@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "fcf153fbbf1facd16a71d46b92be8be495123a9f",
+    commit = "694aaec65733e2d54d393abf80e526f86726c988",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -42,7 +42,7 @@ lazy.setup({
   -- mason.nvim
   {
     "williamboman/mason-lspconfig.nvim",
-    commit = "41674c9d50f23cfa3e11f0ca964eb9100c2a8922",
+    commit = "2d7a2a61221c634391130b86dbebe90b7249e2b1",
   },
 
   -- Another lsp progress status for Neovim.
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "93750d388162f5658cfdb77bdcfe80711e637647",
+    commit = "80a16deb5146a3eb4648effccda1ab9f45e43e76",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -282,7 +282,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "fe3071330a0720ce3695ac915820c8134b22d1b0",
+    commit = "8b7ae53d7f04f33be3439a441db8071c96092d19",
   },
 
   -- Display a line as colorcolumn.
@@ -320,7 +320,7 @@ lazy.setup({
   -- Useful lua functions used by lots of plugins.
   {
     "nvim-lua/plenary.nvim",
-    commit = "366b0837486f60ae0e7550c15de8ff66d057c4cd",
+    commit = "55d9fe89e33efd26f532ef20223e5f9430c8b0c0",
   },
 
   -- UI Component Library.
