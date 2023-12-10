@@ -13,7 +13,7 @@ toggleterm.setup {
   insert_mappings = true,
   terminal_mappings = true,
   persist_size = true,
-  direction = "horizontal", -- 'vertical' | 'horizontal' | 'tab' | 'float',
+  direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float',
   close_on_exit = true,
   shell = vim.o.shell,
   float_opts = {
@@ -23,6 +23,15 @@ toggleterm.setup {
       border = "Normal",
       background = "Normal",
     },
+    width = function(_term)
+      _term.float_opts.col = vim.o.columns
+      return vim.o.columns
+    end,
+    height = function(_term)
+      local height = 15
+      _term.float_opts.row = vim.o.lines - height - 3
+      return height
+    end,
   },
 }
 
