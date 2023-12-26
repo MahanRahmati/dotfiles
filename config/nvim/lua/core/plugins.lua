@@ -134,7 +134,7 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "7cb01c52ac9ece55118be71e0f7457783d5522a4",
+    commit = "34d14ea37313fc755423117b1e9adda058fbffba",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
@@ -166,7 +166,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "57c9f5c31b3d712376c704673eac8e948c82e9c1",
+    commit = "07f5d974203a5d957e7b464020261a657f59556d",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "f336f8cfab38a82f9f00df380d28f0c2a572f862",
+    commit = "c0ee29e8e4700ef49623d12ca3ffb8481c8d69f3",
   },
 
   ----------------------------------------------------------------------
@@ -236,7 +236,7 @@ lazy.setup({
   -- A blazing fast and easy to configure Neovim statusline.
   {
     "nvim-lualine/lualine.nvim",
-    commit = "2248ef254d0a1488a72041cfb45ca9caada6d994",
+    commit = "566b7036f717f3d676362742630518a47f132fff",
   },
 
   ----------------------------------------------------------------------
@@ -282,7 +282,7 @@ lazy.setup({
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
   {
     "stevearc/dressing.nvim",
-    commit = "8b7ae53d7f04f33be3439a441db8071c96092d19",
+    commit = "94b0d24483d56f3777ee0c8dc51675f21709318c",
   },
 
   -- Display a line as colorcolumn.
@@ -310,7 +310,7 @@ lazy.setup({
   -- A Neovim Lua plugin to help easily manage multiple terminal windows.
   {
     "akinsho/toggleterm.nvim",
-    commit = "91be5f327e42aa016da13b277540de8dba0b14e3",
+    commit = "e3805fed94d487b81e9c21548535cc820f62f840",
   },
 
   ----------------------------------------------------------------------
@@ -414,7 +414,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "7396fc0208539e2bd70e3e446f27529e28dba12b",
+    commit = "86393c143b8d1b7bdae1449fd25de315fd967fd7",
   },
 
   ----------------------------------------------------------------------
