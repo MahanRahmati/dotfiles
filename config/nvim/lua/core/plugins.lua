@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "0d9e870d01894c592d7ea93cfe0fa451916d9a7f",
+    commit = "9bedcfed749755e43fc8bed46f85ce2044fe3b77",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -166,7 +166,7 @@ lazy.setup({
   -- A snippet engine for Neovim written in Lua.
   {
     "L3MON4D3/LuaSnip",
-    commit = "2463d687fe704b76eb0aa3bb34e95f69a5bb0362",
+    commit = "8ae1dedd988eb56441b7858bd1e8554dfadaa46d",
   },
 
   -- Set of preconfigured snippets for different languages.
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "953313ecf0a92a8e9f2a4afc603731f1fcb331b4",
+    commit = "c4bc5eacc571bbe9d505932c028126f379823fc4",
   },
 
   ----------------------------------------------------------------------
@@ -226,7 +226,7 @@ lazy.setup({
   -- native LSP, Tree-sitter, and more 🍨!
   {
     "catppuccin/nvim",
-    commit = "b901cf144573b293b6cefeb1ac8c97d5d239ee7a",
+    commit = "5e36ca599f4aa41bdd87fbf2c5aae4397ac55074",
   },
 
   ----------------------------------------------------------------------
@@ -266,7 +266,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "808627b8d412b2a6b6fc6eed816fec3557198b01",
+    commit = "cff25ce621e6d15fae0b0bfe38c00be50ce38468",
   },
 
   ----------------------------------------------------------------------
