@@ -28,7 +28,7 @@ lazy.setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "9bedcfed749755e43fc8bed46f85ce2044fe3b77",
+    commit = "ce0e625df61be77abe1340fbc9afe9ad39b31dd8",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -134,13 +134,13 @@ lazy.setup({
   -- Build flutter and dart applications in Neovim using the native lsp.
   {
     "akinsho/flutter-tools.nvim",
-    commit = "34d14ea37313fc755423117b1e9adda058fbffba",
+    commit = "b65ad58462116785423d81aeb2ee6c8c16f78679",
   },
 
   -- Tools for better development in rust using Neovim's builtin LSP.
   {
     "simrat39/rust-tools.nvim",
-    commit = "0cc8adab23117783a0292a0c8a2fbed1005dc645",
+    commit = "676187908a1ce35ffcd727c654ed68d851299d3e",
   },
 
   ----------------------------------------------------------------------
@@ -150,7 +150,7 @@ lazy.setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "e49f1e8ef3e8450a8446cb1f2bbb53c919f60b6d",
+    commit = "0da349ed303bea955942f409d29059cdb89dbe2c",
   },
 
   -- Generic log syntax highlighting and filetype management for Neovim.
@@ -182,7 +182,7 @@ lazy.setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "3466159b0fcc1876483f6f53587562628664d850",
+    commit = "8b56e9bb2d0b8750c2f8cd4efe9738e3c066889b",
   },
 
   ----------------------------------------------------------------------
@@ -194,7 +194,7 @@ lazy.setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "c4bc5eacc571bbe9d505932c028126f379823fc4",
+    commit = "396ff81e6bb384b0ef12ae427346cbf97d08f808",
   },
 
   ----------------------------------------------------------------------
@@ -266,7 +266,7 @@ lazy.setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "cff25ce621e6d15fae0b0bfe38c00be50ce38468",
+    commit = "3e24abe1ae66532135cec911562f553fe247cb56",
   },
 
   ----------------------------------------------------------------------
@@ -276,7 +276,7 @@ lazy.setup({
   -- A fancy, configurable, notification manager for Neovim.
   {
     "rcarriga/nvim-notify",
-    commit = "ebcdd8219e2a2cbc0a4bef68002f6867f1fde269",
+    commit = "1576123bff3bed67bc673a3076e591abfe5d8ca9",
   },
 
   -- Improve the built-in vim.ui interfaces with telescope, fzf, etc.
@@ -414,7 +414,7 @@ lazy.setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "ad2b5ecd907128ed1b66b1cf4bed57902ef836ee",
+    commit = "c4b2efb8aee4af0ef179a9b49ba401de3c4ef5d2",
   },
 
   ----------------------------------------------------------------------
