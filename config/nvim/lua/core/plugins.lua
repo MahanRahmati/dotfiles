@@ -22,6 +22,17 @@ end
 lazy.setup({
 
   ----------------------------------------------------------------------
+  --                               Mini                               --
+  ----------------------------------------------------------------------
+
+  -- Library of 35+ independent Lua modules improving overall Neovim
+  -- experience with minimal effort
+  {
+    "echasnovski/mini.nvim",
+    commit = "e578f353d0b1d9f21a9640458d8e506c0c9acf5e",
+  },
+
+  ----------------------------------------------------------------------
   --                               LSP                                --
   ----------------------------------------------------------------------
 
@@ -396,12 +407,6 @@ lazy.setup({
   ----------------------------------------------------------------------
   --                             Comment                              --
   ----------------------------------------------------------------------
-
-  -- Smart and Powerful comment plugin for Neovim.
-  {
-    "numToStr/Comment.nvim",
-    commit = "0236521ea582747b58869cb72f70ccfa967d2e89",
-  },
 
   -- Highlight, list and search todo comments in your projects.
   {

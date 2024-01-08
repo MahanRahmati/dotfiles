@@ -32,10 +32,7 @@ local n_mappings = {
   h = { "<cmd>split<cr>", "split" },
   w = { "<cmd>w<CR>", "Write" },
   q = { "<cmd>q<CR>", "Quit" },
-  ["/"] = {
-    '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>',
-    "Comment",
-  },
+  ["/"] = { "<cmd>norm gcc<CR>", "Comment" },
   c = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   C = {
     name = "Cody",
@@ -161,10 +158,7 @@ local v_opts = {
 }
 
 local v_mappings = {
-  ["/"] = {
-    '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>',
-    "Comment",
-  },
+  ["/"] = { "<cmd>norm gc<CR>", "Comment" },
   d = { ":CodyAsk Generate code documentation<cr>", "Cody Doc" },
   e = { ":CodyAsk Explain code<cr>", "Cody Explain" },
   t = { ":CodyAsk Generate unit tests<cr>", "Cody Test" },
