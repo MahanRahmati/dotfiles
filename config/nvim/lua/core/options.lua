@@ -31,6 +31,8 @@ local options = {
   mousescroll = "ver:3,hor:0",
   -- Print the line number in front of each line.
   number = true,
+  -- Minimal number of columns to use for the line number.
+  numberwidth = 4, --TODO: Add logic to switch 20 and 4.
   -- Maximum number of items to show in the popup menu.
   pumheight = 10,
   -- Show the line number relative to the line with the cursor.
@@ -87,8 +89,8 @@ local options = {
   arabicshape = false,
 }
 
-for k, v in pairs(options) do
-  vim.opt[k] = v
+for setting, value in pairs(options) do
+  vim.opt[setting] = value
 end
 
 -- Keywords are used in searching and recognizing with many commands.
