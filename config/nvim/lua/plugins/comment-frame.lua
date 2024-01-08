@@ -1,9 +1,4 @@
-local comment_frame = require("core.import").import "nvim-comment-frame"
-if comment_frame == nil then
-  return
-end
-
-comment_frame.setup {
+require("nvim-comment-frame").setup {
   keymap = "<leader>Ff",
   multiline_keymap = "<leader>Fm",
 }
