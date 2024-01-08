@@ -1,9 +1,4 @@
-local lsp_progress = require("core.import").import "lsp-progress"
-if lsp_progress == nil then
-  return
-end
-
-lsp_progress.setup {
+require("lsp-progress").setup {
   series_format = function(title, message, percentage, _)
     local builder = {}
     local has_title = false
