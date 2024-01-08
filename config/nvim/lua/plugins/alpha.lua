@@ -1,8 +1,4 @@
-local alpha = require("core.import").import "alpha"
-if alpha == nil then
-  return
-end
-
+local icons = require "core.icons"
 local config = require("alpha.themes.theta").config
 local dashboard = require "alpha.themes.dashboard"
 
@@ -21,8 +17,6 @@ local header = {
     hl = "Type",
   },
 }
-
-local icons = require "core.icons"
 
 local buttons = {
   type = "group",
@@ -67,4 +61,4 @@ local buttons = {
 
 config.layout[2] = header
 config.layout[6] = buttons
-alpha.setup(config)
+require("alpha").setup(config)
