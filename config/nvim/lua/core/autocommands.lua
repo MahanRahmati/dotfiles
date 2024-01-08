@@ -1,5 +1,8 @@
+local augroup = vim.api.nvim_create_augroup
+local autocmd = vim.api.nvim_create_autocmd
+
 -- Use 'q' to quit from common plugins
-vim.api.nvim_create_autocmd({ "FileType" }, {
+autocmd({ "FileType" }, {
   pattern = { "qf", "help", "man", "lspinfo" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
@@ -13,7 +16,7 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 -- Set wrap and spell in markdown and gitcommit
-vim.api.nvim_create_autocmd({ "FileType" }, {
+autocmd({ "FileType" }, {
   pattern = { "gitcommit", "markdown" },
   callback = function()
     vim.opt_local.wrap = true
@@ -22,15 +25,15 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 -- Highlight Yanked Text
-vim.api.nvim_create_autocmd({ "TextYankPost" }, {
+autocmd({ "TextYankPost" }, {
   callback = function()
     vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
   end,
 })
 
 -- Reopen files at your last edit position.
-vim.api.nvim_create_autocmd("BufReadPost", {
-  group = vim.api.nvim_create_augroup("RestorePosition", { clear = true }),
+autocmd("BufReadPost", {
+  group = augroup("RestorePosition", { clear = true }),
   pattern = "*",
   callback = function()
     if vim.fn.line "'\"" > 0 and vim.fn.line "'\"" <= vim.fn.line "$" then
@@ -40,14 +43,14 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 })
 
 -- Show cursor line only in active window
-vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter", "CmdlineLeave" }, {
+autocmd({ "InsertLeave", "WinEnter", "CmdlineLeave" }, {
   pattern = "*",
   callback = function()
     vim.cmd [[set cursorline]]
   end,
 })
 
-vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
+autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
   pattern = "*",
   callback = function()
     vim.cmd [[set nocursorline]]
@@ -55,8 +58,8 @@ vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
 })
 
 -- Resize splits if window got resized
-vim.api.nvim_create_autocmd({ "VimResized" }, {
-  group = vim.api.nvim_create_augroup("ResizeSplits", { clear = true }),
+autocmd({ "VimResized" }, {
+  group = augroup("ResizeSplits", { clear = true }),
   callback = function()
     vim.cmd "tabdo wincmd ="
   end,
@@ -64,8 +67,8 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 
 -- Auto create dir when saving a file, in case some intermediate directory does
 -- not exist
-vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-  group = vim.api.nvim_create_augroup("AutoCreateDir", { clear = true }),
+autocmd({ "BufWritePre" }, {
+  group = augroup("AutoCreateDir", { clear = true }),
   callback = function(event)
     if event.match:match "^%w%w+://" then
       return
