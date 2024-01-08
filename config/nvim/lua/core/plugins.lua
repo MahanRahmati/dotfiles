@@ -373,6 +373,14 @@ lazy.setup({
     commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f",
   },
 
+  -- Automatically saves your work as often as needed and as seldom as
+  -- possible.
+  {
+    "okuuva/auto-save.nvim",
+    commit = "e98cafef75271ec83dc84c933f124ab1bb675ef8",
+    event = { "InsertLeave", "TextChanged" },
+  },
+
   -- Shows floating hover with the current function/block context.
   {
     "nvim-treesitter/nvim-treesitter-context",
