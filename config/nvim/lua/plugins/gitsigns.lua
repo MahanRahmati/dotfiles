@@ -1,11 +1,6 @@
-local gitsigns = require("core.import").import "gitsigns"
-if gitsigns == nil then
-  return
-end
-
 local icons = require "core.icons"
 
-gitsigns.setup {
+require("gitsigns").setup {
   signs = {
     add = { text = icons.gitsigns.add },
     change = { text = icons.gitsigns.change },
