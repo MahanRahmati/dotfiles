@@ -372,12 +372,6 @@ lazy.setup({
   --                         Editing Support                          --
   ----------------------------------------------------------------------
 
-  -- A minimalist autopairs for Neovim written by Lua.
-  {
-    "windwp/nvim-autopairs",
-    commit = "9fd41181693dd4106b3e414a822bb6569924de81",
-  },
-
   -- Rainbow delimiters for Neovim through Tree-sitter
   {
     "HiPhish/nvim-ts-rainbow2",
