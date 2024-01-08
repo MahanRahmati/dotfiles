@@ -427,11 +427,12 @@ lazy.setup({
   ----------------------------------------------------------------------
   --                              Indent                              --
   ----------------------------------------------------------------------
-  -- A minimal and blazing fast indentline plugin by using
-  -- nvim_set_decoration_provide api.
+
+  --  IndentLine replacement in Lua with more features and treesitter support.
   {
-    "nvimdev/indentmini.nvim",
-    commit = "a58129ae424fd6d8e0e2e7f6ce06c0443101e370",
+    "lukas-reineke/indent-blankline.nvim",
+    commit = "3c8a185da4b8ab7aef487219f5e001b11d4b6aaf",
+    event = "VimEnter",
   },
 }, {
   ui = { border = "rounded" },
