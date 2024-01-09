@@ -1,13 +1,4 @@
-local lualine = require("core.import").import "lualine"
-if lualine == nil then
-  return
-end
-
 local icons = require "core.icons"
-
-local hide_in_width = function()
-  return vim.fn.winwidth(0) > 80
-end
 
 local open_lazygit = function()
   vim.cmd "lua _LAZYGIT_TOGGLE()"
@@ -54,7 +45,6 @@ local diff = {
     modified = icons.modified,
     removed = icons.removed,
   },
-  cond = hide_in_width,
   source = diff_source,
   on_click = open_lazygit,
 }
@@ -223,7 +213,7 @@ local toggleterm_extension = {
   filetypes = { "toggleterm" },
 }
 
-lualine.setup {
+require("lualine").setup {
   options = {
     icons_enabled = true,
     theme = "auto",
