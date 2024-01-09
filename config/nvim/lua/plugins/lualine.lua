@@ -87,17 +87,6 @@ augroup END
 ]]
 end
 
-local nomodoro_module = {}
-local status_nomodoro_ok, nomodoro = pcall(require, "nomodoro")
-if status_nomodoro_ok then
-  local nomodoro_component = {
-    nomodoro.status,
-    icon = icons.pomodoro,
-    color = { fg = "#F38BA8" },
-  }
-  nomodoro_module = nomodoro_component
-end
-
 local function selectioncount()
   local nvim_mode = vim.fn.mode(true)
   local line_start, col_start = vim.fn.line "v", vim.fn.col "v"
@@ -256,7 +245,6 @@ lualine.setup {
       lsp_progress_module,
       location,
       filetype,
-      nomodoro_module,
       datetime,
     },
     lualine_y = {},
