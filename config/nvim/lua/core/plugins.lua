@@ -164,12 +164,6 @@ lazy.setup({
     commit = "0da349ed303bea955942f409d29059cdb89dbe2c",
   },
 
-  -- Generic log syntax highlighting and filetype management for Neovim.
-  {
-    "fei6409/log-highlight.nvim",
-    commit = "c18d1fd20c411f9fd9702d6d0d09edf3faa2bb96",
-  },
-
   ----------------------------------------------------------------------
   --                             Snippet                              --
   ----------------------------------------------------------------------
