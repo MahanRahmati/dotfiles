@@ -1,9 +1,4 @@
-local toggleterm = require("core.import").import "toggleterm"
-if toggleterm == nil then
-  return
-end
-
-toggleterm.setup {
+require("toggleterm").setup {
   size = 15,
   hide_numbers = true,
   shade_filetypes = {},

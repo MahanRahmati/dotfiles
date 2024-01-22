@@ -1,8 +1,3 @@
-local project = require("core.import").import "project_nvim"
-if project == nil then
-  return
-end
-
-project.setup {
+require("project_nvim").setup {
   detection_methods = { "pattern", "lsp" },
 }

@@ -1,12 +1,7 @@
-local telescope = require("core.import").import "telescope"
-if telescope == nil then
-  return
-end
-
 local actions = require "telescope.actions"
 local icons = require "core.icons"
 
-telescope.setup {
+require("telescope").setup {
   defaults = {
     path_display = { "smart" },
     layout_strategy = "flex",
@@ -69,4 +64,4 @@ telescope.setup {
   extensions = {},
 }
 
-telescope.load_extension "projects"
+require("telescope").load_extension "projects"

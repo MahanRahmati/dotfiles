@@ -1,9 +1,4 @@
-local which_key = require("core.import").import "which-key"
-if which_key == nil then
-  return
-end
-
-which_key.setup {
+require("which-key").setup {
   spelling = {
     enabled = true,
   },
@@ -140,12 +135,6 @@ local n_mappings = {
     },
   },
   t = { "<cmd>ToggleTerm<cr>", "Terminal" },
-  n = {
-    name = "Nomodoro",
-    w = { "<cmd>NomoWork<cr>", "Nomo Work" },
-    b = { "<cmd>NomoBreak<cr>", "Nomo Break" },
-    s = { "<cmd>NomoStop<cr>", "Nomo Stop" },
-  },
 }
 
 local v_opts = {
@@ -214,7 +203,7 @@ local visual_mappings = {
   K = { ":m '<-2<CR>gv=gv", "Move Line" },
 }
 
-which_key.register(n_mappings, n_opts)
-which_key.register(v_mappings, v_opts)
-which_key.register(normal_mappings, normal_opts)
-which_key.register(visual_mappings, visual_opts)
+require("which-key").register(n_mappings, n_opts)
+require("which-key").register(v_mappings, v_opts)
+require("which-key").register(normal_mappings, normal_opts)
+require("which-key").register(visual_mappings, visual_opts)
