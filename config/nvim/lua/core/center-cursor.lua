@@ -3,9 +3,9 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufEnter", "TextChanged" }, {
   pattern = { "*" },
   callback = function()
     if
-        vim.bo.filetype == "alpha"
-        or vim.bo.filetype == "TelescopePrompt"
-        or vim.bo.filetype == "TelescopeResults"
+      vim.bo.filetype == "alpha"
+      or vim.bo.filetype == "TelescopePrompt"
+      or vim.bo.filetype == "TelescopeResults"
     then
       return
     end
@@ -18,9 +18,9 @@ vim.api.nvim_create_autocmd({ "CursorMovedI", "WinScrolled" }, {
   pattern = { "*" },
   callback = function()
     if
-        vim.bo.filetype == "alpha"
-        or vim.bo.filetype == "TelescopePrompt"
-        or vim.bo.filetype == "TelescopeResults"
+      vim.bo.filetype == "alpha"
+      or vim.bo.filetype == "TelescopePrompt"
+      or vim.bo.filetype == "TelescopeResults"
     then
       return
     end
