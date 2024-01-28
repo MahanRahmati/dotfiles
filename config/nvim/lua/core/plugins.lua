@@ -1,11 +1,4 @@
--- Use a protected call so we don't error out on first use
-local status_ok, lazy = pcall(require, "lazy")
-if not status_ok then
-  vim.api.nvim_err_writeln "Failed to load lazy"
-  return
-end
-
-lazy.setup({
+require("lazy").setup({
 
   ----------------------------------------------------------------------
   --                               Mini                               --
