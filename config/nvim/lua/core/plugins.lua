@@ -211,6 +211,9 @@ require("lazy").setup({
   {
     "catppuccin/nvim",
     commit = "048c18fc531703815f5e10765ea46ce9b2c75ae4",
+    config = function()
+      require "core.colorscheme"
+    end,
   },
 
   ----------------------------------------------------------------------

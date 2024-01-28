@@ -33,7 +33,6 @@ for _, source in ipairs {
   "core.usercommands",
   "core.plugins",
   "plugins.notify",
-  "core.colorscheme",
   "core.luasnip",
   "core.cmp",
   "core.lsp",
