@@ -5,36 +5,64 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
-require "core.autocommands"
-require "core.options"
-require "core.plugins"
-require "plugins.notify"
-require "core.colorscheme"
-require "core.luasnip"
-require "core.center-cursor"
-require "core.cmp"
-require "core.lsp"
-require "core.treesitter"
-require "core.usercommands"
-require "plugins.alpha"
-require "plugins.colorizer"
-require "plugins.comment-frame"
-require "plugins.conform"
-require "plugins.dressing"
-require "plugins.flutter-tools"
-require "plugins.gitsigns"
-require "plugins.illuminate"
-require "plugins.indent-blankline"
-require "plugins.lsp-progress"
-require "plugins.lualine"
-require "plugins.mini"
-require "plugins.neo-tree"
-require "plugins.numb"
-require "plugins.project"
-require "plugins.sg"
-require "plugins.telescope"
-require "plugins.todo-comments"
-require "plugins.toggleterm"
-require "plugins.treesitter-context"
-require "plugins.virt-column"
-require "plugins.whichkey"
+----------------------------------------------------------------------
+--                       Installation of Lazy                       --
+----------------------------------------------------------------------
+
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system {
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  }
+end
+vim.opt.rtp:prepend(lazypath)
+
+----------------------------------------------------------------------
+--                       Load Configurations                        --
+----------------------------------------------------------------------
+
+for _, source in ipairs {
+  "core.options",
+  "core.autocommands",
+  "core.center-cursor",
+  "core.usercommands",
+  "core.plugins",
+  "plugins.notify",
+  "core.colorscheme",
+  "core.luasnip",
+  "core.cmp",
+  "core.lsp",
+  "core.treesitter",
+  "plugins.alpha",
+  "plugins.colorizer",
+  "plugins.comment-frame",
+  "plugins.conform",
+  "plugins.dressing",
+  "plugins.flutter-tools",
+  "plugins.gitsigns",
+  "plugins.illuminate",
+  "plugins.indent-blankline",
+  "plugins.lsp-progress",
+  "plugins.lualine",
+  "plugins.mini",
+  "plugins.neo-tree",
+  "plugins.numb",
+  "plugins.project",
+  "plugins.sg",
+  "plugins.telescope",
+  "plugins.todo-comments",
+  "plugins.toggleterm",
+  "plugins.treesitter-context",
+  "plugins.virt-column",
+  "plugins.whichkey",
+} do
+  local status_ok, error = pcall(require, source)
+  if not status_ok then
+    vim.api.nvim_err_writeln("Failed to load " .. source .. "\n\n" .. error)
+  end
+end
