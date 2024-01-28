@@ -241,6 +241,10 @@ require("lazy").setup({
   {
     "goolord/alpha-nvim",
     commit = "4b36c1ca9ea475bdc006896657cf1ccc486aeffa",
+    event = "VimEnter",
+    config = function()
+      require "plugins.alpha"
+    end,
   },
 
   ----------------------------------------------------------------------

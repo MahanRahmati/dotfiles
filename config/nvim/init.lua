@@ -38,7 +38,6 @@ for _, source in ipairs {
   "core.cmp",
   "core.lsp",
   "core.treesitter",
-  "plugins.alpha",
   "plugins.colorizer",
   "plugins.comment-frame",
   "plugins.conform",
