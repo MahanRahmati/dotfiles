@@ -1,9 +1,4 @@
-local colorscheme = require("core.import").import "catppuccin"
-if colorscheme == nil then
-  return
-end
-
-colorscheme.setup {
+require("catppuccin").setup {
   flavour = "mocha",
   -- transparent_background = false,
   no_underline = true,
