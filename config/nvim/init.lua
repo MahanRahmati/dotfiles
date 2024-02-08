@@ -37,7 +37,6 @@ for _, source in ipairs {
   "core.cmp",
   "core.lsp",
   "core.treesitter",
-  "plugins.colorizer",
   "plugins.flutter-tools",
   "plugins.illuminate",
   "plugins.lualine",

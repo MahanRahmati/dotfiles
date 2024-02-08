@@ -212,6 +212,10 @@ require("lazy").setup({
   {
     "NvChad/nvim-colorizer.lua",
     commit = "85855b38011114929f4058efc97af1059ab3e41d",
+    event = "VimEnter",
+    config = function()
+      require "plugins.colorizer"
+    end,
   },
 
   ----------------------------------------------------------------------
