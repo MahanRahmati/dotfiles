@@ -42,7 +42,6 @@ for _, source in ipairs {
   "plugins.illuminate",
   "plugins.lualine",
   "plugins.mini",
-  "plugins.numb",
   "plugins.project",
   "plugins.sg",
   "plugins.telescope",

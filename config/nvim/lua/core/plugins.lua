@@ -387,6 +387,10 @@ require("lazy").setup({
   {
     "nacro90/numb.nvim",
     commit = "3f7d4a74bd456e747a1278ea1672b26116e0824d",
+    event = "VeryLazy",
+    config = function()
+      require "plugins.numb"
+    end,
   },
 
   ----------------------------------------------------------------------
