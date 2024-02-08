@@ -286,6 +286,10 @@ require("lazy").setup({
   {
     "stevearc/dressing.nvim",
     commit = "6f212262061a2120e42da0d1e87326e8a41c0478",
+    event = "VeryLazy",
+    config = function()
+      require "plugins.dressing"
+    end,
   },
 
   -- Display a line as colorcolumn.

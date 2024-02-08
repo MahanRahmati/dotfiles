@@ -40,7 +40,6 @@ for _, source in ipairs {
   "plugins.colorizer",
   "plugins.comment-frame",
   "plugins.conform",
-  "plugins.dressing",
   "plugins.flutter-tools",
   "plugins.illuminate",
   "plugins.lualine",
