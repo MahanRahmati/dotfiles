@@ -408,6 +408,9 @@ require("lazy").setup({
     "lukas-reineke/indent-blankline.nvim",
     commit = "12e92044d313c54c438bd786d11684c88f6f78cd",
     event = "VimEnter",
+    config = function()
+      require "plugins.indent-blankline"
+    end,
   },
 }, {
   ui = { border = "rounded" },
