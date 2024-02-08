@@ -39,7 +39,6 @@ for _, source in ipairs {
   "core.treesitter",
   "plugins.colorizer",
   "plugins.comment-frame",
-  "plugins.conform",
   "plugins.flutter-tools",
   "plugins.illuminate",
   "plugins.lualine",

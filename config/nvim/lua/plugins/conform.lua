@@ -1,9 +1,4 @@
-local conform = require("core.import").import "conform"
-if conform == nil then
-  return
-end
-
-conform.setup {
+require("conform").setup {
   formatters_by_ft = {
     dart = { "dart_format" },
     fish = { "fish_indent" },
@@ -20,16 +15,17 @@ conform.setup {
 
 local util = require "conform.util"
 local prettier = require "conform.formatters.prettier"
-conform.formatters.prettier = vim.tbl_deep_extend("force", prettier, {
-  args = util.extend_args(
-    prettier.args,
-    { "--no-semi", "--single-quote", "--jsx-single-quote" }
-  ),
-  range_args = util.extend_args(
-    prettier.range_args,
-    { "--no-semi", "--single-quote", "--jsx-single-quote" }
-  ),
-})
+require("conform").formatters.prettier =
+  vim.tbl_deep_extend("force", prettier, {
+    args = util.extend_args(
+      prettier.args,
+      { "--no-semi", "--single-quote", "--jsx-single-quote" }
+    ),
+    range_args = util.extend_args(
+      prettier.range_args,
+      { "--no-semi", "--single-quote", "--jsx-single-quote" }
+    ),
+  })
 
 -- Auto format
 vim.api.nvim_create_autocmd("BufWritePre", {

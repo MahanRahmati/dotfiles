@@ -413,6 +413,11 @@ require("lazy").setup({
   {
     "stevearc/conform.nvim",
     commit = "c0e0e80f0c233cb3a249f719a44324c660163a3f",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    config = function()
+      require "plugins.conform"
+    end,
   },
 
   ----------------------------------------------------------------------
