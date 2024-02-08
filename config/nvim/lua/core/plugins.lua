@@ -8,7 +8,7 @@ require("lazy").setup({
   -- experience with minimal effort
   {
     "echasnovski/mini.nvim",
-    commit = "9adc2eeec07f3ee65d54f7ceb791ad8fead49c92",
+    commit = "16600082b7b3e3ee3aa3d59f2bc589fc60ffcada",
   },
 
   ----------------------------------------------------------------------
@@ -18,7 +18,7 @@ require("lazy").setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "d12140c5687a1186b95b3f42dbc6cc769df0cf0d",
+    commit = "1bc83418927003552505ec66fa5d6cffae953f6a",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -140,7 +140,7 @@ require("lazy").setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "4fbf150a1621d52f17b099506e1a32f107079210",
+    commit = "b444afa1dacd3d031c0ffe4763671d89afda5ddb",
   },
 
   ----------------------------------------------------------------------
@@ -178,7 +178,7 @@ require("lazy").setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "c2a9e81699021f4ccaac7c574cc42ca4211a499a",
+    commit = "cfe1920c5dfb0524b3a13e827c35b6eb571143aa",
   },
 
   ----------------------------------------------------------------------
