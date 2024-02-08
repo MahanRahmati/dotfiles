@@ -56,7 +56,6 @@ for _, source in ipairs {
   "plugins.todo-comments",
   "plugins.toggleterm",
   "plugins.treesitter-context",
-  "plugins.virt-column",
   "plugins.whichkey",
 } do
   local status_ok, error = pcall(require, source)

@@ -280,6 +280,10 @@ require("lazy").setup({
   {
     "lukas-reineke/virt-column.nvim",
     commit = "b62b4ef0774d19452d4ed18e473e824c7a756f2f",
+    event = "VimEnter",
+    config = function()
+      require "plugins.virt-column"
+    end,
   },
 
   -- Delete Neovim buffers without losing window layout.
