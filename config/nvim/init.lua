@@ -42,7 +42,6 @@ for _, source in ipairs {
   "plugins.conform",
   "plugins.dressing",
   "plugins.flutter-tools",
-  "plugins.gitsigns",
   "plugins.illuminate",
   "plugins.lualine",
   "plugins.mini",

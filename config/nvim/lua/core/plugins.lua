@@ -338,6 +338,10 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     commit = "2c2463dbd82eddd7dbab881c3a62cfbfbe3c67ae",
+    event = "VimEnter",
+    config = function()
+      require "plugins.gitsigns"
+    end,
   },
 
   ----------------------------------------------------------------------
