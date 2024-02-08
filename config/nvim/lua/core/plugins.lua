@@ -312,6 +312,10 @@ require("lazy").setup({
   {
     "akinsho/toggleterm.nvim",
     commit = "b49df5cdce67a8964d1b027dae94bde212092b51",
+    event = "VeryLazy",
+    config = function()
+      require "plugins.toggleterm"
+    end,
   },
 
   ----------------------------------------------------------------------

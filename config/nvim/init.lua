@@ -50,7 +50,6 @@ for _, source in ipairs {
   "plugins.sg",
   "plugins.telescope",
   "plugins.todo-comments",
-  "plugins.toggleterm",
   "plugins.treesitter-context",
   "plugins.whichkey",
 } do
