@@ -39,6 +39,9 @@ require("lazy").setup({
   {
     "linrongbin16/lsp-progress.nvim",
     commit = "36c84b33bed21f33e62e778b0567eb59ec21dc38",
+    config = function()
+      require "plugins.lsp-progress"
+    end,
   },
 
   ----------------------------------------------------------------------

@@ -45,7 +45,6 @@ for _, source in ipairs {
   "plugins.gitsigns",
   "plugins.illuminate",
   "plugins.indent-blankline",
-  "plugins.lsp-progress",
   "plugins.lualine",
   "plugins.mini",
   "plugins.numb",
