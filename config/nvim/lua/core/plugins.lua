@@ -403,6 +403,10 @@ require("lazy").setup({
   {
     "s1n7ax/nvim-comment-frame",
     commit = "7a7d34ee7a236a89ffe5674bf794358ee12a7df8",
+    event = "VeryLazy",
+    config = function()
+      require "plugins.comment-frame"
+    end,
   },
 
   ----------------------------------------------------------------------

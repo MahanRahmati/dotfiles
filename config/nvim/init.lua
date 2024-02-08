@@ -38,7 +38,6 @@ for _, source in ipairs {
   "core.lsp",
   "core.treesitter",
   "plugins.colorizer",
-  "plugins.comment-frame",
   "plugins.flutter-tools",
   "plugins.illuminate",
   "plugins.lualine",
