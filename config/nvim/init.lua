@@ -48,7 +48,6 @@ for _, source in ipairs {
   "plugins.lsp-progress",
   "plugins.lualine",
   "plugins.mini",
-  "plugins.neo-tree",
   "plugins.numb",
   "plugins.project",
   "plugins.sg",

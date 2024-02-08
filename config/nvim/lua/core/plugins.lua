@@ -179,6 +179,15 @@ require("lazy").setup({
   {
     "nvim-neo-tree/neo-tree.nvim",
     commit = "cfe1920c5dfb0524b3a13e827c35b6eb571143aa",
+    event = "VeryLazy",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
+    config = function()
+      require "plugins.neo-tree"
+    end,
   },
 
   ----------------------------------------------------------------------
