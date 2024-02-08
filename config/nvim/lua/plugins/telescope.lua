@@ -29,7 +29,7 @@ require("telescope").setup {
       ".github/",
       ".gradle/",
       ".idea/",
-      ".settings/",
+      -- ".settings/",
       ".vscode/",
       "__pycache__/",
       "build/",
