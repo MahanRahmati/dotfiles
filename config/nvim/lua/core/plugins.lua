@@ -420,12 +420,6 @@ require("lazy").setup({
   --                             Comment                              --
   ----------------------------------------------------------------------
 
-  -- Highlight, list and search todo comments in your projects.
-  {
-    "folke/todo-comments.nvim",
-    commit = "833d8dd8b07eeda37a09e99460f72a02616935cb",
-  },
-
   -- Adds a comment frame based on the source file.
   {
     "s1n7ax/nvim-comment-frame",
