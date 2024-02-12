@@ -1,22 +1,30 @@
-local treesitter = require("core.import").import "nvim-treesitter.configs"
-if treesitter == nil then
-  return
-end
-
-treesitter.setup {
+require("nvim-treesitter.configs").setup {
   ensure_installed = {
+    -- Neovim
     "lua",
+    "luadoc",
+    "luap",
     "vim",
+    "vimdoc",
+    -- Flutter
     "dart",
     "yaml",
+    -- Json
+    "json",
+    "jsonc",
+    -- Rust
     "rust",
     "toml",
+    -- Shell
     "bash",
-    "json",
+    -- Go
     "go",
     "gomod",
     "gowork",
     "gosum",
+    -- Markdown
+    "markdown",
+    "markdown_inline",
   },
   ignore_install = { "" },
   autopairs = {
@@ -28,7 +36,7 @@ treesitter.setup {
   },
   indent = {
     enable = true,
-    disable = { "yaml", "python", "dart" },
+    disable = { "yaml", "python" },
   },
   rainbow = {
     enable = true,

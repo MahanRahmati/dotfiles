@@ -8,7 +8,7 @@ require("lazy").setup({
   -- experience with minimal effort
   {
     "echasnovski/mini.nvim",
-    commit = "16600082b7b3e3ee3aa3d59f2bc589fc60ffcada",
+    commit = "78a4d457718060fe80480c72a7d64f6b23472d63",
   },
 
   ----------------------------------------------------------------------
@@ -18,7 +18,7 @@ require("lazy").setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "1bc83418927003552505ec66fa5d6cffae953f6a",
+    commit = "41f40dc4b86f3e166cf08115f621001972565a20",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -38,7 +38,7 @@ require("lazy").setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "36c84b33bed21f33e62e778b0567eb59ec21dc38",
+    commit = "044bcfd13bcf79b2899a82b6bfadc90c48d879ad",
     config = function()
       require "plugins.lsp-progress"
     end,
@@ -143,7 +143,28 @@ require("lazy").setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "b444afa1dacd3d031c0ffe4763671d89afda5ddb",
+    commit = "10e8dffb7961fae98cf83efa0e170c22ae2cd33a",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
+    dependencies = {
+      -- Rainbow delimiters for Neovim through Tree-sitter
+      {
+        "HiPhish/nvim-ts-rainbow2",
+        commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f",
+      },
+
+      -- Shows floating hover with the current function/block context.
+      {
+        "nvim-treesitter/nvim-treesitter-context",
+        commit = "f2ef98cd18fca352448756d3feb6e58d82583274",
+        config = function()
+          require "plugins.treesitter-context"
+        end,
+      },
+    },
+    config = function()
+      require "plugins.treesitter"
+    end,
   },
 
   ----------------------------------------------------------------------
@@ -169,7 +190,7 @@ require("lazy").setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "236083884cfe6c874e03e6cb4e7cb08809c1333c",
+    commit = "0f865f17af4f9bc1587a0132414cdfd32d91852e",
   },
 
   ----------------------------------------------------------------------
@@ -181,7 +202,7 @@ require("lazy").setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "cfe1920c5dfb0524b3a13e827c35b6eb571143aa",
+    commit = "f3941c57ec85d7bdb44fa53fd858fd80f159018f",
     event = "VeryLazy",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -292,7 +313,7 @@ require("lazy").setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "313d9e7193354c5de7cdb1724f9e2d3f442780b0",
+    commit = "7f30f2da3c3641841ceb0e2c150281f624445e8f",
   },
 
   ----------------------------------------------------------------------
@@ -393,18 +414,6 @@ require("lazy").setup({
   ----------------------------------------------------------------------
   --                         Editing Support                          --
   ----------------------------------------------------------------------
-
-  -- Rainbow delimiters for Neovim through Tree-sitter
-  {
-    "HiPhish/nvim-ts-rainbow2",
-    commit = "b3120cd5ae9ca524af9cb602f41e12e301fa985f",
-  },
-
-  -- Shows floating hover with the current function/block context.
-  {
-    "nvim-treesitter/nvim-treesitter-context",
-    commit = "9c06b115abc57c99cf0aa81dc29490f5001f57a1",
-  },
 
   -- Peek lines in a non-obtrusive way.
   {
