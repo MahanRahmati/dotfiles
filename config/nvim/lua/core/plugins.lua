@@ -290,6 +290,10 @@ require("lazy").setup({
   {
     "RRethy/vim-illuminate",
     commit = "305bf07b919ac526deb5193280379e2f8b599926",
+    event = "VimEnter",
+    config = function()
+      require "plugins.illuminate"
+    end,
   },
 
   ----------------------------------------------------------------------
