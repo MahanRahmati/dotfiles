@@ -41,7 +41,6 @@ for _, source in ipairs {
   "plugins.mini",
   "plugins.sg",
   "plugins.telescope",
-  "plugins.treesitter-context",
 } do
   local status_ok, error = pcall(require, source)
   if not status_ok then
