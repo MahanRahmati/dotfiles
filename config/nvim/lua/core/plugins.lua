@@ -8,7 +8,7 @@ require("lazy").setup({
   -- experience with minimal effort
   {
     "echasnovski/mini.nvim",
-    commit = "6a1a44220b3b9ee9856059686fd47b15c8ed83db",
+    commit = "be7c6b5282ab15117dc8ef7ab19394925cf16a25",
   },
 
   ----------------------------------------------------------------------
@@ -143,7 +143,7 @@ require("lazy").setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "17d68ac13c902f55253b7facb47df4c0ae532575",
+    commit = "d10e856c11ccc6ca4d9c11766a6ef605c375dd0a",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
@@ -202,7 +202,7 @@ require("lazy").setup({
   -- windows, netrw split style, or all of them at once.
   {
     "nvim-neo-tree/neo-tree.nvim",
-    commit = "db178f4a49c19f8e4ed5a01dafa9d79e76f0081e",
+    commit = "7d3b02073e59ed9ef271795787de76d0de8f5294",
     event = "VeryLazy",
     dependencies = {
       "nvim-lua/plenary.nvim",
