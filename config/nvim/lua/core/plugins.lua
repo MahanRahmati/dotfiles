@@ -8,7 +8,7 @@ require("lazy").setup({
   -- experience with minimal effort
   {
     "echasnovski/mini.nvim",
-    commit = "b7403ad0c2a4dab777244171ca1b7e8c89696584",
+    commit = "7827793105685d8158812bbdab027d11aac19c24",
   },
 
   ----------------------------------------------------------------------
@@ -18,7 +18,7 @@ require("lazy").setup({
   -- Quickstart configurations for the Neovim LSP client.
   {
     "neovim/nvim-lspconfig",
-    commit = "ec7d51a619049c7c597f469f81ea199db6794651",
+    commit = "9553725789be682ecd945a527ec552e489ea8534",
   },
 
   -- Easily install and manage LSP servers, DAP servers, linters, and
@@ -38,7 +38,7 @@ require("lazy").setup({
   -- Another lsp progress status for Neovim.
   {
     "linrongbin16/lsp-progress.nvim",
-    commit = "c336039f3b03176a7b2f0c585a0e78056769b681",
+    commit = "b673377c50ebaf37053f23cc3caeeb6d469ba1c1",
     config = function()
       require "plugins.lsp-progress"
     end,
@@ -143,7 +143,7 @@ require("lazy").setup({
   -- Neovim Treesitter configurations and abstraction layer.
   {
     "nvim-treesitter/nvim-treesitter",
-    commit = "6e2b56cbe75ddf18e6efecee44bc3936d70b0b3e",
+    commit = "a47540fd737eb5c03ee21ee69eb8134ce5568fb6",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
@@ -190,7 +190,7 @@ require("lazy").setup({
   -- A highly extendable fuzzy finder over lists.
   {
     "nvim-telescope/telescope.nvim",
-    commit = "2e1e382df42467029b493c143c2e727028140214",
+    commit = "aa83606299c5beeaf80e656efbf07bde258db7be",
   },
 
   ----------------------------------------------------------------------
@@ -317,7 +317,7 @@ require("lazy").setup({
   -- A Lua fork of vim-devicons.
   {
     "nvim-tree/nvim-web-devicons",
-    commit = "0bb67ef952ea3eb7b1bac9c011281471d99a27bc",
+    commit = "4adea17610d140a99c313e3f79a9dc01825d59ae",
   },
 
   ----------------------------------------------------------------------
@@ -383,7 +383,7 @@ require("lazy").setup({
   -- UI Component Library.
   {
     "MunifTanjim/nui.nvim",
-    commit = "c3c7fd618dcb5a89e443a2e1033e7d11fdb0596b",
+    commit = "b81333d12f824dbed5eb231c8a4409a290fdd848",
   },
 
   ----------------------------------------------------------------------
@@ -450,7 +450,7 @@ require("lazy").setup({
   -- A lightweight formatting engine that plays nice with LSP.
   {
     "stevearc/conform.nvim",
-    commit = "192a6d2ddace343f1840a8f72efe2315bd392243",
+    commit = "f882877f03ebd46067c6a5493d259c4b9a9280f0",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
     config = function()
