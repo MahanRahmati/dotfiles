@@ -1,3 +1,7 @@
+----------------------------------------------------------------------
+--                             Options                              --
+----------------------------------------------------------------------
+
 local options = {
   -- This option is a list of comma-separated names.
   clipboard = "unnamedplus",
