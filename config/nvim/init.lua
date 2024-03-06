@@ -5,6 +5,10 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
+require "core.options"
+require "core.autocommands"
+require "core.keymaps"
+
 ----------------------------------------------------------------------
 --                       Installation of Lazy                       --
 ----------------------------------------------------------------------
@@ -27,8 +31,6 @@ vim.opt.rtp:prepend(lazypath)
 ----------------------------------------------------------------------
 
 for _, source in ipairs {
-  "core.options",
-  "core.autocommands",
   "core.center-cursor",
   "core.usercommands",
   "core.plugins",
