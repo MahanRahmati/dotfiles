@@ -3,6 +3,8 @@ local autocmd = vim.api.nvim_create_autocmd
 
 -- Use 'q' to quit from common plugins
 autocmd({ "FileType" }, {
+  desc = "Use q to quit from common plugins",
+  group = augroup("q-in-plugins", { clear = true }),
   pattern = { "qf", "help", "man", "lspinfo" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
@@ -15,17 +17,20 @@ autocmd({ "FileType" }, {
   end,
 })
 
--- Set wrap and spell in markdown and gitcommit
+-- Set wrap in markdown and gitcommit
 autocmd({ "FileType" }, {
+  desc = "Set wrap in markdown and gitcommit",
+  group = augroup("wrap-for-markdown-and-gitcommit", { clear = true }),
   pattern = { "gitcommit", "markdown" },
   callback = function()
     vim.opt_local.wrap = true
-    vim.opt_local.spell = true
   end,
 })
 
 -- Highlight Yanked Text
 autocmd({ "TextYankPost" }, {
+  desc = "Highlight Yanked Text",
+  group = augroup("highlight-yank", { clear = true }),
   callback = function()
     vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
   end,
@@ -33,7 +38,8 @@ autocmd({ "TextYankPost" }, {
 
 -- Reopen files at your last edit position.
 autocmd("BufReadPost", {
-  group = augroup("RestorePosition", { clear = true }),
+  desc = "Reopen files at your last edit position",
+  group = augroup("restore-position", { clear = true }),
   pattern = "*",
   callback = function()
     if vim.fn.line "'\"" > 0 and vim.fn.line "'\"" <= vim.fn.line "$" then
@@ -42,33 +48,39 @@ autocmd("BufReadPost", {
   end,
 })
 
--- Show cursor line only in active window
+-- Show cursor line in active window
 autocmd({ "InsertLeave", "WinEnter", "CmdlineLeave" }, {
+  desc = "Show cursor line in active window",
+  group = augroup("cursor-in-active-window", { clear = true }),
   pattern = "*",
   callback = function()
     vim.cmd [[set cursorline]]
   end,
 })
 
+-- Hide cursor line in inactive window
 autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
+  desc = "Hide cursor line in inactive window",
+  group = augroup("hide-cursor-in-inactive-window", { clear = true }),
   pattern = "*",
   callback = function()
     vim.cmd [[set nocursorline]]
   end,
 })
 
--- Resize splits if window got resized
+-- Resize splits if window got resized.
 autocmd({ "VimResized" }, {
-  group = augroup("ResizeSplits", { clear = true }),
+  desc = "Resize splits if window got resized",
+  group = augroup("resize-splits", { clear = true }),
   callback = function()
     vim.cmd "tabdo wincmd ="
   end,
 })
 
--- Auto create dir when saving a file, in case some intermediate directory does
--- not exist
+-- Auto create directory when saving a file.
 autocmd({ "BufWritePre" }, {
-  group = augroup("AutoCreateDir", { clear = true }),
+  desc = "Auto create directory when saving a file",
+  group = augroup("auto-create-dir", { clear = true }),
   callback = function(event)
     if event.match:match "^%w%w+://" then
       return
