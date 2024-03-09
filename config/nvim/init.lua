@@ -5,9 +5,9 @@
 -- /_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/
 --
 
-require "core.options"
-require "core.autocommands"
-require "core.keymaps"
+require "options"
+require "autocommands"
+require "keymaps"
 require "core.plugins"
 
 ----------------------------------------------------------------------
