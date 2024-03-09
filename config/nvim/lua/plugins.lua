@@ -21,6 +21,7 @@ require("lazy").setup({
   require "plugins/colorizer",
   require "plugins/comment-frame",
   require "plugins/conform",
+  require "plugins/dressing",
 }, {
   ui = { border = "rounded" },
 })
