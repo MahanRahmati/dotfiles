@@ -19,6 +19,7 @@ require("lazy").setup({
   require "plugins/alpha",
   require "plugins/catppuccin",
   require "plugins/colorizer",
+  require "plugins/comment-frame",
 }, {
   ui = { border = "rounded" },
 })
