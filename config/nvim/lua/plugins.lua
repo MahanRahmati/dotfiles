@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   require "plugins/alpha",
   require "plugins/catppuccin",
+  require "plugins/colorizer",
 }, {
   ui = { border = "rounded" },
 })
