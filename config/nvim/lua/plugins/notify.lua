@@ -1,9 +1,6 @@
 return {
   {
     "rcarriga/nvim-notify",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
     keys = {
       {
         "<Esc>",
