@@ -22,6 +22,7 @@ require("lazy").setup({
   require "plugins/comment-frame",
   require "plugins/conform",
   require "plugins/dressing",
+  require "plugins/gitsigns",
 }, {
   ui = { border = "rounded" },
 })
