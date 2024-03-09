@@ -1,7 +1,7 @@
 return {
   {
     "RRethy/vim-illuminate",
-    event = "VeryLazy",
+    event = "VimEnter",
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
