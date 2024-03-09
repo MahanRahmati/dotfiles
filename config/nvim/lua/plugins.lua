@@ -26,6 +26,7 @@ require("lazy").setup({
   require "plugins/illuminate",
   require "plugins/indent-blankline",
   require "plugins/lualine",
+  require "plugins/neo-tree",
 }, {
   ui = { border = "rounded" },
 })
