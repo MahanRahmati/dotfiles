@@ -4,6 +4,10 @@
 
 local set = vim.keymap.set
 
+-- Set <space> as the leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Write
 set("n", "<leader>w", "<cmd>w<CR>", { desc = "[W]rite" })
 
