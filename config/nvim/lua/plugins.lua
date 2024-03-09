@@ -29,6 +29,7 @@ require("lazy").setup({
   require "plugins/neo-tree",
   require "plugins/notify",
   require "plugins/numb",
+  require "plugins/telescope",
 }, {
   ui = { border = "rounded" },
 })
