@@ -25,6 +25,7 @@ require("lazy").setup({
   require "plugins/gitsigns",
   require "plugins/illuminate",
   require "plugins/indent-blankline",
+  require "plugins/lualine",
 }, {
   ui = { border = "rounded" },
 })
