@@ -23,6 +23,7 @@ require("lazy").setup({
   require "plugins/conform",
   require "plugins/dressing",
   require "plugins/gitsigns",
+  require "plugins/illuminate",
 }, {
   ui = { border = "rounded" },
 })
