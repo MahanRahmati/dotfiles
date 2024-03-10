@@ -6,8 +6,8 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
     opts = {
-      keymap = "<leader>cs",
-      multiline_keymap = "<leader>cm",
+      keymap = "<leader>Cs",
+      multiline_keymap = "<leader>Cm",
     },
   },
 }

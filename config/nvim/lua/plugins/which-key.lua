@@ -16,6 +16,7 @@ return {
 
       -- Document existing key chains
       require("which-key").register {
+        ["<leader>C"] = { name = "Comment Frame", _ = "which_key_ignore" },
         ["<leader>f"] = { name = "Finder", _ = "which_key_ignore" },
         ["<leader>g"] = { name = "Git", _ = "which_key_ignore" },
         ["<leader>l"] = { name = "LSP", _ = "which_key_ignore" },
