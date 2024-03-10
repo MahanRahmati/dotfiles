@@ -29,6 +29,12 @@ return {
       "octaltree/cmp-look",
       "hrsh7th/cmp-calc",
       "hrsh7th/cmp-cmdline",
+      {
+        "sourcegraph/sg.nvim",
+        opts = {
+          enable_cody = true,
+        },
+      },
     },
     config = function()
       local icons = require "icons"
