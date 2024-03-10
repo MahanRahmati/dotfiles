@@ -116,8 +116,7 @@ vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 
 -- Time in milliseconds to wait for a mapped sequence to complete.
--- TODO: Check this later.
--- vim.opt.timeoutlen = 100
+vim.opt.timeoutlen = 100
 
 -- When on, the title of the window will be set to the value of 'titlestring'.
 vim.opt.title = true
