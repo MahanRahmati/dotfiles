@@ -32,6 +32,7 @@ require("lazy").setup({
   require "plugins/telescope",
   require "plugins/toggleterm",
   require "plugins/treesitter",
+  require "plugins/virt-column",
 }, {
   ui = { border = "rounded" },
 })
