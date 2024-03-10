@@ -6,18 +6,8 @@ return {
       {
         "L3MON4D3/LuaSnip",
         dependencies = {
-          {
-            "rafamadriz/friendly-snippets",
-            config = function()
-              require("luasnip.loaders.from_vscode").lazy_load()
-            end,
-          },
+          "rafamadriz/friendly-snippets",
         },
-        config = function()
-          require("luasnip.loaders.from_vscode").lazy_load {
-            paths = { "~/.config/nvim/snippets/" },
-          }
-        end,
       },
       "hrsh7th/cmp-nvim-lsp",
       "saadparwaiz1/cmp_luasnip",
@@ -40,6 +30,12 @@ return {
       local icons = require "icons"
       local cmp = require "cmp"
       local luasnip = require "luasnip"
+
+      require("luasnip.loaders.from_vscode").lazy_load()
+      require("luasnip.loaders.from_vscode").lazy_load {
+        paths = { "~/.config/nvim/snippets/" },
+      }
+
       luasnip.config.setup {}
 
       local has_words_before = function()
