@@ -33,6 +33,7 @@ require("lazy").setup({
   require "plugins/toggleterm",
   require "plugins/treesitter",
   require "plugins/virt-column",
+  require "plugins/which-key",
 }, {
   ui = { border = "rounded" },
 })
