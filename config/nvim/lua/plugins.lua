@@ -31,6 +31,7 @@ require("lazy").setup({
   require "plugins/numb",
   require "plugins/telescope",
   require "plugins/toggleterm",
+  require "plugins/treesitter",
 }, {
   ui = { border = "rounded" },
 })
