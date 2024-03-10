@@ -194,28 +194,16 @@ return {
           lualine_a = { mode },
           lualine_b = {},
           lualine_c = { branch, diff, diagnostics },
-          lualine_x = {
-            --       lsp_progress_module,
-            location,
-            filetype,
-          },
+          lualine_x = { location, filetype },
           lualine_y = {},
           lualine_z = { progress },
         },
         tabline = {},
         winbar = {
-          lualine_c = {
-            winbar_filepath,
-            winbar_filetype,
-            winbar_filename,
-          },
+          lualine_c = { winbar_filepath, winbar_filetype, winbar_filename },
         },
         inactive_winbar = {
-          lualine_c = {
-            winbar_filepath,
-            winbar_filetype,
-            winbar_filename,
-          },
+          lualine_c = { winbar_filepath, winbar_filetype, winbar_filename },
         },
         extensions = { "man", toggleterm_extension },
       }
