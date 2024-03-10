@@ -26,6 +26,7 @@ require("lazy").setup({
   require "plugins/gitsigns",
   require "plugins/illuminate",
   require "plugins/indent-blankline",
+  require "plugins/lspconfig",
   require "plugins/lualine",
   require "plugins/neo-tree",
   require "plugins/notify",

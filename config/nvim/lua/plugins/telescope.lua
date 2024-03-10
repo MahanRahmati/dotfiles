@@ -92,11 +92,7 @@ return {
       local resume = builtin.resume
       local oldfiles = builtin.oldfiles
       local diagnostics = builtin.diagnostics
-      local lsp_references = builtin.lsp_references
       local fuzzy_find = builtin.current_buffer_fuzzy_find
-      local lsp_definitions = builtin.lsp_definitions
-      local lsp_references = builtin.lsp_references
-      local lsp_impls = builtin.lsp_implementations
 
       vim.keymap.set("n", "<leader>b", buffers, { desc = "Buffers" })
       vim.keymap.set("n", "<leader>fb", buffers, { desc = "Buffers" })
@@ -106,14 +102,10 @@ return {
       vim.keymap.set("n", "<leader>fl", resume, { desc = "Last Search" })
       vim.keymap.set("n", "<leader>fr", oldfiles, { desc = "Recent Files" })
       vim.keymap.set("n", "<leader>ld", diagnostics, { desc = "Diagnostics" })
-      vim.keymap.set("n", "<leader>lR", lsp_references, { desc = "References" })
       vim.keymap.set("n", "/", fuzzy_find, { desc = "Fuzzy Find" })
       vim.keymap.set("v", "/", fuzzy_find, { desc = "Fuzzy Find" })
       vim.keymap.set("n", "?", fuzzy_find, { desc = "Fuzzy Find" })
       vim.keymap.set("v", "?", fuzzy_find, { desc = "Fuzzy Find" })
-      vim.keymap.set("n", "gd", lsp_definitions, { desc = "Definition" })
-      vim.keymap.set("n", "gr", lsp_references, { desc = "References" })
-      vim.keymap.set("n", "gI", lsp_impls, { desc = "Implementations" })
     end,
   },
 }
