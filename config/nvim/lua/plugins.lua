@@ -30,6 +30,7 @@ require("lazy").setup({
   require "plugins/notify",
   require "plugins/numb",
   require "plugins/telescope",
+  require "plugins/toggleterm",
 }, {
   ui = { border = "rounded" },
 })
