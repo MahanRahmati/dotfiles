@@ -24,6 +24,7 @@ require("lazy").setup({
   require "plugins/comment-frame",
   require "plugins/conform",
   require "plugins/dressing",
+  require "plugins/flutter-tools",
   require "plugins/gitsigns",
   require "plugins/illuminate",
   require "plugins/indent-blankline",
