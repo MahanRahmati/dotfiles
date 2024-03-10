@@ -232,16 +232,3 @@ return {
     end,
   },
 }
-
--- TODO: Add lsp progress bar
--- local lsp_progress_module = {}
--- local status_lsp_progress_ok, lsp_progress = pcall(require, "lsp-progress")
--- if status_lsp_progress_ok then
---   table.insert(lsp_progress_module, lsp_progress.progress)
---   vim.cmd [[
--- augroup lualine_augroup
---     autocmd!
---     autocmd User LspProgressStatusUpdated lua require("lualine").refresh()
--- augroup END
--- ]]
--- end
