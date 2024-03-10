@@ -33,3 +33,13 @@ require("lazy").setup({
 }, {
   ui = { border = "rounded" },
 })
+
+vim.keymap.set("n", "<leader>pc", "<cmd>Lazy check<CR>", { desc = "Check" })
+vim.keymap.set("n", "<leader>pd", "<cmd>Lazy debug<CR>", { desc = "Debug" })
+vim.keymap.set("n", "<leader>pi", "<cmd>Lazy install<CR>", { desc = "Install" })
+vim.keymap.set("n", "<leader>pl", "<cmd>Lazy log<CR>", { desc = "Log" })
+vim.keymap.set("n", "<leader>pp", "<cmd>Lazy profile<CR>", { desc = "Profile" })
+vim.keymap.set("n", "<leader>pr", "<cmd>Lazy restore<CR>", { desc = "Restore" })
+vim.keymap.set("n", "<leader>ps", "<cmd>Lazy sync<CR>", { desc = "Sync" })
+vim.keymap.set("n", "<leader>pu", "<cmd>Lazy update<CR>", { desc = "Update" })
+vim.keymap.set("n", "<leader>px", "<cmd>Lazy clean<CR>", { desc = "Clean" })
