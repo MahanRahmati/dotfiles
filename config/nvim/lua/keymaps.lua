@@ -9,16 +9,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Write
-set("n", "<leader>w", "<cmd>w<CR>", { desc = "[W]rite" })
+set("n", "<leader>w", "<cmd>w<CR>", { desc = "Write" })
 
 -- Quit
-set("n", "<leader>q", "<cmd>q<CR>", { desc = "[Q]uit" })
+set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 
 -- Vertical Split
-set("n", "<leader>v", "<cmd>vsplit<CR>", { desc = "[V]ertical Split" })
+set("n", "<leader>v", "<cmd>vsplit<CR>", { desc = "Vertical Split" })
 
 -- Horizontal Split
-set("n", "<leader>h", "<cmd>split<CR>", { desc = "[H]orizontal Split" })
+set("n", "<leader>h", "<cmd>split<CR>", { desc = "Horizontal Split" })
 
 -- Make split navigation easier.
 set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })
