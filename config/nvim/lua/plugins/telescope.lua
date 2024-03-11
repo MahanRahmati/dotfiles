@@ -91,7 +91,6 @@ return {
       local help_tags = builtin.help_tags
       local resume = builtin.resume
       local oldfiles = builtin.oldfiles
-      local diagnostics = builtin.diagnostics
       local fuzzy_find = builtin.current_buffer_fuzzy_find
 
       vim.keymap.set("n", "<leader>b", buffers, { desc = "Buffers" })
@@ -101,7 +100,6 @@ return {
       vim.keymap.set("n", "<leader>fh", help_tags, { desc = "Help" })
       vim.keymap.set("n", "<leader>fl", resume, { desc = "Last Search" })
       vim.keymap.set("n", "<leader>fr", oldfiles, { desc = "Recent Files" })
-      vim.keymap.set("n", "<leader>ld", diagnostics, { desc = "Diagnostics" })
       vim.keymap.set("n", "/", fuzzy_find, { desc = "Fuzzy Find" })
       vim.keymap.set("v", "/", fuzzy_find, { desc = "Fuzzy Find" })
       vim.keymap.set("n", "?", fuzzy_find, { desc = "Fuzzy Find" })
