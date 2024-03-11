@@ -16,24 +16,14 @@ return {
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = { timeout_ms = 500, lsp_fallback = true },
+      formatters = {
+        prettier = {
+          prepend_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+        },
+      },
     },
     init = function()
       vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     end,
   },
 }
-
--- TODO: Add prettier options
--- local util = require "conform.util"
--- local prettier = require "conform.formatters.prettier"
--- require("conform").formatters.prettier =
---   vim.tbl_deep_extend("force", prettier, {
---     args = util.extend_args(
---       prettier.args,
---       { "--no-semi", "--single-quote", "--jsx-single-quote" }
---     ),
---     range_args = util.extend_args(
---       prettier.range_args,
---       { "--no-semi", "--single-quote", "--jsx-single-quote" }
---     ),
---   })
