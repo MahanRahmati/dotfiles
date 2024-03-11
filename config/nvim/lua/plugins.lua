@@ -35,6 +35,7 @@ require("lazy").setup({
   require "plugins/neo-tree",
   require "plugins/notify",
   require "plugins/numb",
+  require "plugins/sg",
   require "plugins/telescope",
   require "plugins/toggleterm",
   require "plugins/treesitter",
