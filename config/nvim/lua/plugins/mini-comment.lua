@@ -8,20 +8,9 @@ return {
         ignore_blank_line = true,
       },
     },
-    config = function(_, opts)
-      require("mini.comment").setup(opts)
-      vim.keymap.set(
-        "n",
-        "<leader>/",
-        "<cmd>norm gcc<cr>",
-        { desc = "Comment" }
-      )
-      vim.keymap.set(
-        "v",
-        "<leader>/",
-        "<cmd>norm gcc<cr>",
-        { desc = "Comment" }
-      )
-    end,
+    keys = {
+      { "<leader>/", "<cmd>norm gcc<CR>", desc = "Comment" },
+      { "<leader>/", "<cmd>norm gcc<CR>", mode = "v", desc = "Comment" },
+    },
   },
 }
