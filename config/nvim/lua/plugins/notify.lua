@@ -1,13 +1,6 @@
 return {
   {
     "rcarriga/nvim-notify",
-    keys = {
-      {
-        "<Esc>",
-        "<ESC>:noh<CR>:lua require('notify').dismiss()<CR>",
-        desc = "Dismiss all Notifications",
-      },
-    },
     opts = {
       background_colour = "#000000",
       render = "wrapped-compact",
@@ -15,7 +8,6 @@ return {
     },
     init = function()
       vim.notify = require "notify"
-
       print = function(...)
         local print_safe_args = {}
         local _ = { ... }
@@ -25,5 +17,12 @@ return {
         vim.notify(table.concat(print_safe_args, " "), "info")
       end
     end,
+    keys = {
+      {
+        "<Esc>",
+        "<ESC>:noh<CR>:lua require('notify').dismiss()<CR>",
+        desc = "Dismiss Notifications",
+      },
+    },
   },
 }
