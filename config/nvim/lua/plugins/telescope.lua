@@ -69,6 +69,16 @@ return {
               ["<esc>"] = actions.close,
             },
           },
+          vimgrep_arguments = {
+            "rg",
+            "--color=never",
+            "--no-heading",
+            "--with-filename",
+            "--line-number",
+            "--column",
+            "--smart-case",
+            "--follow",
+          },
         },
         pickers = {
           find_files = {
