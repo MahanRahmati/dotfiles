@@ -82,28 +82,31 @@ return {
         },
         extensions = {},
       }
-      require("telescope").load_extension "projects"
 
-      local builtin = require "telescope.builtin"
-      local buffers = builtin.buffers
-      local find_files = builtin.find_files
-      local live_grep = builtin.live_grep
-      local help_tags = builtin.help_tags
-      local resume = builtin.resume
-      local oldfiles = builtin.oldfiles
-      local fuzzy_find = builtin.current_buffer_fuzzy_find
-
-      vim.keymap.set("n", "<leader>b", buffers, { desc = "Buffers" })
-      vim.keymap.set("n", "<leader>fb", buffers, { desc = "Buffers" })
-      vim.keymap.set("n", "<leader>ff", find_files, { desc = "Find Files" })
-      vim.keymap.set("n", "<leader>fg", live_grep, { desc = "Find Text" })
-      vim.keymap.set("n", "<leader>fh", help_tags, { desc = "Help" })
-      vim.keymap.set("n", "<leader>fl", resume, { desc = "Last Search" })
-      vim.keymap.set("n", "<leader>fr", oldfiles, { desc = "Recent Files" })
-      vim.keymap.set("n", "/", fuzzy_find, { desc = "Fuzzy Find" })
-      vim.keymap.set("v", "/", fuzzy_find, { desc = "Fuzzy Find" })
-      vim.keymap.set("n", "?", fuzzy_find, { desc = "Fuzzy Find" })
-      vim.keymap.set("v", "?", fuzzy_find, { desc = "Fuzzy Find" })
+      pcall(require("telescope").load_extension, "projects")
     end,
+    keys = {
+      { "<leader>b", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
+      { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
+      { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Find Files" },
+      { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Find Text" },
+      { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Help" },
+      { "<leader>fl", "<cmd>Telescope resume<CR>", desc = "Last Search" },
+      { "<leader>fr", "<cmd>Telescope oldfiles<CR>", desc = "Recent Files" },
+      { "/", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find" },
+      {
+        "/",
+        "<cmd>Telescope current_buffer_fuzzy_find<CR>",
+        mode = "v",
+        desc = "Find",
+      },
+      { "?", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Find" },
+      {
+        "?",
+        "<cmd>Telescope current_buffer_fuzzy_find<CR>",
+        mode = "v",
+        desc = "Find",
+      },
+    },
   },
 }
