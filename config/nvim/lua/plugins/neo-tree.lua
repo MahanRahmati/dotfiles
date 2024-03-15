@@ -10,13 +10,6 @@ return {
       "MunifTanjim/nui.nvim",
     },
     cmd = "Neotree",
-    keys = {
-      {
-        "<leader>e",
-        "<cmd>Neotree float reveal_force_cwd<cr>",
-        desc = "File Explorer",
-      },
-    },
     opts = {
       close_if_last_window = true,
       popup_border_style = "rounded",
@@ -47,7 +40,7 @@ return {
         },
       },
       window = {
-        width = 35,
+        width = 40,
         auto_expand_width = true,
         popup = {
           position = { col = "1%", row = "2" },
@@ -55,7 +48,7 @@ return {
             local root_name = vim.fn.fnamemodify(state.path, ":~")
             local root_len = string.len(root_name) + 4
             return {
-              width = math.max(root_len, 50),
+              width = math.max(root_len, 40),
               height = vim.o.lines - 4,
             }
           end,
@@ -78,6 +71,13 @@ return {
             vim.cmd "Neotree close"
           end,
         },
+      },
+    },
+    keys = {
+      {
+        "<leader>e",
+        "<cmd>Neotree float reveal_force_cwd<cr>",
+        desc = "File Explorer",
       },
     },
   },
