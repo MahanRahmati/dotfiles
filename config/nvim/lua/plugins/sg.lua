@@ -1,3 +1,4 @@
+-- TODO: Add Cody keys
 return {
   {
     "sourcegraph/sg.nvim",
