@@ -17,6 +17,7 @@ return {
       },
       "nvim-tree/nvim-web-devicons",
     },
+    cmd = "Telescope",
     config = function()
       local actions = require "telescope.actions"
       local icons = require "icons"
