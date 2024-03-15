@@ -10,30 +10,28 @@ return {
         opts = {},
       },
     },
-    config = function()
-      require("nvim-treesitter.configs").setup {
-        ensure_installed = {
-          -- Neovim
-          "lua",
-          "luadoc",
-          "luap",
-          "vim",
-          "vimdoc",
-          -- Flutter
-          "dart",
-          "yaml",
-          -- Json
-          "json",
-          "jsonc",
-          -- Shell
-          "bash",
-          -- Markdown
-          "markdown",
-          "markdown_inline",
-        },
-        highlight = { enable = true },
-        indent = { enable = true },
-      }
+    opts = {
+      ensure_installed = {
+        -- Neovim
+        "lua",
+        "vim",
+        "vimdoc",
+        -- Flutter
+        "dart",
+        "yaml",
+        -- Json
+        "json",
+        "jsonc",
+        -- Shell
+        "bash",
+        -- Markdown
+        "markdown",
+      },
+      highlight = { enable = true },
+      indent = { enable = true },
+    },
+    config = function(_, opts)
+      require("nvim-treesitter.configs").setup(opts)
     end,
   },
 }
