@@ -6,8 +6,45 @@ return {
       "williamboman/mason-lspconfig.nvim",
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       { "j-hui/fidget.nvim", opts = {} },
+      { "folke/neodev.nvim", opts = {} },
     },
     config = function()
+      local icons = require "icons"
+
+      local signs = {
+        { name = "DiagnosticSignError", text = icons.error },
+        { name = "DiagnosticSignWarn", text = icons.warn },
+        { name = "DiagnosticSignInfo", text = icons.info },
+        { name = "DiagnosticSignHint", text = icons.hint },
+      }
+
+      for _, sign in ipairs(signs) do
+        vim.fn.sign_define(
+          sign.name,
+          { texthl = sign.name, text = sign.text, numhl = "" }
+        )
+      end
+
+      local config = {
+        virtual_text = true, -- enable inline text
+        signs = {
+          active = signs, -- show signs
+        },
+        update_in_insert = true,
+        underline = true,
+        severity_sort = true,
+        float = {
+          focusable = true,
+          style = "minimal",
+          border = "rounded",
+          source = "always",
+          header = "",
+          prefix = "",
+        },
+      }
+
+      vim.diagnostic.config(config)
+
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
         callback = function(event)
@@ -107,8 +144,6 @@ return {
           },
         },
       }
-
-      local icons = require "icons"
 
       require("mason").setup {
         ui = {
