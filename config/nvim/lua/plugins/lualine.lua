@@ -22,6 +22,7 @@ return {
       }
 
       local function diff_source()
+        ---@diagnostic disable-next-line: undefined-field
         local gitsigns = vim.b.gitsigns_status_dict
         if gitsigns then
           return {
@@ -143,7 +144,7 @@ return {
         "filetype",
         colored = true,
         icon_only = true,
-        padding = 1,
+        padding = { left = 1, right = 0 },
       }
 
       local winbar_filename = {
@@ -161,6 +162,7 @@ return {
       }
 
       local function toggleterm_statusline()
+        ---@diagnostic disable-next-line: undefined-field
         return "ToggleTerm #" .. vim.b.toggle_number
       end
 
