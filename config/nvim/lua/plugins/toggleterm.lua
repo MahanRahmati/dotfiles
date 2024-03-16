@@ -1,7 +1,7 @@
 return {
   {
     "akinsho/toggleterm.nvim",
-    event = "VeryLazy",
+    cmd = "ToggleTerm",
     opts = {
       size = 15,
       hide_numbers = true,
