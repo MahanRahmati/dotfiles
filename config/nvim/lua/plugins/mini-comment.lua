@@ -2,7 +2,7 @@ return {
   {
     "echasnovski/mini.comment",
     version = false,
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       options = {
         ignore_blank_line = true,
