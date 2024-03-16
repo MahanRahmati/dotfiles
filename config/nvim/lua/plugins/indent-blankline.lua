@@ -3,7 +3,7 @@ local icons = require "icons"
 return {
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     main = "ibl",
     opts = {
       indent = {
