@@ -1,7 +1,7 @@
 return {
   {
     "RRethy/vim-illuminate",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
     },
