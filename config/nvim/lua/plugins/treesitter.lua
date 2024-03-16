@@ -2,7 +2,7 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "hiphish/rainbow-delimiters.nvim",
       {
@@ -10,6 +10,7 @@ return {
         opts = {},
       },
     },
+    cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     opts = {
       ensure_installed = {
         -- Neovim
