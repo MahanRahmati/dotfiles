@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/dressing.nvim",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {},
   },
 }
