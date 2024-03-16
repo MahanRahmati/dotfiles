@@ -3,10 +3,7 @@ local icons = require "icons"
 return {
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "VimEnter",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-    },
+    event = "VeryLazy",
     main = "ibl",
     opts = {
       indent = {
