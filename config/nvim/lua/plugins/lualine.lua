@@ -45,6 +45,7 @@ return {
 
       local diagnostics = {
         "diagnostics",
+        sources = { "nvim_workspace_diagnostic" },
         symbols = {
           error = icons.error,
           warn = icons.warn,
