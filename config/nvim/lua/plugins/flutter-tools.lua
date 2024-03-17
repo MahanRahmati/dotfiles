@@ -35,6 +35,16 @@ return {
         },
       },
     },
+    cmd = {
+      "FlutterDevTools",
+      "FlutterDevices",
+      "FlutterEmulators",
+      "FlutterReload",
+      "FlutterLspRestart",
+      "FlutterRestart",
+      "FlutterRun",
+      "FlutterQuit",
+    },
     config = function(_, opts)
       require("flutter-tools").setup(opts)
 
@@ -49,5 +59,15 @@ return {
         end,
       })
     end,
+    keys = {
+      { "<leader>FD", "<cmd>FlutterDevTools<CR>", desc = "Dev Tools" },
+      { "<leader>Fd", "<cmd>FlutterDevices<CR>", desc = "Devices" },
+      { "<leader>Fe", "<cmd>FlutterEmulators<CR>", desc = "Emulators" },
+      { "<leader>Fh", "<cmd>FlutterReload<CR>", desc = "Hot Reload" },
+      { "<leader>Fl", "<cmd>FlutterLspRestart<CR>", desc = "LSP Restart" },
+      { "<leader>FR", "<cmd>FlutterRestart<CR>", desc = "Restart" },
+      { "<leader>Fr", "<cmd>FlutterRun<CR>", desc = "Run" },
+      { "<leader>Fq", "<cmd>FlutterQuit<CR>", desc = "Quit" },
+    },
   },
 }
