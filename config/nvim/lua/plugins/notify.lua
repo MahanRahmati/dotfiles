@@ -1,28 +1,28 @@
-local notify = require("core.import").import "notify"
-if notify == nil then
-  return
-end
-
-vim.notify = notify
-
-print = function(...)
-  local print_safe_args = {}
-  local _ = { ... }
-  for i = 1, #_ do
-    table.insert(print_safe_args, tostring(_[i]))
-  end
-  notify(table.concat(print_safe_args, " "), "info")
-end
-
-notify.setup {
-  background_colour = "#000000",
-  render = "wrapped-compact",
-  max_width = 80,
+return {
+  {
+    "rcarriga/nvim-notify",
+    opts = {
+      background_colour = "#000000",
+      render = "wrapped-compact",
+      max_width = 80,
+    },
+    init = function()
+      vim.notify = require "notify"
+      print = function(...)
+        local print_safe_args = {}
+        local _ = { ... }
+        for i = 1, #_ do
+          table.insert(print_safe_args, tostring(_[i]))
+        end
+        vim.notify(table.concat(print_safe_args, " "), "info")
+      end
+    end,
+    keys = {
+      {
+        "<Esc>",
+        "<ESC>:noh<CR>:lua require('notify').dismiss()<CR>",
+        desc = "Dismiss Notifications",
+      },
+    },
+  },
 }
-
-vim.keymap.set(
-  "",
-  "<Esc>",
-  "<ESC>:noh<CR>:lua require('notify').dismiss()<CR>",
-  { silent = true }
-)

@@ -1,64 +1,73 @@
-local flutter_tools = require("core.import").import "flutter-tools"
-if flutter_tools == nil then
-  return
-end
-
-local on_attach = require("core.lsp.handlers").on_attach
-local capabilities = require("core.lsp.handlers").capabilities
-
-flutter_tools.setup {
-  ui = {
-    border = "rounded",
-  },
-  root_patterns = { ".git", ".metadata" },
-  dev_log = {
-    enabled = true,
-    notify_errors = false,
-    open_cmd = "15new",
-  },
-  lsp = {
-    color = {
-      enabled = true,
+return {
+  {
+    "akinsho/flutter-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "stevearc/dressing.nvim",
     },
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-      showTodos = true,
-      completeFunctionCalls = true,
-      analysisExcludedFolders = {
-        "$HOME/.pub-cache/",
-        "/opt/homebrew/",
+    ft = "dart",
+    opts = {
+      ui = {
+        border = "rounded",
       },
-      renameFilesWithClasses = "always",
-      enableSnippets = true,
-      updateImportsOnRename = true,
+      root_patterns = { ".git", ".metadata" },
+      dev_log = {
+        enabled = true,
+        notify_errors = false,
+        open_cmd = "15new",
+      },
+      lsp = {
+        color = {
+          enabled = true,
+        },
+        -- on_attach = on_attach,
+        -- capabilities = capabilities,
+        settings = {
+          showTodos = true,
+          completeFunctionCalls = true,
+          analysisExcludedFolders = {
+            "$HOME/.pub-cache/",
+            "/opt/homebrew/",
+          },
+          renameFilesWithClasses = "always",
+          enableSnippets = true,
+          updateImportsOnRename = true,
+        },
+      },
+    },
+    cmd = {
+      "FlutterDevTools",
+      "FlutterDevices",
+      "FlutterEmulators",
+      "FlutterReload",
+      "FlutterLspRestart",
+      "FlutterRestart",
+      "FlutterRun",
+      "FlutterQuit",
+    },
+    config = function(_, opts)
+      require("flutter-tools").setup(opts)
+
+      -- Run OrganizeImports and FixAll on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        desc = "Run OrganizeImports and FixAll on save",
+        group = vim.api.nvim_create_augroup("FlutterActions", { clear = true }),
+        pattern = { "*.dart" },
+        callback = function()
+          vim.cmd.OrganizeImports()
+          vim.cmd.FixAll()
+        end,
+      })
+    end,
+    keys = {
+      { "<leader>FD", "<cmd>FlutterDevTools<CR>", desc = "Dev Tools" },
+      { "<leader>Fd", "<cmd>FlutterDevices<CR>", desc = "Devices" },
+      { "<leader>Fe", "<cmd>FlutterEmulators<CR>", desc = "Emulators" },
+      { "<leader>Fh", "<cmd>FlutterReload<CR>", desc = "Hot Reload" },
+      { "<leader>Fl", "<cmd>FlutterLspRestart<CR>", desc = "LSP Restart" },
+      { "<leader>FR", "<cmd>FlutterRestart<CR>", desc = "Restart" },
+      { "<leader>Fr", "<cmd>FlutterRun<CR>", desc = "Run" },
+      { "<leader>Fq", "<cmd>FlutterQuit<CR>", desc = "Quit" },
     },
   },
 }
-
-vim.api.nvim_create_autocmd("BufWritePre", {
-  group = vim.api.nvim_create_augroup("FlutterActions", { clear = true }),
-  pattern = { "*.dart" },
-  callback = function()
-    vim.cmd.OrganizeImports()
-    vim.cmd.FixAll()
-    vim.cmd.Format()
-  end,
-})
-
--- Resize dev log window
-vim.api.nvim_create_autocmd({
-  "VimResized",
-  "WinResized",
-  "WinEnter",
-  "WinLeave",
-  "BufEnter",
-  "BufLeave",
-}, {
-  callback = function()
-    if vim.fn.expand "%" ~= "__FLUTTER_DEV_LOG__" then
-      return
-    end
-    vim.cmd "resize 15"
-  end,
-})

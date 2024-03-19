@@ -1,5 +1,11 @@
-local icons = require "core.icons"
+local icons = require "icons"
 
-require("virt-column").setup {
-  char = icons.virt_line,
+return {
+  {
+    "lukas-reineke/virt-column.nvim",
+    event = { "BufReadPost", "BufNewFile" },
+    opts = {
+      char = icons.virt_line,
+    },
+  },
 }

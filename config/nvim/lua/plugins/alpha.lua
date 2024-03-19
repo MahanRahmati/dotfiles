@@ -1,64 +1,75 @@
-local icons = require "core.icons"
-local config = require("alpha.themes.theta").config
-local dashboard = require "alpha.themes.dashboard"
-
-local header = {
-  type = "text",
-  val = {
-    [[    _   __                    _          ]],
-    [[   / | / /___   ____  _   __ (_)____ ___ ]],
-    [[  /  |/ // _ \ / __ \| | / // // __ `__ \]],
-    [[ / /|  //  __// /_/ /| |/ // // / / / / /]],
-    [[/_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/ ]],
-    [[                                         ]],
-  },
-  opts = {
-    position = "center",
-    hl = "Type",
-  },
-}
-
-local buttons = {
-  type = "group",
-  val = {
-    {
-      type = "text",
-      val = "Quick links",
-      opts = { hl = "SpecialComment", position = "center" },
+return {
+  {
+    "goolord/alpha-nvim",
+    event = "VimEnter",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+      "nvim-lua/plenary.nvim",
     },
-    { type = "padding", val = 1 },
-    dashboard.button(
-      "n",
-      icons.file .. " New File",
-      ":ene <BAR> startinsert <CR>"
-    ),
-    { type = "padding", val = 1 },
-    dashboard.button(
-      "f",
-      icons.find .. " Find File",
-      ":Telescope find_files <CR>"
-    ),
-    { type = "padding", val = 1 },
-    dashboard.button(
-      "r",
-      icons.folder .. " Recent Projects ",
-      "<CMD>Telescope projects<CR>"
-    ),
-    { type = "padding", val = 1 },
-    dashboard.button(
-      "c",
-      icons.configuration .. " Configuration",
-      ":e ~/.config/nvim/init.lua <CR>"
-    ),
-    { type = "padding", val = 1 },
-    dashboard.button("l", icons.lazy .. " Lazy", ":Lazy<CR>"),
-    { type = "padding", val = 1 },
-    dashboard.button("q", icons.quit .. " Quit Neovim", ":qa<CR>"),
-    { type = "padding", val = 1 },
-  },
-  position = "center",
-}
+    config = function()
+      local icons = require "icons"
+      local config = require("alpha.themes.theta").config
+      local dashboard = require "alpha.themes.dashboard"
 
-config.layout[2] = header
-config.layout[6] = buttons
-require("alpha").setup(config)
+      local header = {
+        type = "text",
+        val = {
+          [[    _   __                    _          ]],
+          [[   / | / /___   ____  _   __ (_)____ ___ ]],
+          [[  /  |/ // _ \ / __ \| | / // // __ `__ \]],
+          [[ / /|  //  __// /_/ /| |/ // // / / / / /]],
+          [[/_/ |_/ \___/ \____/ |___//_//_/ /_/ /_/ ]],
+          [[                                         ]],
+        },
+        opts = {
+          position = "center",
+          hl = "Type",
+        },
+      }
+
+      local buttons = {
+        type = "group",
+        val = {
+          {
+            type = "text",
+            val = "Quick links",
+            opts = { hl = "SpecialComment", position = "center" },
+          },
+          { type = "padding", val = 1 },
+          dashboard.button(
+            "n",
+            icons.file .. " New File",
+            ":ene <BAR> startinsert <CR>"
+          ),
+          { type = "padding", val = 1 },
+          dashboard.button(
+            "f",
+            icons.find .. " Find File",
+            ":Telescope find_files <CR>"
+          ),
+          { type = "padding", val = 1 },
+          dashboard.button(
+            "r",
+            icons.folder .. " Recent Projects ",
+            "<CMD>Telescope projects<CR>"
+          ),
+          { type = "padding", val = 1 },
+          dashboard.button(
+            "c",
+            icons.configuration .. " Configuration",
+            ":e ~/.config/nvim/init.lua <CR>"
+          ),
+          { type = "padding", val = 1 },
+          dashboard.button("l", icons.lazy .. " Lazy", ":Lazy<CR>"),
+          { type = "padding", val = 1 },
+          dashboard.button("q", icons.quit .. " Quit Neovim", ":qa<CR>"),
+          { type = "padding", val = 1 },
+        },
+        position = "center",
+      }
+      config.layout[2] = header
+      config.layout[6] = buttons
+      require("alpha").setup(config)
+    end,
+  },
+}
