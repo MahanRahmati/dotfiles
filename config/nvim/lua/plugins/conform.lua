@@ -13,6 +13,7 @@ return {
         sh = { "shfmt" },
         yaml = { { "prettier" } },
         css = { { "prettier" } },
+        html = { { "prettier" } },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = { timeout_ms = 500, lsp_fallback = true },
