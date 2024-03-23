@@ -2,6 +2,7 @@
 return {
   {
     "sourcegraph/sg.nvim",
+    event = { "BufReadPost", "BufNewFile" },
     opts = {
       enable_cody = true,
     },
