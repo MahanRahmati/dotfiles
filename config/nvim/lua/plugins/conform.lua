@@ -14,6 +14,7 @@ return {
         yaml = { { "prettier" } },
         css = { { "prettier" } },
         html = { { "prettier" } },
+        go = { "goimports", "gofmt" },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = function(bufnr)

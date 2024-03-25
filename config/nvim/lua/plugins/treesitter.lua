@@ -27,6 +27,11 @@ return {
         "bash",
         -- Markdown
         "markdown",
+        -- Go
+        "go",
+        "gomod",
+        "gowork",
+        "gosum",
       },
       highlight = { enable = true },
       indent = { enable = true },
