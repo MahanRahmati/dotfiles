@@ -32,6 +32,8 @@ return {
         "gomod",
         "gowork",
         "gosum",
+        -- Zig
+        "zig",
       },
       highlight = { enable = true },
       indent = { enable = true },

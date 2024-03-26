@@ -15,6 +15,7 @@ return {
         css = { { "prettier" } },
         html = { { "prettier" } },
         go = { "goimports", "gofmt" },
+        zig = { "zigfmt" },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = function(bufnr)
