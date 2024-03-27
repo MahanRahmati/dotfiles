@@ -186,6 +186,16 @@ return {
         },
         zls = {},
         marksman = {},
+        ltex = {
+          settings = {
+            ltex = {
+              language = "en-US",
+              dictionary = {
+                ["en-US"] = { "zig" },
+              },
+            },
+          },
+        },
       }
 
       require("mason").setup {
