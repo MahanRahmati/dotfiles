@@ -185,6 +185,7 @@ return {
           },
         },
         zls = {},
+        marksman = {},
       }
 
       require("mason").setup {
