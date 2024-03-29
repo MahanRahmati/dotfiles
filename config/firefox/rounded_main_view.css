@@ -13,5 +13,6 @@
 .browserSidebarContainer,
 #browser,
 #appcontent {
-  background-color: var(--lwt-accent-color) !important;
+  background-color: var(--toolbar-field-background-color) !important;
 }
+
