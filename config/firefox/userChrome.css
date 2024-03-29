@@ -1,8 +1,10 @@
+@import url(window_control_placeholder_support.css);
 @import url(floating_findbar.css);
 @import url(rounded_statuspanel.css);
 @import url(hide_alltabs_button.css);
 @import url(rounded_main_view.css);
 @import url(toolbar.css);
+@import url(tabs_on_bottom.css);
 
 /* Add margin and border radius to the side bar*/
 #sidebar-box {
