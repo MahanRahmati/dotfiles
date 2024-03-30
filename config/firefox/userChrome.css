@@ -5,6 +5,8 @@
 @import url(rounded_main_view.css);
 @import url(toolbar.css);
 @import url(tabs_on_bottom.css);
+@import url(non_floating_sharp_tabs.css);
+@import url(hide_tabs_with_one_tab.css);
 
 /* Add margin and border radius to the side bar*/
 #sidebar-box {
