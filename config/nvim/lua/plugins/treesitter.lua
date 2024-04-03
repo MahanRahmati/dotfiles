@@ -17,6 +17,7 @@ return {
         "lua",
         "vim",
         "vimdoc",
+        "luadoc",
         -- Flutter
         "dart",
         "yaml",
