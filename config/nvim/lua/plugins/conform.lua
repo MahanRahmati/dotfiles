@@ -37,5 +37,15 @@ return {
     init = function()
       vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
     end,
+    keys = {
+      {
+        "<leader>lf",
+        function()
+          require("conform").format { async = true, lsp_fallback = true }
+        end,
+        mode = "",
+        desc = "Format Buffer",
+      },
+    },
   },
 }
