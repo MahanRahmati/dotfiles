@@ -196,6 +196,7 @@ return {
             },
           },
         },
+        vale_ls = {},
       }
 
       require("mason").setup {
