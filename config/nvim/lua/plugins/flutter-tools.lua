@@ -4,6 +4,11 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
+      {
+        "akinsho/pubspec-assist.nvim",
+        event = "BufRead pubspec.yaml",
+        opts = {},
+      },
     },
     ft = "dart",
     event = "BufRead pubspec.yaml",
