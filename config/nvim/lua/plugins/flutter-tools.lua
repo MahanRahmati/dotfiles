@@ -6,6 +6,7 @@ return {
       "stevearc/dressing.nvim",
     },
     ft = "dart",
+    event = "BufRead pubspec.yaml",
     opts = {
       ui = {
         border = "rounded",
@@ -14,7 +15,7 @@ return {
       dev_log = {
         enabled = true,
         notify_errors = false,
-        open_cmd = "15new",
+        open_cmd = "botright 10new",
       },
       lsp = {
         color = {
