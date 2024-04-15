@@ -20,6 +20,7 @@ require("lazy").setup({
   require "plugins/autopairs",
   require "plugins/bufdelete",
   require "plugins/catppuccin",
+  require "plugins/cloak",
   require "plugins/cmp",
   require "plugins/colorizer",
   require "plugins/comment-frame",
