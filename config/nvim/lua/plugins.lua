@@ -42,6 +42,7 @@ require("lazy").setup({
   require "plugins/treesitter",
   require "plugins/virt-column",
   require "plugins/which-key",
+  require "plugins/zen-mode",
 }, {
   ui = { border = "rounded" },
 })
