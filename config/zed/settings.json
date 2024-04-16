@@ -1,0 +1,65 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "theme": "Catppuccin Mocha",
+  "features": {
+    "copilot": false
+  },
+  "buffer_font_family": "Hack Nerd Font",
+  "buffer_font_size": 16,
+  "ui_font_family": "Hack Nerd Font",
+  "ui_font_size": 16,
+  "vim_mode": true,
+  "cursor_blink": false,
+  "use_on_type_format": true,
+  "use_autoclose": true,
+  "show_copilot_suggestions": false,
+  "vertical_scroll_margin": 999,
+  "relative_line_numbers": true,
+  "collaboration_panel": {
+    "button": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
+  "assistant": {
+    "version": "1",
+    "enabled": false,
+    "button": false
+  },
+  "autosave": "off",
+  "remove_trailing_whitespace_on_save": true,
+  "format_on_save": "on",
+  "preferred_line_length": 80,
+  "tab_size": 2,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "auto_update": false,
+  "Dart": {
+    "code_actions_on_format": {
+      "source.organizeImports": true,
+      "source.fixAll": true
+    }
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true
+  },
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": true
+  }
+}

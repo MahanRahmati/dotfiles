@@ -14,3 +14,6 @@
 
 [wezterm.files]
 "config/wezterm" = "~/.config/wezterm"
+
+[zed.files]
+"config/zed" = "~/.config/zed"
