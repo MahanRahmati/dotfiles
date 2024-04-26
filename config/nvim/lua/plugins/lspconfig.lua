@@ -191,7 +191,7 @@ return {
             ltex = {
               language = "en-US",
               dictionary = {
-                ["en-US"] = { "zig", "const" },
+                ["en-US"] = { "zig", "const", "TODO" },
               },
             },
           },
