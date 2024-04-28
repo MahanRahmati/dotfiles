@@ -186,9 +186,9 @@ return {
           component_separators = { left = "", right = "" },
           section_separators = { left = "", right = "" },
           disabled_filetypes = {
-            statusline = { "alpha" },
-            tabline = { "alpha" },
-            winbar = { "alpha", "toggleterm", "neo-tree" },
+            statusline = { "alpha", "dashboard" },
+            tabline = { "alpha", "dashboard" },
+            winbar = { "alpha", "toggleterm", "neo-tree", "dashboard" },
           },
           always_divide_middle = true,
           globalstatus = true,

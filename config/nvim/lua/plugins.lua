@@ -16,7 +16,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  require "plugins/alpha",
   require "plugins/autopairs",
   require "plugins/bufdelete",
   require "plugins/catppuccin",
@@ -25,6 +24,7 @@ require("lazy").setup({
   require "plugins/colorizer",
   require "plugins/comment-frame",
   require "plugins/conform",
+  require "plugins/dashboard-nvim",
   require "plugins/dressing",
   require "plugins/flutter-tools",
   require "plugins/gitsigns",
