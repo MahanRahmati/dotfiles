@@ -1,8 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
-    cmd = { "ConformInfo" },
+    lazy = false,
     opts = {
       formatters_by_ft = {
         dart = { "dart_format" },
@@ -34,9 +33,6 @@ return {
         },
       },
     },
-    init = function()
-      vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
-    end,
     keys = {
       {
         "<leader>lf",
