@@ -66,7 +66,7 @@ return {
             enable = false,
           },
           mru = {
-            limit = 10,
+            limit = 9,
             label = " Recent Files",
           },
           footer = {},
