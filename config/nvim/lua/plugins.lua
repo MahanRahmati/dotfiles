@@ -33,6 +33,7 @@ require("lazy").setup({
   require "plugins/lspconfig",
   require "plugins/lualine",
   require "plugins/mini-comment",
+  require "plugins/myeyeshurt",
   require "plugins/neo-tree",
   require "plugins/notify",
   require "plugins/numb",
