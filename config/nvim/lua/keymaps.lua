@@ -55,3 +55,12 @@ set("n", "dw", "dwzz", { desc = "Delete word" })
 set("n", "dd", "ddzz", { desc = "Delete line" })
 set("n", "yw", "ywzz", { desc = "Copy word" })
 set("n", "yy", "yyzz", { desc = "Copy line" })
+
+-- Smart deletion
+vim.keymap.set("n", "dd", function()
+  if vim.api.nvim_get_current_line():match "^%s*$" then
+    return '"_dd'
+  else
+    return "dd"
+  end
+end, { noremap = true, expr = true })
