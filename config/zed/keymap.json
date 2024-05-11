@@ -1,0 +1,73 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "space /": [
+        "editor::ToggleComments",
+        {
+          "advance_downwards": false
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "space w": "workspace::Save",
+      "space q": "pane::CloseActiveItem",
+      "space c": "pane::CloseActiveItem",
+      "space v": "pane::SplitRight",
+      "space h": "pane::SplitDown",
+      "space s": [
+        "buffer_search::Deploy",
+        {
+          "replace_enabled": true
+        }
+      ],
+      "space e": "workspace::ToggleLeftDock",
+      "space z": "workspace::ToggleCenteredLayout",
+      // lsp
+      "g d": "editor::GoToDefinition",
+      "g shift-d": "editor::GoToTypeDefinition",
+      "g r": "editor::FindAllReferences",
+      "space l r": "editor::Rename",
+      "space l a": "editor::ToggleCodeActions",
+      "space a": "editor::ToggleCodeActions",
+      "space l d": "diagnostics::Deploy",
+      "space l j": "editor::GoToDiagnostic",
+      "space l k": "editor::GoToPrevDiagnostic",
+      "K": "editor::Hover",
+      // finders
+      "space b": "tab_switcher::Toggle",
+      "space f b": "tab_switcher::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      // terminal
+      "space t": "terminal_panel::ToggleFocus",
+      "space g g": [
+        "workspace::SendKeystrokes",
+        ": new center terminal enter lazygit space enter"
+      ]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "q": "workspace::ToggleLeftDock"
+    }
+  }
+]
