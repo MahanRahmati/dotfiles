@@ -67,6 +67,7 @@
   {
     "context": "ProjectPanel && not_editing",
     "bindings": {
+      "a": "project_panel::NewFile",
       "q": "workspace::ToggleLeftDock"
     }
   },
