@@ -25,7 +25,7 @@
   },
   "vim_mode": true,
   "cursor_blink": false,
-  "completion_documentation_secondary_query_debounce": 200,
+  "completion_documentation_secondary_query_debounce": 300,
   "use_on_type_format": true,
   "use_autoclose": true,
   "show_copilot_suggestions": false,
@@ -35,7 +35,7 @@
   },
   "toolbar": {
     "breadcrumbs": true,
-    "quick_actions": true
+    "quick_actions": false
   },
   "scrollbar": {
     "show": "always",
