@@ -17,7 +17,6 @@ return {
       "nvim-tree/nvim-web-devicons",
       "barrett-ruth/telescope-http.nvim",
       "benfowler/telescope-luasnip.nvim",
-      "jonarrien/telescope-cmdline.nvim",
     },
     cmd = "Telescope",
     config = function()
@@ -99,7 +98,6 @@ return {
       pcall(require("telescope").load_extension, "projects")
       pcall(require("telescope").load_extension, "http")
       pcall(require("telescope").load_extension, "luasnip")
-      pcall(require("telescope").load_extension, "cmdline")
     end,
     keys = {
       { "<leader>b", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
@@ -125,7 +123,6 @@ return {
         mode = "v",
         desc = "Find",
       },
-      { ":", "<cmd>Telescope cmdline<CR>", desc = "Cmdline" },
     },
   },
 }
