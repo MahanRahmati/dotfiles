@@ -21,7 +21,6 @@ require("lazy").setup({
   require "plugins/catppuccin",
   require "plugins/cmp",
   require "plugins/colorizer",
-  require "plugins/comment-frame",
   require "plugins/conform",
   require "plugins/dashboard-nvim",
   require "plugins/dressing",
