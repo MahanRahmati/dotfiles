@@ -19,7 +19,7 @@ return {
   },
   window_decorations = "INTEGRATED_BUTTONS|RESIZE",
   window_padding = {
-    left = "0.5cell",
+    left = "0.85cell",
     right = "0.5cell",
     top = "1.5cell",
     bottom = "0.0cell",
