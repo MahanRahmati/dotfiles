@@ -14,6 +14,16 @@ return {
         return conditions.buffer_matches { filetype = { filetype } }
       end
 
+      local start_left_divider = {
+        provider = " ",
+        hl = { bg = colors.surface0, fg = colors.base },
+      }
+
+      local start_right_divider = {
+        provider = "",
+        hl = { bg = colors.base, fg = colors.surface0 },
+      }
+
       local vi_mode = {
         init = function(self)
           self.mode = vim.fn.mode(1)
@@ -99,10 +109,7 @@ return {
         init = function(self)
           self.filename = vim.api.nvim_buf_get_name(0)
         end,
-        {
-          provider = " ",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        start_left_divider,
         {
           provider = function(self)
             if check_filetype "help" then
@@ -244,10 +251,7 @@ return {
           provider = " ",
           hl = { bg = colors.surface0 },
         },
-        {
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        start_right_divider,
       }
 
       local git_branch = {
@@ -259,20 +263,14 @@ return {
         static = {
           branch_icon = icons.branch,
         },
-        {
-          provider = " ",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        start_left_divider,
         {
           provider = function(self)
             return self.branch_icon .. " " .. self.status_dict.head .. " "
           end,
           hl = { bg = colors.surface0, bold = true },
         },
-        {
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        start_right_divider,
       }
 
       local git_status = {
@@ -389,7 +387,16 @@ return {
         update = { "DiagnosticChanged", "BufEnter" },
       }
 
-      -- End
+      local end_left_divider = {
+        provider = "",
+        hl = { bg = colors.base, fg = colors.surface0 },
+      }
+
+      local end_right_divider = {
+        provider = "",
+        hl = { bg = colors.surface0, fg = colors.base },
+      }
+
       local search_count = {
         init = function(self)
           local ok, search = pcall(vim.fn.searchcount)
@@ -403,13 +410,7 @@ return {
         static = {
           find_icon = icons.find,
         },
-        {
-          condition = function()
-            return vim.v.hlsearch ~= 0
-          end,
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        end_left_divider,
         {
           provider = function(self)
             local search = self.search
@@ -423,13 +424,7 @@ return {
           end,
           hl = { bg = colors.surface0, bold = true },
         },
-        {
-          condition = function()
-            return vim.v.hlsearch ~= 0
-          end,
-          provider = "",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        end_right_divider,
       }
 
       local lsp_active = {
@@ -437,11 +432,7 @@ return {
         static = {
           configuration_icon = icons.configuration,
         },
-        {
-          condition = conditions.lsp_attached,
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        end_left_divider,
         {
           provider = function(self)
             local names = {}
@@ -455,11 +446,7 @@ return {
           end,
           hl = { bg = colors.surface0, bold = true },
         },
-        {
-          condition = conditions.lsp_attached,
-          provider = "",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        end_right_divider,
         update = { "LspAttach", "LspDetach" },
       }
 
@@ -501,10 +488,7 @@ return {
           end
           return true
         end,
-        {
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        end_left_divider,
         {
           init = function(self)
             local filename = vim.api.nvim_buf_get_name(0)
@@ -530,10 +514,7 @@ return {
           end,
           hl = { bg = colors.surface0, bold = true },
         },
-        {
-          provider = "",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        end_right_divider,
       }
 
       local function selectioncount()
@@ -558,10 +539,7 @@ return {
       end
 
       local location = {
-        {
-          provider = "",
-          hl = { bg = colors.base, fg = colors.surface0 },
-        },
+        end_left_divider,
         {
           provider = function()
             local cursor = vim.fn.line "."
@@ -571,10 +549,7 @@ return {
           end,
           hl = { bg = colors.surface0, bold = true },
         },
-        {
-          provider = "",
-          hl = { bg = colors.surface0, fg = colors.base },
-        },
+        end_right_divider,
       }
 
       local progress = {
