@@ -648,7 +648,6 @@ return {
             return { bg = self.mode_colors[mode], fg = colors.base, bold = true }
           end,
         },
-        update = { "ModeChanged" },
       }
 
       return {
