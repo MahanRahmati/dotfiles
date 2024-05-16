@@ -28,7 +28,7 @@ return {
         end,
         height = function(_term)
           local height = 15
-          _term.float_opts.row = vim.o.lines - height
+          _term.float_opts.row = vim.o.lines - height - 3
           return height
         end,
       },

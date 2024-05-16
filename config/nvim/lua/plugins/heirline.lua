@@ -651,7 +651,7 @@ return {
       }
 
       return {
-        tabline = {
+        statusline = {
           vi_mode,
           file_name,
           git_branch,

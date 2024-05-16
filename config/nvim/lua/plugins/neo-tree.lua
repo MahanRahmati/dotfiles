@@ -49,7 +49,7 @@ return {
               local root_len = string.len(root_name) + 4
               return {
                 width = math.max(root_len, 40),
-                height = vim.o.lines - 3,
+                height = vim.o.lines - 4,
               }
             end,
           },
