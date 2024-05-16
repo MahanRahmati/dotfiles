@@ -39,7 +39,7 @@ vim.opt.iskeyword:append "-"
 
 -- The value of this option influences when the last window will have a status
 -- line
-vim.opt.laststatus = 3
+vim.opt.laststatus = 0
 
 -- If on, Vim will wrap long lines at a character in 'breakat' rather than at
 -- the last character that fits on the screen.
@@ -83,7 +83,7 @@ vim.opt.shortmess:append "c"
 vim.opt.showmode = false
 
 -- Never display the line with tab page labels.
-vim.opt.showtabline = 0
+vim.opt.showtabline = 2
 
 -- The minimal number of screen columns to keep to the left and to the right
 -- of the cursor if 'nowrap' is set.
