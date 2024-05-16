@@ -74,7 +74,11 @@ return {
         },
         {
           provider = function(self)
-            return " " .. self.mode_icon .. " " .. self.mode_names[self.mode]
+            return " "
+              .. self.mode_icon
+              .. " "
+              .. self.mode_names[self.mode]
+              .. " "
           end,
           hl = function(self)
             local mode = self.mode:sub(1, 1)
@@ -104,6 +108,7 @@ return {
             if check_filetype "help" then
               return "Help"
             end
+
             if check_filetype "toggleterm" then
               return "Terminal"
             end
@@ -131,6 +136,10 @@ return {
               return "Telescope "
             end
 
+            if check_filetype "dashboard" then
+              return "Dashboard"
+            end
+
             local filename = vim.fn.fnamemodify(self.filename, ":.")
             if filename == "" then
               return "No Name"
@@ -150,6 +159,7 @@ return {
             if check_filetype "help" then
               return false
             end
+
             if check_filetype "toggleterm" then
               return false
             end
@@ -173,6 +183,10 @@ return {
               check_filetype "TelescopePrompt"
               or check_filetype "TelescopeResults"
             then
+              return false
+            end
+
+            if check_filetype "dashboard" then
               return false
             end
             return vim.bo.modified
@@ -188,6 +202,7 @@ return {
             if check_filetype "help" then
               return false
             end
+
             if check_filetype "toggleterm" then
               return false
             end
@@ -211,6 +226,10 @@ return {
               check_filetype "TelescopePrompt"
               or check_filetype "TelescopeResults"
             then
+              return false
+            end
+
+            if check_filetype "dashboard" then
               return false
             end
             return not vim.bo.modifiable or vim.bo.readonly
@@ -449,6 +468,7 @@ return {
           if check_filetype "help" then
             return false
           end
+
           if check_filetype "toggleterm" then
             return false
           end
@@ -475,6 +495,11 @@ return {
           then
             return false
           end
+
+          if check_filetype "dashboard" then
+            return false
+          end
+          return true
         end,
         {
           provider = "",
