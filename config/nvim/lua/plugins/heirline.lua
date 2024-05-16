@@ -24,82 +24,80 @@ return {
         hl = { bg = colors.base, fg = colors.surface0 },
       }
 
+      local mode_names = {
+        n = "NORMAL",
+        no = "O-PENDING",
+        nov = "O-PENDING",
+        noV = "O-PENDING",
+        ["no\22"] = "O-PENDING",
+        niI = "NORMAL",
+        niR = "NORMAL",
+        niV = "NORMAL",
+        nt = "NORMAL",
+        v = "VISUAL",
+        vs = "VISUAL",
+        V = "V-LINE",
+        Vs = "V-LINE",
+        ["\22"] = "V-BLOCK",
+        ["\22s"] = "V-BLOCK",
+        s = "SELECT",
+        S = "S-LINE",
+        ["\19"] = "S-BLOCK",
+        i = "INSERT",
+        ic = "INSERT",
+        ix = "INSERT",
+        R = "REPLACE",
+        Rc = "REPLACE",
+        Rx = "REPLACE",
+        Rv = "V-REPLACE",
+        Rvc = "V-REPLACE",
+        Rvx = "V-REPLACE",
+        c = "COMMAND",
+        cv = "EX",
+        r = "REPLACE",
+        rm = "MORE",
+        ["r?"] = "CONFIRM",
+        ["!"] = "SHELL",
+        t = "TERMINAL",
+      }
+
+      local mode_colors = {
+        n = colors.blue,
+        i = colors.green,
+        v = colors.mauve,
+        V = colors.mauve,
+        ["\22"] = colors.mauve,
+        c = colors.peach,
+        s = colors.pink,
+        S = colors.pink,
+        ["\19"] = colors.pink,
+        R = colors.red,
+        r = colors.red,
+        ["!"] = colors.red,
+        t = colors.green,
+      }
+
       local vi_mode = {
         init = function(self)
           self.mode = vim.fn.mode(1)
         end,
         static = {
-          mode_names = {
-            n = "NORMAL",
-            no = "O-PENDING",
-            nov = "O-PENDING",
-            noV = "O-PENDING",
-            ["no\22"] = "O-PENDING",
-            niI = "NORMAL",
-            niR = "NORMAL",
-            niV = "NORMAL",
-            nt = "NORMAL",
-            v = "VISUAL",
-            vs = "VISUAL",
-            V = "V-LINE",
-            Vs = "V-LINE",
-            ["\22"] = "V-BLOCK",
-            ["\22s"] = "V-BLOCK",
-            s = "SELECT",
-            S = "S-LINE",
-            ["\19"] = "S-BLOCK",
-            i = "INSERT",
-            ic = "INSERT",
-            ix = "INSERT",
-            R = "REPLACE",
-            Rc = "REPLACE",
-            Rx = "REPLACE",
-            Rv = "V-REPLACE",
-            Rvc = "V-REPLACE",
-            Rvx = "V-REPLACE",
-            c = "COMMAND",
-            cv = "EX",
-            r = "REPLACE",
-            rm = "MORE",
-            ["r?"] = "CONFIRM",
-            ["!"] = "SHELL",
-            t = "TERMINAL",
-          },
-          mode_colors = {
-            n = colors.blue,
-            i = colors.green,
-            v = colors.mauve,
-            V = colors.mauve,
-            ["\22"] = colors.mauve,
-            c = colors.peach,
-            s = colors.pink,
-            S = colors.pink,
-            ["\19"] = colors.pink,
-            R = colors.red,
-            r = colors.red,
-            ["!"] = colors.red,
-            t = colors.green,
-          },
           mode_icon = icons.mode,
         },
         {
           provider = function(self)
-            return " "
-              .. self.mode_icon
-              .. " "
-              .. self.mode_names[self.mode]
-              .. " "
+            return " " .. self.mode_icon .. " " .. mode_names[self.mode] .. " "
           end,
           hl = function(self)
             local mode = self.mode:sub(1, 1)
-            return { bg = self.mode_colors[mode], fg = colors.base, bold = true }
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
           end,
         },
         {
           provider = "",
           hl = function(self)
             local mode = self.mode:sub(1, 1)
-            return { fg = self.mode_colors[mode] }
+            return { fg = mode_colors[mode] }
           end,
         },
         update = { "ModeChanged" },
@@ -556,64 +554,11 @@ return {
         init = function(self)
           self.mode = vim.fn.mode(1)
         end,
-        static = {
-          mode_names = {
-            n = "NORMAL",
-            no = "O-PENDING",
-            nov = "O-PENDING",
-            noV = "O-PENDING",
-            ["no\22"] = "O-PENDING",
-            niI = "NORMAL",
-            niR = "NORMAL",
-            niV = "NORMAL",
-            nt = "NORMAL",
-            v = "VISUAL",
-            vs = "VISUAL",
-            V = "V-LINE",
-            Vs = "V-LINE",
-            ["\22"] = "V-BLOCK",
-            ["\22s"] = "V-BLOCK",
-            s = "SELECT",
-            S = "S-LINE",
-            ["\19"] = "S-BLOCK",
-            i = "INSERT",
-            ic = "INSERT",
-            ix = "INSERT",
-            R = "REPLACE",
-            Rc = "REPLACE",
-            Rx = "REPLACE",
-            Rv = "V-REPLACE",
-            Rvc = "V-REPLACE",
-            Rvx = "V-REPLACE",
-            c = "COMMAND",
-            cv = "EX",
-            r = "REPLACE",
-            rm = "MORE",
-            ["r?"] = "CONFIRM",
-            ["!"] = "SHELL",
-            t = "TERMINAL",
-          },
-          mode_colors = {
-            n = colors.blue,
-            i = colors.green,
-            v = colors.mauve,
-            V = colors.mauve,
-            ["\22"] = colors.mauve,
-            c = colors.peach,
-            s = colors.pink,
-            S = colors.pink,
-            ["\19"] = colors.pink,
-            R = colors.red,
-            r = colors.red,
-            ["!"] = colors.red,
-            t = colors.green,
-          },
-        },
         {
           provider = "",
           hl = function(self)
             local mode = self.mode:sub(1, 1)
-            return { fg = self.mode_colors[mode] }
+            return { fg = mode_colors[mode] }
           end,
         },
 
@@ -645,7 +590,7 @@ return {
           end,
           hl = function(self)
             local mode = self.mode:sub(1, 1)
-            return { bg = self.mode_colors[mode], fg = colors.base, bold = true }
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
           end,
         },
       }
