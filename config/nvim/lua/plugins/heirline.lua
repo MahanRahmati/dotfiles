@@ -163,10 +163,10 @@ return {
           hl = { bg = colors.surface0 },
         },
         {
-          provider = " ",
           condition = function()
             return not vim.bo.modified
           end,
+          provider = " ",
           hl = { bg = colors.surface0 },
         },
         {
@@ -176,14 +176,14 @@ return {
       }
 
       local git_branch = {
-        condition = conditions.is_git_repo,
-        static = {
-          branch_icon = icons.branch,
-        },
         init = function(self)
           ---@diagnostic disable-next-line: undefined-field
           self.status_dict = vim.b.gitsigns_status_dict
         end,
+        condition = conditions.is_git_repo,
+        static = {
+          branch_icon = icons.branch,
+        },
         {
           provider = " ",
           hl = { bg = colors.surface0, fg = colors.base },
@@ -201,16 +201,16 @@ return {
       }
 
       local git_status = {
+        init = function(self)
+          ---@diagnostic disable-next-line: undefined-field
+          self.status_dict = vim.b.gitsigns_status_dict
+        end,
         condition = conditions.is_git_repo,
         static = {
           added_icon = icons.added,
           removed_icon = icons.removed,
           modified_icon = icons.modified,
         },
-        init = function(self)
-          ---@diagnostic disable-next-line: undefined-field
-          self.status_dict = vim.b.gitsigns_status_dict
-        end,
         {
           condition = function(self)
             local added = self.status_dict.added or 0
@@ -255,13 +255,6 @@ return {
       }
 
       local diagnostics = {
-        condition = conditions.has_diagnostics,
-        static = {
-          error_icon = icons.error,
-          warn_icon = icons.warn,
-          info_icon = icons.info,
-          hint_icon = icons.hint,
-        },
         init = function(self)
           self.errors =
             #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
@@ -272,6 +265,13 @@ return {
           self.info =
             #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
         end,
+        condition = conditions.has_diagnostics,
+        static = {
+          error_icon = icons.error,
+          warn_icon = icons.warn,
+          info_icon = icons.info,
+          hint_icon = icons.hint,
+        },
         {
           condition = function(self)
             return self.errors + self.warnings + self.info + self.hints > 0
@@ -316,15 +316,18 @@ return {
 
       -- End
       local search_count = {
-        condition = function()
-          return vim.v.hlsearch ~= 0
-        end,
         init = function(self)
           local ok, search = pcall(vim.fn.searchcount)
           if ok and search.total then
             self.search = search
           end
         end,
+        condition = function()
+          return vim.v.hlsearch ~= 0
+        end,
+        static = {
+          find_icon = icons.find,
+        },
         {
           condition = function()
             return vim.v.hlsearch ~= 0
@@ -335,11 +338,13 @@ return {
         {
           provider = function(self)
             local search = self.search
-            return string.format(
-              " [%d/%d] ",
-              search.current,
-              math.min(search.total, search.maxcount)
-            )
+            return " "
+              .. self.find_icon
+              .. string.format(
+                "%d/%d ",
+                search.current,
+                math.min(search.total, search.maxcount)
+              )
           end,
           hl = { bg = colors.surface0, bold = true },
         },
