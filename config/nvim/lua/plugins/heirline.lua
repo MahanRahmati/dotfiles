@@ -389,6 +389,37 @@ return {
       }
 
       local file_type = {
+        condition = function()
+          if check_filetype "help" then
+            return false
+          end
+          if check_filetype "toggleterm" then
+            return false
+          end
+
+          if check_filetype "neo%-tree" then
+            return false
+          end
+
+          if check_filetype "lspinfo" then
+            return false
+          end
+
+          if check_filetype "lazy" then
+            return false
+          end
+
+          if check_filetype "mason" then
+            return false
+          end
+
+          if
+            check_filetype "TelescopePrompt"
+            or check_filetype "TelescopeResults"
+          then
+            return false
+          end
+        end,
         {
           provider = "",
           hl = { bg = colors.base, fg = colors.surface0 },
