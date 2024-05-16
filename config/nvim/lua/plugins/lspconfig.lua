@@ -82,7 +82,10 @@ return {
           -- Organize imports
           vim.api.nvim_create_user_command("OrganizeImports", function(_)
             vim.lsp.buf.code_action {
-              context = { only = { "source.organizeImports" } },
+              context = {
+                diagnostics = {},
+                only = { "source.organizeImports" },
+              },
               apply = true,
             }
           end, {})
@@ -90,7 +93,10 @@ return {
           -- Fix all lint errors
           vim.api.nvim_create_user_command("FixAll", function(_)
             vim.lsp.buf.code_action {
-              context = { only = { "source.fixAll" } },
+              context = {
+                diagnostics = {},
+                only = { "source.fixAll" },
+              },
               apply = true,
             }
           end, {})
@@ -137,7 +143,7 @@ return {
             and vim.lsp.inlay_hint
           then
             map("<leader>lh", function()
-              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+              vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled {})
             end, "Toggle Inlay Hints")
           end
         end,
