@@ -128,7 +128,7 @@ return {
               check_filetype "TelescopePrompt"
               or check_filetype "TelescopeResults"
             then
-              return "Telescope"
+              return "Telescope "
             end
 
             local filename = vim.fn.fnamemodify(self.filename, ":.")
@@ -147,6 +147,34 @@ return {
             self.filename = vim.api.nvim_buf_get_name(0)
           end,
           condition = function()
+            if check_filetype "help" then
+              return false
+            end
+            if check_filetype "toggleterm" then
+              return false
+            end
+
+            if check_filetype "neo%-tree" then
+              return false
+            end
+
+            if check_filetype "lspinfo" then
+              return false
+            end
+
+            if check_filetype "lazy" then
+              return false
+            end
+
+            if check_filetype "mason" then
+              return false
+            end
+            if
+              check_filetype "TelescopePrompt"
+              or check_filetype "TelescopeResults"
+            then
+              return false
+            end
             return vim.bo.modified
           end,
           provider = " " .. icons.modified,
@@ -157,6 +185,34 @@ return {
             self.filename = vim.api.nvim_buf_get_name(0)
           end,
           condition = function()
+            if check_filetype "help" then
+              return false
+            end
+            if check_filetype "toggleterm" then
+              return false
+            end
+
+            if check_filetype "neo%-tree" then
+              return false
+            end
+
+            if check_filetype "lspinfo" then
+              return false
+            end
+
+            if check_filetype "lazy" then
+              return false
+            end
+
+            if check_filetype "mason" then
+              return false
+            end
+            if
+              check_filetype "TelescopePrompt"
+              or check_filetype "TelescopeResults"
+            then
+              return false
+            end
             return not vim.bo.modifiable or vim.bo.readonly
           end,
           provider = " " .. icons.readonly,
@@ -370,7 +426,7 @@ return {
         {
           provider = function(self)
             local names = {}
-            for _, server in pairs(vim.lsp.get_active_clients { bufnr = 0 }) do
+            for _, server in pairs(vim.lsp.get_clients { bufnr = 0 }) do
               table.insert(names, server.name)
             end
             return " "
