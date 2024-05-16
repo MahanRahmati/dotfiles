@@ -20,6 +20,7 @@ require("lazy").setup({
   require "plugins/conform",
   require "plugins/dashboard-nvim",
   require "plugins/dressing",
+  require "plugins/fidget",
   require "plugins/flutter-tools",
   require "plugins/gitsigns",
   require "plugins/heirline",
