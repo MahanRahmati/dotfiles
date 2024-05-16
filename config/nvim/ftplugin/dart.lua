@@ -1,0 +1,5 @@
+vim.keymap.set("n", "<leader>w", function()
+  vim.cmd.OrganizeImports()
+  vim.cmd.FixAll()
+  vim.cmd.write()
+end, { buffer = 0 })

@@ -53,17 +53,6 @@ return {
     },
     config = function(_, opts)
       require("flutter-tools").setup(opts)
-
-      -- Run OrganizeImports and FixAll on save
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        desc = "Run OrganizeImports and FixAll on save",
-        group = vim.api.nvim_create_augroup("FlutterActions", { clear = true }),
-        pattern = { "*.dart" },
-        callback = function()
-          vim.cmd.OrganizeImports()
-          vim.cmd.FixAll()
-        end,
-      })
     end,
     keys = {
       { "<leader>FD", "<cmd>FlutterDevTools<CR>", desc = "Dev Tools" },
