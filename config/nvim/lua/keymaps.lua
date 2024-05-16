@@ -34,6 +34,10 @@ set(
   { desc = "Replace current word" }
 )
 
+-- Comment
+set("n", "<leader>/", "<cmd>norm gcc<CR>", { desc = "Comment" })
+set("v", "<leader>/", "<cmd>norm gc<CR>", { desc = "Comment" })
+
 -- Center cursor
 set("n", "j", "jzz", { desc = "Down" })
 set("n", "<down>", "<down>zz", { desc = "Down" })

@@ -30,7 +30,6 @@ require("lazy").setup({
   require "plugins/illuminate",
   require "plugins/indent-blankline",
   require "plugins/lspconfig",
-  require "plugins/mini-comment",
   require "plugins/myeyeshurt",
   require "plugins/neo-tree",
   require "plugins/notify",
