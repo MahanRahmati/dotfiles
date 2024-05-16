@@ -81,12 +81,9 @@ return {
         init = function(self)
           self.mode = vim.fn.mode(1)
         end,
-        static = {
-          mode_icon = icons.mode,
-        },
         {
           provider = function(self)
-            return " " .. self.mode_icon .. " " .. mode_names[self.mode] .. " "
+            return " " .. icons.mode .. " " .. mode_names[self.mode] .. " "
           end,
           hl = function(self)
             local mode = self.mode:sub(1, 1)
@@ -258,13 +255,10 @@ return {
           self.status_dict = vim.b.gitsigns_status_dict
         end,
         condition = conditions.is_git_repo,
-        static = {
-          branch_icon = icons.branch,
-        },
         start_left_divider,
         {
           provider = function(self)
-            return self.branch_icon .. " " .. self.status_dict.head .. " "
+            return icons.branch .. " " .. self.status_dict.head .. " "
           end,
           hl = { bg = colors.surface0, bold = true },
         },
@@ -277,11 +271,6 @@ return {
           self.status_dict = vim.b.gitsigns_status_dict
         end,
         condition = conditions.is_git_repo,
-        static = {
-          added_icon = icons.added,
-          removed_icon = icons.removed,
-          modified_icon = icons.modified,
-        },
         {
           condition = function(self)
             local added = self.status_dict.added or 0
@@ -295,21 +284,21 @@ return {
         {
           provider = function(self)
             local count = self.status_dict.added or 0
-            return count > 0 and (self.added_icon .. count .. " ")
+            return count > 0 and (icons.added .. count .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.green, bold = true },
         },
         {
           provider = function(self)
             local count = self.status_dict.changed or 0
-            return count > 0 and (self.modified_icon .. count .. " ")
+            return count > 0 and (icons.modified .. count .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.yellow, bold = true },
         },
         {
           provider = function(self)
             local count = self.status_dict.removed or 0
-            return count > 0 and (self.removed_icon .. count .. " ")
+            return count > 0 and (icons.removed .. count .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.red, bold = true },
         },
@@ -337,12 +326,6 @@ return {
             #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
         end,
         condition = conditions.has_diagnostics,
-        static = {
-          error_icon = icons.error,
-          warn_icon = icons.warn,
-          info_icon = icons.info,
-          hint_icon = icons.hint,
-        },
         {
           condition = function(self)
             return self.errors + self.warnings + self.info + self.hints > 0
@@ -352,26 +335,25 @@ return {
         },
         {
           provider = function(self)
-            return self.errors > 0 and (self.error_icon .. self.errors .. " ")
+            return self.errors > 0 and (icons.error .. self.errors .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.red, bold = true },
         },
         {
           provider = function(self)
-            return self.warnings > 0
-              and (self.warn_icon .. self.warnings .. " ")
+            return self.warnings > 0 and (icons.warn .. self.warnings .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.yellow, bold = true },
         },
         {
           provider = function(self)
-            return self.info > 0 and (self.info_icon .. self.info .. " ")
+            return self.info > 0 and (icons.info .. self.info .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.sky, bold = true },
         },
         {
           provider = function(self)
-            return self.hints > 0 and (self.hint_icon .. self.hints .. " ")
+            return self.hints > 0 and (icons.hint .. self.hints .. " ")
           end,
           hl = { bg = colors.surface0, fg = colors.sky, bold = true },
         },
@@ -405,15 +387,12 @@ return {
         condition = function()
           return vim.v.hlsearch ~= 0
         end,
-        static = {
-          find_icon = icons.find,
-        },
         end_left_divider,
         {
           provider = function(self)
             local search = self.search
             return " "
-              .. self.find_icon
+              .. icons.find
               .. string.format(
                 "%d/%d ",
                 search.current,
@@ -427,20 +406,14 @@ return {
 
       local lsp_active = {
         condition = conditions.lsp_attached,
-        static = {
-          configuration_icon = icons.configuration,
-        },
         end_left_divider,
         {
-          provider = function(self)
+          provider = function()
             local names = {}
             for _, server in pairs(vim.lsp.get_clients { bufnr = 0 }) do
               table.insert(names, server.name)
             end
-            return " "
-              .. self.configuration_icon
-              .. table.concat(names, " ")
-              .. " "
+            return " " .. icons.configuration .. table.concat(names, " ") .. " "
           end,
           hl = { bg = colors.surface0, bold = true },
         },
