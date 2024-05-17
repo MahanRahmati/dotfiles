@@ -169,9 +169,6 @@ return {
           hl = { bg = colors.surface0, bold = true },
         },
         {
-          init = function(self)
-            self.filename = vim.api.nvim_buf_get_name(0)
-          end,
           condition = function()
             if should_be_disabled() then
               return false
@@ -182,9 +179,6 @@ return {
           hl = { bg = colors.surface0 },
         },
         {
-          init = function(self)
-            self.filename = vim.api.nvim_buf_get_name(0)
-          end,
           condition = function()
             if should_be_disabled() then
               return false
