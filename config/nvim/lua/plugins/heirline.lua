@@ -29,6 +29,8 @@ return {
         return conditions.buffer_matches { filetype = file_types }
       end
 
+      local item_hl = { bg = colors.surface0, bold = true }
+
       local start_left_divider = {
         provider = " ",
         hl = { bg = colors.surface0, fg = colors.base },
@@ -166,7 +168,7 @@ return {
             end
             return filename
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         {
           condition = function()
@@ -176,7 +178,7 @@ return {
             return vim.bo.modified
           end,
           provider = " " .. icons.modified,
-          hl = { bg = colors.surface0 },
+          hl = item_hl,
         },
         {
           condition = function()
@@ -186,14 +188,14 @@ return {
             return not vim.bo.modifiable or vim.bo.readonly
           end,
           provider = " " .. icons.readonly,
-          hl = { bg = colors.surface0 },
+          hl = item_hl,
         },
         {
           condition = function()
             return not vim.bo.modified
           end,
           provider = " ",
-          hl = { bg = colors.surface0 },
+          hl = item_hl,
         },
         start_right_divider,
       }
@@ -209,7 +211,7 @@ return {
           provider = function(self)
             return icons.branch .. " " .. self.status_dict.head .. " "
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         start_right_divider,
       }
@@ -348,7 +350,7 @@ return {
                 math.min(search.total, search.maxcount)
               )
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         end_right_divider,
       }
@@ -364,7 +366,7 @@ return {
             end
             return " " .. icons.configuration .. table.concat(names, " ") .. " "
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         end_right_divider,
         update = { "LspAttach", "LspDetach" },
@@ -401,7 +403,7 @@ return {
             local type = vim.bo.filetype
             return type:gsub("^%l", type.upper) .. " "
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         end_right_divider,
       }
@@ -436,7 +438,7 @@ return {
             local selected = selectioncount()
             return " " .. cursor .. ":" .. column .. selected .. " "
           end,
-          hl = { bg = colors.surface0, bold = true },
+          hl = item_hl,
         },
         end_right_divider,
       }
