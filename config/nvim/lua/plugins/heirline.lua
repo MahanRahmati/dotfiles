@@ -14,6 +14,21 @@ return {
         return conditions.buffer_matches { filetype = { filetype } }
       end
 
+      local function should_be_disabled()
+        local file_types = {
+          "help",
+          "toggleterm",
+          "neo%-tree",
+          "lspinfo",
+          "lazy",
+          "mason",
+          "TelescopePrompt",
+          "TelescopeResults",
+          "dashboard",
+        }
+        return conditions.buffer_matches { filetype = file_types }
+      end
+
       local start_left_divider = {
         provider = " ",
         hl = { bg = colors.surface0, fg = colors.base },
@@ -158,37 +173,7 @@ return {
             self.filename = vim.api.nvim_buf_get_name(0)
           end,
           condition = function()
-            if check_filetype "help" then
-              return false
-            end
-
-            if check_filetype "toggleterm" then
-              return false
-            end
-
-            if check_filetype "neo%-tree" then
-              return false
-            end
-
-            if check_filetype "lspinfo" then
-              return false
-            end
-
-            if check_filetype "lazy" then
-              return false
-            end
-
-            if check_filetype "mason" then
-              return false
-            end
-            if
-              check_filetype "TelescopePrompt"
-              or check_filetype "TelescopeResults"
-            then
-              return false
-            end
-
-            if check_filetype "dashboard" then
+            if should_be_disabled() then
               return false
             end
             return vim.bo.modified
@@ -201,37 +186,7 @@ return {
             self.filename = vim.api.nvim_buf_get_name(0)
           end,
           condition = function()
-            if check_filetype "help" then
-              return false
-            end
-
-            if check_filetype "toggleterm" then
-              return false
-            end
-
-            if check_filetype "neo%-tree" then
-              return false
-            end
-
-            if check_filetype "lspinfo" then
-              return false
-            end
-
-            if check_filetype "lazy" then
-              return false
-            end
-
-            if check_filetype "mason" then
-              return false
-            end
-            if
-              check_filetype "TelescopePrompt"
-              or check_filetype "TelescopeResults"
-            then
-              return false
-            end
-
-            if check_filetype "dashboard" then
+            if should_be_disabled() then
               return false
             end
             return not vim.bo.modifiable or vim.bo.readonly
@@ -423,38 +378,7 @@ return {
 
       local file_type = {
         condition = function()
-          if check_filetype "help" then
-            return false
-          end
-
-          if check_filetype "toggleterm" then
-            return false
-          end
-
-          if check_filetype "neo%-tree" then
-            return false
-          end
-
-          if check_filetype "lspinfo" then
-            return false
-          end
-
-          if check_filetype "lazy" then
-            return false
-          end
-
-          if check_filetype "mason" then
-            return false
-          end
-
-          if
-            check_filetype "TelescopePrompt"
-            or check_filetype "TelescopeResults"
-          then
-            return false
-          end
-
-          if check_filetype "dashboard" then
+          if should_be_disabled() then
             return false
           end
           return true
