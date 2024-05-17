@@ -105,7 +105,10 @@ return {
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if
-            client and client.server_capabilities.documentHighlightProvider
+            client
+            and client.supports_method(
+              vim.lsp.protocol.Methods.textDocument_documentHighlight
+            )
           then
             local highlight_augroup =
               vim.api.nvim_create_augroup("lsp-highlight", { clear = false })
@@ -138,8 +141,9 @@ return {
 
           if
             client
-            and client.server_capabilities.inlayHintProvider
-            and vim.lsp.inlay_hint
+            and client.supports_method(
+              vim.lsp.protocol.Methods.textDocument_inlayHint
+            )
           then
             map("<leader>lh", function()
               vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled {})
