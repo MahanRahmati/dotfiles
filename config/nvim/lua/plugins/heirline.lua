@@ -267,14 +267,14 @@ return {
 
       local diagnostics = {
         init = function(self)
-          self.errors =
-            #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR })
-          self.warnings =
-            #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.WARN })
-          self.hints =
-            #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.HINT })
-          self.info =
-            #vim.diagnostic.get(0, { severity = vim.diagnostic.severity.INFO })
+          local workspace_diagnostics = function(severity)
+            local count = vim.diagnostic.get(nil, { severity = severity })
+            return vim.tbl_count(count)
+          end
+          self.errors = workspace_diagnostics(vim.diagnostic.severity.ERROR)
+          self.warnings = workspace_diagnostics(vim.diagnostic.severity.WARN)
+          self.hints = workspace_diagnostics(vim.diagnostic.severity.HINT)
+          self.info = workspace_diagnostics(vim.diagnostic.severity.INFO)
         end,
         condition = conditions.has_diagnostics,
         {
