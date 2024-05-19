@@ -41,6 +41,101 @@ return {
         hl = { bg = colors.base, fg = colors.surface0 },
       }
 
+      local function stl_escape(str)
+        if type(str) ~= "string" then
+          return str
+        end
+        return str:gsub("%%", "%%%%")
+      end
+
+      local function filepath_function()
+        local path = vim.fn.expand "%:~:.:h"
+        path = stl_escape(path)
+        if path == "" or path == "." then
+          return ""
+        end
+        path = path:gsub("/", " " .. icons.separator .. " ")
+        return path .. " " .. icons.separator
+      end
+
+      local file_name = {
+        init = function(self)
+          self.filename = vim.api.nvim_buf_get_name(0)
+        end,
+        condition = function()
+          if should_be_disabled() then
+            return false
+          end
+          return true
+        end,
+        {
+          provider = function()
+            local filepath = filepath_function()
+            if filepath == "" then
+              return ""
+            end
+            return " " .. filepath
+          end,
+          hl = item_hl,
+        },
+        {
+          init = function(self)
+            local filename = vim.api.nvim_buf_get_name(0)
+            local extension = vim.fn.fnamemodify(filename, ":e")
+            self.icon, self.icon_color =
+              require("nvim-web-devicons").get_icon_color(
+                filename,
+                extension,
+                { default = true }
+              )
+          end,
+          provider = function(self)
+            return " " .. self.icon .. " "
+          end,
+          hl = function(self)
+            return { bg = colors.surface0, fg = self.icon_color }
+          end,
+        },
+        {
+          provider = function()
+            local filename = vim.fn.expand "%:t"
+            if filename == "" then
+              return "No Name"
+            end
+            return filename
+          end,
+          hl = item_hl,
+        },
+        {
+          condition = function()
+            if should_be_disabled() then
+              return false
+            end
+            return vim.bo.modified
+          end,
+          provider = " " .. icons.modified,
+          hl = item_hl,
+        },
+        {
+          condition = function()
+            if should_be_disabled() then
+              return false
+            end
+            return not vim.bo.modifiable or vim.bo.readonly
+          end,
+          provider = " " .. icons.readonly,
+          hl = item_hl,
+        },
+        {
+          condition = function()
+            return not vim.bo.modified
+          end,
+          provider = " ",
+          hl = item_hl,
+        },
+        start_right_divider,
+      }
+
       local mode_names = {
         n = "NORMAL",
         no = "O-PENDING",
@@ -115,89 +210,6 @@ return {
           end,
         },
         update = { "ModeChanged" },
-      }
-
-      local file_name = {
-        init = function(self)
-          self.filename = vim.api.nvim_buf_get_name(0)
-        end,
-        start_left_divider,
-        {
-          provider = function(self)
-            if check_filetype "help" then
-              return "Help"
-            end
-
-            if check_filetype "toggleterm" then
-              return "Terminal"
-            end
-
-            if check_filetype "neo%-tree" then
-              return "Neo-tree"
-            end
-
-            if check_filetype "lspinfo" then
-              return "LSP Info"
-            end
-
-            if check_filetype "lazy" then
-              return "Lazy"
-            end
-
-            if check_filetype "mason" then
-              return "Mason"
-            end
-
-            if
-              check_filetype "TelescopePrompt"
-              or check_filetype "TelescopeResults"
-            then
-              return "Telescope "
-            end
-
-            if check_filetype "dashboard" then
-              return "Dashboard"
-            end
-
-            local filename = vim.fn.fnamemodify(self.filename, ":.")
-            if filename == "" then
-              return "No Name"
-            end
-            if not conditions.width_percent_below(#filename, 0.25) then
-              filename = vim.fn.pathshorten(filename)
-            end
-            return filename
-          end,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            if should_be_disabled() then
-              return false
-            end
-            return vim.bo.modified
-          end,
-          provider = " " .. icons.modified,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            if should_be_disabled() then
-              return false
-            end
-            return not vim.bo.modifiable or vim.bo.readonly
-          end,
-          provider = " " .. icons.readonly,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            return not vim.bo.modified
-          end,
-          provider = " ",
-          hl = item_hl,
-        },
-        start_right_divider,
       }
 
       local git_branch = {
@@ -489,9 +501,11 @@ return {
       }
 
       return {
+        winbar = {
+          file_name,
+        },
         statusline = {
           vi_mode,
-          file_name,
           git_branch,
           git_status,
           diagnostics,
