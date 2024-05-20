@@ -21,6 +21,7 @@ return {
           "TelescopePrompt",
           "TelescopeResults",
           "dashboard",
+          "WhichKey",
         }
         return conditions.buffer_matches { filetype = file_types }
       end
@@ -57,12 +58,6 @@ return {
       local file_name = {
         init = function(self)
           self.filename = vim.api.nvim_buf_get_name(0)
-        end,
-        condition = function()
-          if should_be_disabled() then
-            return false
-          end
-          return true
         end,
         {
           provider = function()
@@ -514,6 +509,9 @@ return {
         },
         opts = {
           colors = colors,
+          disable_winbar_cb = function()
+            return should_be_disabled()
+          end,
         },
       }
     end,
