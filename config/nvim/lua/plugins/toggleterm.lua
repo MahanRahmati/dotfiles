@@ -41,7 +41,22 @@ return {
       local lazygit = Terminal:new {
         cmd = "lazygit",
         dir = "git_dir",
-        direction = "tab",
+        direction = "float",
+        float_opts = {
+          border = "rounded",
+          winblend = 0,
+          highlights = {
+            border = "Normal",
+            background = "Normal",
+          },
+          width = function(_term)
+            _term.float_opts.col = vim.o.columns
+            return vim.o.columns
+          end,
+          height = function()
+            return vim.o.lines - 3
+          end,
+        },
         on_open = function(_)
           vim.cmd "startinsert!"
         end,
