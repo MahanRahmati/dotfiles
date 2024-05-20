@@ -318,7 +318,6 @@ return {
           provider = "",
           hl = { bg = colors.base, fg = colors.surface0 },
         },
-        update = { "DiagnosticChanged", "BufEnter" },
       }
 
       local end_left_divider = {
