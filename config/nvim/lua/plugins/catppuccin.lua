@@ -70,8 +70,6 @@ return {
           LineNr = { fg = colors.surface2 },
           CursorLineNr = { fg = colors.yellow },
           SmoothCursor = { fg = colors.yellow },
-          NavicText = { fg = colors.text },
-          NavicSeparator = { fg = colors.surface2 },
         }
       end,
       integrations = {
@@ -84,9 +82,6 @@ return {
         treesitter = true,
         treesitter_context = true,
         which_key = true,
-        navic = {
-          enabled = true,
-        },
       },
     },
     config = function(_, opts)
