@@ -15,6 +15,11 @@ return {
       direction = "float", -- 'vertical' | 'horizontal' | 'tab' | 'float',
       close_on_exit = true,
       shell = vim.o.shell,
+      highlights = {
+        FloatBorder = {
+          link = "FloatBorder",
+        },
+      },
       float_opts = {
         border = "rounded",
         winblend = 0,
