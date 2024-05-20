@@ -23,7 +23,11 @@ return {
           "dashboard",
           "WhichKey",
         }
-        return conditions.buffer_matches { filetype = file_types }
+        local buf_types = { "nofile" }
+        return conditions.buffer_matches {
+          filetype = file_types,
+          buftype = buf_types,
+        }
       end
 
       local item_hl = { bg = colors.surface0, bold = true }
