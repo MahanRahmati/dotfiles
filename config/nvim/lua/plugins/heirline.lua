@@ -10,10 +10,6 @@ return {
       local conditions = require "heirline.conditions"
       local colors = require("catppuccin.palettes").get_palette()
 
-      local function check_filetype(filetype)
-        return conditions.buffer_matches { filetype = { filetype } }
-      end
-
       local function should_be_disabled()
         local file_types = {
           "help",
