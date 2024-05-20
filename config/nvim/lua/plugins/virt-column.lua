@@ -6,6 +6,7 @@ return {
       local icons = require "icons"
       return {
         char = icons.virt_line,
+        highlight = "ErrorMsg",
       }
     end,
   },
