@@ -19,6 +19,7 @@ require("lazy").setup({
   require "plugins/colorizer",
   require "plugins/conform",
   require "plugins/dashboard-nvim",
+  require "plugins/devicons-auto-colors",
   require "plugins/dressing",
   require "plugins/fidget",
   require "plugins/flutter-tools",
