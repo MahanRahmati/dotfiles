@@ -74,6 +74,7 @@
   },
   "autosave": "off",
   "tab_bar": {
+    "show": false,
     "show_nav_history_buttons": false
   },
   "tabs": {
