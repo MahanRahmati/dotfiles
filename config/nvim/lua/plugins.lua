@@ -27,6 +27,7 @@ require("lazy").setup({
   require "plugins/heirline",
   require "plugins/illuminate",
   require "plugins/indent-blankline",
+  require "plugins/lazydev",
   require "plugins/lspconfig",
   require "plugins/myeyeshurt",
   require "plugins/neo-tree",
