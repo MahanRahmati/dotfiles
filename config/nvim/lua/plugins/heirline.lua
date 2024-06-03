@@ -42,95 +42,6 @@ return {
         hl = { bg = colors.base, fg = colors.surface0 },
       }
 
-      local function stl_escape(str)
-        if type(str) ~= "string" then
-          return str
-        end
-        return str:gsub("%%", "%%%%")
-      end
-
-      local function filepath_function()
-        local path = vim.fn.expand "%:~:.:h"
-        path = stl_escape(path)
-        if path == "" or path == "." then
-          return ""
-        end
-        path = path:gsub("/", " " .. icons.separator .. " ")
-        return path .. " " .. icons.separator
-      end
-
-      local file_name = {
-        init = function(self)
-          self.filename = vim.api.nvim_buf_get_name(0)
-        end,
-        {
-          provider = function()
-            local filepath = filepath_function()
-            if filepath == "" then
-              return ""
-            end
-            return " " .. filepath
-          end,
-          hl = item_hl,
-        },
-        {
-          init = function(self)
-            local filename = vim.api.nvim_buf_get_name(0)
-            local extension = vim.fn.fnamemodify(filename, ":e")
-            self.icon, self.icon_color =
-              require("nvim-web-devicons").get_icon_color(
-                filename,
-                extension,
-                { default = true }
-              )
-          end,
-          provider = function(self)
-            return " " .. self.icon .. " "
-          end,
-          hl = function(self)
-            return { bg = colors.surface0, fg = self.icon_color }
-          end,
-        },
-        {
-          provider = function()
-            local filename = vim.fn.expand "%:t"
-            if filename == "" then
-              return "No Name"
-            end
-            return filename
-          end,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            if should_be_disabled() then
-              return false
-            end
-            return vim.bo.modified
-          end,
-          provider = " " .. icons.modified,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            if should_be_disabled() then
-              return false
-            end
-            return not vim.bo.modifiable or vim.bo.readonly
-          end,
-          provider = " " .. icons.readonly,
-          hl = item_hl,
-        },
-        {
-          condition = function()
-            return not vim.bo.modified
-          end,
-          provider = " ",
-          hl = item_hl,
-        },
-        start_right_divider,
-      }
-
       local mode_names = {
         n = "NORMAL",
         no = "O-PENDING",
@@ -182,6 +93,118 @@ return {
         r = colors.red,
         ["!"] = colors.red,
         t = colors.green,
+      }
+
+      local function stl_escape(str)
+        if type(str) ~= "string" then
+          return str
+        end
+        return str:gsub("%%", "%%%%")
+      end
+
+      local function filepath_function()
+        local path = vim.fn.expand "%:~:.:h"
+        path = stl_escape(path)
+        if path == "" or path == "." then
+          return ""
+        end
+        path = path:gsub("/", " " .. icons.separator .. " ")
+        return path .. " " .. icons.separator
+      end
+
+      local file_name = {
+        init = function(self)
+          self.filename = vim.api.nvim_buf_get_name(0)
+          self.mode = vim.fn.mode(1)
+        end,
+        {
+          provider = function()
+            local filepath = filepath_function()
+            if filepath == "" then
+              return ""
+            end
+            return " " .. filepath
+          end,
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          init = function(self)
+            local filename = vim.api.nvim_buf_get_name(0)
+            local extension = vim.fn.fnamemodify(filename, ":e")
+            self.icon, self.icon_color =
+              require("nvim-web-devicons").get_icon_color(
+                filename,
+                extension,
+                { default = true }
+              )
+          end,
+          provider = function(self)
+            return " " .. self.icon .. " "
+          end,
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          provider = function()
+            local filename = vim.fn.expand "%:t"
+            if filename == "" then
+              return "No Name"
+            end
+            return filename
+          end,
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          condition = function()
+            if should_be_disabled() then
+              return false
+            end
+            return vim.bo.modified
+          end,
+          provider = " " .. icons.modified,
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          condition = function()
+            if should_be_disabled() then
+              return false
+            end
+            return not vim.bo.modifiable or vim.bo.readonly
+          end,
+          provider = " " .. icons.readonly,
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          condition = function()
+            return not vim.bo.modified
+          end,
+          provider = " ",
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { bg = mode_colors[mode], fg = colors.base, bold = true }
+          end,
+        },
+        {
+          provider = "",
+          hl = function(self)
+            local mode = self.mode:sub(1, 1)
+            return { fg = mode_colors[mode] }
+          end,
+        },
       }
 
       local vi_mode = {
