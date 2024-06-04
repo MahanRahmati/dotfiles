@@ -17,6 +17,7 @@ fish_config theme choose "Catppuccin Mocha"
 # ----------------------------------------------------------------------
 fish_add_path .local/bin
 fish_add_path /usr/local/bin/
+fish_add_path .local/share/go/bin/
 
 # ----------------------------------------------------------------------
 # --                               XDG                                --
@@ -24,6 +25,8 @@ fish_add_path /usr/local/bin/
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x XDG_CACHE_HOME $HOME/.cache
 set -x XDG_DATA_HOME $HOME/.local/share
+set -x GOPATH $HOME/.local/share/go
+set -x GOMODCACHE $HOME/.cache/go/mod
 
 # ----------------------------------------------------------------------
 # --                              Neovim                              --
