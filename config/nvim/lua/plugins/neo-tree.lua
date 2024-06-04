@@ -15,6 +15,7 @@ return {
       return {
         close_if_last_window = true,
         hide_root_node = true,
+        retain_hidden_root_indent = true,
         popup_border_style = "rounded",
         default_component_configs = {
           indent = {
