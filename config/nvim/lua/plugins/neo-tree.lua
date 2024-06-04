@@ -6,12 +6,15 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
+      "saifulapm/neotree-file-nesting-config",
     },
     cmd = "Neotree",
     opts = function()
       local icons = require "icons"
+      local nesting_rules = require("neotree-file-nesting-config").nesting_rules
       return {
         close_if_last_window = true,
+        hide_root_node = true,
         popup_border_style = "rounded",
         default_component_configs = {
           indent = {
@@ -54,9 +57,7 @@ return {
             end,
           },
         },
-        nesting_rules = {
-          ["dart"] = { "g.dart", "freezed.dart" },
-        },
+        nesting_rules = nesting_rules,
         filesystem = {
           filtered_items = {
             hide_dotfiles = false,
