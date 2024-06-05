@@ -233,6 +233,7 @@ return {
           },
         },
         vale_ls = {},
+        fish_lsp = {},
       }
 
       require("mason").setup {
