@@ -2,6 +2,10 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 100
+    end,
     opts = {
       spelling = { enabled = true },
       window = {
@@ -9,6 +13,7 @@ return {
       },
       layout = {
         align = "center",
+        height = { min = 4, max = 75 },
       },
     },
     config = function(_, opts)

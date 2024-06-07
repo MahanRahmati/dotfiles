@@ -111,9 +111,6 @@ vim.opt.tabstop = 2
 -- Enables 24-bit RGB color in the |TUI|.
 vim.opt.termguicolors = true
 
--- Time in milliseconds to wait for a mapped sequence to complete.
-vim.opt.timeoutlen = 100
-
 -- When on, the title of the window will be set to the value of 'titlestring'.
 vim.opt.title = true
 
