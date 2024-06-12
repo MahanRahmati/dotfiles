@@ -9,7 +9,7 @@
 {
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Catppuccin Latte - No Italics",
     "dark": "Catppuccin Macchiato"
   },
   "features": {
