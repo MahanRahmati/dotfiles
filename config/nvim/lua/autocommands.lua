@@ -89,3 +89,16 @@ autocmd({ "BufWritePre" }, {
     vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
   end,
 })
+
+-- Center cursor
+autocmd({ "CursorMoved", "CursorMovedI" }, {
+  desc = "Center cursor",
+  group = augroup("CenterCursor", { clear = true }),
+  callback = function()
+    local mode = vim.fn.mode(1)
+    if mode == "i" then
+      return
+    end
+    vim.cmd "normal! zz"
+  end,
+})

@@ -34,28 +34,6 @@ set(
 set("n", "<leader>/", "<cmd>norm gcc<CR>", { desc = "Comment" })
 set("v", "<leader>/", "<cmd>norm gc<CR>", { desc = "Comment" })
 
--- Center cursor
-set("n", "j", "jzz", { desc = "Down" })
-set("n", "<down>", "<down>zz", { desc = "Down" })
-set("n", "k", "kzz", { desc = "Up" })
-set("n", "<up>", "<up>zz", { desc = "Up" })
-set("n", "h", "hzz", { desc = "Left" })
-set("n", "<left>", "<left>zz", { desc = "Left" })
-set("n", "l", "lzz", { desc = "Right" })
-set("n", "<right>", "<right>zz", { desc = "Right" })
-set("n", "b", "bzz", { desc = "Previous word" })
-set("n", "e", "ezz", { desc = "Next end of word" })
-set("n", "w", "wzz", { desc = "Next word" })
-set("n", "G", "Gzz", { desc = "Last line" })
-set("n", "gg", "ggzz", { desc = "First line" })
-set("n", "n", "nzz", { desc = "Next" })
-set("n", "N", "Nzz", { desc = "Previous" })
-set("n", "p", "pzz", { desc = "Paste" })
-set("n", "dw", "dwzz", { desc = "Delete word" })
-set("n", "dd", "ddzz", { desc = "Delete line" })
-set("n", "yw", "ywzz", { desc = "Copy word" })
-set("n", "yy", "yyzz", { desc = "Copy line" })
-
 -- Smart deletion
 vim.keymap.set("n", "dd", function()
   if vim.api.nvim_get_current_line():match "^%s*$" then
