@@ -47,10 +47,10 @@ return {
               key = "c",
             },
             {
-              desc = icons.lazy .. " Lazy ",
+              desc = icons.lazy .. " Package Manager ",
               group = "@property",
               action = "Lazy",
-              key = "l",
+              key = "p",
             },
             {
               desc = icons.quit .. " Quit ",
