@@ -14,7 +14,10 @@ return {
         end,
       },
       "nvim-tree/nvim-web-devicons",
-      "barrett-ruth/telescope-http.nvim",
+      {
+        "barrett-ruth/telescope-http.nvim",
+        commit = "c24a43883a0f2c6f244ed1ecf5b66fdb9821a7ea",
+      },
       "benfowler/telescope-luasnip.nvim",
     },
     cmd = "Telescope",
