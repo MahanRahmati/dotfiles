@@ -306,7 +306,6 @@ return {
           self.hints = workspace_diagnostics(vim.diagnostic.severity.HINT)
           self.info = workspace_diagnostics(vim.diagnostic.severity.INFO)
         end,
-        condition = conditions.has_diagnostics,
         {
           condition = function(self)
             return self.errors + self.warnings + self.info + self.hints > 0
