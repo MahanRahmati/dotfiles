@@ -2,29 +2,30 @@ return {
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 100
-    end,
     opts = {
-      spelling = { enabled = true },
-      window = {
+      delay = 100,
+      win = {
+        height = { min = 4, max = 75 },
         border = "rounded",
+        title = false,
       },
       layout = {
         align = "center",
-        height = { min = 4, max = 75 },
+      },
+      icons = {
+        rules = false,
       },
     },
     config = function(_, opts)
       require("which-key").setup(opts)
 
       -- Document existing key chains
-      require("which-key").register {
-        ["<leader>f"] = { name = "Finder", _ = "which_key_ignore" },
-        ["<leader>g"] = { name = "Git", _ = "which_key_ignore" },
-        ["<leader>l"] = { name = "LSP", _ = "which_key_ignore" },
-        ["<leader>p"] = { name = "Package Manager", _ = "which_key_ignore" },
+      require("which-key").add {
+        { "<leader>f", group = "Finder" },
+        { "<leader>F", group = "Flutter" },
+        { "<leader>g", group = "Git" },
+        { "<leader>l", group = "LSP" },
+        { "<leader>p", group = "Package Manager" },
       }
     end,
   },
