@@ -69,6 +69,7 @@ return {
           TreesitterContextLineNumber = { fg = colors.surface2 },
           LineNr = { fg = colors.surface2 },
           CursorLineNr = { fg = colors.yellow },
+          FloatBorder = { fg = colors.yellow },
         }
       end,
       integrations = {
