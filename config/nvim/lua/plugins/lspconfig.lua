@@ -234,6 +234,9 @@ return {
         },
         vale_ls = {},
         fish_lsp = {},
+        harper_ls = {
+          settings = {},
+        },
       }
 
       require("mason").setup {
