@@ -1,6 +1,6 @@
 [
   {
-    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "context": "VimControl && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
       "space /": [
@@ -12,11 +12,10 @@
     }
   },
   {
-    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "context": "vim_mode == normal",
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
       "space w": "workspace::Save",
-      "space q": "pane::CloseActiveItem",
       "space c": "pane::CloseActiveItem",
       "space v": "pane::SplitRight",
       "space h": "pane::SplitDown",
@@ -28,40 +27,46 @@
       ],
       "space e": "workspace::ToggleLeftDock",
       "space z": "workspace::ToggleCenteredLayout",
-      // lsp
+      // Language Server Protocol
       "g d": "editor::GoToDefinition",
-      "g shift-d": "editor::GoToTypeDefinition",
+      "g shift-d": "editor::GoToDeclaration",
       "g r": "editor::FindAllReferences",
+      "g shift-i": "editor::GoToImplementation",
       "space l r": "editor::Rename",
       "space l a": "editor::ToggleCodeActions",
       "space a": "editor::ToggleCodeActions",
+      "space l f": "editor::Format",
       "space l d": "diagnostics::Deploy",
       "space l j": "editor::GoToDiagnostic",
       "space l k": "editor::GoToPrevDiagnostic",
-      "K": "editor::Hover",
-      // finders
+      "shift-k": "editor::Hover",
+      // Finders
       "space b": "tab_switcher::Toggle",
       "space f b": "tab_switcher::Toggle",
       "space f f": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
-      // terminal
+      // Terminal
       "space t": "terminal_panel::ToggleFocus",
       "space g g": [
         "workspace::SendKeystrokes",
         ": new center terminal enter lazygit space enter"
+      ],
+      // Center Cursor
+      "j": [
+        "workspace::SendKeystrokes",
+        "down z z"
+      ],
+      "k": [
+        "workspace::SendKeystrokes",
+        "up z z"
+      ],
+      // Flutter
+      "space shift-f r": [
+        "task::Spawn",
+        {
+          "task_name": "flutter run"
+        }
       ]
-    }
-  },
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
-    "bindings": {
-      // visual, visual line & visual block modes
-    }
-  },
-  {
-    "context": "Editor && vim_mode == insert && !menu",
-    "bindings": {
-      // put key-bindings here if you want them to work in insert mode
     }
   },
   {
