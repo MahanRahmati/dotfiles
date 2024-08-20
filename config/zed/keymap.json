@@ -82,5 +82,12 @@
       "tab": "editor::ContextMenuNext",
       "shift-tab": "editor::ContextMenuPrev"
     }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space e": "workspace::ToggleLeftDock",
+      "space f f": "file_finder::Toggle"
+    }
   }
 ]
