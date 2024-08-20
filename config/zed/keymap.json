@@ -49,7 +49,7 @@
       "space t": "terminal_panel::ToggleFocus",
       "space g g": [
         "workspace::SendKeystrokes",
-        ": new center terminal enter lazygit space enter"
+        ": new center terminal enter lazygit space && space exit enter"
       ],
       // Center Cursor
       "j": [
