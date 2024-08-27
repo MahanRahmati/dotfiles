@@ -222,20 +222,28 @@ return {
         },
         zls = {},
         marksman = {},
-        ltex = {
-          settings = {
-            ltex = {
-              language = "en-US",
-              dictionary = {
-                ["en-US"] = { "zig", "const", "TODO" },
-              },
-            },
-          },
-        },
         vale_ls = {},
         fish_lsp = {},
         harper_ls = {
-          settings = {},
+          settings = {
+            ["harper-ls"] = {
+              linters = {
+                spell_check = true,
+                spelled_numbers = false,
+                an_a = true,
+                sentence_capitalization = true,
+                unclosed_quotes = true,
+                wrong_quotes = false,
+                long_sentences = true,
+                repeated_words = true,
+                spaces = false,
+                matcher = true,
+                correct_number_suffix = true,
+                number_suffix_capitalization = true,
+                multiple_sequential_pronouns = true,
+              },
+            },
+          },
         },
       }
 
