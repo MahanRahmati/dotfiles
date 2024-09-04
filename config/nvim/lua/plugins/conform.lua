@@ -1,7 +1,8 @@
 return {
   {
     "stevearc/conform.nvim",
-    lazy = false,
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
         dart = { "dart_format" },
@@ -22,11 +23,11 @@ return {
         local ft = vim.bo[bufnr].filetype
         local slow = slow_filetypes[ft]
         if slow then
-          return { timeout_ms = 2000, lsp_fallback = true }
+          return { timeout_ms = 2000, lsp_format = "fallback" }
         end
-        return { timeout_ms = 500, lsp_fallback = true }
+        return { timeout_ms = 500, lsp_format = "fallback" }
       end,
-      format_after_save = { lsp_fallback = true },
+      format_after_save = { lsp_format = "fallback" },
       formatters = {
         prettier = {
           prepend_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
@@ -37,7 +38,7 @@ return {
       {
         "<leader>lf",
         function()
-          require("conform").format { async = true, lsp_fallback = true }
+          require("conform").format { async = true, lsp_format = "fallback" }
         end,
         mode = "",
         desc = "Format Buffer",
