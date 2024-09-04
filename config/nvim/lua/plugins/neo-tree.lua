@@ -81,6 +81,7 @@ return {
         "<leader>e",
         "<cmd>Neotree float reveal_force_cwd<cr>",
         desc = "File Explorer",
+        silent = true,
       },
     },
   },
