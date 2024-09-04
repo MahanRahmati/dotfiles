@@ -18,6 +18,7 @@ return {
         "vim",
         "vimdoc",
         "luadoc",
+        "query",
         -- Flutter
         "dart",
         "yaml",
@@ -28,6 +29,7 @@ return {
         "bash",
         -- Markdown
         "markdown",
+        "markdown_inline",
         -- Go
         "go",
         "gomod",
