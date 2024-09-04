@@ -1,5 +1,8 @@
 -- This option is a list of comma-separated names.
-vim.opt.clipboard = "unnamedplus"
+-- Schedule the setting after `UiEnter` because it can increase startup-time.
+vim.schedule(function()
+  vim.opt.clipboard = "unnamedplus"
+end)
 
 -- Number of screen lines to use for the command-line.
 vim.opt.cmdheight = 0
