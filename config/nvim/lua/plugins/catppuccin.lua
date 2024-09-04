@@ -70,6 +70,7 @@ return {
           LineNr = { fg = colors.surface2 },
           CursorLineNr = { fg = colors.yellow },
           FloatBorder = { fg = colors.yellow },
+          DashboardHeader = { fg = colors.green },
         }
       end,
       integrations = {
