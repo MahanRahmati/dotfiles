@@ -59,7 +59,7 @@ return {
           },
 
           -- Delay before showing clue window
-          delay = 400,
+          delay = 100,
 
           -- Keys to scroll inside the clue window
           scroll_down = "<C-d>",
