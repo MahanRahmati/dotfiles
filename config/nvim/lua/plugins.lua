@@ -40,6 +40,7 @@ require("lazy").setup({
   require "plugins/indent-blankline",
   require "plugins/lazydev",
   require "plugins/lspconfig",
+  require "plugins/mini-clue",
   require "plugins/neo-tree",
   require "plugins/notify",
   require "plugins/numb",
@@ -48,7 +49,6 @@ require("lazy").setup({
   require "plugins/toggleterm",
   require "plugins/treesitter",
   require "plugins/virt-column",
-  require "plugins/which-key",
 }, {
   ui = { border = "rounded" },
 })
