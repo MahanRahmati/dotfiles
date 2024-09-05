@@ -56,6 +56,7 @@ return {
           -- Floating window config
           config = {
             border = "rounded",
+            title = { { "", "MiniClueBorder" } },
           },
 
           -- Delay before showing clue window
