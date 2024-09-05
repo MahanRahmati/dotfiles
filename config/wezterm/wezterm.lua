@@ -9,7 +9,7 @@ return {
   },
   enable_tab_bar = false,
   font = wezterm.font("Hack Nerd Font", { weight = "Regular" }),
-  font_size = 16,
+  font_size = 17,
   keys = {
     {
       key = "t",
