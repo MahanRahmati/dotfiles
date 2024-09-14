@@ -8,6 +8,16 @@ return {
         event = "VeryLazy",
         opts = {
           detection_methods = { "pattern", "lsp" },
+          patterns = {
+            ".git",
+            "_darcs",
+            ".hg",
+            ".bzr",
+            ".svn",
+            "Makefile",
+            "package.json",
+            "lazy-lock.json",
+          },
         },
         config = function(_, opts)
           require("project_nvim").setup(opts)
