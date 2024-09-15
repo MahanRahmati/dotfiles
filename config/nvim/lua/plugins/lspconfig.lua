@@ -247,6 +247,10 @@ return {
             },
           },
         },
+        phpactor = {
+          filetypes = { "php", "blade" },
+        },
+        tailwindcss = {},
       }
 
       require("mason").setup {
@@ -265,6 +269,8 @@ return {
       vim.list_extend(ensure_installed, {
         "stylua", -- Used to format lua code
         "goimports", -- Used to format go code
+        "pint", -- Used to format php code
+        "shfmt", -- Used to format shell code
       })
       require("mason-tool-installer").setup {
         ensure_installed = ensure_installed,

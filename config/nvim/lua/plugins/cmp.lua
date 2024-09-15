@@ -30,6 +30,7 @@ return {
       }
 
       luasnip.config.setup {}
+      luasnip.filetype_extend("blade", { "html" })
 
       local has_words_before = function()
         unpack = unpack or table.unpack

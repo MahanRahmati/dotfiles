@@ -16,6 +16,8 @@ return {
         html = { "prettier" },
         go = { "goimports", "gofmt" },
         zig = { "zigfmt" },
+        php = { "pint" },
+        blade = { "blade-formatter" },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = function(bufnr)
