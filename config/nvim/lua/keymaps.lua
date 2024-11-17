@@ -36,3 +36,7 @@ set("n", "dd", function()
     return "dd"
   end
 end, { noremap = true, expr = true })
+
+-- Scroll up and down
+set("n", "<ScrollWheelUp>", "<C-y>", { desc = "Scroll Wheel Up" })
+set("n", "<ScrollWheelDown>", "<C-e>", { desc = "Scroll Wheel Down" })

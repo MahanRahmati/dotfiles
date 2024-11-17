@@ -25,7 +25,6 @@ require("lazy").setup({
   require "plugins/autopairs",
   require "plugins/bufdelete",
   require "plugins/catppuccin",
-  require "plugins/cinnamon",
   require "plugins/cmp",
   require "plugins/colorizer",
   require "plugins/conform",
