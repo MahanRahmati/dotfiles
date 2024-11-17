@@ -14,10 +14,11 @@ return {
         yaml = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
-        go = { "goimports", "gofmt" },
+        go = { "goimports", "gofmt", "golines" },
         zig = { "zigfmt" },
         php = { "pint" },
         blade = { "blade-formatter" },
+        python = { "black" },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = function(bufnr)
@@ -33,6 +34,9 @@ return {
       formatters = {
         prettier = {
           prepend_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+        },
+        golines = {
+          prepend_args = { "-m", "80" },
         },
       },
     },
