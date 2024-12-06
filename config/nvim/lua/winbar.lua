@@ -21,12 +21,13 @@ end
 function _G.get_file_icon()
   local filename = vim.api.nvim_buf_get_name(0)
   local extension = vim.fn.fnamemodify(filename, ":e")
-  local icon, _ = require("nvim-web-devicons").get_icon_color(
-    filename,
-    extension,
-    { default = true }
-  )
-  return icon .. " "
+  local ok, devicons = pcall(require, "nvim-web-devicons")
+  if not ok then
+    return ""
+  end
+  local icon, _ =
+    devicons.get_icon_color(filename, extension, { default = true })
+  return (icon and icon .. " ") or ""
 end
 
 function _G.get_filename()
