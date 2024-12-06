@@ -1,3 +1,7 @@
+if vim.g.lazy_did_setup then
+  return {}
+end
+
 local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -21,33 +25,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  require "plugins/autopairs",
-  require "plugins/bufdelete",
-  require "plugins/catppuccin",
-  require "plugins/cmp",
-  require "plugins/colorizer",
-  require "plugins/conform",
-  require "plugins/dashboard-nvim",
-  require "plugins/devicons-auto-colors",
-  require "plugins/dressing",
-  require "plugins/fidget",
-  require "plugins/flutter-tools",
-  require "plugins/gitsigns",
-  require "plugins/illuminate",
-  require "plugins/indent-blankline",
-  require "plugins/lazydev",
-  require "plugins/lspconfig",
-  require "plugins/mini-clue",
-  require "plugins/neo-tree",
-  require "plugins/notify",
-  require "plugins/numb",
-  require "plugins/sg",
-  require "plugins/telescope",
-  require "plugins/toggleterm",
-  require "plugins/treesitter",
-  require "plugins/virt-column",
-}, {
+require("lazy").setup("plugins", {
   ui = { border = "rounded" },
 })
 
