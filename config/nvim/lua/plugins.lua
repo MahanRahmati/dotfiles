@@ -34,7 +34,6 @@ require("lazy").setup({
   require "plugins/fidget",
   require "plugins/flutter-tools",
   require "plugins/gitsigns",
-  require "plugins/heirline",
   require "plugins/illuminate",
   require "plugins/indent-blankline",
   require "plugins/lazydev",
