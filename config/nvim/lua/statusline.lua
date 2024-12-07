@@ -72,7 +72,7 @@ function _G.get_git_info()
 
   local status_info = #status > 0 and table.concat(status, " ") .. " " or ""
 
-  return branch_info .. status_info
+  return branch_info .. " " .. status_info
 end
 
 vim.api.nvim_set_hl(0, "SLDiagnosticError", { fg = colors.red, bold = true })
@@ -182,6 +182,12 @@ vim.opt.statusline = table.concat {
 }
 
 vim.api.nvim_create_autocmd("DiagnosticChanged", {
+  callback = function()
+    vim.cmd "redrawstatus"
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePost", {
   callback = function()
     vim.cmd "redrawstatus"
   end,
