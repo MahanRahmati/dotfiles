@@ -17,3 +17,6 @@
 
 [zed.files]
 "config/zed" = "~/.config/zed"
+
+[ghostty.files]
+"config/ghostty" = "~/.config/ghostty"
