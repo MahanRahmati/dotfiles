@@ -5,7 +5,7 @@ return {
   check_for_updates = false,
   color_scheme = "Catppuccin Mocha",
   colors = {
-    background = "#0E1116",
+    background = "#080808",
   },
   enable_tab_bar = false,
   font = wezterm.font("Hack Nerd Font", { weight = "Regular" }),
