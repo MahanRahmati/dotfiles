@@ -58,6 +58,8 @@ return {
   warn = " ",
   info = " ",
   hint = "󰌵 ",
+  debug = " ",
+  trace = " ",
   readonly = "",
   package_installed = " ",
   package_pending = " ",
