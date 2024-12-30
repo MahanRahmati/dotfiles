@@ -1,11 +1,11 @@
 return {
   {
-    "akinsho/flutter-tools.nvim",
+    "nvim-flutter/flutter-tools.nvim",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
       {
-        "akinsho/pubspec-assist.nvim",
+        "nvim-flutter/pubspec-assist.nvim",
         event = "BufRead pubspec.yaml",
         opts = {},
       },
@@ -26,8 +26,6 @@ return {
         color = {
           enabled = true,
         },
-        -- on_attach = on_attach,
-        -- capabilities = capabilities,
         settings = {
           showTodos = true,
           completeFunctionCalls = true,

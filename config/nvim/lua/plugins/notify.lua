@@ -13,7 +13,7 @@ return {
           TRACE = icons.trace,
           WARN = icons.warn,
         },
-        render = "wrapped-default",
+        render = "wrapped-compact",
         max_width = 42,
         timeout = 3000,
         top_down = false,
