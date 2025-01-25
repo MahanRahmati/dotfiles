@@ -23,6 +23,11 @@ vim.opt.expandtab = true
 -- File-content encoding for the current buffer.
 vim.opt.fileencoding = "utf-8"
 
+-- Disable the indicator of empty lines at the end of a buffer
+vim.opt.fillchars:append {
+  eob = " ",
+}
+
 -- This is a sequence of letters which describes how automatic formatting is to
 -- be done
 vim.opt.formatoptions:remove { "c", "r", "o" }
