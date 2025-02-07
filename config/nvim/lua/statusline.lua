@@ -31,10 +31,6 @@ function _G.get_mode()
   return string.format("%%#%s#", hl_group) .. " " .. icons.mode .. " "
 end
 
-vim.api.nvim_set_hl(0, "SLGitAdd", { fg = colors.green, bold = true })
-vim.api.nvim_set_hl(0, "SLGitChange", { fg = colors.yellow, bold = true })
-vim.api.nvim_set_hl(0, "SLGitDelete", { fg = colors.red, bold = true })
-
 function _G.get_git_info()
   local ok, _ = pcall(require, "gitsigns")
   if not ok then
@@ -47,32 +43,10 @@ function _G.get_git_info()
   end
 
   local branch = signs.head
-  local status = {}
 
   local branch_info = branch and (icons.branch .. " " .. branch .. " ") or ""
 
-  if signs.added and signs.added > 0 then
-    table.insert(
-      status,
-      "%#SLGitAdd#" .. icons.added .. signs.added .. "%#StatusLine#"
-    )
-  end
-  if signs.changed and signs.changed > 0 then
-    table.insert(
-      status,
-      "%#SLGitChange#" .. icons.modified .. signs.changed .. "%#StatusLine#"
-    )
-  end
-  if signs.removed and signs.removed > 0 then
-    table.insert(
-      status,
-      "%#SLGitDelete#" .. icons.removed .. signs.removed .. "%#StatusLine#"
-    )
-  end
-
-  local status_info = #status > 0 and table.concat(status, " ") .. " " or ""
-
-  return branch_info .. " " .. status_info
+  return branch_info
 end
 
 vim.api.nvim_set_hl(0, "SLDiagnosticError", { fg = colors.red, bold = true })
@@ -173,10 +147,9 @@ end
 vim.opt.statusline = table.concat {
   "%{%v:lua.get_mode()%} ",
   "%#StatusLine#",
-  "%{%v:lua.get_git_info()%}",
-  " ",
-  "%=",
+  "%{%v:lua.get_git_info()%} ",
   "%{%v:lua.get_diagnostics()%}",
+  "%=",
   "%{%v:lua.get_location()%}",
   "%{%v:lua.get_progress()%}",
 }

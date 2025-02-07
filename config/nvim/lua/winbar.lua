@@ -25,8 +25,7 @@ function _G.get_file_icon()
   if not ok then
     return ""
   end
-  local icon, _ =
-    devicons.get_icon_color(filename, extension, { default = true })
+  local icon, _ = devicons.get_icon(filename, extension, { default = true })
   return (icon and icon .. " ") or ""
 end
 
@@ -53,6 +52,47 @@ function _G.get_readonly()
 end
 
 vim.api.nvim_set_hl(0, "WinBarSearchCount", { fg = colors.yellow })
+
+vim.api.nvim_set_hl(0, "SLGitAdd", { fg = colors.green, bold = true })
+vim.api.nvim_set_hl(0, "SLGitChange", { fg = colors.yellow, bold = true })
+vim.api.nvim_set_hl(0, "SLGitDelete", { fg = colors.red, bold = true })
+
+function _G.get_git()
+  local ok, _ = pcall(require, "gitsigns")
+  if not ok then
+    return ""
+  end
+
+  local signs = vim.b.gitsigns_status_dict
+  if not signs then
+    return ""
+  end
+
+  local status = {}
+
+  if signs.added and signs.added > 0 then
+    table.insert(
+      status,
+      "%#SLGitAdd#" .. icons.added .. signs.added .. "%#StatusLine#"
+    )
+  end
+  if signs.changed and signs.changed > 0 then
+    table.insert(
+      status,
+      "%#SLGitChange#" .. icons.modified .. signs.changed .. "%#StatusLine#"
+    )
+  end
+  if signs.removed and signs.removed > 0 then
+    table.insert(
+      status,
+      "%#SLGitDelete#" .. icons.removed .. signs.removed .. "%#StatusLine#"
+    )
+  end
+
+  local status_info = #status > 0 and table.concat(status, " ") .. " " or ""
+
+  return status_info
+end
 
 function _G.get_search_count()
   if vim.v.hlsearch == 0 then
@@ -100,6 +140,7 @@ function _G.get_winbar()
     " %{%v:lua.get_readonly()%}",
     "%=",
     " %{%v:lua.get_search_count()%}",
+    " %{%v:lua.get_git()%}",
   }
 end
 
