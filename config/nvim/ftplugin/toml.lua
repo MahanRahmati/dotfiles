@@ -1,6 +1,6 @@
 local conform_ok, conform = pcall(require, "conform")
 if conform_ok then
-  conform.formatters_by_ft.sql = { "sqlfluff" }
+  conform.formatters_by_ft.toml = { "taplo" }
 end
 
 local mason_ok, _ = pcall(require, "mason")
@@ -10,8 +10,7 @@ if mason_ok then
   if mason_tool_installer_ok then
     mason_tool_installer.setup {
       ensure_installed = {
-        "sqls",
-        "sqlfluff",
+        "taplo",
       },
     }
     vim.cmd "MasonToolsInstall"
