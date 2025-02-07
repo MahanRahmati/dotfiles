@@ -13,30 +13,8 @@ return {
     cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
     opts = {
       ensure_installed = {
-        -- Neovim
-        "lua",
         "vim",
         "vimdoc",
-        "luadoc",
-        "query",
-        -- Flutter
-        "dart",
-        "yaml",
-        -- Json
-        "json",
-        "jsonc",
-        -- Shell
-        "bash",
-        -- Markdown
-        "markdown",
-        "markdown_inline",
-        -- Go
-        "go",
-        "gomod",
-        "gowork",
-        "gosum",
-        -- Zig
-        "zig",
       },
       highlight = { enable = true },
       indent = { enable = true },

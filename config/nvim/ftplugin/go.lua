@@ -21,3 +21,19 @@ if mason_ok then
     vim.cmd "MasonToolsInstall"
   end
 end
+
+local treesitter_ok, parsers = pcall(require, "nvim-treesitter.parsers")
+if treesitter_ok then
+  if not parsers.has_parser "go" then
+    vim.cmd "TSInstall go"
+  end
+  if not parsers.has_parser "gomod" then
+    vim.cmd "TSInstall gomod"
+  end
+  if not parsers.has_parser "gosum" then
+    vim.cmd "TSInstall gosum"
+  end
+  if not parsers.has_parser "gowork" then
+    vim.cmd "TSInstall gowork"
+  end
+end
