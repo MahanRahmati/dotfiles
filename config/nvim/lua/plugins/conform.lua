@@ -5,20 +5,6 @@ return {
     cmd = { "ConformInfo" },
     opts = {
       formatters_by_ft = {
-        dart = { "dart_format" },
-        fish = { "fish_indent" },
-        json = { "prettier" },
-        lua = { "stylua" },
-        markdown = { "prettier" },
-        sh = { "shfmt" },
-        yaml = { "prettier" },
-        css = { "prettier" },
-        html = { "prettier" },
-        go = { "goimports", "gofmt", "golines" },
-        zig = { "zigfmt" },
-        php = { "pint" },
-        blade = { "blade-formatter" },
-        python = { "black" },
         ["*"] = { "squeeze_blanks" },
       },
       format_on_save = function(bufnr)
@@ -31,14 +17,6 @@ return {
         return { timeout_ms = 500, lsp_format = "fallback" }
       end,
       format_after_save = { lsp_format = "fallback" },
-      formatters = {
-        prettier = {
-          prepend_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
-        },
-        golines = {
-          prepend_args = { "-m", "80" },
-        },
-      },
     },
     keys = {
       {
