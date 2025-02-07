@@ -60,7 +60,6 @@ vim.opt.mousescroll = "ver:3,hor:0"
 vim.opt.number = true
 
 -- Minimal number of columns to use for the line number.
--- TODO: Add logic to switch 20 and 4.
 vim.opt.numberwidth = 4
 
 -- Maximum number of items to show in the popup menu.
@@ -83,7 +82,7 @@ vim.opt.shiftwidth = 2
 -- messages.
 vim.opt.shortmess:append "c"
 
--- If in Insert, Replace or Visual mode put a message on the last line.
+-- If in Insert, Replace, or Visual mode put a message on the last line.
 vim.opt.showmode = false
 
 -- Never display the line with tab page labels.
