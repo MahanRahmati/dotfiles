@@ -5,6 +5,11 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     event = "VeryLazy",
-    opts = {},
+    opts = function()
+      local theme_colors = require("catppuccin.palettes").get_palette "mocha"
+      return {
+        colors = theme_colors,
+      }
+    end,
   },
 }
