@@ -26,7 +26,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins", {
-  ui = { border = "rounded" },
+  ui = {
+    size = { width = 1, height = 1 },
+    border = "rounded",
+  },
 })
 
 vim.keymap.set("n", "<leader>pc", "<cmd>Lazy check<CR>", { desc = "Check" })
