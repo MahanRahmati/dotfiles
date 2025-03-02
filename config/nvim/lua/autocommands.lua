@@ -17,7 +17,7 @@ autocmd({ "FileType" }, {
   end,
 })
 
--- Set wrap in markdown and gitcommit
+-- Set wrap in Markdown and gitcommit
 autocmd({ "FileType" }, {
   desc = "Set wrap in markdown and gitcommit",
   group = augroup("wrap-for-markdown-and-gitcommit", { clear = true }),
