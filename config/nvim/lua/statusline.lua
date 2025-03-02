@@ -178,7 +178,7 @@ function _G.get_dart_version()
       version_text
     )
   elseif version_text ~= "" then
-    return icons.dart .. version_text .. " "
+    return "Dart " .. version_text .. " "
   end
 
   vim.schedule(function()
