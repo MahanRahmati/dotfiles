@@ -116,6 +116,86 @@ local function selectioncount()
   end
 end
 
+local go_version_cache = nil
+
+function _G.get_go_version()
+  if vim.bo.filetype ~= "go" then
+    return ""
+  end
+
+  local icon, icon_hl
+  local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
+  if devicons_ok then
+    icon, icon_hl = devicons.get_icon_by_filetype "go"
+  end
+
+  local version_text = go_version_cache or ""
+  if version_text ~= "" and icon then
+    return string.format(
+      "%%#%s#%s%%#StatusLine# %s ",
+      icon_hl,
+      icon,
+      version_text
+    )
+  elseif version_text ~= "" then
+    return "Go " .. version_text .. " "
+  end
+
+  vim.schedule(function()
+    local handle = io.popen "go version"
+    if handle then
+      local result = handle:read "*a"
+      handle:close()
+      go_version_cache = result:match "go(%d+%.%d+%.%d+)"
+      if go_version_cache then
+        vim.cmd "redrawstatus"
+      end
+    end
+  end)
+
+  return ""
+end
+
+local dart_version_cache = nil
+
+function _G.get_dart_version()
+  if vim.bo.filetype ~= "dart" then
+    return ""
+  end
+
+  local icon, icon_hl
+  local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
+  if devicons_ok then
+    icon, icon_hl = devicons.get_icon_by_filetype "dart"
+  end
+
+  local version_text = dart_version_cache or ""
+  if version_text ~= "" and icon then
+    return string.format(
+      "%%#%s#%s%%#StatusLine# %s ",
+      icon_hl,
+      icon,
+      version_text
+    )
+  elseif version_text ~= "" then
+    return icons.dart .. version_text .. " "
+  end
+
+  vim.schedule(function()
+    local handle = io.popen "dart --version 2>&1"
+    if handle then
+      local result = handle:read "*a"
+      handle:close()
+      dart_version_cache = result:match "Dart SDK version: (%d+%.%d+%.%d+)"
+      if dart_version_cache then
+        vim.cmd "redrawstatus"
+      end
+    end
+  end)
+
+  return ""
+end
+
 function _G.get_location()
   local cursor = vim.fn.line "."
   local column = vim.fn.virtcol "."
@@ -150,6 +230,8 @@ vim.opt.statusline = table.concat {
   "%{%v:lua.get_git_info()%} ",
   "%{%v:lua.get_diagnostics()%}",
   "%=",
+  "%{%v:lua.get_go_version()%}",
+  "%{%v:lua.get_dart_version()%}",
   "%{%v:lua.get_location()%}",
   "%{%v:lua.get_progress()%}",
 }
