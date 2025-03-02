@@ -49,79 +49,10 @@ return {
       "FlutterRestart",
       "FlutterRun",
       "FlutterQuit",
+      "FlutterLogToggle",
     },
     config = function(_, opts)
       require("flutter-tools").setup(opts)
-
-      local ui = require "flutter-tools.ui"
-      local Popup = require "nui.popup"
-      local event = require("nui.utils.autocmd").event
-
-      ---@diagnostic disable-next-line: duplicate-set-field
-      ui.open_win = function(options, on_open)
-        local bufnr = vim.api.nvim_create_buf(false, true)
-        vim.api.nvim_buf_set_name(
-          bufnr,
-          options.filename or "__Flutter_Tools_Unknown__"
-        )
-        vim.bo[bufnr].filetype = options.filetype
-        vim.bo[bufnr].swapfile = false
-        vim.bo[bufnr].buftype = "nofile"
-        vim.bo[bufnr].buflisted = false
-
-        local popup = Popup {
-          enter = true,
-          focusable = true,
-          border = {
-            style = "rounded",
-          },
-          position = vim.o.lines - 15 - 4,
-          size = {
-            width = vim.o.columns,
-            height = 15,
-          },
-          buf_options = {
-            modifiable = true,
-            readonly = false,
-          },
-          bufnr = bufnr,
-        }
-
-        local first_open = true
-
-        local function toggle_popup()
-          if popup.winid then
-            popup:unmount()
-          else
-            local current_win = vim.api.nvim_get_current_win()
-            popup:mount()
-            if on_open then
-              on_open(bufnr, popup.winid)
-            end
-            if first_open then
-              vim.api.nvim_set_current_win(current_win)
-              first_open = false
-            else
-              vim.api.nvim_set_current_win(popup.winid)
-            end
-          end
-        end
-
-        popup:on(event.BufWinLeave, function()
-          popup:unmount()
-        end)
-
-        vim.keymap.set(
-          "n",
-          "<leader>Ft",
-          toggle_popup,
-          { desc = "Toggle Dev Logs" }
-        )
-
-        if options.open_cmd then
-          toggle_popup()
-        end
-      end
     end,
     keys = {
       { "<leader>FD", "<cmd>FlutterDevTools<CR>", desc = "Dev Tools" },
@@ -132,6 +63,7 @@ return {
       { "<leader>FR", "<cmd>FlutterRestart<CR>", desc = "Restart" },
       { "<leader>Fr", "<cmd>FlutterRun<CR>", desc = "Run" },
       { "<leader>Fq", "<cmd>FlutterQuit<CR>", desc = "Quit" },
+      { "<leader>Ft", "<cmd>FlutterLogToggle<CR>", desc = "Log Toggle" },
     },
   },
 }
