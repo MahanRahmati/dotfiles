@@ -206,7 +206,6 @@ return {
                 rangeVariableTypes = true,
               },
               analyses = {
-                fieldalignment = true,
                 nilness = true,
                 unusedparams = true,
                 unusedwrite = true,
@@ -224,8 +223,6 @@ return {
         },
         zls = {},
         marksman = {},
-        vale_ls = {},
-        fish_lsp = {},
         harper_ls = {
           settings = {
             ["harper-ls"] = {
@@ -247,16 +244,18 @@ return {
             },
           },
         },
-        phpactor = {
-          filetypes = { "php", "blade" },
+        sqls = {},
+        sourcekit = {
+          cmd = { "/usr/bin/sourcekit-lsp" },
         },
-        tailwindcss = {},
       }
 
       require("mason").setup {
         ui = {
           border = "rounded",
           max_concurrent_installers = 4,
+          width = 1.0,
+          height = 1.0,
           icons = {
             package_installed = icons.package_installed,
             package_pending = icons.package_pending,
@@ -265,15 +264,8 @@ return {
         },
       }
 
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
-        "stylua", -- Used to format lua code
-        "goimports", -- Used to format go code
-        "pint", -- Used to format php code
-        "shfmt", -- Used to format shell code
-      })
       require("mason-tool-installer").setup {
-        ensure_installed = ensure_installed,
+        ensure_installed = {},
       }
 
       require("mason-lspconfig").setup {
