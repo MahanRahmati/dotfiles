@@ -16,6 +16,7 @@ if mason_ok then
         "goimports",
         "golines",
         "gopls",
+        "staticcheck",
       },
     }
     vim.cmd "MasonToolsInstall"
