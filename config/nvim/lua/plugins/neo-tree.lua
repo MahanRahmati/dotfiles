@@ -44,7 +44,7 @@ return {
           },
         },
         window = {
-          width = 40,
+          width = 42,
           auto_expand_width = true,
           popup = {
             position = { col = "1%", row = "2" },
