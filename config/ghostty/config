@@ -1,6 +1,6 @@
 # https://ghostty.org/docs/config/reference
 
-theme = cat-mocha
+theme = dark:cat-mocha,light:catppuccin-latte
 
 cursor-style = block
 cursor-style-blink = false

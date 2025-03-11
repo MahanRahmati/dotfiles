@@ -8,6 +8,7 @@
 require "options"
 require "autocommands"
 require "keymaps"
+require "theme"
 require "plugins"
 require "statusline"
 require "winbar"

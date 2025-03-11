@@ -6,7 +6,16 @@ return {
     },
     event = "VeryLazy",
     opts = function()
-      local theme_colors = require("catppuccin.palettes").get_palette "mocha"
+      local function get_theme()
+        if vim.g.theme_mode == "dark" then
+          return "mocha"
+        elseif vim.g.theme_mode == "light" then
+          return "latte"
+        end
+      end
+
+      local theme = get_theme()
+      local theme_colors = require("catppuccin.palettes").get_palette(theme)
       return {
         colors = theme_colors,
       }

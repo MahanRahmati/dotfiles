@@ -4,8 +4,17 @@ return {
     priority = 1000,
     opts = function()
       local colors = require "colors"
+
+      local function get_theme()
+        if vim.g.theme_mode == "dark" then
+          return "mocha"
+        elseif vim.g.theme_mode == "light" then
+          return "latte"
+        end
+      end
+
       return {
-        flavour = "mocha",
+        flavour = get_theme(),
         transparent_background = true,
         no_underline = true,
         color_overrides = {
@@ -21,8 +30,6 @@ return {
             WhichKey = { fg = c.blue },
             WhichKeyGroup = { fg = c.green },
             WhichKeyDesc = { fg = c.mauve },
-            TreesitterContext = { bg = "#242633" },
-            TreesitterContextLineNumber = { fg = c.surface2 },
             LineNr = { fg = c.surface2 },
             CursorLineNr = { fg = c.yellow },
             FloatBorder = { fg = c.yellow },
