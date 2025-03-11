@@ -10,7 +10,20 @@ set fish_greeting
 # ----------------------------------------------------------------------
 # --                              Theme                               --
 # ----------------------------------------------------------------------
-fish_config theme choose "Catppuccin Mocha"
+function get_ghostty_theme
+    set result (ghostty +show-config 2>/dev/null)
+    if string match -q "*background*=*#eff1f5*" -- $result
+        echo light
+    else
+        echo dark
+    end
+end
+
+if test (get_ghostty_theme) = light
+    fish_config theme choose "Catppuccin Latte"
+else
+    fish_config theme choose "Catppuccin Mocha"
+end
 
 # ----------------------------------------------------------------------
 # --                               Path                               --
