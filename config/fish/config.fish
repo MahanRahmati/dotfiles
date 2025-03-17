@@ -10,16 +10,16 @@ set fish_greeting
 # ----------------------------------------------------------------------
 # --                              Theme                               --
 # ----------------------------------------------------------------------
-function get_ghostty_theme
-    set result (ghostty +show-config 2>/dev/null)
-    if string match -q "*background*=*#eff1f5*" -- $result
-        echo light
-    else
+function get_macos_theme
+    set result (defaults read -g AppleInterfaceStyle 2>/dev/null)
+    if string match -q dark -- $result
         echo dark
+    else
+        echo light
     end
 end
 
-if test (get_ghostty_theme) = light
+if test (get_macos_theme) = light
     fish_config theme choose "Catppuccin Latte"
 else
     fish_config theme choose "Catppuccin Mocha"

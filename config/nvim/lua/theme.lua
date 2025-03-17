@@ -1,15 +1,15 @@
-local function get_ghostty_theme()
-  local handle = io.popen "ghostty +show-config"
+local function get_macos_theme()
+  local handle = io.popen "defaults read -g AppleInterfaceStyle"
   if handle then
     local result = handle:read "*a"
     handle:close()
 
-    if result:match "background%s*=%s*#eff1f5" then
-      return "light"
+    if result:match "Dark" then
+      return "dark"
     end
   end
 
-  return "dark"
+  return "light"
 end
 
-vim.g.theme_mode = get_ghostty_theme()
+vim.g.theme_mode = get_macos_theme()
