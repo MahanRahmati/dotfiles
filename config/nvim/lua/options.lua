@@ -14,6 +14,9 @@ vim.opt.colorcolumn = "80"
 -- A comma-separated list of options for Insert mode completion.
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
+-- Offers the user a dialog, from which a choice can be made.
+vim.opt.confirm = true
+
 -- Highlight the text line of the cursor with CursorLine |hl-CursorLine|.
 vim.opt.cursorline = true
 
