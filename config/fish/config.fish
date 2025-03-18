@@ -12,7 +12,7 @@ set fish_greeting
 # ----------------------------------------------------------------------
 function get_macos_theme
     set result (defaults read -g AppleInterfaceStyle 2>/dev/null)
-    if string match -q dark -- $result
+    if string match -q Dark -- $result
         echo dark
     else
         echo light
