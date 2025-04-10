@@ -108,7 +108,7 @@
     "dock": "left",
     "default_width": 360,
     "status_style": "icon",
-    "fallback_branch_name": "main",
+    "fallback_branch_name": "main"
   },
   "notification_panel": {
     "button": false,
@@ -143,7 +143,7 @@
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": false
+    "show_tab_bar_buttons": true
   },
   "tabs": {
     "git_status": true,
@@ -257,6 +257,19 @@
         "source.organizeImports": true,
         "source.fixAll": true
       }
+    }
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://localhost:11434",
+      "available_models": [
+        {
+          "name": "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K",
+          "display_name": "Qwen 2.5 coder 3B - 32K Token",
+          "max_tokens": 32768,
+          "keep_alive": "5m"
+        }
+      ]
     }
   },
   "prettier": {
