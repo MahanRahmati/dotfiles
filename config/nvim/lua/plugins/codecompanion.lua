@@ -4,10 +4,6 @@ return {
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-treesitter/nvim-treesitter",
-      {
-        "MeanderingProgrammer/render-markdown.nvim",
-        ft = { "markdown", "codecompanion" },
-      },
     },
     cmd = {
       "CodeCompanion",
@@ -19,6 +15,8 @@ return {
       display = {
         chat = {
           intro_message = "Press ? for options",
+          show_header_separator = false,
+          separator = "─",
           show_references = true,
           show_settings = false,
           show_token_count = true,
@@ -60,6 +58,9 @@ return {
           adapter = "qwen",
           inline = "qwen",
         },
+        cmd = {
+          adapter = "qwen",
+        },
       },
       adapters = {
         opts = {
@@ -67,20 +68,16 @@ return {
         },
         qwen = function()
           return require("codecompanion.adapters").extend("ollama", {
-            name = "Qwen 2.5 Coder: 3b (abliterate)",
+            name = "Qwen 2.5 Coder: 3b 32K context",
             schema = {
               model = {
-                default = "huihui_ai/qwen2.5-coder-abliterate:3b",
+                default = "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K",
               },
-            },
-          })
-        end,
-        deepseek = function()
-          return require("codecompanion.adapters").extend("ollama", {
-            name = "Deepseek R1: 7b (abliterated)",
-            schema = {
-              model = {
-                default = "huihui_ai/deepseek-r1-abliterated:latest",
+              num_ctx = {
+                default = 32768,
+              },
+              num_predict = {
+                default = -1,
               },
             },
           })
