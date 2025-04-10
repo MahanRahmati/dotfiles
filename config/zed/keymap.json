@@ -48,8 +48,11 @@
       // Terminal
       "space t": "terminal_panel::ToggleFocus",
       "space g g": [
-        "workspace::SendKeystrokes",
-        ": new center terminal enter lazygit space && space exit enter"
+        "task::Spawn",
+        {
+          "task_name": "Run Lazygit",
+          "reveal_target": "center"
+        }
       ],
       // Center Cursor
       "j": [

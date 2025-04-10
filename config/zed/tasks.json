@@ -38,5 +38,12 @@
     //         }
     //     }
     "shell": "system"
+  },
+  {
+    "label": "Run Lazygit",
+    "command": "lazygit",
+    "use_new_terminal": true,
+    "reveal_target": "center",
+    "hide": "on_success"
   }
 ]
