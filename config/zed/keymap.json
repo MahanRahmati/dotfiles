@@ -38,7 +38,7 @@
       "space l f": "editor::Format",
       "space l d": "diagnostics::Deploy",
       "space l j": "editor::GoToDiagnostic",
-      "space l k": "editor::GoToPrevDiagnostic",
+      "space l k": "editor::GoToPreviousDiagnostic",
       "shift-k": "editor::Hover",
       // Finders
       "space b": "tab_switcher::Toggle",
@@ -80,7 +80,7 @@
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
       "tab": "editor::ContextMenuNext",
-      "shift-tab": "editor::ContextMenuPrev"
+      "shift-tab": "editor::ContextMenuPrevious"
     }
   },
   {
