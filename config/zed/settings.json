@@ -69,7 +69,7 @@
   "autoscroll_on_clicks": false,
   "relative_line_numbers": true,
   "inlay_hints": {
-    "enabled": true
+    "enabled": false
   },
   "project_panel": {
     "button": true,
