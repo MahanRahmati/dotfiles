@@ -1,5 +1,8 @@
 local icons = require "icons"
-local colors = require "colors"
+
+local function highlight_setter(name, link)
+  vim.api.nvim_set_hl(0, name, { link = link, bold = true })
+end
 
 local mode_hl_groups = {
   n = "SLNormal",
@@ -17,13 +20,13 @@ local mode_hl_groups = {
   t = "SLTerminal",
 }
 
-vim.api.nvim_set_hl(0, "SLNormal", { fg = colors.blue, bold = true })
-vim.api.nvim_set_hl(0, "SLInsert", { fg = colors.green, bold = true })
-vim.api.nvim_set_hl(0, "SLVisual", { fg = colors.purple, bold = true })
-vim.api.nvim_set_hl(0, "SLCommand", { fg = colors.orange, bold = true })
-vim.api.nvim_set_hl(0, "SLSelect", { fg = colors.dark_red, bold = true })
-vim.api.nvim_set_hl(0, "SLReplace", { fg = colors.red, bold = true })
-vim.api.nvim_set_hl(0, "SLTerminal", { fg = colors.green, bold = true })
+highlight_setter("SLNormal", "Function")
+highlight_setter("SLInsert", "String")
+highlight_setter("SLVisual", "Statement")
+highlight_setter("SLCommand", "WarningMsg")
+highlight_setter("SLSelect", "Special")
+highlight_setter("SLReplace", "Error")
+highlight_setter("SLTerminal", "String")
 
 function _G.get_mode()
   local mode = vim.fn.mode()
@@ -49,10 +52,10 @@ function _G.get_git_info()
   return branch_info
 end
 
-vim.api.nvim_set_hl(0, "SLDiagnosticError", { fg = colors.red, bold = true })
-vim.api.nvim_set_hl(0, "SLDiagnosticWarn", { fg = colors.yellow, bold = true })
-vim.api.nvim_set_hl(0, "SLDiagnosticInfo", { fg = colors.blue, bold = true })
-vim.api.nvim_set_hl(0, "SLDiagnosticHint", { fg = colors.green, bold = true })
+highlight_setter("SLDiagnosticError", "DiagnosticError")
+highlight_setter("SLDiagnosticWarn", "DiagnosticWarn")
+highlight_setter("SLDiagnosticInfo", "DiagnosticInfo")
+highlight_setter("SLDiagnosticHint", "DiagnosticHint")
 
 local function get_diagnostics_type(severity)
   return #vim.diagnostic.get(nil, { severity = severity })
