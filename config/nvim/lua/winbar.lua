@@ -1,5 +1,8 @@
 local icons = require "icons"
-local colors = require "colors"
+
+local function highlight_setter(name, link)
+  vim.api.nvim_set_hl(0, name, { link = link, bold = true })
+end
 
 local function stl_escape(str)
   if type(str) ~= "string" then
@@ -51,11 +54,11 @@ function _G.get_readonly()
   return icons.readonly
 end
 
-vim.api.nvim_set_hl(0, "WinBarSearchCount", { fg = colors.yellow })
+highlight_setter("WinBarSearchCount", "WarningMsg")
 
-vim.api.nvim_set_hl(0, "SLGitAdd", { fg = colors.green, bold = true })
-vim.api.nvim_set_hl(0, "SLGitChange", { fg = colors.yellow, bold = true })
-vim.api.nvim_set_hl(0, "SLGitDelete", { fg = colors.red, bold = true })
+highlight_setter("SLGitAdd", "Added")
+highlight_setter("SLGitChange", "WarningMsg")
+highlight_setter("SLGitDelete", "Error")
 
 function _G.get_git()
   local ok, _ = pcall(require, "gitsigns")
