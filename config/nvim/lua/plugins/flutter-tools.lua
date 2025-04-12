@@ -1,6 +1,7 @@
 return {
   {
     "nvim-flutter/flutter-tools.nvim",
+    event = "BufRead pubspec.yaml",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "stevearc/dressing.nvim",
@@ -11,7 +12,6 @@ return {
       },
     },
     ft = "dart",
-    event = "BufRead pubspec.yaml",
     opts = {
       ui = {
         border = "rounded",

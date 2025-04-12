@@ -1,10 +1,10 @@
 return {
   {
     "rachartier/tiny-devicons-auto-colors.nvim",
+    event = "VeryLazy",
     dependencies = {
       "nvim-tree/nvim-web-devicons",
     },
-    event = "VeryLazy",
     opts = function()
       local function get_theme()
         if vim.g.theme_mode == "dark" then
