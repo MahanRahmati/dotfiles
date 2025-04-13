@@ -31,28 +31,6 @@ return {
           map("<leader>li", "<cmd>LspInfo<CR>", "Info")
           map("K", vim.lsp.buf.hover, "Hover Documentation")
 
-          -- Organize imports
-          vim.api.nvim_create_user_command("OrganizeImports", function(_)
-            vim.lsp.buf.code_action {
-              context = {
-                diagnostics = {},
-                only = { "source.organizeImports" },
-              },
-              apply = true,
-            }
-          end, {})
-
-          -- Fix all lint errors
-          vim.api.nvim_create_user_command("FixAll", function(_)
-            vim.lsp.buf.code_action {
-              context = {
-                diagnostics = {},
-                only = { "source.fixAll" },
-              },
-              apply = true,
-            }
-          end, {})
-
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
           -- When you move your cursor, the highlights will be cleared (the second autocommand).

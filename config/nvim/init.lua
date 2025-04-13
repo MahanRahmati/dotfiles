@@ -7,6 +7,7 @@
 
 require "options"
 require "autocommands"
+require "usercommands"
 require "keymaps"
 require "theme"
 require "plugins"
