@@ -135,6 +135,14 @@ return {
         mode = "v",
         desc = "Find",
       },
+      { "gd", "<cmd>Telescope lsp_definitions<CR>", desc = "Definition" },
+      { "gr", "<cmd>Telescope lsp_references<CR>", desc = "References" },
+      {
+        "gI",
+        "<cmd>Telescope lsp_implementations<CR>",
+        desc = "Implementations",
+      },
+      { "<leader>ld", "<cmd>Telescope diagnostics<CR>", desc = "Diagnostics" },
     },
   },
 }

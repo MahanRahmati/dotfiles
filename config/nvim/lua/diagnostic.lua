@@ -34,3 +34,10 @@ vim.diagnostic.config {
     prefix = "",
   },
 }
+
+vim.keymap.set("n", "<leader>lj", function()
+  vim.diagnostic.jump { count = 1, float = true }
+end, { desc = "Next Diagnostic" })
+vim.keymap.set("n", "<leader>lk", function()
+  vim.diagnostic.jump { count = -1, float = true }
+end, { desc = "Previous Diagnostic" })

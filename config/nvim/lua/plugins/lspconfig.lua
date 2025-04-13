@@ -24,19 +24,11 @@ return {
             vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
           end
 
-          local builtin = require "telescope.builtin"
-
-          map("gd", builtin.lsp_definitions, "Definition")
           map("gD", vim.lsp.buf.declaration, "Declaration")
-          map("gr", builtin.lsp_references, "References")
-          map("gI", builtin.lsp_implementations, "Implementations")
           map("<leader>lr", vim.lsp.buf.rename, "Rename")
           map("<leader>la", vim.lsp.buf.code_action, "Code Action")
           map("<leader>a", vim.lsp.buf.code_action, "Code Action")
           map("<leader>li", "<cmd>LspInfo<CR>", "Info")
-          map("<leader>ld", builtin.diagnostics, "Diagnostics")
-          map("<leader>lj", vim.diagnostic.goto_next, "Next Diagnostic")
-          map("<leader>lk", vim.diagnostic.goto_prev, "Previous Diagnostic")
           map("K", vim.lsp.buf.hover, "Hover Documentation")
 
           -- Organize imports
