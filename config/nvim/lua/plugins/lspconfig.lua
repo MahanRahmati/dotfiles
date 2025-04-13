@@ -3,9 +3,8 @@ return {
     "neovim/nvim-lspconfig",
     event = { "BufReadPre", "BufNewFile" },
     dependencies = {
-      "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
+      "saghen/blink.cmp",
     },
     config = function()
       local icons = require "icons"
@@ -71,7 +70,6 @@ return {
           map("<leader>la", vim.lsp.buf.code_action, "Code Action")
           map("<leader>a", vim.lsp.buf.code_action, "Code Action")
           map("<leader>li", "<cmd>LspInfo<CR>", "Info")
-          map("<leader>lm", "<cmd>Mason<CR>", "Mason")
           map("<leader>ld", builtin.diagnostics, "Diagnostics")
           map("<leader>lj", vim.diagnostic.goto_next, "Next Diagnostic")
           map("<leader>lk", vim.diagnostic.goto_prev, "Previous Diagnostic")
@@ -157,7 +155,7 @@ return {
       capabilities = vim.tbl_deep_extend(
         "force",
         capabilities,
-        require("cmp_nvim_lsp").default_capabilities()
+        require("blink.cmp").get_lsp_capabilities()
       )
 
       --  Add any additional override configuration in the following tables. Available keys are:
@@ -248,24 +246,6 @@ return {
         sourcekit = {
           cmd = { "/usr/bin/sourcekit-lsp" },
         },
-      }
-
-      require("mason").setup {
-        ui = {
-          border = "rounded",
-          max_concurrent_installers = 4,
-          width = 1.0,
-          height = 1.0,
-          icons = {
-            package_installed = icons.package_installed,
-            package_pending = icons.package_pending,
-            package_uninstalled = icons.package_uninstalled,
-          },
-        },
-      }
-
-      require("mason-tool-installer").setup {
-        ensure_installed = {},
       }
 
       require("mason-lspconfig").setup {
