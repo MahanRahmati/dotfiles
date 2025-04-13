@@ -41,9 +41,13 @@ return {
         end,
         integrations = {
           cmp = true,
+          blink_cmp = true,
+          dashboard = true,
+          fidget = true,
           gitsigns = true,
           illuminate = true,
           mason = true,
+          neotree = true,
           notify = true,
           telescope = true,
           treesitter = true,
