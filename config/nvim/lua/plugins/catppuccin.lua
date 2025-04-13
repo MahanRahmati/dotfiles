@@ -40,7 +40,6 @@ return {
           }
         end,
         integrations = {
-          cmp = true,
           blink_cmp = true,
           dashboard = true,
           fidget = true,
