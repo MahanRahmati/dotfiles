@@ -67,4 +67,7 @@ return {
   folder_filled = "",
   selection_caret = " ",
   separator = "",
+  bot = "",
+  copilot = "",
+  smiley = "",
 }
