@@ -69,7 +69,7 @@ return {
           },
           menu = {
             border = "rounded",
-            winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
+            winhighlight = "Normal:BlinkCmpMenu,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
             scrollbar = false,
             draw = {
               treesitter = { "lsp" },
@@ -98,7 +98,7 @@ return {
             auto_show = true,
             window = {
               border = "rounded",
-              winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder,EndOfBuffer:BlinkCmpDoc",
+              winhighlight = "Normal:BlinkCmpDoc,FloatBorder:FloatBorder,EndOfBuffer:BlinkCmpDoc",
               scrollbar = false,
             },
           },
@@ -110,7 +110,7 @@ return {
           enabled = true,
           window = {
             border = "rounded",
-            winhighlight = "Normal:BlinkCmpSignatureHelp,FloatBorder:BlinkCmpSignatureHelpBorder",
+            winhighlight = "Normal:BlinkCmpSignatureHelp,FloatBorder:FloatBorder",
             scrollbar = false,
             treesitter_highlighting = true,
             show_documentation = true,
