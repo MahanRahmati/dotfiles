@@ -120,6 +120,7 @@ return {
         sources = {
           default = {
             "codecompanion",
+            "minuet",
             "lsp",
             "lazydev",
             "snippets",
@@ -132,10 +133,23 @@ return {
             codecompanion = {
               name = "CodeCompanion",
               module = "codecompanion.providers.completion.blink",
-              score_offset = 106,
+              score_offset = 107,
               transform_items = function(_, items)
                 for _, item in ipairs(items) do
                   item.kind_icon = icons.bot
+                end
+                return items
+              end,
+            },
+            minuet = {
+              name = "minuet",
+              module = "minuet.blink",
+              score_offset = 106,
+              async = true,
+              timeout_ms = 3000,
+              transform_items = function(_, items)
+                for _, item in ipairs(items) do
+                  item.kind_icon = icons.copilot
                 end
                 return items
               end,
