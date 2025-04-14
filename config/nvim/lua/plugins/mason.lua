@@ -4,6 +4,7 @@ return {
     dependencies = {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
+    cmd = "Mason",
     opts = function()
       local icons = require "icons"
       return {
