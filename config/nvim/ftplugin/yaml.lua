@@ -8,9 +8,8 @@ end
 
 local mason_ok, _ = pcall(require, "mason")
 if mason_ok then
-  local mason_tool_installer_ok, mason_tool_installer =
-    pcall(require, "mason-tool-installer")
-  if mason_tool_installer_ok then
+  local ok, mason_tool_installer = pcall(require, "mason-tool-installer")
+  if ok then
     mason_tool_installer.setup {
       ensure_installed = {
         "yaml-language-server",
