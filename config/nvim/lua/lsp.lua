@@ -16,13 +16,15 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
-vim.lsp.enable "lua_ls"
-vim.lsp.enable "bashls"
-vim.lsp.enable "jsonls"
-vim.lsp.enable "yamlls"
-vim.lsp.enable "gopls"
-vim.lsp.enable "zls"
-vim.lsp.enable "marksman"
-vim.lsp.enable "harper_ls"
-vim.lsp.enable "sqls"
-vim.lsp.enable "sourcekit"
+vim.lsp.enable {
+  "lua_ls",
+  "bashls",
+  "jsonls",
+  "yamlls",
+  "gopls",
+  "zls",
+  "marksman",
+  "harper_ls",
+  "sqls",
+  "sourcekit",
+}
