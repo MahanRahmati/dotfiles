@@ -1,36 +1,11 @@
 return {
   {
     "neovim/nvim-lspconfig",
-    event = { "BufReadPre", "BufNewFile" },
-    config = function()
-      vim.api.nvim_create_autocmd("LspAttach", {
-        group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
-        callback = function(event)
-          local map = function(keys, func, desc)
-            vim.keymap.set("n", keys, func, { buffer = event.buf, desc = desc })
-          end
-
-          map("gD", vim.lsp.buf.declaration, "Declaration")
-          map("<leader>lr", vim.lsp.buf.rename, "Rename")
-          map("<leader>la", vim.lsp.buf.code_action, "Code Action")
-          map("<leader>a", vim.lsp.buf.code_action, "Code Action")
-          map("<leader>li", "<cmd>checkhealth vim.lsp<CR>", "Info")
-          map("K", function()
-            vim.lsp.buf.hover { border = "rounded" }
-          end, "Hover Documentation")
-        end,
-      })
-
-      vim.lsp.enable "lua_ls"
-      vim.lsp.enable "bashls"
-      vim.lsp.enable "jsonls"
-      vim.lsp.enable "yamlls"
-      vim.lsp.enable "gopls"
-      vim.lsp.enable "zls"
-      vim.lsp.enable "marksman"
-      vim.lsp.enable "harper_ls"
-      vim.lsp.enable "sqls"
-      vim.lsp.enable "sourcekit"
+    lazy = true,
+    init = function()
+      local lspConfigPath = require("lazy.core.config").options.root
+        .. "/nvim-lspconfig"
+      vim.opt.runtimepath:append(lspConfigPath)
     end,
   },
 }
