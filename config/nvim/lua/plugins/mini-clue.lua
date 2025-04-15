@@ -2,7 +2,7 @@ return {
   {
     "echasnovski/mini.clue",
     version = "*",
-    event = "VeryLazy",
+    event = { "BufReadPost", "BufNewFile" },
     config = function()
       local miniclue = require "mini.clue"
       miniclue.setup {
