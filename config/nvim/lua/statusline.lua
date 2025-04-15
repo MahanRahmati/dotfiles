@@ -151,16 +151,18 @@ vim.api.nvim_create_autocmd({ "User" }, {
   end,
 })
 
-local minuet_timer = vim.loop.new_timer()
-minuet_timer:start(
-  0,
-  100,
-  vim.schedule_wrap(function()
-    if minuet_processing then
-      vim.cmd "redrawstatus"
-    end
-  end)
-)
+local minuet_timer = vim.uv.new_timer()
+if minuet_timer ~= nil then
+  minuet_timer:start(
+    0,
+    100,
+    vim.schedule_wrap(function()
+      if minuet_processing then
+        vim.cmd "redrawstatus"
+      end
+    end)
+  )
+end
 
 local function selectioncount()
   local nvim_mode = vim.fn.mode(true)
