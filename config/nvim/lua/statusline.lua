@@ -98,6 +98,70 @@ function _G.get_diagnostics()
   return #parts > 0 and table.concat(parts, " ") .. " " or ""
 end
 
+local minuet_processing = false
+local minuet_spinner_index = 1
+local ollama_running = false
+local ollama_check_time = 0
+
+function _G.get_minuet_status()
+  if minuet_processing then
+    minuet_spinner_index = (minuet_spinner_index % #icons.spinners) + 1
+    return icons.spinners[minuet_spinner_index]
+  end
+
+  local current_time = os.time()
+  if current_time - ollama_check_time > 30 then
+    ollama_check_time = current_time
+    vim.schedule(function()
+      local handle =
+        io.popen "curl -s -m 1 -X GET 'http://localhost:11434' 2>/dev/null"
+      if handle then
+        local result = handle:read "*a"
+        handle:close()
+        ollama_running = result ~= nil and result ~= ""
+        vim.cmd "redrawstatus"
+      end
+    end)
+  end
+  if not ollama_running then
+    return icons.copilot_disabled
+  end
+
+  return icons.copilot
+end
+
+local minuet_group =
+  vim.api.nvim_create_augroup("MinuetStatusline", { clear = true })
+
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = "MinuetRequestStarted",
+  group = minuet_group,
+  callback = function()
+    minuet_processing = true
+    vim.cmd "redrawstatus"
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "User" }, {
+  pattern = "MinuetRequestFinished",
+  group = minuet_group,
+  callback = function()
+    minuet_processing = false
+    vim.cmd "redrawstatus"
+  end,
+})
+
+local minuet_timer = vim.loop.new_timer()
+minuet_timer:start(
+  0,
+  100,
+  vim.schedule_wrap(function()
+    if minuet_processing then
+      vim.cmd "redrawstatus"
+    end
+  end)
+)
+
 local function selectioncount()
   local nvim_mode = vim.fn.mode(true)
   local line_start, col_start = vim.fn.line "v", vim.fn.col "v"
@@ -233,6 +297,7 @@ vim.opt.statusline = table.concat {
   "%{%v:lua.get_git_info()%} ",
   "%{%v:lua.get_diagnostics()%}",
   "%=",
+  "%{%v:lua.get_minuet_status()%} ",
   "%{%v:lua.get_go_version()%}",
   "%{%v:lua.get_dart_version()%}",
   "%{%v:lua.get_location()%}",

@@ -69,5 +69,18 @@ return {
   separator = "",
   bot = "",
   copilot = "",
+  copilot_disabled = "",
   smiley = "",
+  spinners = {
+    "⠋",
+    "⠙",
+    "⠹",
+    "⠸",
+    "⠼",
+    "⠴",
+    "⠦",
+    "⠧",
+    "⠇",
+    "⠏",
+  },
 }
