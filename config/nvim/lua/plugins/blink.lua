@@ -32,7 +32,17 @@ return {
           ["<C-e>"] = { "hide", "fallback" },
           ["<CR>"] = { "accept", "fallback" },
           ["<S-Tab>"] = { "select_prev", "fallback" },
-          ["<Tab>"] = { "select_next", "fallback" },
+          ["<Tab>"] = {
+            function(cmp)
+              if require("minuet.virtualtext").action.is_visible() then
+                vim.defer_fn(require("minuet.virtualtext").action.accept, 30)
+                return true
+              else
+                return cmp.select_next()
+              end
+            end,
+            "fallback",
+          },
           ["<Up>"] = { "select_prev", "fallback" },
           ["<Down>"] = { "select_next", "fallback" },
           ["<C-p>"] = { "select_prev", "fallback_to_mappings" },
