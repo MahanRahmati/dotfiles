@@ -23,7 +23,7 @@ return {
         provider_options = {
           openai_fim_compatible = {
             api_key = "TERM",
-            name = "Qwen 2.5 Coder",
+            name = " Qwen 2.5",
             end_point = "http://localhost:11434/v1/completions",
             model = "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K",
             stream = true,
