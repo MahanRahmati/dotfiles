@@ -14,8 +14,8 @@ return {
         provider = "openai_fim_compatible",
         context_window = 2000,
         context_ratio = 0.5,
-        throttle = 1000,
-        debounce = 400,
+        throttle = 400,
+        debounce = 100,
         notify = "error",
         request_timeout = 3, -- Same as Blink timeout
         add_single_line_entry = true,
