@@ -110,7 +110,7 @@ function _G.get_minuet_status()
   end
 
   local current_time = os.time()
-  if current_time - ollama_check_time > 30 then
+  if current_time - ollama_check_time > 60 then
     ollama_check_time = current_time
     vim.schedule(function()
       local handle =
