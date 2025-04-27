@@ -40,42 +40,8 @@ return {
     },
     config = function(_, opts)
       require("toggleterm").setup(opts)
-
-      local Terminal = require("toggleterm.terminal").Terminal
-
-      local lazygit = Terminal:new {
-        cmd = "lazygit",
-        dir = "git_dir",
-        direction = "float",
-        float_opts = {
-          border = "rounded",
-          winblend = 0,
-          highlights = {
-            border = "Normal",
-            background = "Normal",
-          },
-          width = function(_term)
-            _term.float_opts.col = vim.o.columns
-            return vim.o.columns
-          end,
-          height = function()
-            return vim.o.lines - 3
-          end,
-        },
-        on_open = function(_)
-          vim.cmd "startinsert!"
-        end,
-        on_close = function(_)
-          vim.cmd "startinsert!"
-        end,
-      }
-
-      function _LAZYGIT_TOGGLE()
-        lazygit:toggle()
-      end
     end,
     keys = {
-      { "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", desc = "LazyGit" },
       { "<leader>t", "<cmd>ToggleTerm<CR>", desc = "Terminal" },
     },
   },
