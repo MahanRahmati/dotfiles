@@ -42,6 +42,12 @@ return {
             height = vim.o.lines - 3,
             border = "rounded",
           },
+          terminal = {
+            width = 0,
+            height = 15,
+            border = "rounded",
+            row = vim.o.lines - 3 - 15,
+          },
         },
       }
     end,
@@ -55,6 +61,11 @@ return {
         "<leader>c",
         ":lua require('snacks').bufdelete()<CR>",
         desc = "Close Buffer",
+      },
+      {
+        "<leader>t",
+        ":lua require('snacks').terminal.toggle('fish')<CR>",
+        desc = "Terminal",
       },
     },
   },
