@@ -9,7 +9,7 @@ return {
       return {
         animate = { enabled = false },
         bigfile = { enabled = false },
-        bufdelete = { enabled = false },
+        bufdelete = {},
         dashboard = { enabled = false },
         debug = { enabled = false },
         dim = { enabled = false },
@@ -50,6 +50,11 @@ return {
         "<leader>gg",
         ":lua require('snacks').lazygit()<CR>",
         desc = "LazyGit",
+      },
+      {
+        "<leader>c",
+        ":lua require('snacks').bufdelete()<CR>",
+        desc = "Close Buffer",
       },
     },
   },
