@@ -21,7 +21,19 @@ return {
         input = { enabled = false },
         layout = { enabled = false },
         lazygit = {},
-        notifier = { enabled = false },
+        notifier = {
+          timeout = 3000,
+          margin = { top = 0, right = 0, bottom = 0 },
+          icons = {
+            error = icons.error,
+            warn = icons.warn,
+            info = icons.info,
+            debug = icons.debug,
+            trace = icons.trace,
+          },
+          style = "compact",
+          top_down = false,
+        },
         picker = { enabled = false },
         profiler = { enabled = false },
         quickfile = { enabled = false },
@@ -48,6 +60,10 @@ return {
             border = "rounded",
             row = vim.o.lines - 3 - 15,
           },
+          notification = {
+            border = "rounded",
+            wo = { wrap = true },
+          },
         },
       }
     end,
@@ -66,6 +82,11 @@ return {
         "<leader>t",
         ":lua require('snacks').terminal.toggle('fish')<CR>",
         desc = "Terminal",
+      },
+      {
+        "<Esc>",
+        "<ESC>:noh<CR>:lua require('snacks').notifier.hide()<CR>",
+        desc = "Dismiss Notifications",
       },
     },
   },
