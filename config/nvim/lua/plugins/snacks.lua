@@ -8,7 +8,7 @@ return {
       ---@type snacks.Config
       return {
         animate = { enabled = false },
-        bigfile = { enabled = false },
+        bigfile = {},
         bufdelete = {},
         dashboard = { enabled = false },
         debug = { enabled = false },
