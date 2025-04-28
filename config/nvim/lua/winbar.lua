@@ -125,6 +125,7 @@ local function should_disable_winbar()
     "TelescopeResults",
     "dashboard",
     "WhichKey",
+    "snacks_dashboard",
   }
   return vim.tbl_contains(file_types, vim.bo.filetype)
 end

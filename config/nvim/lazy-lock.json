@@ -6,7 +6,6 @@
   "codecompanion.nvim": { "branch": "main", "commit": "9c8c55a16597ac3880740632d14bc15b3d2e786d" },
   "colorful-menu.nvim": { "branch": "master", "commit": "f80feb8a6706f965321aff24d0ed3849f02a7f77" },
   "conform.nvim": { "branch": "master", "commit": "372fc521f8421b7830ea6db4d6ea3bae1c77548c" },
-  "dashboard-nvim": { "branch": "master", "commit": "1955f4de3075e15f75b9f68881e9431dd24c2e9a" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "fidget.nvim": { "branch": "main", "commit": "d9ba6b7bfe29b3119a610892af67602641da778e" },
   "flutter-tools.nvim": { "branch": "main", "commit": "6faf2c70bd56f1fe78620591a2bb73f4dc6f4870" },

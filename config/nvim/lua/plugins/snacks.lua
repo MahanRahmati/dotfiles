@@ -10,7 +10,66 @@ return {
         animate = { enabled = false },
         bigfile = {},
         bufdelete = {},
-        dashboard = { enabled = false },
+        dashboard = {
+          width = 60,
+          row = nil,
+          col = nil,
+          pane_gap = 4,
+          preset = {
+            header = [[
+       ████  █████                              ███                 
+      ███████████                                                     
+     ████████████████████████████    ███████████████████████
+    ███████████████   ██████████  ███████████████████████ 
+   ████████████████████████ ████████████████████████  
+  █████████████       ███ █████████████████████████   
+ █████  █████████████ █████████ ████████████████████    ]],
+          },
+          sections = {
+            { section = "header" },
+            { section = "recent_files", limit = 9, padding = 1 },
+            {
+              {
+                icon = icons.file,
+                key = "n",
+                desc = "New File",
+                action = ":ene | startinsert",
+              },
+              {
+                icon = icons.find,
+                key = "f",
+                desc = "Find File",
+                action = ":Telescope find_files",
+              },
+              {
+                icon = icons.folder,
+                key = "r",
+                desc = "Recent Projects",
+                action = ":Telescope projects",
+              },
+              {
+                icon = icons.configuration,
+                key = "c",
+                desc = "Configuration",
+                action = ":e ~/.config/nvim/init.lua",
+              },
+              {
+                icon = icons.lazy,
+                key = "p",
+                desc = "Package Manager",
+                action = ":Lazy",
+                enabled = package.loaded.lazy ~= nil,
+              },
+              {
+                icon = icons.quit,
+                key = "q",
+                desc = "Quit",
+                action = ":qa",
+              },
+            },
+            { section = "startup", icon = "", padding = 1 },
+          },
+        },
         debug = { enabled = false },
         dim = { enabled = false },
         explorer = { enabled = false },
