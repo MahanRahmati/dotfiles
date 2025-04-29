@@ -4,7 +4,6 @@ return {
     event = "BufRead pubspec.yaml",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "stevearc/dressing.nvim",
       {
         "nvim-flutter/pubspec-assist.nvim",
         event = "BufRead pubspec.yaml",

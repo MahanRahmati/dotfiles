@@ -9,7 +9,6 @@ return {
       filetypes_denylist = {
         "lazy",
         "mason",
-        "DressingSelect",
         "neo-tree",
         "dirbuf",
         "dirvish",

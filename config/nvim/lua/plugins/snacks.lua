@@ -104,7 +104,11 @@ return {
         gitbrowse = { enabled = false },
         image = { enabled = false },
         indent = { enabled = false },
-        input = { enabled = false },
+        input = {
+          icon = icons.selection_caret,
+          win = { style = "input" },
+          expand = true,
+        },
         layout = { enabled = false },
         lazygit = {},
         notifier = {
@@ -190,6 +194,9 @@ return {
           notification = {
             border = "rounded",
             wo = { wrap = true },
+          },
+          input = {
+            b = { completion = true },
           },
         },
       }
