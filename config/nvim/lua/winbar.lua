@@ -116,16 +116,14 @@ end
 local function should_disable_winbar()
   local file_types = {
     "help",
-    "toggleterm",
     "neo%-tree",
     "lspinfo",
     "lazy",
     "mason",
-    "TelescopePrompt",
-    "TelescopeResults",
-    "dashboard",
-    "WhichKey",
     "snacks_dashboard",
+    "snacks_picker_list",
+    "snacks_picker_input",
+    "snacks_picker_preview",
   }
   return vim.tbl_contains(file_types, vim.bo.filetype)
 end

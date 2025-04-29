@@ -7,12 +7,9 @@ return {
     },
     opts = {
       filetypes_denylist = {
-        "alpha",
         "lazy",
         "mason",
-        "toggleterm",
         "DressingSelect",
-        "TelescopePrompt",
         "neo-tree",
         "dirbuf",
         "dirvish",
