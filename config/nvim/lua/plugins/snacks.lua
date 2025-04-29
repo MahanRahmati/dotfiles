@@ -5,6 +5,30 @@ return {
     lazy = false,
     opts = function()
       local icons = require "icons"
+
+      local layout = {
+        reverse = true,
+        preview = vim.o.columns >= 120,
+        layout = {
+          box = "horizontal",
+          width = 0,
+          height = vim.o.lines - 1,
+          {
+            box = "vertical",
+            border = "rounded",
+            title = "{title}",
+            { win = "list", border = "none" },
+            { win = "input", height = 1, border = "top" },
+          },
+          {
+            win = "preview",
+            title = "",
+            border = "rounded",
+            width = 0.5,
+          },
+        },
+      }
+
       ---@type snacks.Config
       return {
         animate = { enabled = false },
@@ -39,19 +63,22 @@ return {
                 icon = icons.find,
                 key = "f",
                 desc = "Find File",
-                action = ":Telescope find_files",
+                action = ":lua require('snacks').picker.files()",
               },
               {
                 icon = icons.folder,
                 key = "r",
                 desc = "Recent Projects",
-                action = ":Telescope projects",
+                action = ":lua require('snacks').picker.projects()",
               },
               {
                 icon = icons.configuration,
                 key = "c",
                 desc = "Configuration",
-                action = ":e ~/.config/nvim/init.lua",
+                action = function()
+                  vim.cmd.edit "~/.config/nvim/init.lua"
+                  vim.fn.chdir "~/.config/nvim"
+                end,
               },
               {
                 icon = icons.lazy,
@@ -93,7 +120,48 @@ return {
           style = "compact",
           top_down = false,
         },
-        picker = { enabled = false },
+        picker = {
+          win = {
+            input = {
+              keys = {
+                ["<Esc>"] = { "close", mode = { "n", "i" } },
+              },
+            },
+          },
+          sources = {
+            buffers = {
+              layout = { preset = "select" },
+            },
+            files = {
+              hidden = true,
+              ignored = false,
+              follow = true,
+              show_empty = true,
+              supports_live = true,
+              layout = layout,
+            },
+            help = { layout = layout },
+            recent = { layout = layout },
+            lines = { layout = layout },
+            diagnostics = { layout = layout },
+            grep = { hidden = true, follow = true, layout = layout },
+            projects = { layout = layout },
+          },
+          icons = {
+            files = {
+              enabled = true,
+              dir = icons.folder,
+              dir_open = icons.folder,
+              file = icons.file,
+            },
+            diagnostics = {
+              Error = icons.error,
+              Warn = icons.warn,
+              Hint = icons.hint,
+              Info = icons.info,
+            },
+          },
+        },
         profiler = { enabled = false },
         quickfile = { enabled = false },
         rename = { enabled = false },
@@ -146,6 +214,73 @@ return {
         "<Esc>",
         "<ESC>:noh<CR>:lua require('snacks').notifier.hide()<CR>",
         desc = "Dismiss Notifications",
+      },
+      {
+        "<leader>b",
+        ":lua require('snacks').picker.buffers()<CR>",
+        desc = "Buffers",
+      },
+      {
+        "<leader>fb",
+        ":lua require('snacks').picker.buffers()<CR>",
+        desc = "Buffers",
+      },
+      {
+        "<leader>ff",
+        ":lua require('snacks').picker.files()<CR>",
+        desc = "Find Files",
+      },
+      {
+        "<leader>fg",
+        ":lua require('snacks').picker.grep()<CR>",
+        desc = "Find Text",
+      },
+      {
+        "<leader>fh",
+        ":lua require('snacks').picker.help()<CR>",
+        desc = "Help",
+      },
+      {
+        "<leader>fl",
+        ":lua require('snacks').picker.resume()<CR>",
+        desc = "Last Search",
+      },
+      {
+        "<leader>fr",
+        ":lua require('snacks').picker.recent()<CR>",
+        desc = "Recent Files",
+      },
+      {
+        "/",
+        ":lua require('snacks').picker.lines()<CR>",
+        mode = { "n", "v" },
+        desc = "Find",
+      },
+      {
+        "?",
+        ":lua require('snacks').picker.lines()<CR>",
+        mode = { "n", "v" },
+        desc = "Find",
+      },
+      {
+        "gd",
+        ":lua require('snacks').picker.lsp_definitions()<CR>",
+        desc = "Definition",
+      },
+      {
+        "gr",
+        ":lua require('snacks').picker.lsp_references()<CR>",
+        desc = "References",
+      },
+      {
+        "gI",
+        ":lua require('snacks').picker.lsp_implementations()<CR>",
+        desc = "Implementations",
+      },
+      {
+        "<leader>ld",
+        ":lua require('snacks').picker.diagnostics()<CR>",
+        desc = "Diagnostics",
       },
     },
   },
