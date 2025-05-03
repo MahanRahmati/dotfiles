@@ -34,7 +34,11 @@ return {
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Tab>"] = {
             function(cmp)
-              if require("minuet.virtualtext").action.is_visible() then
+              local minuet_ok, minuet = pcall(require, "minuet.virtualtext")
+              if not minuet_ok then
+                return cmp.select_next()
+              end
+              if minuet.action.is_visible() then
                 vim.defer_fn(require("minuet.virtualtext").action.accept, 30)
                 return true
               else
@@ -79,7 +83,7 @@ return {
           },
           menu = {
             border = "rounded",
-            winhighlight = "Normal:BlinkCmpMenu,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
+            winhighlight = "Normal:None,FloatBorder:FloatBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
             scrollbar = false,
             draw = {
               treesitter = { "lsp" },
