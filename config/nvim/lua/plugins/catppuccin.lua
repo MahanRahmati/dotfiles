@@ -25,10 +25,6 @@ return {
           },
         },
         custom_highlights = function(c)
-          math.randomseed(os.time())
-          local choose = function(choices)
-            return choices[math.random(1, #choices)]
-          end
           return {
             Pmenu = { bg = c.base },
             WhichKey = { fg = c.blue },
@@ -41,26 +37,7 @@ return {
             NeoTreeFloatTitle = { fg = c.yellow },
             NeoTreeDirectoryName = { fg = c.green, style = { "bold" } },
             NeoTreeDirectoryIcon = { fg = c.green },
-            SnacksDashboardHeader = {
-              fg = choose {
-                c.rosewater,
-                c.flamingo,
-                c.pink,
-                c.mauve,
-                c.red,
-                c.maroon,
-                c.peach,
-                c.yellow,
-                c.green,
-                c.teal,
-                c.sky,
-                c.sapphire,
-                c.blue,
-                c.lavender,
-                c.text,
-              },
-              style = { "bold" },
-            },
+            SnacksDashboardHeader = { fg = c.text, style = { "bold" } },
             SnacksDashboardIcon = { fg = c.mauve },
             SnacksDashboardDesc = { link = "Normal" },
             SnacksDashboardFile = { fg = c.mauve },
