@@ -34,16 +34,7 @@ return {
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Tab>"] = {
             function(cmp)
-              local minuet_ok, minuet = pcall(require, "minuet.virtualtext")
-              if not minuet_ok then
-                return cmp.select_next()
-              end
-              if minuet.action.is_visible() then
-                vim.defer_fn(require("minuet.virtualtext").action.accept, 30)
-                return true
-              else
-                return cmp.select_next()
-              end
+              return cmp.select_next()
             end,
             "fallback",
           },
@@ -133,8 +124,6 @@ return {
         fuzzy = { implementation = "prefer_rust_with_warning" },
         sources = {
           default = {
-            "codecompanion",
-            "minuet",
             "lsp",
             "lazydev",
             "snippets",
@@ -144,30 +133,6 @@ return {
             "ripgrep",
           },
           providers = {
-            codecompanion = {
-              name = "CodeCompanion",
-              module = "codecompanion.providers.completion.blink",
-              score_offset = 107,
-              transform_items = function(_, items)
-                for _, item in ipairs(items) do
-                  item.kind_icon = icons.bot
-                end
-                return items
-              end,
-            },
-            minuet = {
-              name = "minuet",
-              module = "minuet.blink",
-              score_offset = 106,
-              async = true,
-              timeout_ms = 3000,
-              transform_items = function(_, items)
-                for _, item in ipairs(items) do
-                  item.kind_icon = icons.copilot
-                end
-                return items
-              end,
-            },
             lsp = {
               name = "LSP",
               module = "blink.cmp.sources.lsp",
