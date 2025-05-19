@@ -174,3 +174,7 @@ function fish_prompt
     print_pwd
     print_in_color '  ' (prompt_color_for_status $last_status)
 end
+
+function fish_greeting
+    fastfetch
+end
