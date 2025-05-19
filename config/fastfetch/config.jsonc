@@ -1,0 +1,93 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": null,
+  "display": {
+    "pipe": true,
+    "key": {
+      "width": 14,
+    },
+    "separator": "│ ",
+    "constants": ["\u001b[40C"],
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "┌──────────┬────────────────────────────────────────┐",
+    },
+    {
+      "type": "os",
+      "key": "│ OS       │{$1}",
+    },
+    {
+      "type": "kernel",
+      "key": "│ Kernel   │{$1}",
+    },
+    {
+      "type": "custom",
+      "format": "├──────────┼────────────────────────────────────────┤",
+    },
+    {
+      "type": "title",
+      "key": "│ User     │{$1}",
+      "format": "{user-name}",
+    },
+    {
+      "type": "title",
+      "key": "│ Host     │{$1}",
+      "format": "{host-name}",
+    },
+    {
+      "type": "shell",
+      "key": "│ Shell    │{$1}",
+    },
+    {
+      "type": "custom",
+      "format": "├──────────┼────────────────────────────────────────┤",
+    },
+    {
+      "type": "packages",
+      "key": "│ Packages │{$1}",
+    },
+    {
+      "type": "custom",
+      "format": "├──────────┼────────────────────────────────────────┤",
+    },
+    {
+      "type": "host",
+      "key": "│ Machine  │{$1}",
+    },
+    {
+      "type": "cpu",
+      "key": "│ CPU      │{$1}",
+    },
+    {
+      "type": "gpu",
+      "key": "│ GPU      │{$1}",
+    },
+    {
+      "type": "custom",
+      "format": "├──────────┼────────────────────────────────────────┤",
+    },
+    {
+      "type": "memory",
+      "key": "│ Memory   │{$1}",
+      "format": "{used} / {total} ({percentage})",
+      "percent": {
+        "type": ["num"],
+      },
+    },
+    {
+      "type": "disk",
+      "key": "│ Disk     │{$1}",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+      "folders": "/",
+      "percent": {
+        "type": ["num"],
+      },
+    },
+    {
+      "type": "custom",
+      "format": "└──────────┴────────────────────────────────────────┘",
+    },
+  ],
+}

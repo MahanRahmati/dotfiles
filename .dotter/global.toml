@@ -20,3 +20,6 @@
 
 [ghostty.files]
 "config/ghostty" = "~/.config/ghostty"
+
+[fastfetch.files]
+"config/fastfetch" = "~/.config/fastfetch"
