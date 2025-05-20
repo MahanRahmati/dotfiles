@@ -34,7 +34,14 @@ return {
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Tab>"] = {
             function(cmp)
-              return cmp.select_next()
+              if cmp.is_visible() then
+                return cmp.select_next()
+              else
+                vim.schedule(function()
+                  vim.fn["llama#fim_accept"] "full"
+                end)
+                return true
+              end
             end,
             "fallback",
           },

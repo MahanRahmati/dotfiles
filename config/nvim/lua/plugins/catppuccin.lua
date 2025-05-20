@@ -43,6 +43,8 @@ return {
             SnacksDashboardFile = { fg = c.mauve },
             SnacksDashboardFooter = { link = "Normal" },
             SnacksDashboardSpecial = { fg = c.mauve },
+            llama_hl_hint = { link = "NonText" },
+            llama_hl_info = { link = "NonText" },
           }
         end,
         integrations = {
