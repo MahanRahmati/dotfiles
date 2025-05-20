@@ -8,6 +8,7 @@ return {
         keymap_accept_full = "",
         keymap_accept_line = "",
         keymap_accept_word = "",
+        stop_strings = { "\n" },
       }
 
       vim.api.nvim_create_autocmd("BufEnter", {
