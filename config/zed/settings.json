@@ -22,6 +22,7 @@
     "border_size": 1.0,
     "inactive_opacity": 1.0
   },
+  "bottom_dock_layout": "contained",
   "centered_layout": {
     "left_padding": 0.2,
     "right_padding": 0.2
@@ -40,7 +41,15 @@
   "toolbar": {
     "breadcrumbs": true,
     "quick_actions": false,
-    "selections_menu": false
+    "selections_menu": false,
+    "agent_review": false
+  },
+  "title_bar": {
+    "show_branch_icon": true,
+    "show_branch_name": true,
+    "show_project_items": true,
+    "show_onboarding_banner": true,
+    "show_user_picture": true
   },
   "scrollbar": {
     "show": "always",
@@ -50,6 +59,11 @@
     "selected_text": true,
     "selected_symbol": true,
     "diagnostics": "all"
+  },
+  "minimap": {
+    "show": "never",
+    "thumb": "always",
+    "thumb_border": "left_open"
   },
   "gutter": {
     "line_numbers": true,
@@ -68,6 +82,13 @@
   "vertical_scroll_margin": 999,
   "autoscroll_on_clicks": false,
   "relative_line_numbers": true,
+  "search": {
+    "button": false,
+    "whole_word": false,
+    "case_sensitive": false,
+    "include_ignored": false,
+    "regex": false
+  },
   "inlay_hints": {
     "enabled": false
   },
@@ -104,32 +125,37 @@
     "default_width": 240
   },
   "git_panel": {
-    "button": true,
+    "button": false,
     "dock": "left",
     "default_width": 360,
     "status_style": "icon",
     "fallback_branch_name": "main"
+  },
+  "message_editor": {
+    "auto_replace_emoji_shortcode": true
   },
   "notification_panel": {
     "button": false,
     "dock": "right",
     "default_width": 360
   },
-  "assistant": {
+  "agent": {
     "version": "2",
     "enabled": true,
+    "preferred_completion_mode": "normal",
     "button": true,
     "dock": "right",
     "default_width": 420,
     "default_height": 320,
     "default_model": {
-      "provider": "ollama",
-      "model": "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K"
+      "provider": "openai",
+      "model": "bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K"
     },
     "editor_model": {
-      "provider": "ollama",
-      "model": "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K"
-    }
+      "provider": "openai",
+      "model": "bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K"
+    },
+    "default_profile": "minimal"
   },
   "slash_commands": {
     "docs": {
@@ -174,6 +200,7 @@
   },
   "auto_update": false,
   "diagnostics": {
+    "button": true,
     "include_warnings": true,
     "inline": {
       "enabled": true,
@@ -214,7 +241,7 @@
       "**/secrets.yml"
     ],
     "mode": "eager",
-    "enabled_in_assistant": true
+    "enabled_in_text_threads": true
   },
   "terminal": {
     "shell": "system",
@@ -260,14 +287,14 @@
     }
   },
   "language_models": {
-    "ollama": {
-      "api_url": "http://localhost:11434",
+    "openai": {
+      "version": "1",
+      "api_url": "http://localhost:8012",
       "available_models": [
         {
-          "name": "hf.co/bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K",
+          "name": "bartowski/Qwen2.5-Coder-3B-Instruct-abliterated-GGUF:Q6_K",
           "display_name": "Qwen 2.5 coder 3B - 32K Token",
-          "max_tokens": 32768,
-          "keep_alive": "5m"
+          "max_tokens": 32768
         }
       ]
     }
