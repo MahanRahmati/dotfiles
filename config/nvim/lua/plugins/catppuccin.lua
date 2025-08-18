@@ -24,6 +24,9 @@ return {
             crust = "#585B70", -- Darkest bg
           },
         },
+        float = {
+          transparent = true,
+        },
         custom_highlights = function(c)
           return {
             Pmenu = { bg = c.base },
