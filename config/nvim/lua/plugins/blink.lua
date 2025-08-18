@@ -184,15 +184,21 @@ return {
               score_offset = 100,
               opts = {
                 prefix_min_len = 3,
-                context_size = 5,
-                max_filesize = "3M",
                 project_root_marker = ".git",
-                project_root_fallback = true,
-                search_casing = "--smart-case",
-                additional_rg_options = {},
                 fallback_to_regex_highlighting = true,
-                ignore_paths = {},
-                additional_paths = { "/usr/share/dict/words" },
+                backend = {
+                  use = "ripgrep",
+                  customize_icon_highlight = true,
+                  ripgrep = {
+                    context_size = 5,
+                    max_filesize = "3M",
+                    project_root_fallback = true,
+                    search_casing = "--smart-case",
+                    additional_rg_options = {},
+                    ignore_paths = {},
+                    additional_paths = { "/usr/share/dict/words" },
+                  },
+                },
               },
               transform_items = function(_, items)
                 for _, item in ipairs(items) do
