@@ -1,6 +1,6 @@
 # https://ghostty.org/docs/config/reference
 
-theme = dark:cat-mocha,light:catppuccin-latte
+theme = dark:cat-mocha,light:Catppuccin Latte
 
 cursor-style = block
 cursor-style-blink = false
@@ -18,3 +18,4 @@ background-blur-radius = 20
 
 window-padding-x = 8
 window-padding-y = 8
+window-padding-balance = true
