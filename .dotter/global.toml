@@ -26,3 +26,6 @@
 
 [opencode.files]
 "config/opencode" = "~/.config/opencode"
+
+[llama-swap.files]
+"config/llama-swap" = "~/.config/llama-swap"
