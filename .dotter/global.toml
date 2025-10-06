@@ -23,3 +23,6 @@
 
 [fastfetch.files]
 "config/fastfetch" = "~/.config/fastfetch"
+
+[opencode.files]
+"config/opencode" = "~/.config/opencode"
