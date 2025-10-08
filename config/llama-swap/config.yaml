@@ -38,7 +38,7 @@ models:
       -hf unsloth/granite-4.0-h-micro-GGUF:Q4_K_M
       --ctx-size 16384
       --context-shift
-      --temp 1.0 
+      --temp 0.0 
       --top-p 1.0 
       --top-k 0 
       --jinja
@@ -52,7 +52,7 @@ models:
       -hf unsloth/granite-4.0-h-tiny-GGUF:Q4_K_M
       --ctx-size 16384
       --context-shift
-      --temp 1.0 
+      --temp 0.0 
       --top-p 1.0 
       --top-k 0 
       --jinja
