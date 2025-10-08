@@ -1,5 +1,6 @@
 {
   "LuaSnip": { "branch": "master", "commit": "458560534a73f7f8d7a11a146c801db00b081df0" },
+  "blink-calc": { "branch": "main", "commit": "199e8a5fe356d553d33a3511ca28e625dac5c470" },
   "blink-nerdfont.nvim": { "branch": "main", "commit": "2f3cedda78dcf4ef547128ce7f72f7b80e25501d" },
   "blink-ripgrep.nvim": { "branch": "main", "commit": "63ea183b044b100484390271fe07676ca11c4464" },
   "blink.cmp": { "branch": "main", "commit": "327fff91fe6af358e990be7be1ec8b78037d2138" },

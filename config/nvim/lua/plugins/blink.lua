@@ -14,6 +14,7 @@ return {
       "MahanRahmati/blink-nerdfont.nvim",
       "mikavilpas/blink-ripgrep.nvim",
       "xzbdmw/colorful-menu.nvim",
+      "joelazar/blink-calc",
     },
     opts = function()
       local icons = require "icons"
@@ -138,8 +139,14 @@ return {
             "path",
             "nerdfont",
             "ripgrep",
+            "calc",
           },
           providers = {
+            calc = {
+              name = "Calc",
+              module = "blink-calc",
+              score_offset = 106,
+            },
             lsp = {
               name = "LSP",
               module = "blink.cmp.sources.lsp",
