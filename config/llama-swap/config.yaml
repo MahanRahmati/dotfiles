@@ -12,6 +12,19 @@ models:
       --ctx-size 0
       --cache-reuse 256
       --jinja
+  'qwen-2.5-coder-3B-Instruct':
+    proxy: 'http://127.0.0.1:8012'
+    name: 'Qwen 2.5 3B'
+    cmd: |
+      llama-server
+      --host 127.0.0.1
+      --port 8012
+      -hf unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M
+      --ubatch-size 512 
+      --batch-size 1024
+      --ctx-size 16384
+      --cache-reuse 256
+      --jinja
   'qwen-3-4B-thinking-2507':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 3 4B (Thinking 2507)'
