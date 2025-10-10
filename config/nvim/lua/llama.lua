@@ -5,7 +5,7 @@ M.llama_server_config = {
   port = 8012,
   args = {
     "-hf",
-    "unsloth/Qwen2.5-Coder-1.5B-Instruct-128K-GGUF:Q4_K_M",
+    "unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M",
     "--port",
     "8012",
     "--ubatch-size",
@@ -13,7 +13,7 @@ M.llama_server_config = {
     "--batch-size",
     "1024",
     "--ctx-size",
-    "0",
+    "16384",
     "--cache-reuse",
     "256",
     "--jinja",
