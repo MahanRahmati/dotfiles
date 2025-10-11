@@ -4,7 +4,7 @@
   "blink-nerdfont.nvim": { "branch": "main", "commit": "2f3cedda78dcf4ef547128ce7f72f7b80e25501d" },
   "blink-ripgrep.nvim": { "branch": "main", "commit": "15910b898cefd0a2a044cfad779acd8ca4bd6dd6" },
   "blink.cmp": { "branch": "main", "commit": "327fff91fe6af358e990be7be1ec8b78037d2138" },
-  "codecompanion.nvim": { "branch": "main", "commit": "946e18627271e008635d53f96a56af459ebb40da" },
+  "codecompanion.nvim": { "branch": "main", "commit": "8913b1b7dd7c864be8bef730f9c48ebffbacffac" },
   "colorful-menu.nvim": { "branch": "master", "commit": "d5b97d247528be308b6b69d96b5950a30e470f3d" },
   "conform.nvim": { "branch": "master", "commit": "fbcb4fa7f34bfea9be702ffff481a8e336ebf6ed" },
   "fidget.nvim": { "branch": "main", "commit": "3f5475949679953af6d78654db29b944fa826e6a" },
@@ -32,7 +32,7 @@
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
   "pubspec-assist.nvim": { "branch": "main", "commit": "c79dbf94967d69dbabc1f7ad35662eb79a007b4b" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "3277ad5f96eb03c9d618c88e24f683e4364e578c" },
-  "snacks.nvim": { "branch": "main", "commit": "94f10539a64f86a30c212fc3cc3be9cc7145317e" },
+  "snacks.nvim": { "branch": "main", "commit": "d91fc7d3fa853422fe4d506220b23394d2c19d38" },
   "tiny-devicons-auto-colors.nvim": { "branch": "main", "commit": "51f548421f8a74680eff27d283c9d5ea6e8d0074" },
   "vim-illuminate": { "branch": "master", "commit": "0d1e93684da00ab7c057410fecfc24f434698898" },
   "virt-column.nvim": { "branch": "master", "commit": "b87e3e0864211a32724a2ebf3be37e24e9e2fa99" }
