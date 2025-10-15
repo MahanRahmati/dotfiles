@@ -2,8 +2,9 @@ models:
   'qwen-2.5-coder-1.5B-Instruct':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 2.5 1.5B'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf unsloth/Qwen2.5-Coder-1.5B-Instruct-128K-GGUF:Q4_K_M
@@ -20,8 +21,9 @@ models:
   'qwen-2.5-coder-3B-Instruct':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 2.5 3B'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M
@@ -38,8 +40,9 @@ models:
   'qwen-3-4B-thinking-2507':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 3 4B (Thinking 2507)'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf bartowski/Qwen_Qwen3-4B-Thinking-2507-GGUF:Q4_K_M
@@ -54,8 +57,9 @@ models:
   'granite-4.0-h-micro-3b':
     proxy: 'http://127.0.0.1:8012'
     name: 'Granite 4 Micro 3B'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf unsloth/granite-4.0-h-micro-GGUF:Q4_K_M
@@ -68,8 +72,9 @@ models:
   'granite-4.0-h-tiny-7b':
     proxy: 'http://127.0.0.1:8012'
     name: 'Granite 4 Tiny 7B'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf unsloth/granite-4.0-h-tiny-GGUF:Q4_K_M
@@ -82,8 +87,9 @@ models:
   'gemma-3-4b':
     proxy: 'http://127.0.0.1:8012'
     name: 'Gemma 3 4B'
+    ttl: 300
     cmd: |
-      llama-server
+      /opt/homebrew/bin/llama-server
       --host 127.0.0.1
       --port 8012
       -hf unsloth/gemma-3-4b-it-GGUF:Q4_K_M
