@@ -94,7 +94,7 @@
     "default_height": 320,
     "default_model": {
       "provider": "Llama.cpp",
-      "model": "Granite"
+      "model": "Local"
     },
     "editor_model": {
       "provider": "openai",
