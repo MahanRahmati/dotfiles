@@ -172,7 +172,7 @@ end
 function fish_prompt
     set -l last_status $status
     print_pwd
-    print_in_color '  ' (prompt_color_for_status $last_status)
+    print_in_color '  ' (prompt_color_for_status $last_status)
 end
 
 function fish_greeting
