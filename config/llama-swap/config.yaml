@@ -27,7 +27,7 @@ models:
       -hf unsloth/Qwen2.5-Coder-3B-Instruct-128K-GGUF:Q4_K_M
       --ubatch-size 512 
       --batch-size 1024
-      --ctx-size 16384
+      --ctx-size 32768
       --cache-reuse 256
       --temp 0.7 
       --min-p 0.0 
