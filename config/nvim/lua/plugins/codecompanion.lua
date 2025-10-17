@@ -54,7 +54,7 @@ return {
             inline = "qwen3",
             roles = {
               llm = function(adapter)
-                return adapter.formatted_name
+                return icons.copilot .. " " .. adapter.formatted_name
               end,
             },
           },
