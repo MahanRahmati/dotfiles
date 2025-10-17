@@ -9,6 +9,8 @@ return {
         keymap_accept_line = "",
         keymap_accept_word = "",
         stop_strings = { "\n" },
+        endpoint = "http://localhost:11434/infill",
+        model = "qwen-2.5-coder-1.5B-Instruct-Q6",
       }
 
       vim.api.nvim_create_autocmd("BufEnter", {
@@ -24,6 +26,7 @@ return {
             "snacks_picker_list",
             "snacks_picker_input",
             "snacks_picker_preview",
+            "codecompanion",
           }
           if is_floating or vim.tbl_contains(file_types, vim.bo.filetype) then
             vim.cmd "LlamaDisable"
