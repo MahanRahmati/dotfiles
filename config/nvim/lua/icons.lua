@@ -71,6 +71,16 @@ return {
   copilot = " ",
   copilot_disabled = " ",
   smiley = " ",
+  codecompanion = {
+    buffer_pin = " ",
+    buffer_watch = " ",
+    chat_context = " ",
+    chat_fold = " ",
+    tool_pending = " ",
+    tool_in_progress = " ",
+    tool_failure = " ",
+    tool_success = " ",
+  },
   spinners = {
     "⠋",
     "⠙",
