@@ -47,8 +47,8 @@ return {
       },
       strategies = {
         chat = {
-          adapter = "localLLM",
-          inline = "localLLM",
+          adapter = "qwen3",
+          inline = "qwen3",
           roles = {
             llm = function(adapter)
               return adapter.formatted_name
@@ -56,26 +56,53 @@ return {
           },
         },
         inline = {
-          adapter = "localLLM",
-          inline = "localLLM",
+          adapter = "qwen3",
+          inline = "qwen3",
         },
         cmd = {
-          adapter = "localLLM",
+          adapter = "qwen3",
         },
       },
       adapters = {
+        acp = {
+          opts = {
+            show_defaults = false,
+          },
+        },
         http = {
           opts = {
             show_defaults = false,
           },
-          localLLM = function()
+          qwen3 = function()
             return require("codecompanion.adapters").extend(
               "openai_compatible",
               {
-                name = "Local LLM",
-                formatted_name = "Local LLM",
+                name = "Qwen 3 4B Thinking 2507",
+                formatted_name = "Qwen 3 4B Thinking 2507",
                 env = {
-                  url = "http://127.0.0.1:8012",
+                  url = "http://127.0.0.1:11434",
+                },
+                schema = {
+                  model = {
+                    default = "qwen-3-4B-thinking-2507",
+                  },
+                },
+              }
+            )
+          end,
+          gemma3 = function()
+            return require("codecompanion.adapters").extend(
+              "openai_compatible",
+              {
+                name = "Gemma 3 4B",
+                formatted_name = "Gemma 3 4B",
+                env = {
+                  url = "http://127.0.0.1:11434",
+                },
+                schema = {
+                  model = {
+                    default = "gemma-3-4b",
+                  },
                 },
               }
             )
