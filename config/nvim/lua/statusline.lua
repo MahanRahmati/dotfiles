@@ -119,6 +119,9 @@ local function selectioncount()
   end
 end
 
+highlight_setter("SLCopilotEnabled", "String")
+highlight_setter("SLCopilotDisabled", "Conceal")
+
 local model_name_cache = ""
 local llama_timer = vim.uv.new_timer()
 if llama_timer then
@@ -166,9 +169,13 @@ end
 
 function _G.get_llama()
   if model_name_cache ~= "" then
-    return icons.copilot .. " " .. model_name_cache .. " "
+    return "%#SLCopilotEnabled#"
+      .. icons.copilot
+      .. " "
+      .. model_name_cache
+      .. "%*"
   end
-  return icons.copilot_disabled .. " "
+  return "%#SLCopilotDisabled#" .. icons.copilot_disabled .. "%*"
 end
 
 local go_version_cache = nil
