@@ -119,6 +119,58 @@ local function selectioncount()
   end
 end
 
+local model_name_cache = ""
+local llama_timer = vim.uv.new_timer()
+if llama_timer then
+  local model_id_to_name = {}
+
+  llama_timer:start(
+    1000,
+    30000,
+    vim.schedule_wrap(function()
+      vim.schedule(function()
+        local handle =
+          io.popen "curl -X GET 'http://localhost:11434/v1/models' -s"
+        if handle then
+          local result = handle:read "*a"
+          handle:close()
+
+          if result ~= "" then
+            local models = vim.fn.json_decode(result)
+            if models and models.data then
+              for _, model in ipairs(models.data) do
+                model_id_to_name[model.id] = model.name
+              end
+            end
+          end
+        end
+      end)
+
+      local handle = io.popen "curl -X GET 'http://localhost:11434/running' -s"
+      if handle then
+        local result = handle:read "*a"
+        handle:close()
+
+        local model_id = result:match '"model":"([^"]+)"'
+        if model_id and model_id_to_name[model_id] then
+          model_name_cache = model_id_to_name[model_id]
+        else
+          model_name_cache = ""
+        end
+
+        vim.cmd "redrawstatus"
+      end
+    end)
+  )
+end
+
+function _G.get_llama()
+  if model_name_cache ~= "" then
+    return icons.copilot .. " " .. model_name_cache .. " "
+  end
+  return icons.copilot_disabled .. " "
+end
+
 local go_version_cache = nil
 
 function _G.get_go_version()
@@ -233,6 +285,7 @@ vim.opt.statusline = table.concat {
   "%{%v:lua.get_git_info()%} ",
   "%{%v:lua.get_diagnostics()%}",
   "%=",
+  "%{%v:lua.get_llama()%}",
   "%{%v:lua.get_go_version()%}",
   "%{%v:lua.get_dart_version()%}",
   "%{%v:lua.get_location()%}",
