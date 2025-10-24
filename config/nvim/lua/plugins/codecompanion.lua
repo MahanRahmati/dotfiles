@@ -50,8 +50,8 @@ return {
         },
         strategies = {
           chat = {
-            adapter = "qwen3",
-            inline = "qwen3",
+            adapter = "qwen_3_instruct",
+            inline = "qwen_3_instruct",
             roles = {
               llm = function(adapter)
                 return icons.copilot .. " " .. adapter.formatted_name
@@ -59,11 +59,11 @@ return {
             },
           },
           inline = {
-            adapter = "qwen3",
-            inline = "qwen3",
+            adapter = "qwen_3_instruct",
+            inline = "qwen_3_instruct",
           },
           cmd = {
-            adapter = "qwen3",
+            adapter = "qwen_3_instruct",
           },
         },
         adapters = {
@@ -76,7 +76,24 @@ return {
             opts = {
               show_defaults = false,
             },
-            qwen3 = function()
+            qwen_3_instruct = function()
+              return require("codecompanion.adapters").extend(
+                "openai_compatible",
+                {
+                  name = "Qwen 3 4B Instruct 2507",
+                  formatted_name = "Qwen 3 4B Instruct 2507",
+                  env = {
+                    url = "http://127.0.0.1:11434",
+                  },
+                  schema = {
+                    model = {
+                      default = "qwen-3-4B-instruct-2507",
+                    },
+                  },
+                }
+              )
+            end,
+            qwen_3_thinking = function()
               return require("codecompanion.adapters").extend(
                 "openai_compatible",
                 {
