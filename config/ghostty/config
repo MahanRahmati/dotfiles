@@ -8,7 +8,7 @@ shell-integration-features = no-cursor
 
 font-family = "Hack Nerd Font"
 font-style = "Regular"
-font-size = 17
+font-size = 19
 
 macos-titlebar-style = tabs
 quit-after-last-window-closed = true
