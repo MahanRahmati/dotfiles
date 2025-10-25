@@ -194,13 +194,13 @@ function _G.get_go_version()
   local version_text = go_version_cache or ""
   if version_text ~= "" and icon then
     return string.format(
-      "%%#%s#%s%%#StatusLine# %s ",
+      " %%#%s#%s%%#StatusLine# %s",
       icon_hl,
       icon,
       version_text
     )
   elseif version_text ~= "" then
-    return "Go " .. version_text .. " "
+    return " Go " .. version_text
   end
 
   vim.schedule(function()
@@ -234,13 +234,13 @@ function _G.get_dart_version()
   local version_text = dart_version_cache or ""
   if version_text ~= "" and icon then
     return string.format(
-      "%%#%s#%s%%#StatusLine# %s ",
+      " %%#%s#%s%%#StatusLine# %s",
       icon_hl,
       icon,
       version_text
     )
   elseif version_text ~= "" then
-    return "Dart " .. version_text .. " "
+    return " Dart " .. version_text
   end
 
   vim.schedule(function()
