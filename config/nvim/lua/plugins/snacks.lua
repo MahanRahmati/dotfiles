@@ -202,6 +202,7 @@ return {
       }
     end,
     keys = {
+      { "<leader>g", "", desc = "Git" },
       {
         "<leader>gg",
         ":lua require('snacks').lazygit()<CR>",
@@ -227,6 +228,7 @@ return {
         ":lua require('snacks').picker.buffers()<CR>",
         desc = "Buffers",
       },
+      { "<leader>f", "", desc = "Finder" },
       {
         "<leader>fb",
         ":lua require('snacks').picker.buffers()<CR>",

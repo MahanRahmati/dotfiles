@@ -46,11 +46,6 @@ return {
           miniclue.gen_clues.registers(),
           miniclue.gen_clues.windows(),
           miniclue.gen_clues.z(),
-          { mode = "n", keys = "<leader>f", desc = "Finder" },
-          { mode = "n", keys = "<leader>F", desc = "Flutter" },
-          { mode = "n", keys = "<leader>g", desc = "Git" },
-          { mode = "n", keys = "<leader>l", desc = "LSP" },
-          { mode = "n", keys = "<leader>p", desc = "Package Manager" },
         },
         window = {
           -- Floating window config

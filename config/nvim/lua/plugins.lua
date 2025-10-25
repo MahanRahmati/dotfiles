@@ -32,6 +32,7 @@ require("lazy").setup("plugins", {
   },
 })
 
+vim.keymap.set("n", "<leader>p", "", { desc = "Package Manager" })
 vim.keymap.set("n", "<leader>pc", "<cmd>Lazy check<CR>", { desc = "Check" })
 vim.keymap.set("n", "<leader>pd", "<cmd>Lazy debug<CR>", { desc = "Debug" })
 vim.keymap.set("n", "<leader>pi", "<cmd>Lazy install<CR>", { desc = "Install" })

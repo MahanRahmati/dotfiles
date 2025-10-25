@@ -54,6 +54,7 @@ return {
       require("flutter-tools").setup(opts)
     end,
     keys = {
+      { "<leader>F", "", desc = "Flutter" },
       { "<leader>FD", "<cmd>FlutterDevTools<CR>", desc = "Dev Tools" },
       { "<leader>Fd", "<cmd>FlutterDevices<CR>", desc = "Devices" },
       { "<leader>Fe", "<cmd>FlutterEmulators<CR>", desc = "Emulators" },
