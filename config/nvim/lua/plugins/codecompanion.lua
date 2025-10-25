@@ -56,6 +56,7 @@ return {
               llm = function(adapter)
                 return icons.copilot .. " " .. adapter.formatted_name
               end,
+              user = icons.person .. " " .. "Me",
             },
           },
           inline = {

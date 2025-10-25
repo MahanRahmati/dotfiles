@@ -68,6 +68,7 @@ return {
   selection_caret = "",
   separator = "",
   bot = " ",
+  person = " ",
   copilot = " ",
   copilot_disabled = " ",
   smiley = " ",
