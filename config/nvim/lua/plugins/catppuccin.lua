@@ -30,11 +30,8 @@ return {
         custom_highlights = function(c)
           return {
             Pmenu = { bg = c.base },
-            WhichKey = { fg = c.blue },
-            WhichKeyGroup = { fg = c.green },
-            WhichKeyDesc = { fg = c.mauve },
             LineNr = { fg = c.surface2 },
-            CursorLineNr = { fg = c.yellow },
+            CursorLineNr = { fg = c.yellow, style = { "bold" } },
             FloatBorder = { fg = c.yellow },
             DashboardHeader = { fg = c.green },
             NeoTreeFloatTitle = { fg = c.yellow },
