@@ -103,7 +103,30 @@ return {
         git = { enabled = false },
         gitbrowse = { enabled = false },
         image = { enabled = false },
-        indent = { enabled = false },
+        indent = {
+          char = icons.indent_line,
+          scope = { enabled = false },
+          filter = function(buf, _)
+            local exclude_filetypes = {
+              "help",
+              "lspinfo",
+              "checkhealth",
+              "man",
+              "neo-tree",
+              "lazy",
+              "mason",
+              "lazyterm",
+              "snacks_picker_list",
+              "snacks_picker_input",
+              "snacks_picker_preview",
+            }
+
+            return vim.g.snacks_indent ~= false
+              and vim.b[buf].snacks_indent ~= false
+              and vim.bo[buf].buftype == ""
+              and not vim.tbl_contains(exclude_filetypes, vim.bo[buf].filetype)
+          end,
+        },
         input = {
           icon = icons.selection_caret,
           win = { style = "input" },
