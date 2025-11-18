@@ -61,7 +61,7 @@
     "enabled": true
   },
   "vertical_scroll_margin": 999,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "search": {
     "button": false
   },
@@ -94,7 +94,7 @@
     "default_height": 320,
     "default_model": {
       "provider": "Llama.cpp",
-      "model": "Local"
+      "model": "qwen-3-4B-instruct-2507"
     },
     "editor_model": {
       "provider": "openai",
@@ -195,17 +195,22 @@
   "language_models": {
     "openai_compatible": {
       "Llama.cpp": {
-        "api_url": "http://localhost:8012",
+        "api_url": "http://localhost:11434/v1",
         "available_models": [
           {
-            "name": "Local",
-            "max_tokens": 16384,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false
-            }
+            "name": "qwen-3-4B-instruct-2507",
+            "display_name": "Qwen 3 4B Instruct 2507",
+            "max_tokens": 16384
+          },
+          {
+            "name": "qwen-3-4B-thinking-2507",
+            "display_name": "Qwen 3 4B Thinking 2507",
+            "max_tokens": 16384
+          },
+          {
+            "name": "gemma-3-4b",
+            "display_name": "Gemma 3 4B",
+            "max_tokens": 16384
           }
         ]
       }
