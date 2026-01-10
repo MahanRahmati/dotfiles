@@ -28,4 +28,5 @@ vim.lsp.enable {
   "harper_ls",
   "sqls",
   "sourcekit",
+  "ty",
 }
