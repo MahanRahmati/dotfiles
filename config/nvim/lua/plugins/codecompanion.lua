@@ -48,10 +48,9 @@ return {
             },
           },
         },
-        strategies = {
+        interactions = {
           chat = {
             adapter = "qwen_3_instruct",
-            inline = "qwen_3_instruct",
             roles = {
               llm = function(adapter)
                 return icons.copilot .. " " .. adapter.formatted_name
@@ -61,21 +60,23 @@ return {
           },
           inline = {
             adapter = "qwen_3_instruct",
-            inline = "qwen_3_instruct",
           },
           cmd = {
+            adapter = "qwen_3_instruct",
+          },
+          background = {
             adapter = "qwen_3_instruct",
           },
         },
         adapters = {
           acp = {
             opts = {
-              show_defaults = false,
+              show_presets = false,
             },
           },
           http = {
             opts = {
-              show_defaults = false,
+              show_presets = false,
             },
             qwen_3_instruct = function()
               return require("codecompanion.adapters").extend(
@@ -106,23 +107,6 @@ return {
                   schema = {
                     model = {
                       default = "qwen-3-4B-thinking-2507",
-                    },
-                  },
-                }
-              )
-            end,
-            gemma3 = function()
-              return require("codecompanion.adapters").extend(
-                "openai_compatible",
-                {
-                  name = "Gemma 3 4B",
-                  formatted_name = "Gemma 3 4B",
-                  env = {
-                    url = "http://127.0.0.1:11434",
-                  },
-                  schema = {
-                    model = {
-                      default = "gemma-3-4b",
                     },
                   },
                 }
