@@ -4,10 +4,10 @@ return {
     init = function()
       vim.g.llama_config = {
         show_info = 0,
-        keymap_trigger = "",
-        keymap_accept_full = "",
-        keymap_accept_line = "",
-        keymap_accept_word = "",
+        keymap_fim_trigger = "",
+        keymap_fim_accept_full = "",
+        keymap_fim_accept_line = "",
+        keymap_fim_accept_word = "",
         stop_strings = { "\n" },
         endpoint = "http://localhost:11434/infill",
         model = "qwen-2.5-coder-1.5B-Instruct-Q6",
