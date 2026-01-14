@@ -29,4 +29,5 @@ vim.lsp.enable {
   "sqls",
   "sourcekit",
   "ty",
+  "rust_analyzer",
 }

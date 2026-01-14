@@ -10,7 +10,6 @@ if mason_ok then
     mason_tool_installer.setup {
       ensure_installed = {
         "rust-analyzer",
-        "rustfmt",
       },
     }
     vim.cmd "MasonToolsInstall"
