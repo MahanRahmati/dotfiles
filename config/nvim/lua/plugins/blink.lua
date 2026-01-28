@@ -35,7 +35,7 @@ return {
           ["<S-Tab>"] = { "select_prev", "fallback" },
           ["<Tab>"] = {
             function(cmp)
-              if vim.fn["llama#is_hint_shown"]() then
+              if vim.fn["llama#is_fim_hint_shown"]() then
                 vim.schedule(function()
                   vim.fn["llama#fim_accept"] "full"
                 end)

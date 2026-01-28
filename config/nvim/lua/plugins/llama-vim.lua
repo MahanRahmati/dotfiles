@@ -9,8 +9,8 @@ return {
         keymap_fim_accept_line = "",
         keymap_fim_accept_word = "",
         stop_strings = { "\n" },
-        endpoint = "http://localhost:11434/infill",
-        model = "qwen-2.5-coder-1.5B-Instruct-Q6",
+        endpoint_fim = "http://localhost:11434/infill",
+        model_fim = "qwen-2.5-coder-1.5B-Instruct-Q6",
       }
 
       vim.api.nvim_create_autocmd("BufEnter", {
