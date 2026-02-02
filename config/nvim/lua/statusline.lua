@@ -258,6 +258,46 @@ function _G.get_dart_version()
   return ""
 end
 
+local rust_version_cache = nil
+
+function _G.get_rust_version()
+  if vim.bo.filetype ~= "rust" then
+    return ""
+  end
+
+  local icon, icon_hl
+  local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
+  if devicons_ok then
+    icon, icon_hl = devicons.get_icon_by_filetype "rust"
+  end
+
+  local version_text = rust_version_cache or ""
+  if version_text ~= "" and icon then
+    return string.format(
+      " %%#%s#%s%%#StatusLine# %s",
+      icon_hl,
+      icon,
+      version_text
+    )
+  elseif version_text ~= "" then
+    return " Rust " .. version_text
+  end
+
+  vim.schedule(function()
+    local handle = io.popen "rustc --version 2>&1"
+    if handle then
+      local result = handle:read "*a"
+      handle:close()
+      rust_version_cache = result:match "rustc (%d+%.%d+%.%d+)"
+      if rust_version_cache then
+        vim.cmd "redrawstatus"
+      end
+    end
+  end)
+
+  return ""
+end
+
 function _G.get_location()
   local cursor = vim.fn.line "."
   local column = vim.fn.virtcol "."
@@ -295,6 +335,7 @@ vim.opt.statusline = table.concat {
   "%{%v:lua.get_llama()%}",
   "%{%v:lua.get_go_version()%}",
   "%{%v:lua.get_dart_version()%}",
+  "%{%v:lua.get_rust_version()%}",
   "%{%v:lua.get_location()%}",
   "%{%v:lua.get_progress()%}",
 }
