@@ -30,4 +30,5 @@ vim.lsp.enable {
   "sourcekit",
   "ty",
   "rust_analyzer",
+  "templ",
 }
