@@ -15,6 +15,7 @@ return {
         correct_number_suffix = true,
         number_suffix_capitalization = true,
         multiple_sequential_pronouns = true,
+        ToDoHyphen = false,
       },
     },
   },
