@@ -11,24 +11,23 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("<leader>la", vim.lsp.buf.code_action, "Code Action")
     map("<leader>a", vim.lsp.buf.code_action, "Code Action")
     map("<leader>li", "<cmd>checkhealth vim.lsp<CR>", "Info")
-    map("K", function()
-      vim.lsp.buf.hover { border = "rounded" }
-    end, "Hover Documentation")
+    map("K", vim.lsp.buf.hover, "Hover Documentation")
   end,
 })
 
-vim.lsp.enable {
-  "lua_ls",
-  "bashls",
-  "jsonls",
-  "yamlls",
-  "gopls",
-  "zls",
-  "marksman",
-  "harper_ls",
-  "sqls",
-  "sourcekit",
-  "ty",
-  "rust_analyzer",
-  "templ",
-}
+local enable_lsp = function(name)
+  vim.lsp.enable(name)
+  vim.lsp.config(name, {})
+end
+
+enable_lsp "bashls"
+enable_lsp "gopls"
+enable_lsp "harper_ls"
+enable_lsp "jsonls"
+enable_lsp "lua_ls"
+enable_lsp "marksman"
+enable_lsp "rust_analyzer"
+enable_lsp "templ"
+enable_lsp "ty"
+enable_lsp "yamlls"
+enable_lsp "zls"

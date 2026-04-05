@@ -26,10 +26,6 @@ vim.diagnostic.config {
   underline = { severity = vim.diagnostic.severity.ERROR },
   severity_sort = true,
   float = {
-    focusable = true,
-    style = "minimal",
-    border = "rounded",
-    source = "if_many",
     header = "",
     prefix = "",
   },

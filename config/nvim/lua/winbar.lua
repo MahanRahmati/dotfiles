@@ -120,10 +120,10 @@ local function should_disable_winbar()
     "lspinfo",
     "lazy",
     "mason",
-    "snacks_dashboard",
-    "snacks_picker_list",
-    "snacks_picker_input",
-    "snacks_picker_preview",
+    "TelescopePrompt",
+    "TelescopeResults",
+    "ministarter",
+    "dashboard",
   }
   return vim.tbl_contains(file_types, vim.bo.filetype)
 end

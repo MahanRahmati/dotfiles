@@ -1,7 +1,16 @@
 local icons = require "icons"
 
-local function highlight_setter(name, link)
-  vim.api.nvim_set_hl(0, name, { link = link, bold = true })
+function _G.capsule(highlight, text)
+  return string.format("%%#%s#", highlight)
+    .. ""
+    .. text
+    .. string.format("%%#%s#", highlight)
+    .. ""
+    .. "%#StatusLine#"
+end
+
+function _G.capsule_middle(highlight, text)
+  return string.format("%%#%s#", highlight) .. text
 end
 
 local mode_hl_groups = {
@@ -20,18 +29,27 @@ local mode_hl_groups = {
   t = "SLTerminal",
 }
 
-highlight_setter("SLNormal", "Function")
-highlight_setter("SLInsert", "String")
-highlight_setter("SLVisual", "Statement")
-highlight_setter("SLCommand", "WarningMsg")
-highlight_setter("SLSelect", "Special")
-highlight_setter("SLReplace", "Error")
-highlight_setter("SLTerminal", "String")
+local mode_hl_alt_groups = {
+  n = "SLNormalAlt",
+  i = "SLInsertAlt",
+  v = "SLVisualAlt",
+  V = "SLVisualAlt",
+  ["\22"] = "SLVisualAlt",
+  c = "SLCommandAlt",
+  s = "SLSelectAlt",
+  S = "SLSelectAlt",
+  ["\19"] = "SLSelectAlt",
+  R = "SLReplaceAlt",
+  r = "SLReplaceAlt",
+  ["!"] = "SLTerminalAlt",
+  t = "SLTerminalAlt",
+}
 
 function _G.get_mode()
   local mode = vim.fn.mode()
   local hl_group = mode_hl_groups[mode:sub(1, 1)] or "SLNormal"
-  return string.format("%%#%s#", hl_group) .. " " .. icons.mode .. " "
+  local hl_alt_group = mode_hl_alt_groups[mode:sub(1, 1)] or "SLNormalAlt"
+  return capsule(hl_alt_group, capsule_middle(hl_group, icons.mode .. " "))
 end
 
 function _G.get_git_info()
@@ -47,15 +65,14 @@ function _G.get_git_info()
 
   local branch = signs.head
 
-  local branch_info = branch and (icons.branch .. " " .. branch .. " ") or ""
+  local branch_info = branch and (icons.branch .. " " .. branch) or ""
 
-  return branch_info
+  if branch_info == "" then
+    return ""
+  end
+
+  return capsule("SLItemAlt", capsule_middle("SLItem", branch_info .. " "))
 end
-
-highlight_setter("SLDiagnosticError", "DiagnosticError")
-highlight_setter("SLDiagnosticWarn", "DiagnosticWarn")
-highlight_setter("SLDiagnosticInfo", "DiagnosticInfo")
-highlight_setter("SLDiagnosticHint", "DiagnosticHint")
 
 local function get_diagnostics_type(severity)
   return #vim.diagnostic.get(nil, { severity = severity })
@@ -73,25 +90,38 @@ function _G.get_diagnostics()
   if counts.errors > 0 then
     table.insert(
       parts,
-      "%#SLDiagnosticError#" .. icons.error .. counts.errors .. "%#StatusLine#"
+      capsule(
+        "SLDiagnosticErrorAlt",
+        capsule_middle("SLDiagnosticError", icons.error .. counts.errors)
+      )
     )
   end
   if counts.warnings > 0 then
     table.insert(
       parts,
-      "%#SLDiagnosticWarn#" .. icons.warn .. counts.warnings .. "%#StatusLine#"
+      capsule(
+        "SLDiagnosticWarnAlt",
+        capsule_middle("SLDiagnosticWarn", icons.warn .. counts.warnings)
+      )
     )
   end
   if counts.info > 0 then
     table.insert(
       parts,
-      "%#SLDiagnosticInfo#" .. icons.info .. counts.info .. "%#StatusLine#"
+      capsule(
+        "SLDiagnosticInfoAlt",
+        capsule_middle("SLDiagnosticInfo", icons.info .. counts.info)
+      )
     )
   end
+
   if counts.hints > 0 then
     table.insert(
       parts,
-      "%#SLDiagnosticHint#" .. icons.hint .. counts.hints .. "%#StatusLine#"
+      capsule(
+        "SLDiagnosticHintAlt",
+        capsule_middle("SLDiagnosticHint", icons.hint .. counts.hints)
+      )
     )
   end
 
@@ -118,9 +148,6 @@ local function selectioncount()
     return ""
   end
 end
-
-highlight_setter("SLCopilotEnabled", "String")
-highlight_setter("SLCopilotDisabled", "Conceal")
 
 local model_name_cache = ""
 local llama_timer = vim.uv.new_timer()
@@ -169,13 +196,18 @@ end
 
 function _G.get_llama()
   if model_name_cache ~= "" then
-    return "%#SLCopilotEnabled#"
-      .. icons.copilot
-      .. " "
-      .. model_name_cache
-      .. "%*"
+    return capsule(
+      "SLCopilotEnabledAlt",
+      capsule_middle(
+        "SLCopilotEnabled",
+        icons.copilot .. " " .. model_name_cache .. "%*"
+      )
+    )
   end
-  return "%#SLCopilotDisabled#" .. icons.copilot_disabled .. "%*"
+  return capsule(
+    "SLCopilotDisabledAlt",
+    capsule_middle("SLCopilotDisabled", icons.copilot_disabled .. "%*")
+  )
 end
 
 local go_version_cache = nil
@@ -185,22 +217,21 @@ function _G.get_go_version()
     return ""
   end
 
-  local icon, icon_hl
+  local icon
   local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
   if devicons_ok then
-    icon, icon_hl = devicons.get_icon_by_filetype "go"
+    icon, _ = devicons.get_icon_by_filetype "go"
   end
 
   local version_text = go_version_cache or ""
   if version_text ~= "" and icon then
-    return string.format(
-      " %%#%s#%s%%#StatusLine# %s",
-      icon_hl,
-      icon,
-      version_text
-    )
+    return capsule(
+      "SLItemAlt",
+      capsule_middle("SLItem", icon .. " " .. version_text)
+    ) .. " "
   elseif version_text ~= "" then
-    return " Go " .. version_text
+    return capsule("SLItemAlt", capsule_middle("SLItem", "Go " .. version_text))
+      .. " "
   end
 
   vim.schedule(function()
@@ -225,22 +256,23 @@ function _G.get_dart_version()
     return ""
   end
 
-  local icon, icon_hl
+  local icon
   local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
   if devicons_ok then
-    icon, icon_hl = devicons.get_icon_by_filetype "dart"
+    icon, _ = devicons.get_icon_by_filetype "dart"
   end
 
   local version_text = dart_version_cache or ""
   if version_text ~= "" and icon then
-    return string.format(
-      " %%#%s#%s%%#StatusLine# %s",
-      icon_hl,
-      icon,
-      version_text
-    )
+    return capsule(
+      "SLItemAlt",
+      capsule_middle("SLItem", icon .. " " .. version_text)
+    ) .. " "
   elseif version_text ~= "" then
-    return " Dart " .. version_text
+    return capsule(
+      "SLItemAlt",
+      capsule_middle("SLItem", "Dart " .. version_text)
+    ) .. " "
   end
 
   vim.schedule(function()
@@ -265,22 +297,23 @@ function _G.get_rust_version()
     return ""
   end
 
-  local icon, icon_hl
+  local icon
   local devicons_ok, devicons = pcall(require, "nvim-web-devicons")
   if devicons_ok then
-    icon, icon_hl = devicons.get_icon_by_filetype "rust"
+    icon, _ = devicons.get_icon_by_filetype "rust"
   end
 
   local version_text = rust_version_cache or ""
   if version_text ~= "" and icon then
-    return string.format(
-      " %%#%s#%s%%#StatusLine# %s",
-      icon_hl,
-      icon,
-      version_text
-    )
+    return capsule(
+      "SLItemAlt",
+      capsule_middle("SLItem", icon .. " " .. version_text)
+    ) .. " "
   elseif version_text ~= "" then
-    return " Rust " .. version_text
+    return capsule(
+      "SLItemAlt",
+      capsule_middle("SLItem", "Rust " .. version_text)
+    ) .. " "
   end
 
   vim.schedule(function()
@@ -302,27 +335,32 @@ function _G.get_location()
   local cursor = vim.fn.line "."
   local column = vim.fn.virtcol "."
   local selected = selectioncount()
-  return " " .. cursor .. ":" .. column .. selected .. " "
+  return capsule(
+    "SLItemAlt",
+    capsule_middle("SLItem", cursor .. ":" .. column .. selected)
+  )
 end
 
 function _G.get_progress()
   local mode = vim.fn.mode()
   local hl_group = mode_hl_groups[mode:sub(1, 1)] or "SLNormal"
+  local hl_alt_group = mode_hl_alt_groups[mode:sub(1, 1)] or "SLNormalAlt"
   local cur = vim.fn.line "."
   local total = vim.fn.line "$"
+
   if cur == 1 then
-    return string.format("%%#%s#%s ", hl_group, "0%%")
+    return capsule(hl_alt_group, string.format("%%#%s#%s", hl_group, "0%%"))
   end
   if cur == total then
-    return string.format("%%#%s#%s ", hl_group, "100%%")
+    return capsule(hl_alt_group, string.format("%%#%s#%s", hl_group, "100%%"))
   end
   local percentage = math.floor(cur / total * 100)
   if percentage < 10 then
     local p = string.format("%d%%%%", percentage)
-    return string.format("%%#%s#%s ", hl_group, p)
+    return capsule(hl_alt_group, string.format("%%#%s#%s", hl_group, p))
   else
     local p = string.format("%2d%%%%", percentage)
-    return string.format("%%#%s#%s ", hl_group, p)
+    return capsule(hl_alt_group, string.format("%%#%s#%s", hl_group, p))
   end
 end
 
@@ -332,11 +370,11 @@ vim.opt.statusline = table.concat {
   "%{%v:lua.get_git_info()%} ",
   "%{%v:lua.get_diagnostics()%}",
   "%=",
-  "%{%v:lua.get_llama()%}",
+  "%{%v:lua.get_llama()%} ",
   "%{%v:lua.get_go_version()%}",
   "%{%v:lua.get_dart_version()%}",
   "%{%v:lua.get_rust_version()%}",
-  "%{%v:lua.get_location()%}",
+  "%{%v:lua.get_location()%} ",
   "%{%v:lua.get_progress()%}",
 }
 

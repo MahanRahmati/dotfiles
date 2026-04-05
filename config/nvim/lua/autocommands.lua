@@ -5,7 +5,7 @@ local autocmd = vim.api.nvim_create_autocmd
 autocmd({ "FileType" }, {
   desc = "Use q to quit from common plugins",
   group = augroup("q-in-plugins", { clear = true }),
-  pattern = { "qf", "help", "man", "lspinfo" },
+  pattern = { "qf", "help", "man" },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
     vim.keymap.set(
@@ -65,15 +65,6 @@ autocmd({ "InsertEnter", "WinLeave", "CmdlineEnter" }, {
   pattern = "*",
   callback = function()
     vim.cmd [[set nocursorline]]
-  end,
-})
-
--- Resize splits if window got resized.
-autocmd({ "VimResized" }, {
-  desc = "Resize splits if window got resized",
-  group = augroup("resize-splits", { clear = true }),
-  callback = function()
-    vim.cmd "tabdo wincmd ="
   end,
 })
 

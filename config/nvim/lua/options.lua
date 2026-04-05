@@ -31,13 +31,6 @@ vim.opt.fillchars:append {
   eob = " ",
 }
 
--- This is a sequence of letters which describes how automatic formatting is to
--- be done
-vim.opt.formatoptions:remove { "c", "r", "o" }
-
--- This is a list of fonts which will be used for the GUI version of Vim.
-vim.opt.guifont = "Hack Nerd Font:h15"
-
 -- Ignore case in search patterns.
 vim.opt.ignorecase = true
 
@@ -65,6 +58,9 @@ vim.opt.number = true
 -- Minimal number of columns to use for the line number.
 vim.opt.numberwidth = 4
 
+-- Defines the default border style of popupmenu windows.
+vim.opt.pumborder = "rounded"
+
 -- Maximum number of items to show in the popup menu.
 vim.opt.pumheight = 10
 
@@ -78,10 +74,10 @@ vim.opt.ruler = false
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 999
 
--- Number of spaces to use for each step of (auto)indent.
+-- Number of columns that make up one level of (auto)indentation.
 vim.opt.shiftwidth = 2
 
--- This option helps to avoid all the |hit-enter| prompts caused by file
+-- This option helps to avoid all the hit-enter prompts caused by file
 -- messages.
 vim.opt.shortmess:append "c"
 
@@ -115,13 +111,13 @@ vim.opt.splitright = true
 -- Use a swapfile for the buffer.
 vim.opt.swapfile = false
 
--- Number of spaces that a <Tab> in the file counts for.
+-- Defines the column multiple used to display the Horizontal Tab character.
 vim.opt.tabstop = 2
 
--- Enables 24-bit RGB color in the |TUI|.
+-- Enables 24-bit RGB color in the TUI.
 vim.opt.termguicolors = true
 
--- When on, the title of the window will be set to the value of 'titlestring'.
+-- If enabled, Nvim will update the (GUI or terminal) window title.
 vim.opt.title = true
 
 -- When on, Vim automatically saves undo history to an undo file when
@@ -130,7 +126,7 @@ vim.opt.title = true
 vim.opt.undofile = true
 
 -- If this many milliseconds nothing is typed the swap file will be written
--- to disk.
+-- to disk. Also used for the CursorHold autocommand event.
 vim.opt.updatetime = 300
 
 -- Allow specified keys that move the cursor left/right to move to the
@@ -138,8 +134,8 @@ vim.opt.updatetime = 300
 -- line.
 vim.opt.whichwrap:append "<,>,[,],h,l"
 
+-- Defines the default border style of floating windows.
+vim.opt.winborder = "rounded"
+
 -- This option changes how text is displayed.
 vim.opt.wrap = false
-
--- Make a backup before overwriting a file.
-vim.opt.writebackup = false

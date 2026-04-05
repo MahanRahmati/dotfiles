@@ -40,3 +40,6 @@ end, { noremap = true, expr = true })
 -- Scroll up and down
 set("n", "<ScrollWheelUp>", "<C-y>", { desc = "Scroll Wheel Up" })
 set("n", "<ScrollWheelDown>", "<C-e>", { desc = "Scroll Wheel Down" })
+
+-- Package Manager
+vim.keymap.set("n", "<leader>p", vim.pack.update, { desc = "Package Manager" })

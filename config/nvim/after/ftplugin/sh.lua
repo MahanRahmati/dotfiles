@@ -1,0 +1,6 @@
+local conform_ok, conform = pcall(require, "conform")
+if conform_ok then
+  conform.formatters_by_ft.sh = { "shfmt" }
+end
+
+enable_treesitter "bash"
