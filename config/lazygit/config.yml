@@ -1,3 +1,6 @@
+git:
+  ignoreWhitespaceInDiffView: false
+
 gui:
   border: 'rounded'
   nerdFontsVersion: '3'
