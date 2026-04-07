@@ -6,7 +6,7 @@ vim.g.llama_config = {
   keymap_fim_accept_word = "",
   stop_strings = { "\n" },
   endpoint_fim = "http://localhost:11434/infill",
-  model_fim = "qwen-2.5-coder-1.5B-Instruct-Q6",
+  model_fim = "qwen-2.5-coder-1.5B-Instruct",
 }
 
 vim.pack.add { "https://github.com/ggml-org/llama.vim" }

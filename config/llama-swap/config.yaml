@@ -51,7 +51,7 @@ models:
       --chat-template-kwargs '{"enable_thinking":true}'
       --jinja
       --parallel 1
-  'qwen-2.5-coder-1.5B-Instruct-128K-Q6':
+  'qwen-2.5-coder-1.5B-Instruct':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 2.5 Coder 1.5B (128K)'
     ttl: 300
