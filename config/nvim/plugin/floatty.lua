@@ -13,9 +13,6 @@ local term = require("floatty").setup {
 vim.keymap.set("n", "<leader>t", function()
   term.toggle()
 end, { desc = "Terminal" })
-vim.keymap.set("t", "<leader>t", function()
-  term.toggle()
-end, { desc = "Terminal" })
 
 local lazygit = require("floatty").setup {
   cmd = "lazygit",
