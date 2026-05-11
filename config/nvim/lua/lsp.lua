@@ -12,6 +12,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("<leader>a", vim.lsp.buf.code_action, "Code Action")
     map("<leader>li", "<cmd>checkhealth vim.lsp<CR>", "Info")
     map("K", vim.lsp.buf.hover, "Hover Documentation")
+
+    vim.lsp.document_color.enable(true, { bufnr = event.buf })
   end,
 })
 

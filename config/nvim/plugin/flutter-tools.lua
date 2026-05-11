@@ -17,9 +17,6 @@ require("flutter-tools").setup {
     open_cmd = "botright 10new",
   },
   lsp = {
-    color = {
-      enabled = true,
-    },
     settings = {
       showTodos = true,
       completeFunctionCalls = true,
