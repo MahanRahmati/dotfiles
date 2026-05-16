@@ -1,54 +1,64 @@
 models:
-  'qwen-3.5-2B':
+  'qwen-3.6-35B-A3B':
     proxy: 'http://127.0.0.1:8012'
-    name: 'Qwen 3.5 2B'
+    name: 'Qwen 3.6 35B A3B'
     cmd: |
-      /opt/homebrew/bin/llama-server
+      llama-server
       --host 127.0.0.1
       --port 8012
-      -hf unsloth/Qwen3.5-2B-GGUF:UD-Q4_K_XL
-      --ctx-size 0
-      --temp 1.0
+      -hf unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q4_K_M
+      --ctx-size 65536
+      --temp 0.6
       --min-p 0.0
       --top-p 0.95
       --top-k 20
       --repeat-penalty 1.0
       --presence-penalty 0.0
+      --flash-attn on
+      --reasoning-budget 4096
+      --reasoning-budget-message "Proceed to final answer."
+      --fit on 
+      --fit-target 128
       --jinja
       --parallel 1
-  'qwen-3.5-4B-Instruct':
+  'gemma-4-26B-A4B':
     proxy: 'http://127.0.0.1:8012'
-    name: 'Qwen 3.5 4B'
+    name: 'Gemma 4 26B A4B'
     cmd: |
-      /opt/homebrew/bin/llama-server
+      llama-server
       --host 127.0.0.1
       --port 8012
-      -hf unsloth/Qwen3.5-4B-GGUF:UD-Q4_K_XL
-      --ctx-size 0
+      -hf unsloth/gemma-4-26B-A4B-it-GGUF:UD-Q4_K_M
+      --ctx-size 65536
       --temp 1.0
       --min-p 0.0
       --top-p 0.95
-      --top-k 20
+      --top-k 64
       --repeat-penalty 1.0
       --presence-penalty 0.0
+      --flash-attn on
+      --reasoning-budget 4096
+      --reasoning-budget-message "Proceed to final answer."
+      --fit on
+      --fit-target 128
       --jinja
       --parallel 1
-  'qwen-3.5-4B-Thinking':
+  'gpt-oss-20B':
     proxy: 'http://127.0.0.1:8012'
-    name: 'Qwen 3.5 4B'
+    name: 'GPT OSS 20B'
     cmd: |
-      /opt/homebrew/bin/llama-server
+      llama-server
       --host 127.0.0.1
       --port 8012
-      -hf unsloth/Qwen3.5-4B-GGUF:UD-Q4_K_XL
-      --ctx-size 0
+      -hf unsloth/gpt-oss-20b-GGUF:UD-Q4_K_XL
+      --ctx-size 65536
       --temp 1.0
       --min-p 0.0
-      --top-p 0.95
-      --top-k 20
-      --repeat-penalty 1.0
-      --presence-penalty 0.0
-      --chat-template-kwargs '{"enable_thinking":true}'
+      --top-p 1.0
+      --top-k 0
+      --flash-attn on
+      --fit on
+      --fit-target 128
       --jinja
       --parallel 1
   'qwen-2.5-coder-1.5B-Instruct':
@@ -65,32 +75,6 @@ models:
       --top-p 0.8 
       --top-k 20 
       --repeat-penalty 1.05
-      --jinja
-      --parallel 1
-  'gemma-4-e2b':
-    proxy: 'http://127.0.0.1:8012'
-    name: 'Gemma 4 E2B'
-    cmd: |
-      /opt/homebrew/bin/llama-server
-      --host 127.0.0.1
-      --port 8012
-      -hf unsloth/gemma-4-E2B-it-GGUF:UD-Q4_K_XL
-      --temp 1.0 
-      --top-p 0.95 
-      --top-k 64 
-      --jinja
-      --parallel 1
-  'gemma-4-e4b':
-    proxy: 'http://127.0.0.1:8012'
-    name: 'Gemma 4 E4B'
-    cmd: |
-      /opt/homebrew/bin/llama-server
-      --host 127.0.0.1
-      --port 8012
-      -hf unsloth/gemma-4-E4B-it-GGUF:UD-Q4_K_XL
-      --temp 1.0 
-      --top-p 0.95 
-      --top-k 64 
       --jinja
       --parallel 1
   'whisper':
