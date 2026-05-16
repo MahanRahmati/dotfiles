@@ -103,6 +103,9 @@ function _G.get_search_count()
   end
 
   local count = vim.fn.searchcount()
+  if not count.total or not count.maxcount then
+    return ""
+  end
   return "%#WinBarSearchCount#"
     .. icons.find
     .. string.format(
