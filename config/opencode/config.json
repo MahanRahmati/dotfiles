@@ -1,29 +1,24 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "system",
+  "model": "llama/qwen-3.6-35B-A3B",
   "small_model": "llama/qwen-2.5-coder-1.5B-Instruct",
   "provider": {
     "llama": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "Llama.cpp (local)",
       "options": {
-        "baseURL": "http://localhost:11434/v1"
+        "baseURL": "http://localhost:12434/v1"
       },
       "models": {
-        "qwen-3.5-4B-Instruct": {
-          "name": "Qwen 3.5 4B Instruct"
+        "qwen-3.6-35B-A3B": {
+          "name": "Qwen 3.6 35B A3B"
         },
-        "qwen-3.5-4B-Thinking": {
-          "name": "Qwen 3.5 4B Thinking"
+        "gemma-4-26B-A4B": {
+          "name": "Gemma 4 26B A4B"
         },
-        "qwen-3.5-2B": {
-          "name": "Qwen 3.5 2B"
-        },
-        "gemma-4-e2b": {
-          "name": "Gemma 4 E2B"
-        },
-        "gemma-4-e4b": {
-          "name": "Gemma 4 E4B"
+        "gpt-oss-20B": {
+          "name": "GPT OSS 20B"
         },
         "qwen-2.5-coder-1.5B-Instruct": {
           "name": "Qwen 2.5 Coder 1.5B"
