@@ -20,7 +20,6 @@ models:
       --fit on 
       --fit-target 128
       --jinja
-      --parallel 1
   'gemma-4-26B-A4B':
     proxy: 'http://127.0.0.1:8012'
     name: 'Gemma 4 26B A4B'
@@ -42,7 +41,6 @@ models:
       --fit on
       --fit-target 128
       --jinja
-      --parallel 1
   'gpt-oss-20B':
     proxy: 'http://127.0.0.1:8012'
     name: 'GPT OSS 20B'
@@ -60,15 +58,13 @@ models:
       --fit on
       --fit-target 128
       --jinja
-      --parallel 1
   'qwen-2.5-coder-1.5B-Instruct':
-    proxy: 'http://127.0.0.1:8012'
+    proxy: 'http://127.0.0.1:8013'
     name: 'Qwen 2.5 Coder 1.5B (128K)'
-    ttl: 300
     cmd: |
-      /opt/homebrew/bin/llama-server
+      llama-server
       --host 127.0.0.1
-      --port 8012
+      --port 8013
       -hf unsloth/Qwen2.5-Coder-1.5B-Instruct-128K-GGUF:Q6_K
       --temp 0.7 
       --min-p 0.0 
@@ -76,7 +72,6 @@ models:
       --top-k 20 
       --repeat-penalty 1.05
       --jinja
-      --parallel 1
   'whisper':
     proxy: 'http://127.0.0.1:9090'
     checkEndpoint: /v1/audio/transcriptions/
@@ -86,3 +81,11 @@ models:
       --port 9090
       --flash-attn
       --request-path /v1/audio/transcriptions --inference-path ""
+matrix:
+  vars:
+    q36: qwen-3.6-35B-A3B
+    g4: gemma-4-26B-A4B
+    g20: gpt-oss-20B
+    c15: qwen-2.5-coder-1.5B-Instruct
+  sets:
+    coder: 'c15 & (q36 | g4 | g20)'
