@@ -37,11 +37,15 @@
           "cargo check *": "allow",
           "cargo update *": "allow",
           "cargo search *": "allow",
+          "cargo build *": "allow",
           "go run *": "allow",
           "go build *": "allow",
           "go test *": "allow",
           "go vet *": "allow",
           "sqlc generate *": "allow",
+          "ddgr *": "allow",
+          "head *": "allow",
+          "tail *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -58,11 +62,15 @@
           "cargo test *": "allow",
           "cargo check *": "allow",
           "cargo search *": "allow",
+          "cargo build *": "allow",
           "go run *": "allow",
           "go build *": "allow",
           "go test *": "allow",
           "go vet *": "allow",
           "sqlc generate *": "allow",
+          "ddgr *": "allow",
+          "head *": "allow",
+          "tail *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -82,10 +90,14 @@
     "cargo fmt *": "allow",
     "cargo test *": "allow",
     "cargo check *": "allow",
+    "cargo build *": "allow",
     "go run *": "allow",
     "go build *": "allow",
     "go test *": "allow",
     "go vet *": "allow",
-    "sqlc generate *": "allow"
+    "sqlc generate *": "allow",
+    "ddgr *": "allow",
+    "head *": "allow",
+    "tail *": "allow"
   }
 }
