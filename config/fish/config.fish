@@ -125,8 +125,8 @@ if type -q git
     function g
         git clone $argv[1]
         and set git_folder (echo $argv[1] | awk -F '/' '{ print $5 }' | awk -F '.git' '{ print $1 }')
-        and mv $git_folder $HOME/Development/Git/
-        and cd $HOME/Development/Git/$git_folder
+        and mv $git_folder $HOME/Projects/Git/
+        and cd $HOME/Projects/Git/$git_folder
     end
 else
     echo "Install Git"
@@ -175,6 +175,9 @@ function fish_prompt
     print_in_color '  ' (prompt_color_for_status $last_status)
 end
 
+# ----------------------------------------------------------------------
+# --                             Greeting                             --
+# ----------------------------------------------------------------------
 function fish_greeting
     fastfetch
 end
