@@ -29,3 +29,6 @@
 
 [llama-swap.files]
 "config/llama-swap" = "~/.config/llama-swap"
+
+[zsh.files]
+"config/zsh" = "~/.config/zsh"

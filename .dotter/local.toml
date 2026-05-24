@@ -10,6 +10,7 @@ packages = [
   "fastfetch",
   "opencode",
   "llama-swap",
+  "zsh",
 ]
 
 [files]
