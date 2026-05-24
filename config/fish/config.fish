@@ -40,8 +40,7 @@ fish_add_path /opt/homebrew/opt/rustup/bin
 set -x XDG_CONFIG_HOME $HOME/.config
 set -x XDG_CACHE_HOME $HOME/.cache
 set -x XDG_DATA_HOME $HOME/.local/share
-set -x GOPATH $HOME/.local/share/go
-set -x GOMODCACHE $HOME/.cache/go/mod
+set -x XDG_STATE_HOME $HOME/.local/state
 
 # ----------------------------------------------------------------------
 # --                              Neovim                              --
@@ -75,12 +74,12 @@ end
 # ----------------------------------------------------------------------
 # --                                Go                                --
 # ----------------------------------------------------------------------
-# if type -q go
-# set -x GOPATH $XDG_DATA_HOME/go
-# set -x GOMODCACHE $XDG_CACHE_HOME/go/mod
-# else
-# echo "Install Go"
-# end
+set -x GOPATH $XDG_DATA_HOME/go
+set -x GOMODCACHE $XDG_CACHE_HOME/go/mod
+if type -q go
+else
+    echo "Install Go"
+end
 
 # ----------------------------------------------------------------------
 # --                              MacOS                               --
@@ -179,7 +178,3 @@ end
 function fish_greeting
     fastfetch
 end
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
