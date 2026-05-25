@@ -97,6 +97,7 @@ end
 if type -q eza
     alias ls='eza --icons --color=always -a --group-directories-first'
     alias ll='eza --icons --color=always -al --group-directories-first'
+    alias tree='eza --tree --icons --color=always -a --group-directories-first'
     function cd
         if [ -n $argv[1] ]
             builtin cd $argv[1]

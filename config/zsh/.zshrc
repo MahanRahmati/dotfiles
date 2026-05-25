@@ -9,11 +9,12 @@
 # --                               Path                               --
 # ----------------------------------------------------------------------
 path=(~/.local/bin $path)
-path+=(usr/local/bin)
+path+=(/usr/local/bin)
 path+=(~/.local/share/go/bin)
 if [[ $OSTYPE == "darwin"* ]]; then
   path+=(/opt/homebrew/opt/openjdk@17/bin)
   path+=(/opt/homebrew/opt/rustup/bin)
+  path+=(/opt/homebrew/bin)
 fi
 
 typeset -U path PATH
@@ -28,18 +29,33 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 
 # ----------------------------------------------------------------------
-# --                               ZSH                                --
+# --                               Zsh                                --
 # ----------------------------------------------------------------------
-HISTSIZE=1000
-SAVEHIST=1000
-
 [ -d "$XDG_STATE_HOME"/zsh ] || mkdir -p "$XDG_STATE_HOME"/zsh
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 
-zstyle :compinstall filename "$XDG_STATE_HOME"/zsh/.zshrc
+HISTSIZE=1000
+SAVEHIST=1000
 
+setopt APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+
+setopt AUTOCD
+setopt NOBEEP
+setopt NUMERIC_GLOB_SORT
+
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
+
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+zstyle :compinstall filename "$XDG_STATE_HOME"/zsh/.zshrc
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 
 
 # ----------------------------------------------------------------------
 # --                              Neovim                              --
@@ -84,7 +100,6 @@ fi
 # --                              MacOS                               --
 # ----------------------------------------------------------------------
 if [[ $OSTYPE == "darwin"* ]]; then
-  export PATH=$PATH:$HOME/.pub-cache/bin
   export CHROME_EXECUTABLE='/Applications/Chromium.app/Contents/MacOS/Chromium'
 fi
 
@@ -94,6 +109,7 @@ fi
 if type eza >/dev/null; then
   alias ls='eza --icons --color=always -a --group-directories-first'
   alias ll='eza --icons --color=always -al --group-directories-first'
+  alias tree='eza --tree --icons --color=always -a --group-directories-first'
   chpwd() {
     eza --icons --color=always -a --group-directories-first
   }
@@ -136,20 +152,7 @@ alias q='exit'
 # --                              Prompt                              --
 # ----------------------------------------------------------------------
 setopt PROMPT_SUBST
-
-prompt_pwd() {
-  printf "[%s]" "%~"
-}
-
-prompt_color_for_status() {
-  if [ "$1" -eq 0 ]; then
-    printf '%s' '%F{green}'
-  else
-    printf '%s' '%F{red}'
-  fi
-}
-
-PROMPT='$(prompt_pwd)$(prompt_color_for_status $?)  %f '
+PROMPT='[%~]%(?.%F{green}.%F{red})  %f'
 
 # ----------------------------------------------------------------------
 # --                             Greeting                             --
