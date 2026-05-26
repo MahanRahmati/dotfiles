@@ -46,6 +46,9 @@
           "ddgr *": "allow",
           "head *": "allow",
           "tail *": "allow",
+          "ls *": "allow",
+          "find *": "allow",
+          "tree *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -71,6 +74,9 @@
           "ddgr *": "allow",
           "head *": "allow",
           "tail *": "allow",
+          "ls *": "allow",
+          "find *": "allow",
+          "tree *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -98,6 +104,9 @@
     "sqlc generate *": "allow",
     "ddgr *": "allow",
     "head *": "allow",
-    "tail *": "allow"
+    "tail *": "allow",
+    "ls *": "allow",
+    "find *": "allow",
+    "tree *": "allow"
   }
 }
