@@ -75,6 +75,13 @@ models:
       --top-k 20 
       --repeat-penalty 1.05
       --jinja
+  'comfyui':
+    proxy: 'http://127.0.0.1:8188'
+    name: 'ComfyUI'
+    cmd: |
+      comfyui
+      --listen 127.0.0.1
+      --port 8188
   'whisper':
     proxy: 'http://127.0.0.1:9090'
     checkEndpoint: /v1/audio/transcriptions/
@@ -90,5 +97,7 @@ matrix:
     g4: gemma-4-26B-A4B
     g20: gpt-oss-20B
     c15: qwen-2.5-coder-1.5B-Instruct
+    cui: comfyui
   sets:
     coder: 'c15 & (q36 | g4 | g20)'
+    creative: 'cui & (q36 | g4)'
