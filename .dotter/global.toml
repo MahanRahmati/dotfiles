@@ -32,3 +32,6 @@
 
 [zsh.files]
 "config/zsh" = "~/.config/zsh"
+
+[npm.files]
+"config/npm" = "~/.config/npm"
