@@ -55,7 +55,7 @@ compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
 zstyle :compinstall filename "$XDG_STATE_HOME"/zsh/.zshrc
 zstyle ':completion:*' menu select
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # ----------------------------------------------------------------------
 # --                              Neovim                              --
@@ -152,7 +152,10 @@ alias q='exit'
 # --                              Prompt                              --
 # ----------------------------------------------------------------------
 setopt PROMPT_SUBST
-PROMPT='[%~]%(?.%F{green}.%F{red})  %f'
+precmd() {
+  [[ -n "$CONTAINER_ID" ]] && CONTAINER="[$CONTAINER_ID]" || CONTAINER=""
+}
+PROMPT='%{${CONTAINER}%}[%~]%(?.%F{green}.%F{red})  %f'
 
 # ----------------------------------------------------------------------
 # --                             Greeting                             --
