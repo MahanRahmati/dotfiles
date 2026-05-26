@@ -78,6 +78,7 @@ models:
   'comfyui':
     proxy: 'http://127.0.0.1:8188'
     name: 'ComfyUI'
+    checkEndpoint: /models
     cmd: |
       comfyui
       --listen 127.0.0.1
