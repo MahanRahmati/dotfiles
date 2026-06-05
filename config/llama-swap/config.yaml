@@ -15,8 +15,8 @@ models:
       --repeat-penalty 1.0
       --presence-penalty 0.0
       --flash-attn on
-      --reasoning-budget 4096
-      --reasoning-budget-message "Proceed to final answer."
+      --reasoning-budget 2048
+      --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
       --fit on
       --fit-target 128
       --no-mmproj-offload
@@ -37,8 +37,8 @@ models:
       --repeat-penalty 1.0
       --presence-penalty 0.0
       --flash-attn on
-      --reasoning-budget 4096
-      --reasoning-budget-message "Proceed to final answer."
+      --reasoning-budget 2048
+      --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
       --fit on
       --fit-target 128
       --no-mmap
