@@ -49,6 +49,8 @@
           "ls *": "allow",
           "find *": "allow",
           "tree *": "allow",
+          "sort *": "allow",
+          "grep *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -77,6 +79,8 @@
           "ls *": "allow",
           "find *": "allow",
           "tree *": "allow",
+          "sort *": "allow",
+          "grep *": "allow",
           "git *": "deny"
         },
         "skill": {
@@ -107,6 +111,8 @@
     "tail *": "allow",
     "ls *": "allow",
     "find *": "allow",
-    "tree *": "allow"
+    "tree *": "allow",
+    "sort *": "allow",
+    "grep *": "allow"
   }
 }
