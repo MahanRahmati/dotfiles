@@ -59,6 +59,14 @@ require("telescope").setup {
     find_files = {
       follow = true,
       hidden = true,
+      find_command = {
+        "rg",
+        "--files",
+        "--color",
+        "never",
+        "-g",
+        "!*_templ.go",
+      },
     },
     buffers = {
       theme = "dropdown",
