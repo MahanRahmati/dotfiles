@@ -160,7 +160,7 @@ if llama_timer then
     vim.schedule_wrap(function()
       vim.schedule(function()
         local handle =
-          io.popen "curl -X GET 'http://localhost:11434/v1/models' -s"
+          io.popen "curl -X GET 'http://localhost:12434/v1/models' -s"
         if handle then
           local result = handle:read "*a"
           handle:close()
@@ -176,7 +176,7 @@ if llama_timer then
         end
       end)
 
-      local handle = io.popen "curl -X GET 'http://localhost:11434/running' -s"
+      local handle = io.popen "curl -X GET 'http://localhost:12434/running' -s"
       if handle then
         local result = handle:read "*a"
         handle:close()
