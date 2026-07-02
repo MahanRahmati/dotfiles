@@ -1,4 +1,34 @@
 models:
+  'qwen-3.6-35B-A3B-IQ3_XXS':
+    proxy: 'http://127.0.0.1:8012'
+    name: 'Qwen 3.6 35B A3B IQ3'
+    cmd: |
+      llama-server
+      --host 127.0.0.1
+      --port 8012
+      -hf unsloth/Qwen3.6-35B-A3B-MTP-GGUF:UD-IQ3_XXS
+      --ctx-size 131072
+      --temp 0.6
+      --min-p 0.0
+      --top-p 0.95
+      --top-k 20
+      --repeat-penalty 1.0
+      --presence-penalty 0.0
+      --flash-attn on
+      --reasoning on
+      --reasoning-preserve
+      --reasoning-budget 2048
+      --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
+      --fit on
+      --fit-target 128
+      --no-mmproj-offload
+      --parallel 1
+      --no-mmap
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --jinja
+      --spec-type draft-mtp
+      --spec-draft-n-max 3
   'qwen-3.6-35B-A3B':
     proxy: 'http://127.0.0.1:8012'
     name: 'Qwen 3.6 35B A3B'
@@ -15,12 +45,48 @@ models:
       --repeat-penalty 1.0
       --presence-penalty 0.0
       --flash-attn on
+      --reasoning on
+      --reasoning-preserve
       --reasoning-budget 2048
       --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
       --fit on
       --fit-target 128
       --no-mmproj-offload
+      --parallel 1
+      --no-mmap
+      --cache-type-k q8_0
+      --cache-type-v q8_0
       --jinja
+  'qwen-3.6-27B':
+    proxy: 'http://127.0.0.1:8012'
+    name: 'Qwen 3.6 27B'
+    cmd: |
+      llama-server
+      --host 127.0.0.1
+      --port 8012
+      -hf unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q3_K_XL
+      --ctx-size 131072
+      --temp 0.6
+      --min-p 0.0
+      --top-p 0.95
+      --top-k 20
+      --repeat-penalty 1.0
+      --presence-penalty 0.0
+      --flash-attn on
+      --reasoning on
+      --reasoning-preserve
+      --reasoning-budget 2048
+      --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
+      --fit on
+      --fit-target 128
+      --no-mmproj-offload
+      --parallel 1
+      --no-mmap
+      --cache-type-k q8_0
+      --cache-type-v q8_0
+      --jinja
+      --spec-type draft-mtp
+      --spec-draft-n-max 3
   'gemma-4-26B-A4B':
     proxy: 'http://127.0.0.1:8012'
     name: 'Gemma 4 26B A4B'
@@ -28,7 +94,7 @@ models:
       llama-server
       --host 127.0.0.1
       --port 8012
-      -hf unsloth/gemma-4-26B-A4B-it-GGUF:UD-Q4_K_M
+      -hf unsloth/gemma-4-26B-A4B-it-qat-GGUF:UD-Q4_K_XL
       --ctx-size 131072
       --temp 1.0
       --min-p 0.0
@@ -37,6 +103,8 @@ models:
       --repeat-penalty 1.0
       --presence-penalty 0.0
       --flash-attn on
+      --reasoning on
+      --reasoning-preserve
       --reasoning-budget 2048
       --reasoning-budget-message " ... I am thinking too long. Will proceed with the final answer now."
       --fit on
