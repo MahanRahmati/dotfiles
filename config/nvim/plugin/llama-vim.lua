@@ -4,7 +4,7 @@ vim.g.llama_config = {
   keymap_fim_accept_full = "",
   keymap_fim_accept_line = "",
   keymap_fim_accept_word = "",
-  stop_strings = { "\n" },
+  stop_strings_fim = { "\n" },
   endpoint_fim = "http://localhost:12434/infill",
   model_fim = "qwen-2.5-coder-1.5B-Instruct",
 }
