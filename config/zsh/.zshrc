@@ -152,6 +152,7 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 alias ..='cd ..'
 alias cd..='cd ..'
 alias q='exit'
+alias oc='opencode'
 
 # ----------------------------------------------------------------------
 # --                              Prompt                              --
