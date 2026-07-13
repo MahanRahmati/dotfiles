@@ -48,6 +48,50 @@ setopt AUTOCD
 setopt NOBEEP
 setopt NUMERIC_GLOB_SORT
 
+# ----------------------------------------------------------------------
+# --                            Plugins                               --
+# ----------------------------------------------------------------------
+ZSH_PLUGINS_DIR="$XDG_DATA_HOME/zsh/plugins"
+
+clone_repo() {
+  local repo="$1" dir="$2"
+  if ! type git >/dev/null; then
+    echo "Error: git is not installed"
+    return 1
+  fi
+  if [ -d "$dir" ]; then
+    return 0
+  fi
+  echo "Cloning $repo..."
+  git clone --depth 1 "$repo" "$dir" 2>/dev/null
+}
+
+# Autosuggestions
+if ! [ -f "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  clone_repo "https://github.com/zsh-users/zsh-autosuggestions.git" "$ZSH_PLUGINS_DIR/zsh-autosuggestions"
+fi
+source "$ZSH_PLUGINS_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
+
+# Syntax highlighting
+if ! [ -f "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  clone_repo "https://github.com/zsh-users/zsh-syntax-highlighting.git" "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting"
+fi
+source "$ZSH_PLUGINS_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# History substring search
+if ! [ -f "$ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh" ]; then
+  clone_repo "https://github.com/zsh-users/zsh-history-substring-search.git" "$ZSH_PLUGINS_DIR/zsh-history-substring-search"
+fi
+source "$ZSH_PLUGINS_DIR/zsh-history-substring-search/zsh-history-substring-search.zsh"
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+# Completions
+if ! [ -d "$ZSH_PLUGINS_DIR/zsh-completions/src" ]; then
+  clone_repo "https://github.com/zsh-users/zsh-completions.git" "$ZSH_PLUGINS_DIR/zsh-completions"
+fi
+fpath=("$ZSH_PLUGINS_DIR/zsh-completions/src" $fpath)
+
 [ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
 autoload -Uz compinit
 compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
