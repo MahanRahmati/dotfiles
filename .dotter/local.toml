@@ -12,6 +12,7 @@ packages = [
   "llama-swap",
   "zsh",
   "npm",
+  "llama-server",
 ]
 
 [files]

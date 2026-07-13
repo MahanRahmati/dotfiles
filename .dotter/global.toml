@@ -35,3 +35,6 @@
 
 [npm.files]
 "config/npm" = "~/.config/npm"
+
+[llama-server.files]
+"config/llama-server" = "~/.config/llama-server"
