@@ -1,0 +1,68 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "llama/qwen-3.6-35B-A3B-IQ3_XXS",
+  "providers": {
+    "llama": {
+      "name": "Llama.cpp (local)",
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "http://localhost:12434/v1",
+      },
+      "models": {
+        "qwen-3.6-35B-A3B-IQ3_XXS": {
+          "name": "Qwen 3.6 35B A3B IQ3 XXS",
+        },
+        "qwen-3.6-35B-A3B-UD-IQ4_XS": {
+          "name": "Qwen 3.6 35B A3B UD-IQ4 XS",
+        },
+        "qwen-3.8-27B-UD-Q3_K_XL": {
+          "name": "Qwen 3.8 27B UD-Q3_K_XL",
+        },
+        "qwen3.8-27B-GSQ-RCO-IQ3_XXS": {
+          "name": "Qwen 3.8 27B GSQ RCO IQ3 XXS",
+        },
+        "qwen-2.5-coder-1.5B-Instruct": {
+          "name": "Qwen 2.5 Coder 1.5B",
+        },
+      },
+    },
+  },
+  "agents": {
+    "build": {},
+    "plan": {},
+    "title": {
+      "model": "llama/qwen-2.5-coder-1.5B-Instruct",
+    },
+  },
+  "share": "disabled",
+  "update": "disable",
+  "permissions": [
+    { "action": "edit", "resource": "*", "effect": "ask" },
+    { "action": "webfetch", "resource": "*", "effect": "ask" },
+    { "action": "websearch", "resource": "*", "effect": "ask" },
+    { "action": "shell", "resource": "*", "effect": "ask" },
+    { "action": "shell", "resource": "git status *", "effect": "allow" },
+    { "action": "shell", "resource": "git diff *", "effect": "allow" },
+    { "action": "shell", "resource": "git push *", "effect": "deny" },
+    { "action": "shell", "resource": "cargo clippy *", "effect": "allow" },
+    { "action": "shell", "resource": "cargo fmt *", "effect": "allow" },
+    { "action": "shell", "resource": "cargo test *", "effect": "allow" },
+    { "action": "shell", "resource": "cargo check *", "effect": "allow" },
+    { "action": "shell", "resource": "cargo build *", "effect": "allow" },
+    { "action": "shell", "resource": "go run *", "effect": "allow" },
+    { "action": "shell", "resource": "go build *", "effect": "allow" },
+    { "action": "shell", "resource": "go test *", "effect": "allow" },
+    { "action": "shell", "resource": "go vet *", "effect": "allow" },
+    { "action": "shell", "resource": "sqlc generate *", "effect": "allow" },
+    { "action": "shell", "resource": "head *", "effect": "allow" },
+    { "action": "shell", "resource": "tail *", "effect": "allow" },
+    { "action": "shell", "resource": "ls *", "effect": "allow" },
+    { "action": "shell", "resource": "find *", "effect": "allow" },
+    { "action": "shell", "resource": "tree *", "effect": "allow" },
+    { "action": "shell", "resource": "sort *", "effect": "allow" },
+    { "action": "shell", "resource": "grep *", "effect": "allow" },
+  ],
+  "watcher": {
+    "ignore": ["dist/**", "node_modules/**", ".git/**"],
+  },
+}
